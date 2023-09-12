@@ -1,12 +1,8 @@
----
-title: Publishing Developer Portal
-parent: Developer Portal
-has_children: false
-nav_order: 1
----
+# Excercise 2: Developer Portal
 
+The Developer Portal is an automatically generated, fully customizable website with the documentation of your APIs. It is where API consumers can discover your APIs, learn how to use them, request access, and try them out.
 
-## Publishing the Developer Portal
+## Task 1: Publishing the Developer Portal
 
 The Azure API Management Developer Portal uses role-based access control (RBAC). After creating the Azure API Management instance, you need to first **access the Developer Portal using the admin role**, which will trigger its activation.
 
@@ -26,7 +22,7 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 ---
 
-## Enabling CORS for the Developer Portal
+## Task 2: Enabling CORS for the Developer Portal
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
 
@@ -38,7 +34,7 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 ---
 
-## User Experience
+## Task 3: User Experience
 
 Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.** 
 
