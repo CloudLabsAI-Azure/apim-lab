@@ -45,6 +45,6 @@ Accessing the link in your browser should now show you no error message. In fact
 ![APIM Echo API Browser Success](../../assets/images/apim-echo-api-test-5.png)
 
 Alternatively, you can issue a verbose (`-v`) CURL command against the **Echo API** and observe the `200` Success:
-`curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource?param1=sample`
+**curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource?param1=sample**
 
 ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
