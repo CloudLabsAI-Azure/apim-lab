@@ -39,7 +39,7 @@ Instead of developing an API, for this lab you will use the existing [*Star Wars
 
   ![APIM Star Wars API Add Operation](media/04.png)
 
-### Access Star Wars API from Developer Portal
+### Task 2: Access Star Wars API from Developer Portal
 
 - Switch now to the Developer Portal and sign in as a developer with a subscription. 
 - Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
