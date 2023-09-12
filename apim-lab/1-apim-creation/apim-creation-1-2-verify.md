@@ -1,13 +1,17 @@
----
-title: Verification
-parent: Azure API Management Creation
-has_children: false
-nav_order: 2
----
+# Exercise 1: Create an API Management instance
 
-## Verifying the Azure API Management instance
+Azure API Management instance has already been pre-deployed as part of the deployment for this lab.
 
-Once the Azure API Management instance has been created, please verify that it functions correctly by following these steps:
+1) Navigate to the resource groups in the Azure Portal and select the **apim-rg** resource group.
+
+   ![01](media/01.png)
+
+3) Select **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
+   ![02](media/02.png)
+   
+## Task 1: Verifying the Azure API Management instance
+
+Please verify that the Azure API Management instance functions correctly by following these steps:
 
 1) Navigate to the newly-created Azure API Management instance in the Azure Portal.  
 2) Select the **APIs** blade, then select the *Echo API*.   
