@@ -8,17 +8,17 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 - Click the **Developer portal** link in the **Overview** blade of the Azure API Management instance:
 
-  ![APIM Developer Portal](../../assets/images/apim-developer-portal.png)
+  ![APIM Developer Portal](media/01.png)
 
-  ![APIM Developer Portal Admin Launch](../../assets/images/apim-developer-portal-admin-launch.png)
+  ![APIM Developer Portal Admin Launch](media/02.png)
 
 - You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Back in the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview**. Press the **Publish** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
 
-  ![APIM Developer Portal Publish](../../assets/images/apim-developer-portal-publish.png)
+  ![APIM Developer Portal Publish](media/03.png)
 
 - You will see confirmation once the Developer Portal has been published.
 
-  ![APIM Developer Portal Published](../../assets/images/apim-developer-portal-published.png)
+  ![APIM Developer Portal Published](media/04.png)
 
 ---
 
@@ -28,9 +28,9 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 - CORS is enabled by using policies. We will go deeper on this topic in part 4. For now we will enable this using a built-in UI by pressing the **Enable CORS** button.
 
-  ![APIM Developer Portal Enable CORS](../../assets/images/apim-developer-portal-CORS.png)
+  ![APIM Developer Portal Enable CORS](media/05.png)
 
-  ![APIM Developer Portal CORS Enabled](../../assets/images/apim-developer-portal-CORS-enabled.png)
+  
 
 ---
 
@@ -38,11 +38,11 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.** 
 
-- Navigate to `https://{apim-service-name}.developer.azure-api.net`.
+- Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net**.
 
   > Keep this browser session open as we will use it frequently throughout our labs.
 
-  ![APIM Developer Portal Unauthenticated Launch](../../assets/images/apim-developer-portal-unauthenticated-launch.png)
+  ![APIM Developer Portal Unauthenticated Launch](media/06.png)
 
 ### Anonymous User
 
@@ -50,32 +50,32 @@ Let's experience how your users will navigate through your portal. In order to d
 
   > Notice the difference between the Starter & Unlimited products.
 
-  ![APIM Developer Portal Products](../../assets/images/apim-developer-portal-products.png)
+  ![APIM Developer Portal Products](media/07.png)
 
 - Check out the APIs. As you can see, all operations exposed are described and can also be tested directly within the portal.
 
-  ![APIM Developer Portal APIs](../../assets/images/apim-developer-portal-apis.png)
+  ![APIM Developer Portal APIs](media/08.png)
 
 ### Register for an account
 
 - Let's sign up for an account by pressing the **Sign up** link in the upper right-hand corner. The email can be your personal or a work email for this lab, but please be sure to use an email other than the one associated with your Azure subscription. 
 
-  ![APIM Developer Portal Sign-up](../../assets/images/apim-developer-portal-signup.png)
+  ![APIM Developer Portal Sign-up](media/09.png)
 
 - Check your inbox for the acceptance email and confirm to activate your account.
 
-  ![APIM Developer Portal Sign-up Email](../../assets/images/apim-developer-portal-signup-email.png)
+  ![APIM Developer Portal Sign-up Email](media/10.png)
 
 ### Sign into account
 
 - Back in the private browser, sign in with your new credentials.
 
-  ![APIM Developer Portal Sign-in](../../assets/images/apim-developer-portal-sign-in.png)
+  ![APIM Developer Portal Sign-in](media/11.png)
 
 - Click on **Products**, then **Starter**.
 - Enter `Starter` as the subscription name, then press **Subscribe**. You should receive a confirmation email shortly.
 
-  ![APIM Developer Portal Product Subscribe](../../assets/images/apim-developer-portal-product-subscribe.png)
+  ![APIM Developer Portal Product Subscribe](media/12.png)
 
 - Next, click back on **Products**, then **Unlimited**.
 - Enter `Unlimited` as the subscription name, then press **Subscribe**.
@@ -86,15 +86,15 @@ Let's experience how your users will navigate through your portal. In order to d
 
 - Back in the Azure Portal, navigate to the **Subscriptions** blade to see the two new subscriptions that were just added.
 
-  ![APIM Subscriptions](../../assets/images/apim-subscriptions.png)
+  ![APIM Subscriptions](media/13.png)
 
 - Enter the menu for the submitted **Unlimited** subscription, then press **Activate subscription**. - Provide additional comments, if you like, then confirm the activation. By default, this will send an activation confirmation email to the user.
 
-  ![APIM Activate Subscription](../../assets/images/apim-activate-subscription.png)
+  ![APIM Activate Subscription](media/14.png)
 
 - Back in the private browser, refresh the profile page to see the activated **Unlimited** subscription.
 
-  ![APIM Subscription Activated](../../assets/images/apim-subscriptions-activated.png)
+  ![APIM Subscription Activated](media/15.png)
 
 ### Try an API
 
@@ -104,6 +104,6 @@ It's now time to test one of the published APIs.
   - Notice the developer information
   - Test the Echo API using the POST verb by pressing **Try it**, using the defaults, then pressing **Send** at the bottom. You should see a successful `200` response.
 
-  ![APIM Developer Portal Try API](../../assets/images/apim-developer-portal-try-api-1.png)
+  ![APIM Developer Portal Try API](media/16.png)
 
-  ![APIM Developer Portal Try API](../../assets/images/apim-developer-portal-try-api-2.png)
+  ![APIM Developer Portal Try API](media/17.png)
