@@ -1,14 +1,6 @@
----
-title: Customizing Developer Portal
-parent: Developer Portal
-has_children: false
-nav_order: 2
----
+## Task 4: Customizing the Developer Portal
 
- 
-## Customizing the Developer Portal
-
-### Site Configuration
+### Task 4.1: Site Configuration
 
 The Developer Portal is based on a fork of the [Paperbits Web framework](https://paperbits.io/) and is enriched with Azure API Management-specific features. The fork resides at <https://github.com/Azure/api-management-developer-portal>.
 
@@ -24,7 +16,7 @@ A video on customization is available at <https://www.youtube.com/watch?v=5mMtUS
 
 ![APIM Developer Portal Styles](../../assets/images/apim-developer-portal-styles.png)
 
-### Email Configuration
+### Task 4.2: Email Configuration
 
 The templates for the email notifications are managed from the Azure Management Portal, directly on the blade's resource menu.
 
