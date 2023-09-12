@@ -13,16 +13,19 @@ Azure API Management instance has already been pre-deployed as part of the deplo
 
 Please verify that the Azure API Management instance functions correctly by following these steps:
 
-1) Navigate to the newly-created Azure API Management instance in the Azure Portal.  
-2) Select the **APIs** blade, then select the *Echo API*.   
-3) Press the **Test** tab, then select the **GET Retrieve resource** operation.  
-4) Press **Send** to issue a simple request.  
+1) Navigate to the Azure API Management instance in the Azure Portal.  
+2) Select the **APIs** blade, then select the *Echo API*.
 
-  ![APIM Echo API Test Send](../../assets/images/apim-echo-api-test-1.png)
+  ![APIM Echo API Test Send](media/02a.png)
+
+4) Press the **Test** tab, then select the **GET Retrieve resource** operation.  
+5) Press **Send** to issue a simple request.  
+
+  ![APIM Echo API Test Send](media/03.png)
 
 5) Observe the `200` Success response.  
 
-  ![APIM Echo API Test Success](../../assets/images/apim-echo-api-test-2.png)
+  ![APIM Echo API Test Success](media/04.png)
 
 At this time you have successfully verified that Azure API Management is set up!
 
@@ -30,7 +33,7 @@ At this time you have successfully verified that Azure API Management is set up!
 
 You may have noticed the *Request URL* and may be tempted to put it in your browser, issue a CURL statement, etc. If you do, you may see a `401` error and wonder what's happening.
 
-![APIM Echo API Test 401](../../assets/images/apim-echo-api-test-3.png)
+![APIM Echo API Test 401](media/05.png)
 
 The reason for this the unauthorized access status code is that the *Echo API* requires a subscription key to be set. Whereas tests originating in Azure API Management account for this automatically, external callers cannot (and, naturally, should not).
 
@@ -38,11 +41,11 @@ Back in APIM, switch to the **Settings** tab and uncheck **Subscription required
 
 > Subscriptions are important and useful, but in this case, we just want to quickly verify the Azure API Management instance is working as intended.
 
-![APIM Echo API Disable Required Subscription](../../assets/images/apim-echo-api-test-4.png)
+![APIM Echo API Disable Required Subscription](media/06.png)
 
 Accessing the link in your browser should now show you no error message. In fact, in order to verify the 200, it's easiest to open your Developer Tools (F12), navigate to the **Network** tab, and look at **All** requests to see the 200.
 
-![APIM Echo API Browser Success](../../assets/images/apim-echo-api-test-5.png)
+![APIM Echo API Browser Success](media/07.png)
 
 Alternatively, you can issue a verbose (`-v`) CURL command against the **Echo API** and observe the `200` Success:
 
