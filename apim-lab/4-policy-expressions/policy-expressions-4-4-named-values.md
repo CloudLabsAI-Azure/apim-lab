@@ -1,12 +1,4 @@
----
-title: Named Values
-parent: Policy Expressions
-has_children: false
-nav_order: 4
----
-
-
-## Named Values
+## Task 4: Named Values
 
 **Named Values** (aka **Properties**) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage `string` constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
@@ -17,7 +9,7 @@ nav_order: 4
   - Type: **Plain**
   - Value: `@(DateTime.Now.ToString())`
 
-    ![APIM Named Values](../../assets/images/apim-named-values.png)
+    ![APIM Named Values](media/26.png)
 
 - Back in the **APIs** blade, open the **Add two integers** operation in the Calculator API. 
 - Amend the inbound `set-header` policy by clicking on the pencil icon.
