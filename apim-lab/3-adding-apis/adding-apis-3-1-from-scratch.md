@@ -1,18 +1,10 @@
----
-title: Add API from scratch
-parent: Adding APIs
-has_children: false
-nav_order: 1
----
-
-
-## APIs
+## Exercise 3: Adding APIs
 
 - On the left menu, open the *APIs* blade. You will see all APIs, the possibility to add new ones, but also to customize existing ones.
 
   ![APIM APIs](../../assets/images/apim-apis.png)
 
-### Add API from Scratch
+### Task 1: Add API from Scratch
 
 Instead of developing an API, for this lab you will use the existing [*Star Wars* API](https://swapi.dev):
 
@@ -36,11 +28,14 @@ Instead of developing an API, for this lab you will use the existing [*Star Wars
     - Display name: **Get People**  
     - Name will be populate with: **get-people**  
     - URL: **GET /people/**  
+      ![01](media/01.png)
 
   2) **Get People By Id**  
     - Display name: **Get People By Id**  
     - Name will be populate with: **get-people-by-id**  
-    - URL: **GET /people/{id}/**  
+    - URL: **GET /people/{id}/**
+ 
+  
 
   ![APIM Star Wars API Add Operation](../../assets/images/apim-star-wars-api-add-operation.png)
 
