@@ -1,48 +1,46 @@
----
-title: Transformation policies
-parent: Policy Expressions
-has_children: false
-nav_order: 3
----
+## Task 3: Transformation policies
 
-## Transformation policies
-
-### Transformation - replace string
+### Task 3.1: Transformation - replace string
 
 The **find-and-replace** policy finds a substring in a request or response and replaces it with a different string.
 
 - Open the **Colors** API, then open the `Get random color` operation.
+  ![APIM Policy Find & Replace](media/15.png)
+  
 - Enter the **Policy code editor** in the **Outbound processing** section.
 - Place the cursor after the `<base />` element in the `<outbound>` section.
 - Press **Show snippets**, then select the **Find and replace string in body** transformation policy.  
 
-  ![APIM Policy Find & Replace](../../assets/images/apim-policy-find-and-replace-1.png)
+  ![APIM Policy Find & Replace](media/16.png)
 
 - Fill in the `from` and `to` values accordingly:
 
-```xml  
-<outbound>
-    <base />
-    <find-and-replace from="blue" to="yellow" />
-    <cache-store duration="15" />
-</outbound>
-```
+     ```xml  
+    <outbound>
+       <base />
+       <find-and-replace from="blue" to="yellow" />
+       <cache-store duration="15" />
+   </outbound>
+     ```
 
-  ![APIM Policy Find & Replace](../../assets/images/apim-policy-find-and-replace-2.png)
+  ![APIM Policy Find & Replace](media/17.png)
 
 - Save the policy, then invoke the API using the Unlimited subscription key.
 
-  ![APIM Policy Find & Replace](../../assets/images/apim-policy-find-and-replace-3.png)
+  ![APIM Policy Find & Replace](media/18.png)
 
 ---
 
-### Transformation - conditional
+### Task 3.2: Transformation - conditional
 
 Policies can be applied very granularly. In this example, you are modifying the **Star Wars** API to return a limited set of information if the caller is using the **Starter** subscription. Other products, such as the **Unlimited** subscription, will receive the full response.  
 
 The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions#ContextVariables) that is implicitly available in every policy expression provides access to the `Response` and `Product` below. 
 
 - Open the **Star Wars** API, then open the **Get People By Id** operation.
+
+   ![APIM Policy Transform Starter Product](media/19.png)
+  
 - Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below.  
 Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
 
@@ -84,15 +82,15 @@ Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure tha
 
 - With **Starter** or **None** product scope:
 
-  ![APIM Policy Transform Starter Product](../../assets/images/apim-policy-transform-starter-product.png)
+  ![APIM Policy Transform Unlimited Product](media/20.png)
 
 - With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response.
 
-  ![APIM Policy Transform Unlimited Product](../../assets/images/apim-policy-transform-unlimited-product.png)
+  ![APIM Policy Transform Unlimited Product](media/21.png)
 
 ---
 
-### Transformation - XML to JSON
+### Task 3.3: Transformation - XML to JSON
 
 A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Calculator** API that returned an XML response. 
 
@@ -107,9 +105,9 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
 - Test the API and examine the response. Note that it's now JSON.
 
-  ![APIM Policy Transform XML to JSON](../../assets/images/apim-policy-transform-xml-to-json.png)
+  ![APIM Policy Transform XML to JSON](media/22.png)
 
-### Transformation - Delete response headers
+### Task 3.4: Transformation - Delete response headers
 
 A frequent requirement is to remove headers, especially ones that return security-related or superfluous information.
 
@@ -126,9 +124,9 @@ A frequent requirement is to remove headers, especially ones that return securit
 
 - Invoke the API and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
 
-  ![APIM Policy Delete Response Header](../../assets/images/apim-policy-delete-response-header.png)
+  ![APIM Policy Delete Response Header](media/23.png)
 
-### Transformation - Amend what's passed to the backend
+### Task 3.5: Transformation - Amend what's passed to the backend
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
@@ -148,6 +146,6 @@ Query string parameters and headers can be easily modified prior to sending the 
 
 - Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. If Tracing is not enabled, press **Enable Tracing**.
 
-  ![APIM Policy Amend Backend Call](../../assets/images/apim-trace-amend-backend-1.png)
+  ![APIM Policy Amend Backend Call](media/24.png)
 
-  ![APIM Policy Amend Backend Call](../../assets/images/apim-trace-amend-backend-2.png)
+  ![APIM Policy Amend Backend Call](media/25.png)
