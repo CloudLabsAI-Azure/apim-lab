@@ -1,16 +1,8 @@
----
-title: Product Management
-parent: Developer Portal
-has_children: false
-nav_order: 3
----
-
-
-## Product Management
+## Task 5: Product Management
 
 A product contains one or more APIs as well as a usage quota and the terms of use. Once a product is published, developers can subscribe to the product and begin to use the product's APIs.
 
-### Product definition
+### Task 5.1: Product definition
 
 - In the Azure Portal, open the resource menu item `Products`.
 
