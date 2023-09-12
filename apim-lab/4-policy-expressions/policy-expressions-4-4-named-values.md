@@ -3,6 +3,9 @@
 **Named Values** (aka **Properties**) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage `string` constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
 - Open the `Named values` blade in the resource menu and press **+ Add**.
+
+    ![APIM Named Values](media/27.png)
+  
 - Create the new property:
   - Name: **TimeNow**
   - Display name: **TimeNow**
@@ -14,6 +17,9 @@
 - Back in the **APIs** blade, open the **Add two integers** operation in the Calculator API. 
 - Amend the inbound `set-header` policy by clicking on the pencil icon.
 - Create a new header by pressing **+ Add header**:
+
+    ![APIM Named Values](media/29.png)
+  
   - Name: **x-request-received-time**
   - Value: `{{"{{TimeNow"}}}}`
   - Action: **override**  
