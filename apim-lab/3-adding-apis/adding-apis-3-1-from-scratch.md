@@ -28,7 +28,7 @@ Instead of developing an API, for this lab you will use the existing [*Star Wars
     - Display name: **Get People**  
     - Name will be populate with: **get-people**  
     - URL: **GET /people/**  
-      ![01](media/03.png)
+  ![01](media/03.png)
 
   2) **Get People By Id**  
     - Display name: **Get People By Id**  
