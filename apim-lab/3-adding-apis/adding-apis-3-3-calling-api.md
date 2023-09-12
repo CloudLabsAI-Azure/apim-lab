@@ -51,7 +51,7 @@ First, we need to enable CORS for the domain name of the frontend. To achieve th
 
 - Click on the hamburger menu next to *Colors* in the top left corner.
 - Click on **Config**.
-- Replace the **API URL** according to this format: https://YOUR_APIM.azure-api.net/colors/random (e.g. https://apim-dev-we-hol-ms-01.azure-api.net/colors/random).
+- Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random.
 - After setting the API URL correctly, press the hamburger menu again and go to **Home**. 
 - Press **Start** to see how the frontend is calling the api. You should see a **401** response, indicating an auth error. This happens as our API requires a subscription, but we have not yet entered a subscription key.
 
@@ -60,12 +60,13 @@ First, we need to enable CORS for the domain name of the frontend. To achieve th
 - The subscription keys can be fetched from the Developer Portal. Open the main Developer Portal page, then click on **Profile** in the top menu. 
 
 - Prepare the url in a text editor:
-Concat the base url and the subscription key for the **Starter** and **Unlimited**, and update modify the url with your Azure API Management instance:
+Concat the base url and the subscription key for the **Starter** and **Unlimited**:
 
-```
-https://YOUR_APIM.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE
-https://YOUR_APIM.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE
-```
+    
+    **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
+  
+    **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
+    
 
 - To see that **Unlimited** product has no rate limits:
   - Configure the Colors website to use the Unlimited URL.
