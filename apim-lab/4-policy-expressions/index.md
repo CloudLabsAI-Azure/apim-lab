@@ -1,11 +1,4 @@
----
-title: Policy Expressions
-has_children: true
-nav_order: 5
----
-
-
-## Policy Expressions
+# Exercise 4: Policy Expressions
 
 Policy Expressions are used to control traffic to and modify the behavior of the Backend API. At the time of this writing, [APIM Policy Expressions support C# 7](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions). Please note that a specific subset of .NET Framework types, not the entire Framework, are made available. This is to cover the most frequently-needed types and operations without introducing bloat into APIM.  
 
