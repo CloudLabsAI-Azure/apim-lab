@@ -34,6 +34,7 @@ As a demo we will use an API that offers a simple calculator service : [Calc API
 > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you wanted to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
 ![APIM Developer Portal Calculator API Try It](media2/04.png)
+
 ![APIM Developer Portal Calculator API Try It](media2/05.png)
 
 - Back in the Azure API Management Portal, we can inspect / edit the Open API definition by selecting the *Edit* icon from the Frontend block:
