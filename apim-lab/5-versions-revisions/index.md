@@ -1,11 +1,4 @@
----
-title: Versions & Revisions
-has_children: true
-nav_order: 6
----
-
-
-## Version and Revisions
+## Exercise 5:  Version and Revisions
 
 Versions and revisions provide you with elegant means to safely manage the lifecycle of your APIs. 
 
