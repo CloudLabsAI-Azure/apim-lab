@@ -16,6 +16,7 @@ Proper version management not only helps organize your API, it also aids in Azur
   - Products: **Starter** and **Unlimited**
 
     ![APIM Versions Add](media/01.png)
+    
     ![APIM Version Create](media/02.png)
 
   - The new version, _v2_, is now added in the Star Wars API. 
