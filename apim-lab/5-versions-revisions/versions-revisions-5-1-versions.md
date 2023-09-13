@@ -1,18 +1,10 @@
----
-title: Versions
-parent: Versions & Revisions
-has_children: false
-nav_order: 1
----
-
-
-## Version
+## Task1: Version
 
 Proper version management not only helps organize your API, it also aids in Azure API Management. In this exercise we are going to version an existing API.
 
 > Good practice: Integrate version management from the beginning with a **v1** or similar identifier. 
 
-### Add a new version
+### Task 1.1: Add a new version
 
 - Select the *Star Wars* API.
 - Click on the ellipsis and select *Add version*.
@@ -23,29 +15,29 @@ Proper version management not only helps organize your API, it also aids in Azur
     > This name must be unique across the Azure API Management instance. Therefore, a combination of the API name and its version identifier is both semantic and suitable.
   - Products: **Starter** and **Unlimited**
 
-    ![APIM Versions Add](../../assets/images/apim-versions-add.png)
-    ![APIM Version Create](../../assets/images/apim-version-create.png)
+    ![APIM Versions Add](media/01.png)
+    ![APIM Version Create](media/02.png)
 
   - The new version, _v2_, is now added in the Star Wars API. 
     > Any previous implementation of the newly-versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact to the consumers.
 
-    ![APIM Version Created](../../assets/images/apim-version-created.png)
+    ![APIM Version Created](media/03.png)
 
-### Test the new version
+### Task 1.2: Test the new version
 
 > Sometimes, the version creation takes just a little bit of time. If you do not see it immediately, please keep refreshing and ensure you select the appropriate version as per below instructions.
 
 - In the Developer Portal select the `v2` version of the *Star Wars* API.
 
-  ![APIM Developer Portal Versions](../../assets/images/apim-developer-portal-versions.png)
+  ![APIM Developer Portal Versions](media/04.png)
 
 - Notice the request URL and the inclusion of `v2` in the path.
 
-  ![APIM Developer Portal Version 2](../../assets/images/apim-developer-portal-version-2.png)
+  ![APIM Developer Portal Version 2](media/05.png)
 
 - Test the `GetPeople` operation.
 
-  ![APIM Developer Portal Test Version](../../assets/images/apim-developer-portal-test-version-2.png)
+  ![APIM Developer Portal Test Version](media/06.png)
 
 ### What Versions Enable
 
