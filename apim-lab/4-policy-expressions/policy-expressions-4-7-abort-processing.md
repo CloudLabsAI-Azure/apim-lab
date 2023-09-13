@@ -1,17 +1,10 @@
----
-title: Abort processing policy
-parent: Policy Expressions
-has_children: false
-nav_order: 7
----
-
-## Abort processing policy
+## Task 7: Abort processing policy
 
 ### Aborting the processing
 
 The ability to terminate a response gracefully is of importance in a number of cases such as error handling or business logic. Using the `return-response` policies short-circuits the request and yields a response that often does not originate from the backend. Consider what general situations may make sense without shifting too much business logic into APIM.
 
-- Open the **Add two integers** operation in the **Calculator** API.
+- Open the **Add two integers** operation in the **Calculator** API.  
 - Open the **Code View**.
 - Add the **inbound** policy to test for a condition (just `true` for our example) and return an error.
 - Invoke the API. 
@@ -43,7 +36,7 @@ The ability to terminate a response gracefully is of importance in a number of c
   </inbound>
   ```
 
-  ![APIM Policy Abort Response](../../assets/images/apim-policy-abort-response.png)
+  ![APIM Policy Abort Response](media/39.png)
 
   ### Clean Up
 
