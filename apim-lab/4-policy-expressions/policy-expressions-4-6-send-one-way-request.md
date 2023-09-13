@@ -1,12 +1,4 @@
----
-title: Send One Way policy
-parent: Policy Expressions
-has_children: false
-nav_order: 6
----
-
-
-## Send One Way policy
+## Task 6: Send One Way policy
 
 APIM integrates well with [external services](https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-send-request) via HTTP-based interaction.
 
@@ -58,7 +50,7 @@ The following policy and payload applies for both examples in this section (webh
 
 - Go to [Webhook.site](https://webhook.site) and copy the value for **Your unique URL**.
 
-    ![Webhook Site Setup](../../assets/images/webhook-site-1.png)
+    ![Webhook Site Setup](media/34.png)
 
 - Use this URL as the value in the `<set-url>` property in the `send-one-way-request` policy previously defined.
 
@@ -66,11 +58,11 @@ The following policy and payload applies for both examples in this section (webh
 
 - Check the **Trace** for the **Outbound** one-way message.
 
-    ![Webhook Site APIM Trace](../../assets/images/webhook-site-apim-send-one-way-request-1.png)
+    ![Webhook Site APIM Trace](media/35.png)
 
 - Observe the success in the Webhook site.
 
-    ![Webhook Site Success](../../assets/images/webhook-site-2.png)
+    ![Webhook Site Success](media/36.png)
 
 ### Send a message to Microsoft Teams channel
 
@@ -84,4 +76,4 @@ An optional lab to connect to Microsoft Teams:
 
 - Look for a received message in your Teams channel:
 
-  ![Teams APIM Message](../../assets/images/teams-apim-message.png)
+  ![Teams APIM Message](media/37.png)
