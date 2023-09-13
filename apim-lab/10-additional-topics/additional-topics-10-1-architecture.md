@@ -1,12 +1,6 @@
----
-title: Architecture Design Session
-parent: Additional Topics
-has_children: false
-nav_order: 1
----
+# Excercise 9
 
-
-## Architecture Design Session
+## Task 1: Architecture Design Session
 
 In this section we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
 
