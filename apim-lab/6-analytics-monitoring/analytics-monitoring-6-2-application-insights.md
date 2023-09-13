@@ -1,16 +1,8 @@
----
-title: Application Insights
-parent: Analytics & Monitoring
-has_children: false
-nav_order: 2
----
-
-
-## How to integrate Azure API Management with Azure Application Insights
+## Task 2: How to integrate Azure API Management with Azure Application Insights
 
 Azure API Management allows for easy integration with Azure Application Insights - an extensible service for web developers building and managing apps on multiple platforms. This guide walks through every step of such an integration and describes strategies for reducing performance impact on your Azure API Management instance.
 
-### Create an Azure Application Insights instance
+### Task 2.1: Create an Azure Application Insights instance
 
 Before you can use Azure Application Insights, you first need to create an instance of the service. The naming convention for Application Insights is: `appi-<environment>-<region>-<application-name>-<owner>-<instance>`
 
@@ -24,7 +16,7 @@ Before you can use Azure Application Insights, you first need to create an insta
 
 3. Click **Review + Create**, followed by **Create**.
 
-### Create a connection between Azure Application Insights and Azure API Management service instance
+### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
 1. Navigate to your **APIM** instance in the **Azure portal**.
 2. Select **Application Insights** from the menu on the left.
@@ -40,7 +32,7 @@ Before you can use Azure Application Insights, you first need to create an insta
 
     > Behind the scenes, a [Logger](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/logger/createorupdate) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
 
-### Enable Application Insights logging for your API
+### Task 2.3: Enable Application Insights logging for your API
 
 1. Select **APIs** from the menu on the left.
 2. Click on the **Colors** API.
@@ -77,7 +69,7 @@ A failed request is a request which:
 
 Any request you make to the Colors API in Azure API Management will be subject to being received by Application Insights (recall the 100% sampling). To generate a large amount of requests quickly, you can invoke the API via the [Colors](https://colors-web.azurewebsites.net) website. As we are presently caching the output for 15 seconds, you may get a lot of requests with the same color. Please feel free to disable the output caching in the Colors API if you would like to see more variety.
 
-### Viewing Azure Application Insights Data
+### Task 2.4: Viewing Azure Application Insights Data
 
 - Go back to the **Application Insights** blade and click on the Application Insights instance.
 - In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
