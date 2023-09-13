@@ -1,12 +1,6 @@
----
-title: Basics with Azure Monitor
-parent: Analytics & Monitoring
-has_children: false
-nav_order: 1
----
+# Exercise 6: Analytics & Monitoring 
 
-
-## Basics Monitoring with Azure Monitor
+## Task 1: Basics Monitoring with Azure Monitor
 
 Analytics is available on the _Analytics_ blade in APIM.
 
