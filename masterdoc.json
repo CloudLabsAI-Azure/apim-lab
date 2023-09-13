@@ -98,33 +98,29 @@
         "Order": 23
       },
 
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/7-security/security-7-2-oauth2.md",
-        "Order": 24
-      },
        {
         "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/7-security/security-7-3-managed-identities.md",
-        "Order": 25
+        "Order": 24
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/9-fusion-dev/fusion-dev-9-1.md",
-        "Order": 26
+        "Order": 25
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-1-architecture.md",
-        "Order": 27
+        "Order": 26
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-2-container-instance.md",
-        "Order": 28
+        "Order": 27
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-3-serverless.md",
-        "Order": 29
+        "Order": 28
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/Zubair8899/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-4-self-hosted-gateway.md",
-        "Order": 30
+        "Order": 29
       }
     ]
   }
