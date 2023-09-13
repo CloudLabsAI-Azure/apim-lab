@@ -1,14 +1,6 @@
----
-title: Revisions
-parent: Versions & Revisions
-has_children: false
-nav_order: 2
----
+## Task 2: Revisions
 
-
-## Revisions
-
-### Add a new revision
+### Task 2.1: Add a new revision
 
 - Select the **Star Wars** API **v2**.
 - Select the **Revisions** tab.
@@ -21,7 +13,7 @@ nav_order: 2
 
   ![APIM Created Revision](../../assets/images/apim-created-revision.png)
 
-### Add caching
+### Task 2.2: Add caching
 
 - Switch to the **Design** tab, then select the `Get People` operation.
   > **Revision 2** automatically became the active revision you are now making changes in. You can also switch between revisions, but **be aware that changes to the *Current* revision are live immediately**.
@@ -46,7 +38,7 @@ nav_order: 2
 
   ![APIM Revision Add Caching](../../assets/images/apim-revision-add-caching-2.png)
 
-### Test the new revision
+### Task 2.3: Test the new revision
 
 - From the Azure portal, test the `Get People` operation.
   > Note the revision number at the top of the page as well as in the request URL.  
@@ -58,7 +50,7 @@ nav_order: 2
 
   ![APIM Revision Caching Test](../../assets/images/apim-revision-test-caching-2.png)
 
-### Make current revision
+### Task 2.4: Make current revision
 
 - Select the **Revisions** tab.
 - Click on the ellipsis for `rev2` and make it the current revision.
