@@ -8,11 +8,11 @@ Before you can use Azure Application Insights, you first need to create an insta
 
 1. Open the **Azure portal** and navigate to **Application Insights**.
 
-    ![App Insights Create Instance](../../assets/images/app-insights-create-instance-1.png)
+    ![App Insights Create Instance](media/04.png)
 
-2. Click **+ Create**, then fill in the form. You may need to create a new Log Analytics Workspace if you don't already have one.
+2. Click **+ Create**, then fill in the form. 
 
-    ![App Insights Create Instance](../../assets/images/app-insights-create-instance-2.png)
+    ![App Insights Create Instance](media/05.png)
 
 3. Click **Review + Create**, followed by **Create**.
 
@@ -22,13 +22,15 @@ Before you can use Azure Application Insights, you first need to create an insta
 2. Select **Application Insights** from the menu on the left.
 3. Click **+ Add**.
 
-    ![APIM App Insights Logger](../../assets/images/apim-app-insights-logger-1.png)
+    ![APIM App Insights Logger](media/06.png)
 
-4. Select the previously created **Application Insights** instance and provide a short description.
-5. Click **Create**.
-6. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
+    ![APIM App Insights Logger](media/07.png)
 
-    ![APIM App Insights Logger](../../assets/images/apim-app-insights-logger-2.png)
+5. Select the previously created **Application Insights** instance and provide a short description.
+6. Click **Create**.
+7. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
+
+    ![APIM App Insights Logger](media/08.png)
 
     > Behind the scenes, a [Logger](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/logger/createorupdate) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
 
@@ -43,7 +45,7 @@ Before you can use Azure Application Insights, you first need to create an insta
 7. Set sampling to **100** to capture all events.
 8. Check the **Always log errors** checkbox.
 
-    ![APIM API App Insights Logger](../../assets/images/apim-app-insights-api-1.png)
+    ![APIM API App Insights Logger](media/09.png)
 
 9. Click **Save**.
 
@@ -75,7 +77,7 @@ Any request you make to the Colors API in Azure API Management will be subject t
 - In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
 - Open the **Transaction search** to see details on a transactional level:
 
-  ![APIM API App Insights Logger](../../assets/images/apim-app-insights-api-2.png)
+  ![APIM API App Insights Logger](media/10.png)
 
 ### Performance implications and log sampling
 
