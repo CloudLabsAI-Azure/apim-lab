@@ -1,56 +1,59 @@
----
-title: Managed Identities
-parent: Security
-has_children: false
-nav_order: 3
----
-
-## Managed Identities
+## Task 2: Managed Identities
 
 In Azure, an Active Directory identity can be assigned to a managed resource such as an Azure Function, App Service or even an Azure API Management instance. Once an identity is assigned, it has many capabilities to work with other resources that leverage Azure AD for authentication, much like a service principal.
 
-### Register Azure API Management with Active Directory
+### Task 2.1: Register Azure API Management with Active Directory
+- Navigate to your API management instance, select Managed identities from the pan, and enable system-assigned identity.
 
-![Register APIM](../../assets/images/apim-security-register-principal.png)
+![Register APIM](media/7.png)
 
 ## Key Vault 
 
-### Create Key Vault and add a secret
+### Task 2.2: Create Key Vault and add a secret
 
-- Create a **Key Vault** instance, the naming convention is: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
+- Search for Key Vault in Azure portal, Select Create.
+- Select Resource Group: **apim-rg**
+- Follow this naming convention for key vualt: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
 
-![Create Key Vault](../../assets/images/apim-security-create-key-vault.png)
+![Create Key Vault](media/8.png)
 
+- In the Access configuration tab, select the vault access policy and click on create.
+
+ ![Create Key Vault](media/9.png)
+
+  
 - Next, add a [secret](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault) to the Key Vault instance
   - Name:`favoritePerson`
   - Secret value: `3`
+ 
+![Create Key Vault](media/10.png)
 
-### Access policy and principal assignment
+### Task 2.3: Access policy and principal assignment
 
 Create an access policy
 
-![Create Key Vault](../../assets/images/apim-security-key-vault-1.png)
+![Create Key Vault](media/11.png)
 
 Select the `Get` operation from the list of Secret permissions
 
-![Create Key Vault](../../assets/images/apim-security-key-vault-2.png)
+![Create Key Vault](media/12.png)
 
 Select the principal and search for the name of your Azure API Management instance
 
-![Create Key Vault](../../assets/images/apim-security-key-vault-3.png)
+![Create Key Vault](media/13.png)
 
 Remember to click **Create**
 
 You should see something like this:
 
-![Create Key Vault](../../assets/images/apim-security-key-vault-4.png)
+![Create Key Vault](media/14.png)
 
-### Azure API Management, Key Vault and Managed Service Identity
+### Task 2.4: Azure API Management, Key Vault and Managed Service Identity
 
 - Go back to your APIM
 - Add a new operation to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want)
 
-![New operation](../../assets/images/apim-security-add-operation.png)
+![New operation](media/15.png)
 
 - Update the policies for **this** new operation
 
@@ -72,8 +75,8 @@ You should see something like this:
 
 Don't forget to change the `set-url` value with your Key Vault name.
 
-### Test the operation
+### Test 2.5: Test the operation
 
 - Sign in to the developer portal and test this new operation
-- Notice the request URL will be similar to: `https://{your-apim-instance}.azure-api.net/sw/favorite`
+- Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
 
