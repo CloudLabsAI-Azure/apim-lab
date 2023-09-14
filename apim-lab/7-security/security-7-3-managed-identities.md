@@ -80,3 +80,7 @@ Don't forget to change the `set-url` value with your Key Vault name.
 - Sign in to the developer portal and test this new operation
 - Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
 
+---
+### Summary 
+In this Task, Azure API Management (APIM) is configured to securely access secrets from Azure Key Vault using Managed Service Identity (MSI), enhancing security and enabling the retrieval of secrets for API management operations, as demonstrated during testing in the developer portal.
+- Now, click on Next from the lower right corner to move on to the next page.
