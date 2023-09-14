@@ -31,7 +31,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 3. The first time Cloud Shell is started will require you to create a storage account. 
 4. We proceed to create a unique identifier suffix for resources created in this Lab:
 
-    ```bash
+    ```
     APIMLAB_UNIQUE_SUFFIX=$USER$RANDOM
     # Remove Underscores and Dashes
     APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//_}"
@@ -45,7 +45,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 5. Now we proceed to create a resource group for our ACI objects:
 
 
-    ```bash
+    ```
     #we define some variables first
     APIMLAB_RGNAME=myColorsAppRg-$APIMLAB_UNIQUE_SUFFIX
     APIMLAB_LOCATION=eastus
@@ -59,7 +59,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
 6.  Now we create our ACI and specify our colors-web github container
  
-    ```bash
+    ```
     #we define some variables first
     APIMLAB_COLORS_WEB=mycolorsweb-$APIMLAB_UNIQUE_SUFFIX
     APIMLAB_IMAGE_WEB=ghcr.io/markharrison/coloursweb:latest
@@ -76,7 +76,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
 7.   Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
-      ```bash
+      ```
       #we check the status
       az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
       ```
@@ -95,7 +95,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
 8.  Now we proceed to create the ACI for the colors-api github container:
 
-    ```bash
+    ```
     #we define some variables first
     APIMLAB_COLORS_API=mycolorsapi-$APIMLAB_UNIQUE_SUFFIX
     APIMLAB_IMAGE_API=ghcr.io/markharrison/coloursapi:latest
@@ -112,7 +112,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
 9.  Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
-    ```bash
+    ```
     #we check the status
     az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_API --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
     ```
