@@ -59,7 +59,8 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
 6.  Now we create our ACI and specify our colors-web github container
  
-    ```
+
+     ```
     #we define some variables first
     APIMLAB_COLORS_WEB=mycolorsweb-$APIMLAB_UNIQUE_SUFFIX
     APIMLAB_IMAGE_WEB=ghcr.io/markharrison/coloursweb:latest
@@ -74,7 +75,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
     az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
     ```
 
-7.   Now we run the following command to check the status of the deployment and get the FQDN to access the app:
+8.   Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
       ```
       #we check the status
@@ -93,7 +94,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
       ![](media/02.png)
 
-8.  Now we proceed to create the ACI for the colors-api github container:
+9.  Now we proceed to create the ACI for the colors-api github container:
 
     ```
     #we define some variables first
@@ -110,7 +111,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
     az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_API --image $APIMLAB_IMAGE_API --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
     ```
 
-9.  Now we run the following command to check the status of the deployment and get the FQDN to access the app:
+10.  Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
     ```
     #we check the status
