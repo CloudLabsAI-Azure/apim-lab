@@ -34,3 +34,5 @@ We have already configured the **CORS** policy for our APIs in labs 2 & 3. Below
     <on-error />
 </policies>
 ```
+
+- Now, click on Next from the lower right corner to move on to the next page.
