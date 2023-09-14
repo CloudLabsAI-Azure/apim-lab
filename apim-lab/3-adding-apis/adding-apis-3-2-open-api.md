@@ -2,12 +2,13 @@
 
 Instead of importing operations one-by-one, you can also import a full API. The [OpenAPI specification](https://www.openapis.org/) (aka [Swagger](https://swagger.io)) is a definition format to describe RESTful APIs. The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.
 
-As a demo we will use an API that offers a simple calculator service : [Calc API](http://calcapi.cloudapp.net)
+As a demo, we will use an API that offers a simple calculator service : [Calc API](http://calcapi.cloudapp.net)
 
-> This is an older API and only available via `HTTP`. Azure API Management provides means for fronting access to it via `HTTPS`, which further demonstrates how Azure API Management can help with a secure, uniform facade while the backend implementation can be reworked and upgraded.
+> This is an older API and is only available via `HTTP`. Azure API Management provides a means for fronting access to it via `HTTPS`, which further demonstrates how Azure API Management can help with a secure, uniform facade while the backend implementation can be reworked and upgraded.
 
 ![APIM Calculator API](media2/01.png)
 
+- Navigate back to your Azure API Management instance.
 1) On the left menu, open the **APIs** blade.  
 2) Click on **Add API**.  
 3) Under **Create from definition** select **OpenAPI**.  
