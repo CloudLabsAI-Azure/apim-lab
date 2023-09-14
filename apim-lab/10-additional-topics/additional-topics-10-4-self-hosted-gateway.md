@@ -94,3 +94,6 @@ Our Gateway Node is now deployed - and we can test that it works.
 ![](../../assets/images/apim-app-gateway-test-3.png)
 
 
+---
+### Summary
+In this task, you have deployed a self-hosted gateway for Azure API Management, enabling the hosting of API gateway nodes in Docker or Kubernetes environments. Then you have configured the gateway deployment, downloaded configuration files, and executed Docker commands to start the gateway node. Finally, tested the API using Postman, confirming the proper functionality of the self-hosted gateway.
