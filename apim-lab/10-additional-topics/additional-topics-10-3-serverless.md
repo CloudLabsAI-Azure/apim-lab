@@ -1,21 +1,14 @@
----
-title: API Proxy to Serverless
-parent: Additional Topics
-has_children: false
-nav_order: 3
----
-
-## API Proxy to Serverless
+## Task 3: API Proxy to Serverless
 
 Azure Serverless (Functions and Logic Apps) can be configured to benefit from the advantages of Azure API Management.
 
-### Azure Functions
+### Task 3.1: Azure Functions
 
 - Create a simple function that is Triggered by an HTTP Request
 
 Example:
 
-![](../../assets/images/apim-azure-function-example.png)
+![](media/04.png)
 
 ```c#
     //string[] strColors = { "blue", "lightblue", "darkblue" };
@@ -29,39 +22,39 @@ Example:
 
 Lets add the function to Azure API Management. In the API blade select [+Add API] and the [Function App] tile
 
-![](../../assets/images/apim-azure-function-add-api.png)
+![](media/05.png)
 
 - Select the [Browse] button to get a list of Functions in the subscription
 
-![](../../assets/images/apim-azure-function-add-browse.png)
+![](media/06.png)
 
 - Select the Function App and then the Function
 
-![](../../assets/images/apim-azure-function-select-1.png)
+![](media/07.png)
 
-![](../../assets/images/apim-azure-function-select-2.png)
+![](media/08.png)
 
 - Amend the Names / Descriptions, URL suffix and select the Products
 
-![](../../assets/images/apim-azure-function-create.png)
+![](media/09.png)
 
 - As previously add CORS policy
 
 - Validate the function works - either from the Azure management portal or the developer portal
 
-![](../../assets/images/apim-azure-function-test-1.png)
+![](media/10.png)
 
-![](../../assets/images/apim-azure-function-test-2.png)
+![](media/11.png)
 
-### Azure Logic Apps
+### Task 3.2: Azure Logic Apps
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
 Example:
 
-![](../../assets/images/apim-logic-app-example-1.png)
+![](media/12.png)
 
-![](../../assets/images/apim-logic-app-example-2.png)
+![](media/13.png)
 
 Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
 
@@ -73,34 +66,34 @@ Use the following sample message to generate the schema of the Request body payl
 
 Lets add the function to API Managament. In the API blade select [+Add API] and the [Logic App] tile
 
-![](../../assets/images/apim-logic-app-add-api.png)
+![](media/14.png)
 
 - Select the [Browse] button to get a list of Logic Apps in the subscription
 
-![](../../assets/images/apim-logic-app-add-browse.png)
+![](media/15.png)
 
 - Select the Logic App
 
-![](../../assets/images/apim-logic-app-select.png)
+![](media/16.png)
 
 - Amend the Names / Descriptions, URL suffix  and select the Products
 
-![](../../assets/images/apim-logic-app-create.png)
+![](media/17.png)
 
  As previously add CORS policy
 
 - Validate the Logic App works - either from the Azure management portal or the developer poral
 
-![](../../assets/images/apim-logic-app-test-1.png)
+![](media/18.png)
 
-![](../../assets/images/apim-logic-app-test-2.png)
+![](media/19.png)
 
 - Check the Logic App audit
 
-![](../../assets/images/apim-logic-app-test-3.png)
+![](media/20.png)
 
 - Check the email was sent
 
-![](../../assets/images/apim-logic-app-test-4.png)
+![](media/21.png)
 
 
