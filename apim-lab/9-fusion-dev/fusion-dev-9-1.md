@@ -1,5 +1,5 @@
 # Exercise 8:  Fusion Dev
-**Overview:**
+## Overview
 
 In this exercise, you'll create a Star Wars Fan Club mobile application using Power Apps and Azure API Management. You'll connect your member data from an Excel worksheet, integrate Star Wars character information through a custom connector, and customize the app to display favorite character details for each member.
 
@@ -126,3 +126,10 @@ ClearCollect(characterCollection, StarWarsAPI.getpeople({search: ThisItem.Member
 ![](media/13.png)
 
 ![](media/14.png)
+
+--- 
+
+### Summary
+In this exercise, you have integrated the Star Wars API with Azure API Management, exported it as a Power Platform Custom Connector, and created a Canvas App to allow Fan Club members to search and view information about their favorite Star Wars characters.
+
+- Now, click on Next from the lower right corner to move on to the next page.
