@@ -48,6 +48,7 @@ First, we need to enable CORS for the domain name of the frontend. To achieve th
   ![APIM Policy CORS All APIs](media3/10.png)
 
 - After enabling CORS in Azure API Management let's go back to our frontend <https://colors-web.azurewebsites.net> and follow these steps:
+- Copy this URL <https://colors-web.azurewebsites.net> and paste in the browser.
 
 - Click on the hamburger menu next to *Colors* in the top left corner.
 - Click on **Config**.
