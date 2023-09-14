@@ -14,6 +14,8 @@ A product contains one or more APIs as well as a usage quota and the terms of us
   
   **Published**: Selected
 
+- Click on Create.
+
   ![APIM Add Product](media3/02.png)
 
   ![APIM Add Product](media3/03.png)
