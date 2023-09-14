@@ -149,3 +149,17 @@ Query string parameters and headers can be easily modified prior to sending the 
   ![APIM Policy Amend Backend Call](media/24.png)
 
   ![APIM Policy Amend Backend Call](media/25.png)
+
+---
+### Summary
+In these transformation tasks, you implemented various policies in Azure API Management:
+
+1)You applied find-and-replace policies to modify response strings in the Colors API.
+
+2)Conditional policies were used in the Star Wars API to customize responses based on subscription tiers.
+
+3)You transformed XML to JSON in the Calculator API and removed specific response headers.
+
+4)Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
+
+- Now, click on Next from the lower right corner to move on to the next page.
