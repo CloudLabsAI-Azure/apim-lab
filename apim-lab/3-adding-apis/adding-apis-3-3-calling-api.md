@@ -85,3 +85,8 @@ Concat the base url and the subscription key for the **Starter** and **Unlimited
 - Try the same **Starter** URL directly in your web browser and notice the error status / message returned:
 
     ![APIM Colors API URL in Browser for Starter Product 429 ](../../assets/images/apim-color-api-url-in-browser-starter-product-429.png)
+
+
+### Summary
+In this Task, you imported and configured the "Colors API" in Azure API Management, successfully tested it in the Developer Portal, and added rate limits to different subscription tiers (Starter and Unlimited).
+- Now, click on Next from the lower right corner to move on to the next page.
