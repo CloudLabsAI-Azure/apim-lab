@@ -1,5 +1,14 @@
 # Exercise 1: Create an API Management instance
+## Overview
+APIs enable digital experiences, simplify application integration, underpin new digital products, and make data and services reusable and universally accessible. With the proliferation and increasing dependency on APIs, organizations need to manage them as first-class assets throughout their lifecycle.
+Azure API Management helps customers meet these challenges:
 
+- Abstract backend architecture diversity and complexity from API consumers
+- Securely expose services hosted on and outside of Azure as APIs
+- Protect, accelerate, and observe APIs
+- Enable API discovery and consumption by internal and external users
+
+## Task 1: Verifying the Azure API Management instance
 Azure API Management instance has already been pre-deployed as part of the deployment for this lab.
 
 1) Navigate to the resource groups in the Azure Portal and select the **apim-rg** resource group.
@@ -10,8 +19,6 @@ Azure API Management instance has already been pre-deployed as part of the deplo
    
    ![02](media/02.png)
    
-## Task 1: Verifying the Azure API Management instance
-
 Please verify that the Azure API Management instance functions correctly by following these steps:
 
 1) Navigate to the Azure API Management instance in the Azure Portal.  
@@ -53,3 +60,6 @@ Alternatively, you can issue a verbose (`-v`) CURL command against the **Echo AP
 **curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource?param1=sample**
 
 ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
+
+### Summary
+In this exercise, you have verified the Azure API management instance. Now, click on Next from the lower right corner to move on to the next page.
