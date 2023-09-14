@@ -4,7 +4,7 @@ With the Azure API Management self-hosted gateway, organizations have the abilit
 
 The self-hosted gateways are hosted in a Docker or Kubernetes environment and are managed from the Azure API Management service they are connected to.
 
-This part of the lab assumes that the user has Docker Desktop installed.  Installation instructions are [here](https://docs.docker.com/docker-for-windows/install/)
+This part of the lab requires that the user has Docker Desktop installed. we have already pre-installed Docker Desktop in the Jump VM.
 
 There are two terms to become familiar with:
 
@@ -83,12 +83,13 @@ Our Gateway Node is now deployed - and we can test that it works.
 
 ![](../../assets/images/apim-app-gateway-test-1.png)
 
-- Use a tool like [Postman](https://www.postman.com/) to test the API ... should see the random color appear in the response and this confirms everything is working properly
-- If tested with a browser, then a warning needs to be accepted to proceed - this is because trusted TLS certificates have not been set up
+- Use Postman to test the API, you can find the postman shortcut on the desktop... should see the random color appear in the response and this confirms everything is working properly
+- If tested with a browser, then a warning needs to be accepted to proceed - this is because trusted TLS certificates have not been set up Diagnostics 
+ for the API call will be logged by the container.
 
 ![](../../assets/images/apim-app-gateway-test-2.png)
 
-Diagnostics for the API call will be logged by the container.
+
 
 ![](../../assets/images/apim-app-gateway-test-3.png)
 
