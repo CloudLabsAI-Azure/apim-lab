@@ -96,4 +96,7 @@ Lets add the function to API Managament. In the API blade select [+Add API] and 
 
 ![](media/21.png)
 
-
+--- 
+### Summary
+In this task, you have integrated Azure Functions and Logic Apps with Azure API Management, exposing them as APIs with management capabilities. you have configured, tested, and audited these serverless resources within API Management for seamless integration with other services.
+- Now, click on Next from the lower right corner to move on to the next page.
