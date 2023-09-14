@@ -1,5 +1,5 @@
 ## Exercise 5:  Version and Revisions
-
+### Overview
 Versions and revisions provide you with elegant means to safely manage the lifecycle of your APIs. 
 
 Versions of APIs are differentiated by a version identifier (e.g. `v1`, `v2`, etc.) through a versioning scheme such as a version path in the URL, a header, or a query string. Multiple versions can and may often be active at the same time to provide continued service while breaking changes may be introduced in newer versions.
@@ -8,3 +8,4 @@ Revisions allow you to safely make _non-breaking_ changes to your API. Developer
 
 For more information, visit the [Versions & Revisions](https://azure.microsoft.com/en-us/blog/versions-revisions) documentation.
 
+- Now, click on Next from the lower right corner to move on to the next page.
