@@ -59,12 +59,12 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
   
   ![APIM Developer Portal Star Wars Try It](media/08.png)
 
-
+---
 ### Summary
-    In this task, you added the Star Wars API to Azure API Management and configured two operations:
+In this task, you added the Star Wars API to Azure API Management and configured two operations:
 
-      1)Get People: This operation retrieves a list of people from the Star Wars API.
-
-      2)Get People By Id: This operation retrieves detailed information about a specific person from the Star Wars API based on their ID.
-
+1)Get People: This operation retrieves a list of people from the Star Wars API.
+       
+2)Get People By Id: This operation retrieves detailed information about a specific person from the Star Wars API based on their ID.
+       
 - Now, click on Next from the lower right corner to move on to the next page.
