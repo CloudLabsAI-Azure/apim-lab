@@ -11,9 +11,12 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 - Navigate back to your Azure API Management instance.
 1) On the left menu, open the **APIs** blade.  
 2) Click on **Add API**.  
-3) Under **Create from definition** select **OpenAPI**.  
-4) Select the **Full** option in the **Create from OpenAPI specification** dialog.  
-5) Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
+3) Under **Create from definition** select **OpenAPI**.
+
+![](media/b.png)
+   
+5) Select the **Full** option in the **Create from OpenAPI specification** dialog.  
+6) Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
 
 > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
 
