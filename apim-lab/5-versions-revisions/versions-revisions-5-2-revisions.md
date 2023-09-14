@@ -72,3 +72,8 @@
   > Unlike versioning, revisioning requires no URL updates for the API consumer.
 
   ![APIM Revision Make Current](media/17.png)
+--- 
+
+### Summary
+In this Task, a new revision is added to the Star Wars API in Azure API Management. This revision remains inactive until made current. Then, caching policies are applied to the GET operation of this new revision. Testing the API shows cache-lookup behavior. Finally, the new revision is made the current one, eliminating the need for URL updates for API consumers, illustrating the advantages of revisioning over versioning in APIM.
+- Now, click on Next from the lower right corner to move on to the next page.
