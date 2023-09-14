@@ -128,3 +128,10 @@ With the container we can deploy to multiple hosting options : VM's, App Service
     Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
 
     ![](media/03.png)
+
+---
+
+### Summary
+In this Task, you have deployed Azure Container Instances (ACI) for both the Colours Web and Colours API applications using GitHub container images. Then you accessed the applications via fully qualified domain names (FQDNs) to verify successful deployment and functionality.
+
+- Now, click on Next from the lower right corner to move on to the next page.
