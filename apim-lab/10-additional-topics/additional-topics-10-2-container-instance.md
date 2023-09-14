@@ -1,12 +1,4 @@
----
-title: Provision your own instance of ColoursWeb/ColoursAPI
-parent: Additional Topics
-has_children: false
-nav_order: 2
----
-
-
-## Provision your own instance of ColoursWeb/ColoursAPI
+## Task 2: Provision your own instance of ColoursWeb/ColoursAPI
 
 Some of the demos use the ColoursWeb web application and the ColoursAPI API application. In this lab we will show you how to deploy your own instances of the Colours Web and Colours API.  Note - ColoursWeb / ColoursAPI is new version of ColorsWeb/ColorsAPI  ... do not mix the web client and API versions. 
 
@@ -29,12 +21,12 @@ Docker Containers exist for these applications and so provides an easy deploymen
 With the container we can deploy to multiple hosting options : VM's, App Services, ACI and also AKS. In this lab we are going to show you how to do it with [Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/).
 
 
-# Deploying Web and API containers with Azure Container Instances
+### Task 2.1: Deploying Web and API containers with Azure Container Instances
 
 1. Login to [Azure Portal](https://portal.azure.com)
 2. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose Powershell)
 
-   ![Azure Cloud Shell](../../assets/images/azure-cloud-shell.png "Azure Cloud Shell")
+   ![Azure Cloud Shell](media/01.png)
 
 3. The first time Cloud Shell is started will require you to create a storage account. 
 4. We proceed to create a unique identifier suffix for resources created in this Lab:
@@ -99,7 +91,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
       Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
 
-      ![](../../assets/images/apim-aci-color-web.png)
+      ![](media/02.png)
 
 8.  Now we proceed to create the ACI for the colors-api github container:
 
@@ -135,4 +127,4 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
     Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
 
-    ![](../../assets/images/apim-aci-color-api.png)
+    ![](media/03.png)
