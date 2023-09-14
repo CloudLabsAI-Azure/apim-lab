@@ -1,12 +1,13 @@
 ## Exercise 3: Adding APIs
-
-- On the left menu, open the *APIs* blade. You will see all APIs, the possibility to add new ones, but also to customize existing ones.
+### Overview
+An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
+- On the left menu, open the *APIs* blade. You will see all APIs, and the possibility to add new ones, but also to customize existing ones.
 
   ![APIM APIs](media/01.png)
 
 ### Task 1: Add API from Scratch
 
-Instead of developing an API, for this lab you will use the existing [*Star Wars* API](https://swapi.dev):
+Instead of developing an API, for this lab, you will use the existing [*Star Wars* API](https://swapi.dev):
 
 1) Click on **Add API**.  
 2) Click on **HTTP - Manually define an HTTP API**.  
@@ -26,13 +27,13 @@ Instead of developing an API, for this lab you will use the existing [*Star Wars
 
   1) **Get People**  
     - Display name: **Get People**  
-    - Name will be populate with: **get-people**  
+    - Name will be populated with: **get-people**  
     - URL: **GET /people/**  
   ![01](media/03.png)
 
   2) **Get People By Id**  
     - Display name: **Get People By Id**  
-    - Name will be populate with: **get-people-by-id**  
+    - Name will be populated with: **get-people-by-id**  
     - URL: **GET /people/{id}/**
  
   
@@ -57,3 +58,13 @@ Instead of developing an API, for this lab you will use the existing [*Star Wars
 - Examine the successful `200` response with `C-3PO`'s details in the response body payload.
   
   ![APIM Developer Portal Star Wars Try It](media/08.png)
+
+
+### Summary
+    In this task, you added the Star Wars API to Azure API Management and configured two operations:
+
+      1)Get People: This operation retrieves a list of people from the Star Wars API.
+
+      2)Get People By Id: This operation retrieves detailed information about a specific person from the Star Wars API based on their ID.
+
+- Now, click on Next from the lower right corner to move on to the next page.
