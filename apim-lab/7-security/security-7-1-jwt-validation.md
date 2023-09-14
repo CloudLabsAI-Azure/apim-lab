@@ -168,3 +168,5 @@ Let's add the username contained inside the JSON Web Tokens into a specific head
 ### Improvements
 
 Based on what you have learned thus far, consider how you can improve your policies. For example, you may not want to hard-code the `issuer-signing-key` and instead use a Named Value that you can more easily administer and change outside of an API's policies. If you have time in this exercise, go ahead and give it a try.
+
+- Now, click on Next from the lower right corner to move on to the next page.
