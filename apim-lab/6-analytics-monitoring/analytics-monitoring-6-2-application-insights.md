@@ -89,3 +89,5 @@ You can manipulate the number of requests being logged by adjusting the **Sampli
 Sampling is an effective tool in diagnosing often general operational issues. For example, sampling can identify connectivity or integration issues as these would often occur in high quantity, not singular instances. A sampling rate of 50% is as effective in diagnosing such issues as 100% is.
 
 Skipping logging of headers and body of requests and responses will also have positive impact on alleviating performance issues.
+
+- Now, click on Next from the lower right corner to move on to the next page.
