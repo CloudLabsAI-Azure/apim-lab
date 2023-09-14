@@ -7,6 +7,7 @@ Azure API Management instance has already been pre-deployed as part of the deplo
    ![01](media/01.png)
 
 3) Select **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
+   
    ![02](media/02.png)
    
 ## Task 1: Verifying the Azure API Management instance
