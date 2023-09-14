@@ -1,5 +1,5 @@
 # Exercise 4: Policy Expressions
-
+## Overview
 Policy Expressions are used to control traffic to and modify the behavior of the Backend API. At the time of this writing, [APIM Policy Expressions support C# 7](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions). Please note that a specific subset of .NET Framework types, not the entire Framework, are made available. This is to cover the most frequently-needed types and operations without introducing bloat into APIM.  
 
 Using C# statements and an ability to access the API context, as well as your Azure API Management service configuration, Policy Expressions are a powerful way to modify the behavior of the API at runtime.
@@ -50,3 +50,5 @@ Editing **Inbound processing / Outbound processing / Backend**:
   ![APIM Inbound Processing](media/06.png)
 
   ![APIM Inbound Form Editor](media/07.png)
+
+- Now, click on Next from the lower right corner to move on to the next page.
