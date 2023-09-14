@@ -184,3 +184,9 @@ Once your logger is configured in Azure API Management, you can configure your l
     ![Event Hub APIM events](media/26.png)
 
 > What to do with the data that is now in Event Hub is beyond the scope of this lab as this lab primarily focused on Azure API Management to Event Hub integration.
+
+---
+
+### Summary 
+In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) for API analytics. This involves creating an Event Hubs namespace, configuring an event hub, setting up access, creating an APIM logger, and configuring policies to log events to Event Hubs, providing real-time API usage tracking and monitoring.
+- Now, click on Next from the lower right corner to move on to the next page.
