@@ -42,6 +42,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
     echo export APIMLAB_UNIQUE_SUFFIX=$APIMLAB_UNIQUE_SUFFIX >> ~/.bashrc
     ```
 
+
 5. Now we proceed to create a resource group for our ACI objects:
 
 
@@ -55,6 +56,7 @@ With the container we can deploy to multiple hosting options : VM's, App Service
 
     #we create the resource group
     az group create --name $APIMLAB_RGNAME --location $APIMLAB_LOCATION
+    
     ```
 
 6.  Now we create our ACI and specify our colors-web github container
