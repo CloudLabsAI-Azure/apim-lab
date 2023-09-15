@@ -21,7 +21,7 @@
     ![APIM Named Values](media/29.png)
   
   - Name: **x-request-received-time**
-  - Value: `{{"{{TimeNow"}}}}`
+  - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
   - Action: **override**  
 - The corresponding XML in the *Code editor* view should look like this: 
 
@@ -35,7 +35,7 @@
           <value>@(context.Deployment.Region)</value>
       </set-header>
       <set-header name="x-request-received-time" exists-action="override">
-          <value>{{"{{TimeNow"}}}}</value>
+          <value>@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))</value>
       </set-header>
   </inbound>
   ```
