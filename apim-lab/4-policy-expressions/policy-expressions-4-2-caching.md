@@ -17,7 +17,7 @@ Using the Azure Management portal, navigate to the **Colors** API and set a cach
 
     ![APIM Cache Duration](media/13.png)
 
-- Configure the Colors website from lab 3 to use the Unlimited subscription URL.
+- Configure the Colors website from Exercise 3(Task 4.2) to use the Unlimited subscription URL.
 - Select **Start**.
 - Notice that for each 15 second period the same color is set.
 
