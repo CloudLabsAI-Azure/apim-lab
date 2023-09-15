@@ -21,6 +21,8 @@ Using the Azure Management portal, navigate to the **Colors** API and set a cach
 - Select **Start**.
 - Notice that for each 15 second period the same color is set.
 
+> **Note:** If you are unable to see colors, please refresh the page once. 
+
   ![Colors Website Caching](media/14.png)
 
 - Looking at the **Get Random color** GET API policies in the **Code View**, you'll see the caching policy defined:
