@@ -99,6 +99,8 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
 - Add an outbound policy to the **Add two integers** operation on the **Calculator** API to transform the response body to JSON.
 
+  ![](media/d.png)
+
   ```xml
   <outbound>
       <base />
