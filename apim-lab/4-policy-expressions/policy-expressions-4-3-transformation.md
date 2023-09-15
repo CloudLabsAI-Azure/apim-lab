@@ -8,6 +8,9 @@ The **find-and-replace** policy finds a substring in a request or response and r
   ![APIM Policy Find & Replace](media/15.png)
   
 - Enter the **Policy code editor** in the **Outbound processing** section.
+
+   ![APIM Policy Find & Replace](media/c.png)
+  
 - Place the cursor after the `<base />` element in the `<outbound>` section.
 - Press **Show snippets**, then select the **Find and replace string in body** transformation policy.  
 
