@@ -1,8 +1,8 @@
-# Excercise 9
+# Excercise 9 (Optional)
 
 ## Task 1: Architecture Design Session
 
-In this section we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
+In this section, we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
 
 - What type of APIs are you onboarding to Azure APIM?   
 - What deployment model works for you (no vnet, internal, external)?  
