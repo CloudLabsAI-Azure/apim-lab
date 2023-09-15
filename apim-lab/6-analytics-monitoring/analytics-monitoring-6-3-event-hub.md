@@ -82,7 +82,18 @@ Azure API Management loggers are configured using the [API Management REST API](
 
     ![REST API Try It](media/20.png)
 
-1. Press **Sign in** and use your Azure credentials that you have been using with this workshop, if prompted.
+1. Click on Try It.
+
+   ![](media/e.png)
+
+1. Press **Sign in** and use your Azure credentials,Enter following email/username and then click on **Next**. 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+   * Password: <inject key="AzureAdUserPassword"></inject>
+
+- Enter the required details.
+
 1. Fill in the following **Parameters**:
     1. loggerId: **event-hub-logger** (you will use it in the next steps)
     1. resourceGroupName: **apim-rg** 
