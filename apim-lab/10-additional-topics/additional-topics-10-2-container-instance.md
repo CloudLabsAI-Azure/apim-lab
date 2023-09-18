@@ -28,48 +28,66 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    ![Azure Cloud Shell](media/01.png)
 
 3. The first time Cloud Shell is started will require you to create a storage account.
-4. We proceed to create a unique identifier suffix for resources created in this Lab:
 
-    ```bash
-    APIMLAB_UNIQUE_SUFFIX=$USER$RANDOM
-    # Remove Underscores and Dashes
-    APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//_}"
-    APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//-}"
-    # Check Unique Suffix Value (Should be No Underscores or Dashes)
-    echo $APIMLAB_UNIQUE_SUFFIX
-    # Persist for Later Sessions in Case of Timeout
-    echo export APIMLAB_UNIQUE_SUFFIX=$APIMLAB_UNIQUE_SUFFIX >> ~/.bashrc
-    ```
+   - Select show advanced settings.
+   - Select Resource Group: **apim-rg**
+   - Storage account name: apim-<inject key="Deployment ID" enableCopy="false" />
+   - Fileshare name: apim
 
-5. Now we proceed to create a resource group for our ACI objects:
+   ![](media/cloudshell.png)
+   
+5. We proceed to create a unique identifier suffix for resources created in this Lab:
 
-    ```bash
-    # We define some variables first
-    APIMLAB_RGNAME=myColorsAppRg-$APIMLAB_UNIQUE_SUFFIX
-    APIMLAB_LOCATION=eastus
-    # Persist for Later Sessions in Case of Timeout
-    echo export APIMLAB_RGNAME=$APIMLAB_RGNAME >> ~/.bashrc
-    echo export APIMLAB_LOCATION=$APIMLAB_LOCATION >> ~/.bashrc
+    
+- Define the existing resource group name
+```
+APIMLAB_RGNAME=myColorsAppRg
+```
 
-    # We create the resource group
-    az group create --name $APIMLAB_RGNAME --location $APIMLAB_LOCATION
-    ```
+- Define other variables
+```
+APIMLAB_UNIQUE_SUFFIX=$USER$RANDOM
+APIMLAB_LOCATION=eastus
+APIMLAB_COLORS_WEB=mycolorsweb-$APIMLAB_UNIQUE_SUFFIX
+APIMLAB_IMAGE_WEB=ghcr.io/markharrison/coloursweb:latest
+APIMLAB_DNSLABEL_WEB=acicolorweb$APIMLAB_UNIQUE_SUFFIX
+APIMLAB_COLORS_API=mycolorsapi-$APIMLAB_UNIQUE_SUFFIX
+APIMLAB_IMAGE_API=ghcr.io/markharrison/coloursapi:latest
+APIMLAB_DNSLABEL_API=aci-color-api-$APIMLAB_UNIQUE_SUFFIX
+```
 
-6. Now we create our ACI and specify our colors-web GitHub container:
+- Remove Underscores and Dashes from the unique suffix
+```
+APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//_}"
+APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//-}"
+```
 
-    ```bash
-    # We define some variables first
-    APIMLAB_COLORS_WEB=mycolorsweb-$APIMLAB_UNIQUE_SUFFIX
-    APIMLAB_IMAGE_WEB=ghcr.io/markharrison/coloursweb:latest
-    APIMLAB_DNSLABEL_WEB=acicolorweb$APIMLAB_UNIQUE_SUFFIX
-    # Persist for Later Sessions in Case of Timeout
-    echo export APIMLAB_COLORS_WEB=$APIMLAB_COLORS_WEB >> ~/.bashrc
-    echo export APIMLAB_IMAGE_WEB=$APIMLAB_IMAGE_WEB >> ~/.bashrc
-    echo export APIMLAB_DNSLABEL_WEB=$APIMLAB_DNSLABEL_WEB >> ~/.bashrc
 
-    # We create the container instance for the colors web
-    az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
-    ```
+- Check Unique Suffix Value (Should be No Underscores or Dashes)
+```
+echo $APIMLAB_UNIQUE_SUFFIX
+```
+
+- Persist for Later Sessions in Case of Timeout
+```
+echo export APIMLAB_UNIQUE_SUFFIX=$APIMLAB_UNIQUE_SUFFIX >> ~/.bashrc
+echo export APIMLAB_RGNAME=$APIMLAB_RGNAME >> ~/.bashrc
+echo export APIMLAB_LOCATION=$APIMLAB_LOCATION >> ~/.bashrc
+echo export APIMLAB_COLORS_WEB=$APIMLAB_COLORS_WEB >> ~/.bashrc
+echo export APIMLAB_IMAGE_WEB=$APIMLAB_IMAGE_WEB >> ~/.bashrc
+echo export APIMLAB_DNSLABEL_WEB=$APIMLAB_DNSLABEL_WEB >> ~/.bashrc
+echo export APIMLAB_COLORS_API=$APIMLAB_COLORS_API >> ~/.bashrc
+echo export APIMLAB_IMAGE_API=$APIMLAB_IMAGE_API >> ~/.bashrc
+echo export APIMLAB_DNSLABEL_API=$APIMLAB_DNSLABEL_API >> ~/.bashrc
+```
+
+
+6. Create the container instance for the colors web:
+
+```  
+az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
+```
+
 
 8. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
@@ -92,24 +110,13 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 9. Now we proceed to create the ACI for the colors-api GitHub container:
 
-    ```bash
-    # We define some variables first
-    APIMLAB_COLORS_API=mycolorsapi-$APIMLAB_UNIQUE_SUFFIX
-    APIMLAB_IMAGE_API=ghcr.io/markharrison/coloursapi:latest
-    APIMLAB_DNSLABEL_API=aci-color-api-$APIMLAB_UNIQUE_SUFFIX
-    # Persist for Later Sessions in Case of Timeout
-    echo export APIMLAB_COLORS_WEB=$APIMLAB_COLORS_WEB >> ~/.bashrc
-    echo export APIMLAB_IMAGE_WEB=$APIMLAB_IMAGE_WEB >> ~/.bashrc
-    echo export APIMLAB_DNSLABEL_WEB=$APIMLAB_DNSLABEL_WEB >> ~/.bashrc
-
-    # We create the container instance for the colors api
+    ```
     az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_API --image $APIMLAB_IMAGE_API --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
     ```
 
 10. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
-    ```bash
-    # We check the status
+    ```
     az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_API --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
     ```
 
