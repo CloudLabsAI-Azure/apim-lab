@@ -4,11 +4,25 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 ### Task 3.1: Azure Functions
 
-- Create a simple function that is Triggered by an HTTP Request
+1. Create a simple function that is Triggered by an HTTP Request
 
-Example:
+2. Search for Azure Functions in the portal, and select Create.
+- Resource group: **apim-rg**
+- Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
+- Select Runtime stack as .Net and hosting option as **consumption** then click on Create.
 
-![](media/04.png)
+![](media/a.png)
+
+3. Once the Resource is created go to Resource, select Create in Azure portal.
+
+![](media/b.png)
+
+4. Select HTTP Trigger and enter the name  of the new function, Select create.
+
+![](media/c.png)
+
+5. Navigate to Code+Test and Replace the code with the following.
+
 
 ```c#
     //string[] strColors = { "blue", "lightblue", "darkblue" };
@@ -19,6 +33,9 @@ Example:
 
     return  (ActionResult)new OkObjectResult(strColors[rInt]);
 ```
+
+![](media/c1.png)
+
 
 Lets add the function to Azure API Management. In the API blade select [+Add API] and the [Function App] tile
 
@@ -50,9 +67,46 @@ Lets add the function to Azure API Management. In the API blade select [+Add API
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-Example:
+1. Search for Logic App in the portal, and select Create.
+- Select Resource Group: **apim-rg**
+- Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
+- Select plan type as **consumption** and click on create.
 
-![](media/12.png)
+![](media/d.png)
+
+2. In the logic app designer select when a HTTP request is received.
+
+![](media/e.png)
+
+- In the Request body JSON Schema insert the following JSON.
+
+```
+{
+ "type" : "object",
+  "properties" : {
+      "msg": {
+          "type" : "string"
+      }
+  }
+
+
+}
+```
+
+![](media/f.png)
+
+3. Add a new step, search for Azure Functions, and Select the Azure function that you have created previously.
+
+![](media/g.png)
+
+4. Add a new step to send e-mail, search for Office 365 Outlook, and select send an email (v2). 
+
+- Specify email address to receive e-mail.
+- In the body type **Msg** and click on add dynamic content, select msg. type **Color** and select Azure function.
+
+![](media/h.png)
+
+5. Add a Response and save the logic App.
 
 ![](media/13.png)
 
