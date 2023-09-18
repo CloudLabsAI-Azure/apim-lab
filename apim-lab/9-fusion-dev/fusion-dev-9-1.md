@@ -27,7 +27,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 ### Task 2: View your custom connector in Power Platform
 
-1. Go to [https://make.powerapps.com](https://make.powerapps.com/) and sign in with your organizational account.
+1. Go to [https://make.powerapps.com](https://make.powerapps.com/) and sign in.
 2. Select **Data** from the left pane, and then select **Custom Connectors** to see your generated custom connector to your Azure API Management API.
 
 ![](media/3.png)
