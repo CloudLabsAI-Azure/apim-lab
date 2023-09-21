@@ -37,8 +37,6 @@ Use the following sites:
 ### Task 1.2: Validation
 
 - Back in APIM, open the **Calculator** API and select **All operations**.
-
-  ![APIM Request with no JWT](media/02.png)
   
 - In the **Code View** add an inbound `validate-jwt` policy with the signing key.
 
