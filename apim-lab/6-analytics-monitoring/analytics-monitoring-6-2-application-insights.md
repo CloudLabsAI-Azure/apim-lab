@@ -80,6 +80,7 @@ Any request you make to the Colors API in Azure API Management will be subject t
 - Go back to the **Application Insights** blade and click on the Application Insights instance.
 - In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
 - Open the **Transaction search** to see details on a transactional level:
+- Unselect **Availability** from Event Types.
 
   ![APIM API App Insights Logger](media/10.png)
 
