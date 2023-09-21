@@ -95,7 +95,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 11. Next, **Update connector**.
 
-12. On the **Test** screen, create a new connection instance in the **Connections** section. You will then be redirected to the **Connections** area in Power Platform where your connection was created. Navigate back to the **Custom Connectors** page and edit the Star Wars API again. Return to the **Test** page and test each of the API actions.
+12. On the **Test** screen, create a new connection instance in the **Connections** section. If prompted to provide the subscription key, you can find the subscription key in the developer portal, click on profile, and copy the Primary key of the **unlimited** subscription.  You will then be redirected to the **Connections** area in Power Platform where your connection was created. Navigate back to the **Custom Connectors** page and edit the Star Wars API again. Return to the **Test** page and test each of the API actions.
 
 ![](media/8.png)
 
