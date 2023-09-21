@@ -81,6 +81,15 @@ echo export APIMLAB_IMAGE_API=$APIMLAB_IMAGE_API >> ~/.bashrc
 echo export APIMLAB_DNSLABEL_API=$APIMLAB_DNSLABEL_API >> ~/.bashrc
 ```
 
+- Generate a DNS label that meets the criteria
+  ```
+   APIMLAB_DNSLABEL_WEB="acicolorweb$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-57)"
+  ```
+
+- Generate a container name that meets the criteria
+  ```
+   APIMLAB_COLORS_WEB="mycolorsweb-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
+  ```
 
 6. Create the container instance for the colors web:
 
@@ -108,16 +117,31 @@ az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB 
 
     ![Colours Web](media/02.png)
 
+
+- Generate a DNS label that meets the criteria for color-api
+
+  ```
+   APIMLAB_DNSLABEL_API="aci-color-api-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-53)"
+  ```
+
+- Create a valid container name for color-api
+
+  ```
+   APIMLAB_CONTAINER_NAME="mycolorsapi-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
+  ```
+
+
 9. Now we proceed to create the ACI for the colors-api GitHub container:
 
     ```
-    az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_API --image $APIMLAB_IMAGE_API --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
+    az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --image $APIMLAB_IMAGE_API --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
+
     ```
 
 10. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
     ```
-    az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_API --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
+    az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --query "provisioningState" --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
     ```
 
     The output should something like this:
