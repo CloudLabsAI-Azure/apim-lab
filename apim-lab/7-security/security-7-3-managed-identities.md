@@ -53,6 +53,10 @@ You should see something like this:
 
 - Go back to your APIM
 - Add a new operation to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want)
+  
+- **Display Name: Get Favorite Person**
+
+- **URL: /favorite** 
 
 ![New operation](media/15.png)
 
