@@ -13,7 +13,8 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 - Search for Key Vault in Azure portal, Select Create.
 - Select Resource Group: **apim-rg**
-- Follow this naming convention for key vualt: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
+- You can follow this naming convention for key vualt: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
+- Enter Key Vault Name: **kv-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
 
 ![Create Key Vault](media/8.png)
 
