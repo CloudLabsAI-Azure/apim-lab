@@ -16,7 +16,10 @@ An Event Hubs namespace provides a unique scoping container in which you create 
 
 1. Press **Create** to create the namespace, then enter the following:
    1. Select the `Resource Group` : **apim-rg**
-   1. Enter a unique **Namespace name**, the naming convention for Event Hub Namespace is: `evhns-<environment>-<region>-<application-name>-<owner>-<instance>`
+   
+   >**Note:** The naming convention you can follow for Event Hub Namespace: `evhns-<environment>-<region>-<application-name>-<owner>-<instance>`
+   
+   1. Enter a unique **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
    1. Select the **Location** you used in previous labs.
    1. Choose **Basic** for the **Pricing Tier**. To learn about differences between tiers, see [Quotas and limits](event-hubs-quotas.md), [Event Hubs Premium](event-hubs-premium-overview.md), and [Event Hubs Dedicated](event-hubs-dedicated-overview.md) articles. 
    1. Leave the **Throughput Units** setting as it is. To learn more about throughput units or processing units: [Event Hubs scalability](event-hubs-scalability.md).  
