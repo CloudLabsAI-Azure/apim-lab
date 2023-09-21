@@ -12,6 +12,8 @@ The following policy and payload applies for both examples in this section (webh
 - Open the **Code View**.
 - Add the `send-one-way-request` policy to **Outbound processing** and replace the webhook and payload as required. For demo purposes we are going to use the payload for a Teams message (even for Webhook.site) and also send the message on every successful request.
 
+>**Note:** Make Sure that **Add two integers** operation is selected.
+
   ```xml
   <outbound>
       <base />
