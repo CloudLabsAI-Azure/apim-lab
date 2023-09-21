@@ -10,7 +10,11 @@ Before you can use Azure Application Insights, you first need to create an insta
 
     ![App Insights Create Instance](media/04.png)
 
-2. Click **+ Create**, then fill in the form. 
+2. Click **+ Create**, then fill in the form.
+
+   - Resource Group: **apim-rg**
+     
+   - Name: **appi-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
 
     ![App Insights Create Instance](media/05.png)
 
