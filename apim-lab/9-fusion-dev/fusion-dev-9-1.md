@@ -76,17 +76,17 @@ If you are unable to create a Power Connector from Azure API Management, you can
 9. In the **Policies** section select + New policy.
 10. Fill out the new policy with the following information:
 
-  **Name: set-origin-header**
+     **Name: set-origin-header**
   
-  **Template: Set HTTP header**
+     **Template: Set HTTP header**
   
-  **Header name: Origin**
+     **Header name: Origin**
   
-  **Header value: https://make.powerapps.com**
+     **Header value: https://make.powerapps.com**
   
-  **Action if the header exists: override**
+     **Action if the header exists: override**
   
-  **Run policy on: request**
+     **Run policy on: request**
 
 ![](media/7.png)
 
