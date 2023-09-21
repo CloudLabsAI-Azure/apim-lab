@@ -43,15 +43,17 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
    
     ![Add Event Hub](media/14.png)
 
-1. Type a name for your event hub,  the naming convention is `evh-<the-goal>-<environment>-<region>-<application-name>-<owner>-<instance>` then select **Create**.
+>**Note:** The naming convention you can follow for Event Hub `evh-<the-goal>-<environment>-<region>-<application-name>-<owner>-<instance>` 
+
+1.Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Create**.
 
    
 
-    The **partition count** setting allows you to parallelize consumption across many consumers. For more information, see [Partitions](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#partitions).
+The **partition count** setting allows you to parallelize consumption across many consumers. For more information, see [Partitions](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#partitions).
 
-    The **message retention** setting specifies how long the Event Hubs service keeps data. For more information, see [Event retention](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-publishers).
+The **message retention** setting specifies how long the Event Hubs service keeps data. For more information, see [Event retention](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-publishers).
 
-    ![Create Event Hub](media/15.png)
+![Create Event Hub](media/15.png)
 
 1. After the event hub is created, you see it in the list of event hubs.
 
