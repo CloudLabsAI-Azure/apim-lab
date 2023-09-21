@@ -31,7 +31,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
    - Select show advanced settings.
    - Select Resource Group: **apim-rg**
-   - Storage account name: apim-<inject key="Deployment ID" enableCopy="false" />
+   - Storage account name: apim<inject key="Deployment ID" enableCopy="false" />
    - Fileshare name: apim
 
    ![](media/cloudshell.png)
