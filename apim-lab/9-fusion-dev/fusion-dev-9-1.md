@@ -109,11 +109,14 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 2. Back in the Power Apps Editor, in the left pane, select **Home**.
 4. Under **Create** , select **Excel** and then Create **New connection** with **OneDrive for Business**.
+
+![](media/excel.png)
+   
 5. Under **Connections** , select **OneDrive for Business** and browse to the file location. 
-6. Under **Choose an Excel file** , select the **FanClubMembers.xlsx** file.
-7. Under **Choose a table** , select the **Members** table.
-8. Select **Connect** on the bottom right.
-9. Power Apps will generate the app by inspecting your data and matching it with Power Apps screens.
+7. Under **Choose an Excel file** , select the **FanClubMembers.xlsx** file.
+8. Under **Choose a table** , select the **Members** table.
+9. Select **Connect** on the bottom right.
+10. Power Apps will generate the app by inspecting your data and matching it with Power Apps screens.
 
 ## **Task 4: Add Favorite Character information**
 
