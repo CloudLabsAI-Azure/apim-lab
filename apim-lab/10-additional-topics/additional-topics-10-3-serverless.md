@@ -130,7 +130,7 @@ Lets add the function to API Managament. In the API blade select [+Add API] and 
 
 ![](media/16.png)
 
-- Amend the Names / Descriptions, URL suffix  and select the Products
+- Amend the Names / Descriptions, Add URL suffix as **logicapp**,  and select the Products(Starter, Unlimited)
 
 ![](media/17.png)
 
