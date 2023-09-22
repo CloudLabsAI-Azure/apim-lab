@@ -31,7 +31,7 @@ Please verify that the Azure API Management instance functions correctly by foll
 
   ![APIM Echo API Test Send](media/03.png)
 
-5) Observe the `200` Success response.  
+6) Observe the `200` Success response.  
 
   ![APIM Echo API Test Success](media/04.png)
 
