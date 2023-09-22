@@ -28,27 +28,27 @@ Select an API (e.g. **Colors**). Policy can be configured for **Inbound processi
 
 The **Frontend** section allows for editing of the OpenAPI / Swagger definition.
 
-![APIM Policy Editor](media/02.png)
+![APIM Policy Editor](media/frontend.png)
 
 Editing the Frontend:
   - If editing an operation, there is a choice of the **Code View** or **Forms-based** editor.
   - If editing an API, the only option is the **Code View** editor.
   - The **Code View** editor allows amendments to the OpenAPI / Swagger definition.
 
-    ![APIM Frontend Code Editor](media/03.png)
+    ![APIM Frontend Code Editor](media/code.png)
 
-    ![APIM Frontend Form Editor](media/04.png)
+    
 
 Editing **Inbound processing / Outbound processing / Backend**:
 
 - Using the **Code Editor**:
 
-  ![APIM Inbound Code Editor](media/05.png)
+  ![APIM Inbound Code Editor](media/codeedit.png)
 
 - Using the **Form Editor**:
 
-  ![APIM Inbound Processing](media/06.png)
+  ![APIM Inbound Processing](media/policye.png)
 
-  ![APIM Inbound Form Editor](media/07.png)
+  ![APIM Inbound Form Editor](media/ip.png)
 
 - Now, click on Next from the lower right corner to move on to the next page.
