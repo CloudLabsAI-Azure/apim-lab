@@ -42,7 +42,7 @@ The added gateway will appear in the list ... this is the Gateway Deployment.
 
 - Select the `Deployment` option from the menu
   - There are scripts for deploying on Docker and Kubernetes ... for this lab, we will be using the Docker option
-- Save the *env.conf* file to your desktop
+- Download the **env.config** file by clicking on it, and it will be saved automatically in the following directory: C:/Users/demouser/Downloads.
 - Copy the Docker run command but remove the *-d* parameter ... this is so the logs are displayed to the terminal
 
 ```text
@@ -53,8 +53,13 @@ docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mc
 
 From a command line - elevated to Administrator (needed for Docker commands)
 
-- Navigate to the location where the *env.conf* is located
+- You can launch Docker Desktop by using the shortcut available on the Jump VM. After launching Docker Desktop, accept the terms, click "Continue without sign in", and skip the survey. Docker Engine may take about 2-3 minutes to start. Minimize Docker Desktop and then open the Command Prompt.
+- Navigate to the location where the *env.conf* is located, Run command `cd C:/Users/demouser/Downloads`
 - Run the Docker run command
+  ```
+   docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
+  ```
+  
 
 ![](../../assets/images/apim-app-gateway-deploy-6.png)
 
