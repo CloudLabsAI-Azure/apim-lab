@@ -21,16 +21,16 @@ The **find-and-replace** policy finds a substring in a request or response and r
      ```xml  
     <outbound>
        <base />
-       <find-and-replace from="blue" to="yellow" />
+       <find-and-replace from="blue" to="green" />
        <cache-store duration="15" />
    </outbound>
      ```
 
-  ![APIM Policy Find & Replace](media/17.png)
+  ![APIM Policy Find & Replace](media/bluegreen.png)
 
 - Save the policy, then invoke the API using the Unlimited subscription key.
 
-  ![APIM Policy Find & Replace](media/18.png)
+  ![APIM Policy Find & Replace](media/green.png)
 
 ---
 
@@ -149,7 +149,11 @@ Query string parameters and headers can be easily modified prior to sending the 
   </inbound>
   ```
 
-- Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. If Tracing is not enabled, press **Enable Tracing**.
+- Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. If Tracing is not enabled, press **Enable Tracing**, and on the Pop-up select **Enable Tracing for one hour**.
+
+  ![](media/trace.png)
+
+- In the Trace tab Select Backend.
 
   ![APIM Policy Amend Backend Call](media/24.png)
 
