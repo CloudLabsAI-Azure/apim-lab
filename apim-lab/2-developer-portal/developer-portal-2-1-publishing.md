@@ -26,11 +26,13 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
 
-- CORS is enabled by using policies. We will go deeper on this topic in part 4. For now we will enable this using a built-in UI by pressing the **Enable CORS** button.
+- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now we will enable this using a built-in UI by pressing the **Enable CORS** button, and confirm Yes in the popup.
+
+  
 
   ![APIM Developer Portal Enable CORS](media/05.png)
 
-  
+  ![](media/cors.png)
 
 ---
 
