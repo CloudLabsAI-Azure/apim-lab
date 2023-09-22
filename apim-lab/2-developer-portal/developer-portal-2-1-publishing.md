@@ -6,7 +6,7 @@ The Developer Portal is an automatically generated, fully customizable website w
 
 The Azure API Management Developer Portal uses role-based access control (RBAC). After creating the Azure API Management instance, you need to first **access the Developer Portal using the admin role**, which will trigger its activation.
 
-- Click the **Developer portal** link in the **Overview** blade of the Azure API Management instance:
+- Back in the Azure Portal Navigate to the Azure API Management instance, and locate the 'Developer Portal' section in the left-hand resource menu. Click to open the Developer Portal.
 
   ![APIM Developer Portal](media/01.png)
 
@@ -46,7 +46,9 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Anonymous User
 
-- As an unauthenticated user, have a look around the portal by checking out the APIs and products.
+- As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available APIs and products.
+
+![](media/exploreapi.png)
 
   > Notice the difference between the Starter & Unlimited products.
 
