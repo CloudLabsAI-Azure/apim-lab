@@ -7,7 +7,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 - Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>. 
 - This time we will choose to not provide API URL suffix. Without API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service. 
 
-  ![APIM Add Colors API](media3/02.png)
+  ![APIM Add Colors API](media3/openapi.png)
 
   ![APIM Add Colors API](media3/03.png)
 
