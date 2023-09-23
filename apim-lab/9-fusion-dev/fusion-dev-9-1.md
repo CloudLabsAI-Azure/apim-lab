@@ -103,7 +103,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 ### Task 3.1: Connect to the backing data source
 
-1. Download the [**FanClubMembers.xlsx workbook**](../../assets/excel/FanClubMembers.xlsx) and save it to your OneDrive for Business account.
+1. In the Jump VM, Navigate to **C:\LabFiles\fanclubmembers.xlsx** and upload **fanclubmembers.xlsx** to your OneDrive for Business account.
 
 > **Note:** Use the following credentials for Onedrive for business.
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
