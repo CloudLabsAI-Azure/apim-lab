@@ -102,11 +102,11 @@ Lets add the function to Azure API Management. In the API blade select [+Add API
 4. Add a new step to send e-mail, search for Office 365 Outlook, and select send an email (v2). 
 
 - Specify email address to receive e-mail.
-- In the body type **Msg** and click on add dynamic content, select msg. type **Color** and select Azure function.
+- In the body type **Msg** and click on add dynamic content, select msg. type **Color** and Search **body** in dynamic content and select **Azure function.**
 
 ![](media/h.png)
 
-5. Add a Response and save the logic App.
+5. Add a new step for Response, and save the logic App.
 
 ![](media/13.png)
 
