@@ -1,14 +1,8 @@
----
-title: Architecture Design Session
-parent: Additional Topics
-has_children: false
-nav_order: 1
----
+# Excercise 9 (Optional)
 
+## Task 1: Architecture Design Session
 
-## Architecture Design Session
-
-In this section we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
+In this section, we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
 
 - What type of APIs are you onboarding to Azure APIM?   
 - What deployment model works for you (no vnet, internal, external)?  
@@ -25,3 +19,5 @@ Download Diagram:
 - [drawio editable svg](../../assets/diagrams/apimADSv2.svg)
 - [drawio editable png](../../assets/diagrams/apimADSv2.png)
 - [Visio](../../assets/diagrams/apimADSv2.vsdx)
+
+- Now, click on Next from the lower right corner to move on to the next page.

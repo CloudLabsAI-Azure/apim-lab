@@ -1,29 +1,27 @@
----
-title: Named Values
-parent: Policy Expressions
-has_children: false
-nav_order: 4
----
-
-
-## Named Values
+## Task 4: Named Values
 
 **Named Values** (aka **Properties**) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage `string` constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
 - Open the `Named values` blade in the resource menu and press **+ Add**.
+
+    ![APIM Named Values](media/27.png)
+  
 - Create the new property:
   - Name: **TimeNow**
   - Display name: **TimeNow**
   - Type: **Plain**
   - Value: `@(DateTime.Now.ToString())`
 
-    ![APIM Named Values](../../assets/images/apim-named-values.png)
+    ![APIM Named Values](media/26.png)
 
 - Back in the **APIs** blade, open the **Add two integers** operation in the Calculator API. 
 - Amend the inbound `set-header` policy by clicking on the pencil icon.
 - Create a new header by pressing **+ Add header**:
+
+    ![APIM Named Values](media/29.png)
+  
   - Name: **x-request-received-time**
-  - Value: `{{"{{TimeNow"}}}}`
+  - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
   - Action: **override**  
 - The corresponding XML in the *Code editor* view should look like this: 
 
@@ -37,7 +35,7 @@ nav_order: 4
           <value>@(context.Deployment.Region)</value>
       </set-header>
       <set-header name="x-request-received-time" exists-action="override">
-          <value>{{"{{TimeNow"}}}}</value>
+          <value>@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))</value>
       </set-header>
   </inbound>
   ```
@@ -51,3 +49,8 @@ nav_order: 4
     "value": "12/30/2021 6:10:47 PM"
   }
   ```
+---
+
+### Summary
+In this task, a Named Value (TimeNow) with the current timestamp is created in Azure API Management (APIM). This value is then used to dynamically set the "x-request-received-time" header in the Calculator API's inbound policy, resulting in the header being populated with the current timestamp when testing the API operation.
+- Now, click on Next from the lower right corner to move on to the next page.

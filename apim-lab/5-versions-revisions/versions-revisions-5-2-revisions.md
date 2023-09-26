@@ -1,32 +1,30 @@
----
-title: Revisions
-parent: Versions & Revisions
-has_children: false
-nav_order: 2
----
+## Task 2: Revisions
 
-
-## Revisions
-
-### Add a new revision
+### Task 2.1: Add a new revision
 
 - Select the **Star Wars** API **v2**.
+
+![](media/07.png)
+
 - Select the **Revisions** tab.
+
+![APIM Revisions Menu](media/08.png)
+  
 - Add a new revision with description `Adding a caching policy.`
 
-  ![APIM Revisions Menu](../../assets/images/apim-revisions-menu.png)
-  ![APIM Revision Create](../../assets/images/apim-revisions-create.png)
+  
+  ![APIM Revision Create](media/09.png)
 
   > The new revision is online but not yet current. The previous revision continues to remain the active default. Having added the new revision has not resulted in any change for your API consumers.
 
-  ![APIM Created Revision](../../assets/images/apim-created-revision.png)
+  ![APIM Created Revision](media/10.png)
 
-### Add caching
+### Task 2.2: Add caching
 
 - Switch to the **Design** tab, then select the `Get People` operation.
   > **Revision 2** automatically became the active revision you are now making changes in. You can also switch between revisions, but **be aware that changes to the *Current* revision are live immediately**.
 
-  ![APIM Revision Add Caching](../../assets/images/apim-revision-add-caching-1.png)
+  ![APIM Revision Add Caching](media/11.png)
 
 - Add a 10-second caching policy for the GET operation via the Code editor.
 
@@ -44,33 +42,38 @@ nav_order: 2
   </outbound>
   ```
 
-  ![APIM Revision Add Caching](../../assets/images/apim-revision-add-caching-2.png)
+  ![APIM Revision Add Caching](media/12.png)
 
-### Test the new revision
+### Task 2.3: Test the new revision
 
 - From the Azure portal, test the `Get People` operation.
   > Note the revision number at the top of the page as well as in the request URL.  
   The request URL should look similar to: `https://<your-apim-name>.azure-api.net/sw/v2;rev=2/people/`.
 
-  ![APIM Revision Caching Test](../../assets/images/apim-revision-test-caching-1.png)
+  ![APIM Revision Caching Test](media/13.png)
 
 - Test the API twice. The test trace should then show that the cache-lookup occurred. 
 
-  ![APIM Revision Caching Test](../../assets/images/apim-revision-test-caching-2.png)
+  ![APIM Revision Caching Test](media/14.png)
 
-### Make current revision
+### Task 2.4: Make current revision
 
 - Select the **Revisions** tab.
 - Click on the ellipsis for `rev2` and make it the current revision.
 
-  ![APIM Revision Make Current](../../assets/images/apim-revision-make-current-1.png)
+  ![APIM Revision Make Current](media/15.png)
 
 - Choose to post to the public change log for the API and provide a meaningful update.
 
-  ![APIM Revision Make Current](../../assets/images/apim-revision-make-current-2.png)
+  ![APIM Revision Make Current](media/16.png)
 
 - The new revision is now the current/live one. When you test now, note that the URL no longer contains a specific revision. The old revision is still online and can now be accessed with the `rev` qualifier. 
 
   > Unlike versioning, revisioning requires no URL updates for the API consumer.
 
-  ![APIM Revision Make Current](../../assets/images/apim-revision-make-current-3.png)
+  ![APIM Revision Make Current](media/17.png)
+--- 
+
+### Summary
+In this Task, a new revision is added to the Star Wars API in Azure API Management. This revision remains inactive until made current. Then, caching policies are applied to the GET operation of this new revision. Testing the API shows cache-lookup behavior. Finally, the new revision is made the current one, eliminating the need for URL updates for API consumers, illustrating the advantages of revisioning over versioning in APIM.
+- Now, click on Next from the lower right corner to move on to the next page.

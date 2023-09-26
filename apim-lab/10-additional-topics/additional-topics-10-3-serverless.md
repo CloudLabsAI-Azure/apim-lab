@@ -1,21 +1,28 @@
----
-title: API Proxy to Serverless
-parent: Additional Topics
-has_children: false
-nav_order: 3
----
-
-## API Proxy to Serverless
+## Task 3: API Proxy to Serverless
 
 Azure Serverless (Functions and Logic Apps) can be configured to benefit from the advantages of Azure API Management.
 
-### Azure Functions
+### Task 3.1: Azure Functions
 
-- Create a simple function that is Triggered by an HTTP Request
+1. Create a simple function that is Triggered by an HTTP Request
 
-Example:
+2. Search for Azure Functions in the portal, and select Create.
+- Resource group: **apim-rg**
+- Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
+- Select Runtime stack as .Net and hosting option as **consumption** then click on Create.
 
-![](../../assets/images/apim-azure-function-example.png)
+![](media/a.png)
+
+3. Once the Resource is created go to Resource, select Create in Azure portal.
+
+![](media/b.png)
+
+4. Select HTTP Trigger and enter the name  of the new function, Select create.
+
+![](media/c.png)
+
+5. Navigate to Code+Test and Replace the code with the following.
+
 
 ```c#
     //string[] strColors = { "blue", "lightblue", "darkblue" };
@@ -27,41 +34,81 @@ Example:
     return  (ActionResult)new OkObjectResult(strColors[rInt]);
 ```
 
+![](media/c1.png)
+
+
 Lets add the function to Azure API Management. In the API blade select [+Add API] and the [Function App] tile
 
-![](../../assets/images/apim-azure-function-add-api.png)
+![](media/05.png)
 
 - Select the [Browse] button to get a list of Functions in the subscription
 
-![](../../assets/images/apim-azure-function-add-browse.png)
+![](media/06.png)
 
 - Select the Function App and then the Function
 
-![](../../assets/images/apim-azure-function-select-1.png)
+![](media/07.png)
 
-![](../../assets/images/apim-azure-function-select-2.png)
+![](media/08.png)
 
 - Amend the Names / Descriptions, URL suffix and select the Products
 
-![](../../assets/images/apim-azure-function-create.png)
+![](media/09.png)
 
 - As previously add CORS policy
 
 - Validate the function works - either from the Azure management portal or the developer portal
 
-![](../../assets/images/apim-azure-function-test-1.png)
+![](media/10.png)
 
-![](../../assets/images/apim-azure-function-test-2.png)
+![](media/11.png)
 
-### Azure Logic Apps
+### Task 3.2: Azure Logic Apps
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-Example:
+1. Search for Logic App in the portal, and select Create.
+- Select Resource Group: **apim-rg**
+- Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
+- Select plan type as **consumption** and click on create.
 
-![](../../assets/images/apim-logic-app-example-1.png)
+![](media/d.png)
 
-![](../../assets/images/apim-logic-app-example-2.png)
+2. In the logic app designer select when a HTTP request is received.
+
+![](media/e.png)
+
+- In the Request body JSON Schema insert the following JSON.
+
+```
+{
+ "type" : "object",
+  "properties" : {
+      "msg": {
+          "type" : "string"
+      }
+  }
+
+
+}
+```
+
+![](media/f.png)
+
+3. Add a new step, search for Azure Functions, and Select the Azure function that you have created previously.
+
+![](media/g.png)
+
+4. Add a new step to send e-mail, search for Office 365 Outlook, and select send an email (v2). 
+
+- Specify email address to receive e-mail.
+- In the body type **Msg** and click on add dynamic content, select msg. type **Color** and Search **body** in dynamic content and select **Azure function.**
+
+![](media/h.png)
+
+5. Add a new step for Response, and save the logic App.
+
+![](media/13.png)
 
 Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
 
@@ -73,34 +120,37 @@ Use the following sample message to generate the schema of the Request body payl
 
 Lets add the function to API Managament. In the API blade select [+Add API] and the [Logic App] tile
 
-![](../../assets/images/apim-logic-app-add-api.png)
+![](media/14.png)
 
 - Select the [Browse] button to get a list of Logic Apps in the subscription
 
-![](../../assets/images/apim-logic-app-add-browse.png)
+![](media/15.png)
 
 - Select the Logic App
 
-![](../../assets/images/apim-logic-app-select.png)
+![](media/16.png)
 
-- Amend the Names / Descriptions, URL suffix  and select the Products
+- Amend the Names / Descriptions, Add URL suffix as **logicapp**,  and select the Products(Starter, Unlimited)
 
-![](../../assets/images/apim-logic-app-create.png)
+![](media/17.png)
 
  As previously add CORS policy
 
 - Validate the Logic App works - either from the Azure management portal or the developer poral
 
-![](../../assets/images/apim-logic-app-test-1.png)
+![](media/18.png)
 
-![](../../assets/images/apim-logic-app-test-2.png)
+![](media/19.png)
 
 - Check the Logic App audit
 
-![](../../assets/images/apim-logic-app-test-3.png)
+![](media/20.png)
 
 - Check the email was sent
 
-![](../../assets/images/apim-logic-app-test-4.png)
+![](media/21.png)
 
-
+--- 
+### Summary
+In this task, you have integrated Azure Functions and Logic Apps with Azure API Management, exposing them as APIs with management capabilities. you have configured, tested, and audited these serverless resources within API Management for seamless integration with other services.
+- Now, click on Next from the lower right corner to move on to the next page.

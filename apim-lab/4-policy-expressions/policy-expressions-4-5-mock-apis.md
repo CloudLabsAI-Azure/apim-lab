@@ -1,18 +1,13 @@
----
-title: Mock policy
-parent: Policy Expressions
-has_children: false
-nav_order: 5
----
-
-
-## Mock policy
+## Task 5: Mock policy
 
 ### Mock responses
 
 Mocking in Azure API Management is a useful mechanism for API consumers to interact with APIs without waiting for the backend to be ready. 
 
 - Open the **Star Wars** API and select **+ Add Operation**
+
+![](media/30.png)
+
 - Create a new GET operation:
   - Display name: **Get Film**
   - Name: **get-film**
@@ -26,7 +21,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
   }
   ```
   
-  ![APIM Policy Mock Frontend](../../assets/images/apim-policy-mock-frontend.png)
+  ![APIM Policy Mock Frontend](media/31.png)
 
 - Press **Save**.
 - Open the Inbound processing **Code View**
@@ -39,8 +34,13 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
   </inbound>
   ```
 
-  ![APIM Policy Mock Inbound](../../assets/images/apim-policy-mock-inbound.png)
+  ![APIM Policy Mock Inbound](media/32.png)
 
 - Invoke the API to receive a `200` success with the mocked film data.
 
-  ![APIM Policy Mock Response](../../assets/images/apim-policy-mock-response.png)
+  ![APIM Policy Mock Response](media/33.png)
+---
+
+### Summary 
+In Azure API Management, a "Get Film" operation is created for the Star Wars API. This operation returns a mock response with a 200 OK status code and sample JSON data containing film information. An inbound policy is added to simulate the mock response, and when the API is invoked, it returns a 200 success status with the mocked film data.
+- Now, click on Next from the lower right corner to move on to the next page.
