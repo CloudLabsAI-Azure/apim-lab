@@ -31,21 +31,22 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
   1) **Get People**  
     - Display name: **Get People**  
     - Name will be populated with: **get-people**  
-    - URL: **GET /people/**  
+    - URL: **GET /people/**
+      
   ![01](media/03.png)
+
+  Again click on **+ Add operation** to add another operation and give the following details
 
   2) **Get People By Id**  
     - Display name: **Get People By Id**  
     - Name will be populated with: **get-people-by-id**  
     - URL: **GET /people/{id}/**
- 
-  
 
   ![APIM Star Wars API Add Operation](media/04.png)
 
 ### Task 2: Access Star Wars API from Developer Portal
 
-- Switch now to the Developer Portal and sign in as a developer with a subscription. 
+- Now switch to the **Developer Portal** and sign in as a developer with a subscription. 
 - Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
 
   ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
