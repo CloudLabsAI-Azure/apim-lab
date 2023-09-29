@@ -6,7 +6,10 @@ We have already configured the **CORS** policy for our APIs in labs 2 & 3. Below
 
 ![APIM Policy CORS All APIs](media/08.png)  
 
+Click on the **Edit button** to view the XML present within thr **CORS** policy.
+
 ![APIM Policy CORS All APIs](media/09.png)  
+
 
 ```xml
 <policies>
