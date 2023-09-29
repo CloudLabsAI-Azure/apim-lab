@@ -5,11 +5,21 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 ### Task 3.1: Azure Functions
 
 1. Create a simple function that is Triggered by an HTTP Request
+2. Search for Azure Function App in the portal, and select Create.
+   
+   ![](media/Pg28-funcapp.png)
 
-2. Search for Azure Functions in the portal, and select Create.
+   Enter the following details:
+   
 - Resource group: **apim-rg**
 - Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
-- Select Runtime stack as .Net and hosting option as **consumption** then click on Create.
+- Do you want to deploy code or container image? : Select **Code**
+- Runtime stack : Select **.Net**
+- Version : 6(LTS)
+- Region: Select the region you used for previous exercises.
+- Operating System : Windows
+- Hosting option and plans : **Consumption (Serverless)**
+- Then click on **Review + Create**.
 
 ![](media/a.png)
 
@@ -67,10 +77,16 @@ Lets add the function to Azure API Management. In the API blade select [+Add API
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for Logic App in the portal, and select Create.
+1. Search for Logic App in the portal, and select Add.
+
+![](media/Pg28-logicapp.png)
+  
+  Enter the following details:
 - Select Resource Group: **apim-rg**
 - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
-- Select plan type as **consumption** and click on create.
+- Region : Select the regions you have used for previous exercises. 
+- Plan type : **Consumption**
+- Click on **Review + create**.
 
 ![](media/d.png)
 
@@ -101,8 +117,8 @@ Lets add the function to Azure API Management. In the API blade select [+Add API
 
 4. Add a new step to send e-mail, search for Office 365 Outlook, and select send an email (v2). 
 
-- Specify email address to receive e-mail.
-- In the body type **Msg** and click on add dynamic content, select msg. type **Color** and Search **body** in dynamic content and select **Azure function.**
+- Specify ypur Email address to receive the e-mail.
+- In the body type **msg** and click on add dynamic content, select **msg**, type **Color** and Search **body** in dynamic content and select **Azure function.**
 
 ![](media/h.png)
 
@@ -122,7 +138,7 @@ Lets add the function to API Managament. In the API blade select [+Add API] and 
 
 ![](media/14.png)
 
-- Select the [Browse] button to get a list of Logic Apps in the subscription
+- Select the **Browse** button to get a list of Logic Apps in the subscription
 
 ![](media/15.png)
 
