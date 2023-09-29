@@ -9,7 +9,7 @@ The ability to terminate a response gracefully is of importance in a number of c
 - Open the **Code View**.
 - Add the **inbound** policy to test for a condition (just `true` for our example) and return an error.
 
-   ![](media/Pg-16.png)
+ ![](media/Pg-16.png)
   
   ```xml
   <inbound>
