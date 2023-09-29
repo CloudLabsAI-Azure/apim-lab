@@ -56,7 +56,7 @@ APIMLAB_IMAGE_API=ghcr.io/markharrison/coloursapi:latest
 APIMLAB_DNSLABEL_API=aci-color-api-$APIMLAB_UNIQUE_SUFFIX
 ```
 
-- Remove Underscores and Dashes from the unique suffix
+- Unique suffix is assigned.
 ```
 APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//_}"
 APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//-}"
