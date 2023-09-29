@@ -6,13 +6,13 @@ The Developer Portal is an automatically generated, fully customizable website w
 
 The Azure API Management Developer Portal uses role-based access control (RBAC). After creating the Azure API Management instance, you need to first **access the Developer Portal using the admin role**, which will trigger its activation.
 
-- Back in the Azure Portal Navigate to the Azure API Management instance, and locate the 'Developer Portal' section in the left-hand resource menu. Click to open the Developer Portal.
+- In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in overview section. Click to open the **Developer Portal**.
 
   ![APIM Developer Portal](media/01.png)
 
   ![APIM Developer Portal Admin Launch](media/02.png)
 
-- You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Back in the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview**. Press the **Publish** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
+- You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Back in the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. Press the **Publish (2)** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
 
   ![APIM Developer Portal Publish](media/03.png)
 
@@ -26,11 +26,11 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
 
-- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now we will enable this using a built-in UI by pressing the **Enable CORS** button, and confirm Yes in the popup.
-
+- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in overview section. Click to open the **Developer Portal**. 
   
-
   ![APIM Developer Portal Enable CORS](media/05.png)
+
+Now click on **Enable CORS (1)** button, and confirm **Yes (2)** in the popup.
 
   ![](media/cors.png)
 
@@ -38,9 +38,9 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 ## Task 3: User Experience
 
-Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.** 
+Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening in a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.** 
 
-- Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net**.
+- Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** .
 
   > Keep this browser session open as we will use it frequently throughout our labs.
 
@@ -48,7 +48,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Anonymous User
 
-- As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available APIs and products.
+- As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
 ![](media/exploreapi.png)
 
@@ -62,7 +62,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Register for an account
 
-- Let's sign up for an account by pressing the **Sign up** link in the upper right-hand corner. The email can be your personal or a work email for this lab, but please be sure to use an email other than the one associated with your Azure subscription. 
+- Let's create a new account by clicking the **Sign up** button in the top right corner. For this lab, the email can be either personal or work-related, but please make sure to use a different email from the one associated to your Azure subscription.  
 
   ![APIM Developer Portal Sign-up](media/09.png)
 
@@ -88,13 +88,17 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Approving Subscriptions
 
-- Back in the Azure Portal, navigate to the **Subscriptions** blade to see the two new subscriptions that were just added.
+- Navigate back to Azure Portal, under APIs click on **Subscriptions (1)** blade to see the two new subscriptions `Starter` and `Unlimited` that were just added.
 
-  ![APIM Subscriptions](media/13.png)
+  ![APIM Subscriptions](media/P3-T3-AS.png)
 
-- Enter the menu for the submitted **Unlimited** subscription, then press **Activate subscription**. - Provide additional comments, if you like, then confirm the activation. By default, this will send an activation confirmation email to the user.
-
+- Click on Hamburger buttons for the **Unlimited** subscription in submitted state, then select **Activate subscription**.
+  
   ![APIM Activate Subscription](media/14.png)
+
+- Provide additional comments, if you like, then **Confirm** the activation. By default, this will send an activation confirmation email to the user.
+
+  ![APIM Activate Subscription](media/P3-T3-ActSubscription.png)
 
 - Back in the private browser, refresh the profile page to see the activated **Unlimited** subscription.
 
@@ -106,10 +110,12 @@ It's now time to test one of the published APIs.
 
 - Open the **APIs** page and look at the **Echo API**:
   - Notice the developer information
-  - Test the Echo API using the POST verb by pressing **Try it**, using the defaults, then pressing **Send** at the bottom. You should see a successful `200` response.
+  - Test the Echo API using the POST verb by pressing **Try it**, using the defaults, then pressing **Send** at the bottom. 
 
   ![APIM Developer Portal Try API](media/16.png)
-
+  
+- You should see a successful `200` HTTP response.
+  
   ![APIM Developer Portal Try API](media/17.png)
 
 ### Summary
