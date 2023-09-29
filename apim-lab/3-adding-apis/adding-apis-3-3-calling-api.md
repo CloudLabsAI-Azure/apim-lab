@@ -4,11 +4,15 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
 ![APIM Colors API](media3/01.png)
 
-- Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>. 
+- Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
+- To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAI (3)**.
+
+  ![APIM Add Colors API](media3/P8-T4.1-S2.png)
+  
 - This time we will choose to not provide API URL suffix. Without API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
 
-  - OpenAPI specification: https://colors-api.azurewebsites.net/swagger/v1/swagger.json
-  - Display Name: Colors API
+  - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json`
+  - Display Name: `Colors API`
   - Name: colors-api
   - click on create.
 
@@ -16,7 +20,11 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
   ![APIM Add Colors API](media3/03.png)
 
-- We can test the newly-added API from the **Test** tab. Note the successful `200` response.
+- We can test the newly-added API from the **Test** tab, select **Get Random Color** and click on **Send**.
+
+  ![APIM Test Colors API](media3/P8-T4.1-STest.png)
+
+- Now scroll down and note the successful `200` response.
 
   ![APIM Test Colors API](media3/04.png)
 

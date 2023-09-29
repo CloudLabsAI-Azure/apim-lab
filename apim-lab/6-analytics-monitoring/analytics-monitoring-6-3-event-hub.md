@@ -9,27 +9,28 @@ We can use Event Hubs with Azure API Management to obtain analytics of our API u
 An Event Hubs namespace provides a unique scoping container in which you create one or more event hubs. To create a namespace in your resource group using the Azure portal, follow these steps:
 
 1. In the Azure portal select **Create a resource** at the top left of the screen.
-1. Search for **Event Hubs**, then click on the resource.  
+2. Search for **Event Hubs**, then click on the resource.  
     *If you cannot find it there, please try the same **Event Hubs** term in the top search bar.*
 
     ![Select Event Hubs in Portal](media/11.png)
 
-1. Press **Create** to create the namespace, then enter the following:
-   1. Select the `Resource Group` : **apim-rg**
+3. Click on **Create** to create the namespace, then enter the following:
+   
+   1. Resource Group : Select **apim-rg**.
    
    >**Note:** The naming convention you can follow for Event Hub Namespace: `evhns-<environment>-<region>-<application-name>-<owner>-<instance>`
    
-   1. Enter a unique **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
-   1. Select the **Location** you used in previous labs.
-   1. Choose **Basic** for the **Pricing Tier**. To learn about differences between tiers, see [Quotas and limits](event-hubs-quotas.md), [Event Hubs Premium](event-hubs-premium-overview.md), and [Event Hubs Dedicated](event-hubs-dedicated-overview.md) articles. 
-   1. Leave the **Throughput Units** setting as it is. To learn more about throughput units or processing units: [Event Hubs scalability](event-hubs-scalability.md).  
-   1. Select **Review + Create** at the bottom of the page, followed by **Create**.
+   2. **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
+   3. **Location** : Select the region you used in previous exercise.
+   4. **Pricing Tier**: Choose **Basic** for the dropdown.  To learn about differences between tiers, see [Quotas and limits](event-hubs-quotas.md), [Event Hubs Premium](event-hubs-premium-overview.md), and [Event Hubs Dedicated](event-hubs-dedicated-overview.md) articles. 
+   5. **Throughput Units** : Leave the setting as it is. To learn more about throughput units or processing units: [Event Hubs scalability](event-hubs-scalability.md).  
+   6. Select **Review + Create** at the bottom of the page, followed by **Create**.
       
       ![Create an Event Hub Namespace](media/12.png)
 
-   1. Press **Go to resource** when it's created.
+4. Once it has been created, select **Go to resource**.
       
-   1. Confirm that you see the **Event Hubs Namespace** page similar to the following example:   
+5. Confirm that you see the **Event Hubs Namespace** page similar to the following example:   
       
       ![Event Hub Namespace Home Page](media/13.png)
 
@@ -45,9 +46,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
 >**Note:** The naming convention you can follow for Event Hub `evh-<the-goal>-<environment>-<region>-<application-name>-<owner>-<instance>` 
 
-1.Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Create**.
-
-   
+2. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Create**. 
 
 The **partition count** setting allows you to parallelize consumption across many consumers. For more information, see [Partitions](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#partitions).
 
@@ -55,7 +54,7 @@ The **message retention** setting specifies how long the Event Hubs service keep
 
 ![Create Event Hub](media/15.png)
 
-1. After the event hub is created, you see it in the list of event hubs.
+3. After the event hub is created, you see it in the list of event hubs.
 
     ![Event Hub Created](media/16.png)
 
@@ -153,9 +152,9 @@ Once your logger is configured in Azure API Management, you can configure your l
 1. Browse to your Azure API Management instance.
 1. Select the **APIs** blade.
 1. Select the API to which you want to add the policy.  
-   In this example, we're adding a policy to the **Echo API**.
-1. Select **All operations**.
-1. On the top of the screen, select the **Design** tab.
+   In this example, we're adding a policy to the **Echo API (1)**.
+1. Select **All operations (2)**.
+1. On the top of the screen, select the **Design (3)** tab.
 
    ![APIM Add Log to Event Hub](media/23.png)
    

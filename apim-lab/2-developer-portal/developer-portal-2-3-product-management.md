@@ -10,23 +10,31 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
 - Let's add a new product tier called `Gold Tier`.
 
-  **Display Name:** Gold Tier
+  **Display Name :** Gold Tier
+
+  **Description :** Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.
   
-  **Published**: Selected
+  **Published :** Selected
 
-- Click on Create.
+   Click on **Create**.
 
-  ![APIM Add Product](media3/02.png)
+  ![APIM Add Product](media3/P5-T5.1-S2.png)
 
-  ![APIM Add Product](media3/03.png)
+  You can view the recently created Gold Tier product.
+
+  ![APIM Add Product](media3/P5-T5.1-S3.png)
 
 - Next, we'll change the access control by clicking on **Gold Tier** and selecting **Access control** in the left pane.
 
   ![APIM Add Product Access](media3/04.png)
 
-  Press **Add group**, check **Developers** and **Guests**, then press **Select**. The two added roles are shown now.
+  Click on **Add group (1)** to add new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**. 
 
-  ![APIM Add Product Access](media3/05.png)
+  ![APIM Add Product Access](media3/P5-T5.1-addgrp.png)
+
+  The two added roles are shown now.
+
+  ![APIM Developer Portal Added Product](media3/05.png)
 
   Back in the private browsing session, browse to **Products** and observe the new **Gold Tier**. 
 

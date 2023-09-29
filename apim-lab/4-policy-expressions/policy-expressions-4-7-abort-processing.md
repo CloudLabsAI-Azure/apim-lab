@@ -8,9 +8,9 @@ The ability to terminate a response gracefully is of importance in a number of c
 - Open the **Add two integers** operation.  
 - Open the **Code View**.
 - Add the **inbound** policy to test for a condition (just `true` for our example) and return an error.
-- Invoke the API. 
-- Observe the 500 error.
 
+ ![](media/Pg-16.png)
+  
   ```xml
   <inbound>
       <base />
@@ -36,6 +36,9 @@ The ability to terminate a response gracefully is of importance in a number of c
       </set-header>
   </inbound>
   ```
+
+- Invoke the API. 
+- Observe the 500 error.
 
   ![APIM Policy Abort Response](media/39.png)
 

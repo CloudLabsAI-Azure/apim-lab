@@ -13,28 +13,35 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with Azu
 
 ### Task 1.1: Update CORS policy
 
-Check Azure API Management -> Developer Portal -> Portal overview to see if CORS has been enabled globally. If it has been enabled, go to All APIs and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins. Here's what the Portal overview will look like if CORS has been enabled:
+Check Azure API Management, under Developer Portal select Portal overview to see if CORS has been enabled globally. Here's what the Portal overview will look like if CORS has been enabled:
 
  ![](media/1.png)
  
-Add Allowed origins.
+Now go to **All APIs (1)** , click on **edit icon (2)** .
 
  ![](media/aaa1.png)
+
+ Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins.
 
  ![](media/aaa2.png)
 
 
 ### Task 1.2: Create a custom connector
 
+>*Note* : Before proceeding further make sure you are signed in Power platform with given credentials in resources tab.
+
 Click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
 
  ![](media/aa1.png)
 
-Select the Star wars API  and click on create.
+ Enter the following details:
 
-- Display Name : **Star Wars API**
+- API : Select the **Star wars (1)** API 
+- Power Platform Environment : From the dropdown select **ODL_User XXXX Environment (2)**.
+- Display Name : **Star Wars API (3)**
+- Click on **Create (4)**.
 
- ![](media/aa2.png)
+  ![](media/Pg25-1.png)
 
 If you are unable to create a Power Connector from Azure API Management, you can also export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within Power Platform. You can find a sample [here](https://github.com/Azure/apim-lab/blob/main/apim-lab/9-fusion-dev/Star%20Wars%20API.swagger.json).
 
@@ -45,12 +52,15 @@ If you are unable to create a Power Connector from Azure API Management, you can
    
    ![](media/aaa4.png)
 
+  Scroll down and select **Custom Connectors**.
+
    ![](media/aaa3.png)
 
-   ![](media/3.png)
+3. You can view the recently created **Star Wars API** custom connecter. From here, select the pencil icon to edit the custom connector.
 
-4. From here, select the pencil icon to edit the custom connector.
-5. On the **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
+   ![](media/3.png)
+ 
+4. On the top left corner ,from the drop down select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
 
    ![](media/def.png)
 
@@ -64,9 +74,11 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 7. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. Copy and paste a sample JSON response into the `Body` section of the response. Close the import panel and select **Update connector**. 
 
-- Navigate back to the Azure API Management instance and Invoke `getpeople`, copy the Response, and paste it `Body` section of the response.
+- Navigate back to the Azure API Management instance and Invoke `getpeople`, copy the Response into a notepad. 
 
   ![](media/aa4.png)
+  
+  Paste the response into the `Body` section of the response.
 
   ![](media/aa5.png)
 
@@ -95,7 +107,12 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 11. Next, **Update connector**.
 
-12. On the **Test** screen, create a new connection instance in the **Connections** section. If prompted to provide the subscription key, you can find the subscription key in the developer portal, click on profile, and copy the Primary key of the **unlimited** subscription.  You will then be redirected to the **Connections** area in Power Platform where your connection was created. Navigate back to the **Custom Connectors** page and edit the Star Wars API again. Return to the **Test** page and test each of the API actions.
+12. From the top left corner select **Test** screen, create a new connection instance in the **Connections** section.
+ If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, under APIs click on **Subscriptions (1)**, click on **Show/hide keys (2)**. Copy the **Primary key (3)** of the **unlimited** subscription.  
+
+![](media/Pg25-subscriptionid.png)   
+
+Navigate back to the **Custom Connectors** page and edit the Star Wars API again. Return to the **Test** page and test each of the API actions.
 
 ![](media/8.png)
 
@@ -103,14 +120,18 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 ### Task 3.1: Connect to the backing data source
 
-1. In the Jump VM, Navigate to **C:\LabFiles\fanclubmembers.xlsx** and upload **fanclubmembers.xlsx** to your OneDrive for Business account.
+1. Login to  ![Onedrive](https://onedrive.live.com/login/) .
 
 > **Note:** Use the following credentials for Onedrive for business.
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-2. Back in the Power Apps Editor, in the left pane, select **Home**.
+2. Click on Files Upload, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path and upload **fanclubmembers.xlsx**  to your OneDrive for Business account
+
+  ![](media/Pg25-onedrive.png)
+ 
+3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
 4. Under **Create** , select **Excel** and then Create **New connection** with **OneDrive for Business**.
 
 ![](media/excel.png)
@@ -127,10 +148,10 @@ Your generated app will now be in edit mode in the Power Apps Studio.
 
 ### Task 4.1: Add the Star Wars API Data Source
 
-1. Select **Data** from the left pane and then select **+ Add data** from the drop-down menu.
-2. Search for Star Wars in the search field and choose the connection to the Star Wars API.
+1. Select **Data (1)** from the left pane and then select **+ Add data (2)** from the drop-down menu.
+2. Search for **Star Wars (3)** in the search field and choose the connection to the **Star Wars API (4)**.
 
-![](media/9.png)
+![](media/9.1.png)
 
 ### Task 4.2: Customize the generated app
 

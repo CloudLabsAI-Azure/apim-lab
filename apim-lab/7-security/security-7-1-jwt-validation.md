@@ -11,12 +11,13 @@ In this lab, we are going to see how to use JSON Web Tokens with your APIs.
 JSON Web Tokens are an open-industry standard method for representing claims securely between two parties. More info at <https://jwt.io>. 
 
 Use the following sites:
-- <https://www.unixtimestamp.com> to get a future date using the Epoch Unix Timestamp _at least one hour from the current time_ as the JWT will not work otherwise (e.g. 01/11/2029 = `1862842300`)
+- 1. <https://www.unixtimestamp.com> to get a future date using the Epoch Unix Timestamp, **make sure to add the date or time _at least one hour from the current time_** as the JWT will not work otherwise (e.g. 01/11/2029 = `1862842300`).
+- Copy the Unix TImestamp value in a notepad.
 
    ![](media/unix.png)
 
-- <https://jwt.io> to create a JWT with payload. In the **Decoded** section make these changes:
-  - Leave the **Header** as is.
+- 2. <https://jwt.io> to create a JWT with payload. In the **Decoded** section make these changes:
+  - Leave the **Header** as it is.
   - Use the following **Payload** format and replace the `exp` value with your newly-created Unix timestamp:
 
     ```json
@@ -28,7 +29,7 @@ Use the following sites:
     }
     ```
 
-  - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is a rather weak secret but serves the demo purpose.
+  - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is rather a weak secret but serves the demo purpose.
   - Check **secret base64 encoded**.
   - Your configuration should be similar to this now:
 
@@ -39,6 +40,8 @@ Use the following sites:
 - Back in APIM, open the **Calculator** API and select **All operations**.
   
 - In the **Code View** add an inbound `validate-jwt` policy with the signing key.
+
+   ![](media/Pg23-1.png)
 
   ```xml
   <policies>
@@ -53,6 +56,8 @@ Use the following sites:
       ...
   </policies>
   ```
+
+ ![](media/Pg23-2.png)
 
 - Invoke the **Divide two integers** method on the API from the **Test** tab. Observe the `401` Unauthorized error.
 

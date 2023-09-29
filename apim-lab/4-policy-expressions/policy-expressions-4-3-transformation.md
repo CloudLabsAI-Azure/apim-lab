@@ -4,19 +4,20 @@
 
 The **find-and-replace** policy finds a substring in a request or response and replaces it with a different string.
 
-- Open the **Colors** API, then open the `Get random color` operation.
-  ![APIM Policy Find & Replace](media/15.png)
+- Open **APIs (1)** and click the **Colors API (2)**, then select the **Get random color (3)** operation.
+
+   ![APIM Policy Find & Replace](media/15.png)
   
-- Enter the **Policy code editor** in the **Outbound processing** section.
+- In the **Outbound processing (1)** section, select **Policy code editor** with symbol **</>**.
 
    ![APIM Policy Find & Replace](media/c.png)
   
 - Place the cursor after the `<base />` element in the `<outbound>` section.
-- Press **Show snippets**, then select the **Find and replace string in body** transformation policy.  
+- Click on **Show snippets** present in the top right corner, then select the **Find and replace string in body** transformation policy.  
 
   ![APIM Policy Find & Replace](media/16.png)
 
-- Fill in the `from` and `to` values accordingly:
+- Fill in the **`from` and `to` (1)** values accordingly and **Save (2)** the policy.
 
      ```xml  
     <outbound>
@@ -28,7 +29,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
   ![APIM Policy Find & Replace](media/bluegreen.png)
 
-- Save the policy, then invoke the API using the Unlimited subscription key.
+- Invoke the API using the Unlimited subscription key.
 
   ![APIM Policy Find & Replace](media/green.png)
 
@@ -40,7 +41,7 @@ Policies can be applied very granularly. In this example, you are modifying the 
 
 The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions#ContextVariables) that is implicitly available in every policy expression provides access to the `Response` and `Product` below. 
 
-- Open the **Star Wars** API, then open the **Get People By Id** operation.
+- Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation.
 
    ![APIM Policy Transform Starter Product](media/19.png)
   
@@ -97,7 +98,7 @@ Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure tha
 
 A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Calculator** API that returned an XML response. 
 
-- Add an outbound policy to the **Add two integers** operation on the **Calculator** API to transform the response body to JSON.
+- On **Design tab (1)**, select **Add two integers operation (2)**, then in **Outbound processing (3)** section click on **add policy icon `</>` (4)** to transform the response body to JSON.
 
   ![](media/d.png)
 
@@ -153,7 +154,7 @@ Query string parameters and headers can be easily modified prior to sending the 
 
   ![](media/trace.png)
 
-- In the Trace tab Select Backend.
+- In the **Trace tab**, select **Backend**.
 
   ![APIM Policy Amend Backend Call](media/24.png)
 

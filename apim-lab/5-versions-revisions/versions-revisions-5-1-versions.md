@@ -6,17 +6,19 @@ Proper version management not only helps organize your API, it also aids in Azur
 
 ### Task 1.1: Add a new version
 
-- Select the *Star Wars* API.
-- Click on the ellipsis and select *Add version*.
-- Add a new version with these values, then press **Create**:
+- Select the **Star Wars** API.
+- Click on the ellipsis and select **Add version.**
+
+   ![APIM Versions Add](media/01.png)
+  
+- Add a new version with these values,
   - Version identifier: **v2**  
   - Versioning scheme: **Path**
   - Full API version name: **star-wars-v2**
     > This name must be unique across the Azure API Management instance. Therefore, a combination of the API name and its version identifier is both semantic and suitable.
   - Products: **Starter** and **Unlimited**
+  -  Click on **Create**:
 
-    ![APIM Versions Add](media/01.png)
-    
     ![APIM Version Create](media/02.png)
 
   - The new version, _v2_, is now added in the Star Wars API. 
