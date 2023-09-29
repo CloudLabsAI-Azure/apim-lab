@@ -18,32 +18,33 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 To deploy a self-hosted gateway:
 
-- Select the `Gateways` option from the menu
-- Select `+ Add`
+- Select the **Gateways** option from the menu, click **+ Add**
 
+![](media/apim-app-gateway-deploy-1.png)
 
-![](../../assets/images/apim-app-gateway-deploy-1.png)
+Enter the following details:
 
-- Enter a Name and Location for the Gateway
+- Name - **OnPremiseGateway**
+- Location - **OnPremise**
 - Select the required APIs from those that are configured in the Azure API Management instance
-  - Our lab will use the Colors API - this was configured in an earlier module
-- Select the `Add` button
+  - Our lab will use the **Colors API** - this was configured in an earlier module
+- Click on **Add** button
 
 ![](../../assets/images/apim-app-gateway-deploy-2.png)
 
-The added gateway will appear in the list ... this is the Gateway Deployment.
+The added Gateway will appear in the list.
 
 
 ![](../../assets/images/apim-app-gateway-deploy-3.png)
 
-- Click on the gateway in the list - a blade appears allowing further configuration
+- Select the **OnPremiseGateway** gateway from the list, a blade will appear allowing for further configuration.
 
 ![](../../assets/images/apim-app-gateway-deploy-4.png)
 
-- Select the `Deployment` option from the menu
-  - There are scripts for deploying on Docker and Kubernetes ... for this lab, we will be using the Docker option
-- Download the **env.config** file by clicking on it, and it will be saved automatically in the following directory: C:/Users/demouser/Downloads.
-- Copy the Docker run command but remove the *-d* parameter ... this is so the logs are displayed to the terminal
+- Under Settings, select the **Deployment** option.
+  - Yo can find the scripts for deploying on Docker and Kubernetes ... for this lab, we will be using the Docker option.
+- Download the **env.config** file by clicking on it, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`.
+- Copy the Docker run command under Deployment scripts, but remove the *-d* parameter ... this is so the logs are displayed to the terminal.
 
 ```text
 docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:latest
@@ -51,10 +52,17 @@ docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mc
 
 ![](../../assets/images/apim-app-gateway-deploy-5.png)
 
-From a command line - elevated to Administrator (needed for Docker commands)
+In the LabVM serach for Windows Powershell and run as Administrator (needed for Docker commands).
 
 - You can launch Docker Desktop by using the shortcut available on the Jump VM. After launching Docker Desktop, accept the terms, click "Continue without sign in", and skip the survey. Docker Engine may take about 2-3 minutes to start. Minimize Docker Desktop and then open the Command Prompt.
-- Navigate to the location where the *env.conf* is located, Run command `cd C:/Users/demouser/Downloads`
+- Navigate to the location where the *env.conf* is located, Run command :
+  Make sure to replace the demouser with the username.
+  ```
+  cd C:/Users/demouser/Downloads
+  ```
+  ```
+  cat env.conf
+  ```
 - Run the Docker run command
   ```
    docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
@@ -63,7 +71,7 @@ From a command line - elevated to Administrator (needed for Docker commands)
 
 ![](../../assets/images/apim-app-gateway-deploy-6.png)
 
-The first time this is executed, it will need to pull down the Docker image - and so there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
+The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
 ![](../../assets/images/apim-app-gateway-deploy-7.png)
 
@@ -74,13 +82,13 @@ Once downloaded, the log output from the container will display a Sputnik logo (
 
 ![](../../assets/images/apim-app-gateway-deploy-9.png)
 
-Note that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
+>*Note* that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
 ![](../../assets/images/apim-app-gateway-deploy-10.png)
 
 ## Task 4.2: Testing the API
 
-Our Gateway Node is now deployed - and we can test that it works.
+Our Gateway Node is now deployed, we can test it.
 
 - Open the Developer portal, go to the Profile page, and get the API key for Unlimited products
 - Open Notepad - Make note of URLs including the key.  For our lab test, the machine name is just *localhost*
