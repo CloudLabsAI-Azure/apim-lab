@@ -2,13 +2,13 @@
 
 The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-management-cross-domain-policies#CORS>) adds cross-origin resource sharing (CORS) support to an operation or an API to allow cross-domain calls from browser-based clients.
 
-We have already configured the **CORS** policy for our APIs in labs 2 & 3. Below is the resulting XML:
+- We have already configured the **CORS** policy for our APIs in labs 2 & 3. Below is the resulting XML:
 
-![APIM Policy CORS All APIs](media/08.png)  
+    ![APIM Policy CORS All APIs](media/08.png)  
 
-Click on the **Edit button** to view the XML present within thr **CORS** policy.
+- Click on the **Edit button** to view the XML present within the **CORS** policy.
 
-![APIM Policy CORS All APIs](media/09.png)  
+    ![APIM Policy CORS All APIs](media/all-api1.png)  
 
 
 ```xml
