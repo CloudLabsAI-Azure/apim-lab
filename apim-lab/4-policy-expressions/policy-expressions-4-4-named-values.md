@@ -4,15 +4,16 @@
 
 - Open the `Named values` blade in the resource menu and press **+ Add**.
 
-    ![APIM Named Values](media/27.png)
+    ![APIM Named Values](media/api-management.png)
   
 - Create the new property:
-  - Name: **TimeNow**
-  - Display name: **TimeNow**
-  - Type: **Plain**
-  - Value: `@(DateTime.Now.ToString())`
+  - Name: **TimeNow** **(1)**
+  - Display name: **TimeNow** **(2)**
+  - Type: **Plain** **(3)**
+  - Value: `@(DateTime.Now.ToString())` **(4)**
+  - Click on **save** **(5)**
 
-    ![APIM Named Values](media/26.png)
+    ![APIM Named Values](media/add-name.png)
 
 - Back in the **APIs** blade, open the **Add two integers** operation in the Calculator API. 
 - Amend the inbound `set-header` policy by clicking on the pencil icon.
