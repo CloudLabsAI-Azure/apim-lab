@@ -4,7 +4,7 @@ Azure API Management can be configured for response caching which can significan
 
 Using the Azure Management portal, navigate to the **Colors API (1)** and set a caching policy for the **Get random color (2)** call:
 
-    ![APIM Adding Enable Caching](media/10.png)
+![APIM Adding Enable Caching](media/10.png)
 
   - Click on **Add policy**.
     
@@ -17,11 +17,11 @@ Using the Azure Management portal, navigate to the **Colors API (1)** and set a 
   - Set a caching duration of `15` seconds and **Save**.
     > Simple caching configuration is not yet implemented in the Azure Management portal. We shall see later how it can be done using policy expressions.
 
-    ![APIM Cache Duration](media/13.png)
+    ![APIM Cache Duration](media/inbond-processing.png)
 
-- Navigate back to the the website and configure the Colors website from Exercise 3(Task 4.2) to use the Unlimited subscription URL.
+- Navigate back to the website and configure the Colors website from Exercise 3(Task 4.2) to use the Unlimited subscription URL.
 - Select **Start**.
-- Notice that for each 15 second period the same color is set.
+- Notice that for each 15-second period, the same color is set.
 
 > **Note:** If you are unable to see colors, please refresh the page once. 
 
