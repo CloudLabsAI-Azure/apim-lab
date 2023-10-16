@@ -60,7 +60,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
    ![](media/3.png)
  
-4. On the top left corner ,from the drop down select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
+4. On the top left corner, from the drop-down select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
 
    ![](media/def.png)
 
@@ -74,7 +74,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 7. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. Copy and paste a sample JSON response into the `Body` section of the response. Close the import panel and select **Update connector**. 
 
-- Navigate back to the Azure API Management instance and Invoke `getpeople`, copy the Response into a notepad. 
+- Navigate back to the Azure API Management instance Invoke `getpeople`, and copy the Response into a notepad. 
 
   ![](media/aa4.png)
   
@@ -120,27 +120,27 @@ Navigate back to the **Custom Connectors** page and edit the Star Wars API again
 
 ### Task 3.1: Connect to the backing data source
 
-1. Login to  ![Onedrive](https://onedrive.live.com/login/) .
+1. Login to ![Onedrive](https://onedrive.live.com/login/).
 
-> **Note:** Use the following credentials for Onedrive for business.
+  > **Note:** Use the following credentials for Onedrive for business.
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
    * Password: <inject key="AzureAdUserPassword"></inject>
 
 2. Click on Files Upload, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path and upload **fanclubmembers.xlsx**  to your OneDrive for Business account
 
-  ![](media/Pg25-onedrive.png)
+   ![](media/Pg25-onedrive.png)
  
 3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
 4. Under **Create** , select **Excel** and then Create **New connection** with **OneDrive for Business**.
 
-![](media/excel.png)
+   ![](media/excel.png)
    
 5. Under **Connections** , select **OneDrive for Business** and browse to the file location. 
-7. Under **Choose an Excel file** , select the **FanClubMembers.xlsx** file.
-8. Under **Choose a table** , select the **Members** table.
-9. Select **Connect** on the bottom right.
-10. Power Apps will generate the app by inspecting your data and matching it with Power Apps screens.
+6. Under **Choose an Excel file** , select the **FanClubMembers.xlsx** file.
+7. Under **Choose a table** , select the **Members** table.
+8. Select **Connect** on the bottom right.
+9. Power Apps will generate the app by inspecting your data and matching it with Power Apps screens.
 
 ## **Task 4: Add Favorite Character information**
 
