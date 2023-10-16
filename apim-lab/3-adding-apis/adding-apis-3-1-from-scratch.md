@@ -1,7 +1,8 @@
-## Exercise 3: Adding APIs
+![image](https://github.com/shashankms9/apim-lab/assets/104433795/10cf1681-976a-42b4-8af6-7a8fe971bb89)![image](https://github.com/shashankms9/apim-lab/assets/104433795/3b7adf6f-e01d-4bdc-90b2-fdfca4630690)## Exercise 3: Adding APIs
 ### Overview
 An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
-- On the left menu, open the ***APIs*** blade. You will see all APIs, and the possibility to add new ones, but also to customize existing ones.
+
+- Navigate back to the Azure portal, on the left menu, select the ***APIs*** blade. You will see all APIs, and the possibility to add new ones, but also to customize existing ones.
 
   ![APIM APIs](media/01.png)
 
@@ -14,36 +15,36 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
 
   ![](media/a.png)
 
-4) Select the **Full** option in the **Create an HTTP API** dialog.  
-5) **Display name** : `Star Wars`
-6) **Name** : `star-wars`
-7) **Description** : Implementing the Star Wars API
-8) **Web service URL** : `https://swapi.dev/api`  .  
-9) **URL scheme** : `HTTPS` as we strive to enforce HTTPS only.  
-10) **API URL suffix** : `sw`. This allows us to compartmentalize the Azure API Management URLs for distinct APIs.  
-11) **Products** : Assign **Starter** and **Unlimited**   
-12) Click on **Create**.  
+3) Enter the following details in the **Create an HTTP API** dialog and click on **Create** **(8)**.
+  - Select the **Full**  option.  
+  - Display name: **Star Wars** **(1)**.
+  - Name: **star-wars** **(2)**.
+  - Description: **Implementing the Star Wars API** **(3)**.
+  - Web service URL: **https://swapi.dev/api** **(4)**.
+  - URL scheme: **HTTPS** **(5)** as we strive to enforce HTTPS only.
+  - API URL suffix: **sw** **(6)**. This allows us to compartmentalize the Azure API Management URLs for distinct APIs.
+  - Products : Assign **Starter** and **Unlimited** **(7)**.   
+ 
+    > **Note**: While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for the brevity of the labs.
 
-  > While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for brevity of the labs.
+      ![APIM Add Blank API](media/http-api.png)  
 
-  ![APIM Add Blank API](media/02.png)
+4. Once created, inside the *Star Wars* API press **+ Add operation (1)** to declare two new operations:
 
-- Once created, inside the *Star Wars* API press **+ Add operation (1)** to declare two new operations:
-
-  1) **Get People**  
+  
     - Display name: **Get People (2)**  
     - Name will be populated with: **get-people**  
     - URL: **GET /people/ (3)**
     - Click on **Save (4)**.
-      
-  ![01](media/03.png)
 
-  Again click on **+ Add operation** to add another operation and give the following details
+       ![01](media/03.png)
 
-  2) **Get People By Id**  
+5. Again click on **+ Add operation** to add another operation and give the following details
+
     - Display name: **Get People By Id**  
     - Name will be populated with: **get-people-by-id**  
     - URL: **GET /people/{id}/**
+    - Click on **Save**.
 
   ![APIM Star Wars API Add Operation](media/04.png)
 
