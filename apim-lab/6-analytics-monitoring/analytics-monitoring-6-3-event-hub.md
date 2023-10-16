@@ -18,7 +18,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
    
    1. Resource Group : Select **apim-rg**.
    
-   >**Note:** The naming convention you can follow for Event Hub Namespace: `evhns-<environment>-<region>-<application-name>-<owner>-<instance>`
+   > **Note:** The naming convention you can follow for Event Hub Namespace: `evhns-<environment>-<region>-<application-name>-<owner>-<instance>`
    
    2. **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
    3. **Location** : Select the region you used in previous exercise.
@@ -46,13 +46,13 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
 >**Note:** The naming convention you can follow for Event Hub `evh-<the-goal>-<environment>-<region>-<application-name>-<owner>-<instance>` 
 
-2. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Create**. 
+2. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Reeview + Create**, and click on the **Create**. 
 
 The **partition count** setting allows you to parallelize consumption across many consumers. For more information, see [Partitions](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#partitions).
 
 The **message retention** setting specifies how long the Event Hubs service keeps data. For more information, see [Event retention](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-publishers).
 
-![Create Event Hub](media/15.png)
+   ![Create Event Hub](media/15.png)
 
 3. After the event hub is created, you see it in the list of event hubs.
 
@@ -70,7 +70,7 @@ The **message retention** setting specifies how long the Event Hubs service keep
 
     ![Event Hub Send Policy](media/18.png)
 
-1. Click on the new policy created and copy the **Connection string-primary key** to a notepad. Also copy the **Event Hub namespace**. You will use both values in the next section.
+1. Click on the new policy created and copy the **Connection string-primary key** to a notepad. Also, copy the **Event Hub namespace**. You will use both values in the next section.
 
     ![Event Hub Connection](media/19.png)
 
@@ -90,7 +90,7 @@ Azure API Management loggers are configured using the [API Management REST API](
 
    ![](media/e.png)
 
-1. Press **Sign in** and use your Azure credentials,Enter following email/username and then click on **Next**. 
+1. Press **Sign in** and use your Azure credentials, Enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
 1. Now enter the following password and click on **Sign in**.
@@ -99,44 +99,44 @@ Azure API Management loggers are configured using the [API Management REST API](
 - Enter the required details.
 
 1. Fill in the following **Parameters**:
-    1. loggerId: **event-hub-logger** (you will use it in the next steps)
-    1. resourceGroupName: **apim-rg** 
-    1. serviceName: apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />
+    1. LoggerId: **event-hub-logger** (you will use it in the next steps)
+    1. ResourceGroupName: **apim-rg** 
+    1. ServiceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
     1. SubscriptionId: Select the subscription given by default.
 
         ![RREST API Try It](media/21.png)
 
 1. Replace the request **Body** with the following json. Make sure you replace the parameters appropriately:
 
-```json
-{
-    "properties": {
-        "loggerType": "azureEventHub",
-        "description": "adding a new logger",
-        "credentials": {
-            "name": "<your event hub namespace>",
-            "connectionString": "<your Connection string-primary key>"
-        }
-    }
-}
-```
+   ```json
+   {
+       "properties": {
+           "loggerType": "azureEventHub",
+           "description": "adding a new logger",
+           "credentials": {
+               "name": "<your event hub namespace>",
+               "connectionString": "<your Connection string-primary key>"
+           }
+       }
+   }
+   ```
 
 1. Your request parameters might then look similar to this: 
 
-    > Note my deviation by intential masking my `SharedAccessKey`. Please do not alter your key.
+    > Note my deviation by intentionally masking my `SharedAccessKey`. Please do not alter your key.
 
-```json
- {
-     "properties": {
-         "loggerType": "azureEventHub",
-         "description": "adding a new logger",
-         "credentials": {
-             "name": "evhns-dev-we-hol-ms-011/evh-logger-dev-we-hol-ms-01",
-             "connectionString": "Endpoint=sb://evhns-dev-we-hol-ms-011.servicebus.windows.net/;SharedAccessKeyName=sendpolicy;SharedAccessKey******=;EntityPath=evh-logger-dev-we-hol-ms-01"
-         }
-     }
- }
-```
+   ```json
+    {
+        "properties": {
+            "loggerType": "azureEventHub",
+            "description": "adding a new logger",
+            "credentials": {
+                "name": "evhns-dev-we-hol-ms-011/evh-logger-dev-we-hol-ms-01",
+                "connectionString": "Endpoint=sb://evhns-dev-we-hol-ms-011.servicebus.windows.net/;SharedAccessKeyName=sendpolicy;SharedAccessKey******=;EntityPath=evh-logger-dev-we-hol-ms-01"
+            }
+        }
+    }
+   ```
 
 1. Press **Run**.
 1. You should get a **201** response, confirming that the resource has been created.
