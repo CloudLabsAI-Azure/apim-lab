@@ -10,7 +10,7 @@ The following policy and payload applies for both examples in this section (webh
 
 - From **Basic Calculator API (1)** ,select the **Add two integers (2)** operation .
 - In **Outbound Processing (3)** section ,open the **Code View (4)**.
-- Add the `send-one-way-request` policy to **Outbound processing** and replace the webhook and payload as required. For demo purposes we are going to use the payload for a Teams message (even for Webhook.site) and also send the message on every successful request.
+- Add the `send-one-way-request` policy to **Outbound processing** and replace the webhook and payload as required. For demo purposes, we are going to use the payload for a Teams message (even for Webhook.site) and also send the message on every successful request.
   
   ![](media/Pg15-1.png)
 
@@ -58,6 +58,8 @@ The following policy and payload applies for both examples in this section (webh
 
 - Use this URL as the value in the `<set-url>` property in the `send-one-way-request` policy previously defined.
 
+    ![Webhook Site Setup](media/adding-web-hook.png)
+
 - Invoke the API from the Azure API Management **Test** tab by clicking the **Trace** button and observe the `200` success response.
 
 - Check the **Trace** for the **Outbound** one-way message.
@@ -68,11 +70,11 @@ The following policy and payload applies for both examples in this section (webh
 
     ![Webhook Site Success](media/36.png)
 
-### Send a message to Microsoft Teams channel
+### Send a message to the Microsoft Teams channel (Optional)
 
 An optional lab to connect to Microsoft Teams:
 
-- Follow the official steps from the [documentation to create an Incoming Webhook](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook#create-an-incoming-webhook-1) and when you have your rwebhook URL ready, update the previous `send-one-way-request` policy.
+- Follow the official steps from the [documentation to create an Incoming Webhook](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook#create-an-incoming-webhook-1) and when you have your webhook URL ready, update the previous `send-one-way-request` policy.
 
 - If you want, you can format the required payload. The payload sent to a Teams channel uses the [MessageCard](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-reference) JSON schema. You can experiment with different cards in the [MessageCard Playground](https://messagecardplayground.azurewebsites.net/).
 
