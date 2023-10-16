@@ -10,15 +10,15 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
 - Let's add a new product tier called `Gold Tier`.
 
-  **Display Name :** Gold Tier
+  Display Name : **Gold Tier** **(1)**
 
-  **Description:** Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.
+  Description: **Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.** **(2)**
   
-  **Published :** Selected
+  Published : **Check** **(3)**.
 
-   Click on **Create**.
+   Click on **Create** **(4)**.
 
-  ![APIM Add Product](media3/P5-T5.1-S2.png)
+  ![APIM Add Product](media3/add-product.png)
 
   You can view the recently created Gold Tier product.
 
