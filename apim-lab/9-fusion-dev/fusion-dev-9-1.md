@@ -121,7 +121,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 ### Task 3.1: Connect to the backing data source
 
-1. Login to ![Onedrive](https://onedrive.live.com/login/).
+1. Login to [Onedrive](https://onedrive.live.com/login/).
 
    > **Note:** Use the following credentials for Onedrive for business.
     
