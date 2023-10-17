@@ -23,9 +23,10 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 ### Task 2.1: Deploying Web and API containers with Azure Container Instances
 
 1. Login to [Azure Portal](https://portal.azure.com)
+
 2. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose PowerShell)
 
-   ![Azure Cloud Shell](media/01.png)
+     ![Azure Cloud Shell](media/01.png)
 
 3. The first time Cloud Shell is started will require you to create a storage account.
 
@@ -34,71 +35,75 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    - Storage account name: apim<inject key="Deployment ID" enableCopy="false" />
    - Fileshare name: apim
 
-   ![](media/cloudshell.png)
+       ![](media/cloudshell.png)
    
-5. We proceed to create a unique identifier suffix for resources created in this Lab:
+4. We proceed to create a unique identifier suffix for resources created in this Lab:
 
-    
-- Define the existing resource group name
-```
-APIMLAB_RGNAME=myColorsAppRg
-```
+    - Define the existing resource group name
 
-- Define other variables
-```
-APIMLAB_UNIQUE_SUFFIX=$USER$RANDOM
-APIMLAB_LOCATION=eastus
-APIMLAB_COLORS_WEB=mycolorsweb-$APIMLAB_UNIQUE_SUFFIX
-APIMLAB_IMAGE_WEB=ghcr.io/markharrison/coloursweb:latest
-APIMLAB_DNSLABEL_WEB=acicolorweb$APIMLAB_UNIQUE_SUFFIX
-APIMLAB_COLORS_API=mycolorsapi-$APIMLAB_UNIQUE_SUFFIX
-APIMLAB_IMAGE_API=ghcr.io/markharrison/coloursapi:latest
-APIMLAB_DNSLABEL_API=aci-color-api-$APIMLAB_UNIQUE_SUFFIX
-```
+       ```
+      APIMLAB_RGNAME=myColorsAppRg
+      ```
 
-- Unique suffix is assigned.
-```
-APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//_}"
-APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//-}"
-```
+    - Define other variables
+
+      ```
+      APIMLAB_UNIQUE_SUFFIX=$USER$RANDOM
+      APIMLAB_LOCATION=eastus
+      APIMLAB_COLORS_WEB=mycolorsweb-$APIMLAB_UNIQUE_SUFFIX
+      APIMLAB_IMAGE_WEB=ghcr.io/markharrison/coloursweb:latest
+      APIMLAB_DNSLABEL_WEB=acicolorweb$APIMLAB_UNIQUE_SUFFIX
+      APIMLAB_COLORS_API=mycolorsapi-$APIMLAB_UNIQUE_SUFFIX
+      APIMLAB_IMAGE_API=ghcr.io/markharrison/coloursapi:latest
+      APIMLAB_DNSLABEL_API=aci-color-api-$APIMLAB_UNIQUE_SUFFIX
+      ```
+
+    - Unique suffix is assigned.
+
+      ```
+      APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//_}"
+      APIMLAB_UNIQUE_SUFFIX="${APIMLAB_UNIQUE_SUFFIX//-}"
+      ```
+
+    - Check Unique Suffix Value (Should be No Underscores or Dashes)
+
+      ```
+      echo $APIMLAB_UNIQUE_SUFFIX
+      ```
+
+    - Persist for Later Sessions in Case of Timeout
+
+      ```
+      echo export APIMLAB_UNIQUE_SUFFIX=$APIMLAB_UNIQUE_SUFFIX >> ~/.bashrc
+      echo export APIMLAB_RGNAME=$APIMLAB_RGNAME >> ~/.bashrc
+      echo export APIMLAB_LOCATION=$APIMLAB_LOCATION >> ~/.bashrc
+      echo export APIMLAB_COLORS_WEB=$APIMLAB_COLORS_WEB >> ~/.bashrc
+      echo export APIMLAB_IMAGE_WEB=$APIMLAB_IMAGE_WEB >> ~/.bashrc
+      echo export APIMLAB_DNSLABEL_WEB=$APIMLAB_DNSLABEL_WEB >> ~/.bashrc
+      echo export APIMLAB_COLORS_API=$APIMLAB_COLORS_API >> ~/.bashrc
+      echo export APIMLAB_IMAGE_API=$APIMLAB_IMAGE_API >> ~/.bashrc
+      echo export APIMLAB_DNSLABEL_API=$APIMLAB_DNSLABEL_API >> ~/.bashrc
+      ```
+
+    - Generate a DNS label that meets the criteria
+      ```
+      APIMLAB_DNSLABEL_WEB="acicolorweb$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-57)"
+      ```
+
+    - Generate a container name that meets the criteria
+
+      ```
+      APIMLAB_COLORS_WEB="mycolorsweb-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
+      ```
+
+5. Create the container instance for the colors web:
+
+    ```  
+    az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
+    ```
 
 
-- Check Unique Suffix Value (Should be No Underscores or Dashes)
-```
-echo $APIMLAB_UNIQUE_SUFFIX
-```
-
-- Persist for Later Sessions in Case of Timeout
-```
-echo export APIMLAB_UNIQUE_SUFFIX=$APIMLAB_UNIQUE_SUFFIX >> ~/.bashrc
-echo export APIMLAB_RGNAME=$APIMLAB_RGNAME >> ~/.bashrc
-echo export APIMLAB_LOCATION=$APIMLAB_LOCATION >> ~/.bashrc
-echo export APIMLAB_COLORS_WEB=$APIMLAB_COLORS_WEB >> ~/.bashrc
-echo export APIMLAB_IMAGE_WEB=$APIMLAB_IMAGE_WEB >> ~/.bashrc
-echo export APIMLAB_DNSLABEL_WEB=$APIMLAB_DNSLABEL_WEB >> ~/.bashrc
-echo export APIMLAB_COLORS_API=$APIMLAB_COLORS_API >> ~/.bashrc
-echo export APIMLAB_IMAGE_API=$APIMLAB_IMAGE_API >> ~/.bashrc
-echo export APIMLAB_DNSLABEL_API=$APIMLAB_DNSLABEL_API >> ~/.bashrc
-```
-
-- Generate a DNS label that meets the criteria
-  ```
-   APIMLAB_DNSLABEL_WEB="acicolorweb$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-57)"
-  ```
-
-- Generate a container name that meets the criteria
-  ```
-   APIMLAB_COLORS_WEB="mycolorsweb-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
-  ```
-
-6. Create the container instance for the colors web:
-
-```  
-az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
-```
-
-
-8. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
+6. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
     ```bash
     # We check the status
@@ -107,38 +112,38 @@ az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB 
 
     The output should something like this:
 
-    ```
-    FQDN                                                  ProvisioningState
-    ----------------------------------------------------  -------------------
-    aci-color-web-fernando22287.eastus.azurecontainer.io  Succeeded
-    ```
+      ```
+      FQDN                                                  ProvisioningState
+      ----------------------------------------------------  -------------------
+      aci-color-web-fernando22287.eastus.azurecontainer.io  Succeeded
+      ```
 
-    Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
+7. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
 
     ![Colours Web](media/02.png)
 
 
-- Generate a DNS label that meets the criteria for color-api
+    - Generate a DNS label that meets the criteria for color-api
+  
+        ```
+       APIMLAB_DNSLABEL_API="aci-color-api-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-53)"
+      ```
 
-  ```
-   APIMLAB_DNSLABEL_API="aci-color-api-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-53)"
-  ```
+    - Create a valid container name for color-api
 
-- Create a valid container name for color-api
-
-  ```
-   APIMLAB_CONTAINER_NAME="mycolorsapi-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
-  ```
+      ```
+      APIMLAB_CONTAINER_NAME="mycolorsapi-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
+      ```
 
 
-9. Now we proceed to create the ACI for the colors-api GitHub container:
+8. Now we proceed to create the ACI for the colors-api GitHub container:
 
     ```
     az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --image $APIMLAB_IMAGE_API --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
 
     ```
 
-10. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
+9. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
     ```
     az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --query "provisioningState" --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
@@ -152,9 +157,9 @@ az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB 
     aci-color-api-fernando22287.eastus.azurecontainer.io  Succeeded
     ```
 
-    Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
+10. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
 
-    ![Colours API](media/03.png)
+      ![Colours API](media/03.png)
 ---
 ### Summary
 In this Task, you have deployed Azure Container Instances (ACI) for both the Colours Web and Colours API applications using GitHub container images. Then you accessed the applications via fully qualified domain names (FQDNs) to verify successful deployment and functionality.
