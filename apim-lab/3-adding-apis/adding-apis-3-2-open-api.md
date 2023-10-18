@@ -6,26 +6,27 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
 > This is an older API and is only available via `HTTP`. Azure API Management provides a means for fronting access to it via `HTTPS`, which further demonstrates how Azure API Management can help with a secure, uniform facade while the backend implementation can be reworked and upgraded.
 
-![APIM Calculator API](media2/01.png)
+   ![APIM Calculator API](media2/01.png)
 
 - Navigate back to your Azure API Management instance.
+
 1) On the left menu, open the **APIs** blade.  
 2) Click on **Add API**.  
 3) Under **Create from definition** select **OpenAPI**.
 
-![](media/b.png)
+   ![](media/b.png)
    
-5) Select the **Full** option in the **Create from OpenAPI specification** dialog.  
-6) Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
+4) Select the **Full** option in the **Create from OpenAPI specification** dialog.  
+5) Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
 
-> **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
+   > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
 
 6) While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both`** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
 7) Set the **API URL suffix** to `calc`.  
 8) Assign **Starter** and **Unlimited** products.  
 9) Press **Create**.  
 
-![APIM Add Calculator API](media2/02.png)
+   ![APIM Add Calculator API](media2/opeai-api.png)
 
 - Once the API is created, it will show in the list of APIs along with all of its operations.
 
@@ -35,15 +36,15 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
 - Back in the Developer Portal, try out the Calculator API via the **Add two integers** GET method, then examine the response.  
 
- >*Note* : Before performing the below steps in the Developer portal, please make sure you are signed up with your account .
+ > **Note**: Before performing the below steps in the Developer portal, please make sure you are signed up with your account.
 
-> Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you wanted to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
+> Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
 ![APIM Developer Portal Calculator API Try It](media2/04.png)
 
 ![APIM Developer Portal Calculator API Try It](media2/05.png)
 
-- Navigate back to the Azure API Management Portal, we can inspect / edit the Open API definition by selecting the *Edit* icon from the Frontend block:
+- Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *Edit* icon from the Frontend block:
 
 ![APIM Calculator API Swagger](media2/06.png)
 

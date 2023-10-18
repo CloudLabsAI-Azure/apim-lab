@@ -41,6 +41,10 @@ Policies can be applied very granularly. In this example, you are modifying the 
 
 The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions#ContextVariables) that is implicitly available in every policy expression provides access to the `Response` and `Product` below. 
 
+> **Note**: After saving any changes in the policy if you see this below pop-up, click on **Discard**.
+
+   ![APIM Policy Transform Starter Product](media/note.png)
+
 - Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation.
 
    ![APIM Policy Transform Starter Product](media/19.png)
@@ -82,7 +86,9 @@ Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure tha
   </policies>
   ```
 
-- Test the API on the **Test** tab with **id** 1 and apply the appropriate **Starter** or **Unlimited** product scope. Examine the different responses.
+- Test the API on the **Test** **(1)** tab with **id** 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
+
+  ![APIM Policy Transform Unlimited Product](media/set-people-id.png)
 
 - With **Starter** or **None** product scope:
 

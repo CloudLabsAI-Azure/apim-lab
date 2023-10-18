@@ -164,7 +164,7 @@ Let's add the username contained inside the JSON Web Tokens into a specific head
   ```
 
 - Invoke the **Divide two integers** method with the `Authorization` header once more and observe the `200` Success.
-- Use the **Trace** feature to inspect what was passed to backend. You should see the new header and the correct value from the claims.
+- Use the **Trace** feature to inspect what was passed to the backend. You should see the new header and the correct value from the claims.
 
   ![APIM JWT Claim in Trace](media/06.png)
 

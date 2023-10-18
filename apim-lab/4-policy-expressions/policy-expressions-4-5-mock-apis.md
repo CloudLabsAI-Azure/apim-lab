@@ -16,7 +16,9 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
  
 ![](media/Pg14-1.png)
   
-- Under the Design tab ,in the **Responses** configuration tab, press **+ Add response**, return `200 OK` with a representation with content type `application/json` and this sample data:
+- Under the Design tab, in the **Responses** configuration tab, press **+ Add response**, return `200 OK` with a
+
+- Click on **+ Add representation** under Representations, from the content-type  drop-down select `application/json` and add this below sample data under **Sample**:
 
   ```json
   {

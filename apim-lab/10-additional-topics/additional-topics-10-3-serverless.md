@@ -4,167 +4,174 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 ### Task 3.1: Azure Functions
 
-1. Create a simple function that is Triggered by an HTTP Request
-2. Search for Azure Function App in the portal, and select Create.
+1. Create a simple function that is Triggered by an **HTTP Request**.
+
+2. Search for **Azure Function** App in the portal, and select **Create**.
    
    ![](media/Pg28-funcapp.png)
 
-   Enter the following details:
+3. Enter the following details:
    
-- Resource group: **apim-rg**
-- Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
-- Do you want to deploy code or container image? : Select **Code**
-- Runtime stack : Select **.Net**
-- Version : 6(LTS)
-- Region: Select the region you used for previous exercises.
-- Operating System : Windows
-- Hosting option and plans : **Consumption (Serverless)**
-- Then click on **Review + Create**.
+   - Resource group: **apim-rg**
+   - Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
+   - Do you want to deploy code or container image? : Select **Code**
+   - Runtime stack : Select **.Net**
+   - Version : 6(LTS)
+   - Region: Select the region you used for previous exercises.
+   - Operating System : Windows
+   - Hosting option and plans : **Consumption (Serverless)**
+   - Then click on **Review + Create**.
 
-![](media/a.png)
+      ![](media/a.png)
 
-3. Once the Resource is created go to Resource, select Create in Azure portal.
+4. On the **Review + Create** tab, click on **Create**.
 
-![](media/b.png)
+5. Once the Resource is created click on **Go to Resource**, and select Create in Azure portal.
 
-4. Select HTTP Trigger and enter the name  of the new function, Select create.
+   ![](media/b.png)
 
-![](media/c.png)
+6. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
 
-5. Navigate to Code+Test and Replace the code with the following.
+   ![](media/c.png)
 
-
-```c#
-    //string[] strColors = { "blue", "lightblue", "darkblue" };
-    string[] strColors = { "green", "lightgreen", "darkgreen" };
-
-    Random r = new Random();
-    int rInt = r.Next(strColors.Length);
-
-    return  (ActionResult)new OkObjectResult(strColors[rInt]);
-```
-
-![](media/c1.png)
+7. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
 
 
-Lets add the function to Azure API Management. In the API blade select [+Add API] and the [Function App] tile
+     ```c#
+     //string[] strColors = { "blue", "lightblue", "darkblue" };
+     string[] strColors = { "green", "lightgreen", "darkgreen" };
 
-![](media/05.png)
+     Random r = new Random();
+     int rInt = r.Next(strColors.Length);
 
-- Select the [Browse] button to get a list of Functions in the subscription
+     return  (ActionResult)new OkObjectResult(strColors[rInt]);
+     ```
 
-![](media/06.png)
+   ![](media/c1.png)
 
-- Select the Function App and then the Function
 
-![](media/07.png)
+8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
 
-![](media/08.png)
+   ![](media/05.png)
 
-- Amend the Names / Descriptions, URL suffix and select the Products
+   - Click on the **Browse** button to get a list of Functions in the subscription
 
-![](media/09.png)
+      ![](media/06.png)
 
-- As previously add CORS policy
+   - Select the Function App and then the Function
 
-- Validate the function works - either from the Azure management portal or the developer portal
+      ![](media/07.png)
 
-![](media/10.png)
+      ![](media/08.png)
 
-![](media/11.png)
+   - Amend the Names / Descriptions, URL suffix, and select the Products
+
+      ![](media/09.png)
+
+   - As previously added CORS policy
+
+   - Validate the function works - either from the Azure management portal or the developer portal
+
+      ![](media/10.png)
+
+      ![](media/11.png)
 
 ### Task 3.2: Azure Logic Apps
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for Logic App in the portal, and select Add.
+1. Search for **Logic App** in the portal, and click on **Add**.
 
-![](media/Pg28-logicapp.png)
+   ![](media/Pg28-logicapp.png)
   
-  Enter the following details:
-- Select Resource Group: **apim-rg**
-- Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
-- Region : Select the regions you have used for previous exercises. 
-- Plan type : **Consumption**
-- Click on **Review + create**.
+1. Enter the following details:
 
-![](media/d.png)
+   - Select Resource Group: **apim-rg**
+   - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
+   - Region : Select the regions you have used for previous exercises. 
+   - Plan type : **Consumption**
+   - Click on **Review + create**.
 
-2. In the logic app designer select when a HTTP request is received.
+      ![](media/d.png)
 
-![](media/e.png)
+1. On the **Review + Create** tab, click on **Create**.
 
-- In the Request body JSON Schema insert the following JSON.
+1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer**.
 
-```
-{
- "type" : "object",
-  "properties" : {
-      "msg": {
-          "type" : "string"
-      }
-  }
+1. In the logic app designer selects **when a HTTP request is received**.
 
+   ![](media/e.png)
 
-}
-```
+   - In the Request body JSON Schema insert the following JSON.
 
-![](media/f.png)
+   ```
+   {
+    "type" : "object",
+     "properties" : {
+         "msg": {
+             "type" : "string"
+         }
+     }
 
-3. Add a new step, search for Azure Functions, and Select the Azure function that you have created previously.
+   }
+   ```
 
-![](media/g.png)
+      ![](media/f.png)
 
-4. Add a new step to send e-mail, search for Office 365 Outlook, and select send an email (v2). 
+1. Add a new step, search for **Azure Functions**, and Select the **Azure function** that you have created previously.
 
-- Specify ypur Email address to receive the e-mail.
-- In the body type **msg** and click on add dynamic content, select **msg**, type **Color** and Search **body** in dynamic content and select **Azure function.**
+   ![](media/g.png)
 
-![](media/h.png)
+1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
 
-5. Add a new step for Response, and save the logic App.
+   - Specify your Email address to receive the e-mail.
+   - In the body type **msg** and click on add dynamic content, select **msg**, type **Color** and Search **body** in dynamic content and select **Azure function.**
 
-![](media/13.png)
+      ![](media/h.png)
 
-Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
+5. Add a new step for **Response**, and **save** the logic App.
 
-```json
-{
-  "msg": "text"
-}
-```
+   ![](media/13.png)
 
-Lets add the function to API Managament. In the API blade select [+Add API] and the [Logic App] tile
+   - Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
 
-![](media/14.png)
+   ```json
+   {
+     "msg": "text"
+   }
+   ```
 
-- Select the **Browse** button to get a list of Logic Apps in the subscription
+6. Lets add the function to API Management. In the API blade select **+ Add API** and the **Logic App** tile
 
-![](media/15.png)
+   ![](media/14.png)
 
-- Select the Logic App
+   - Select the **Browse** button to get a list of **Logic Apps** in the subscription
 
-![](media/16.png)
+      ![](media/15.png)
 
-- Amend the Names / Descriptions, Add URL suffix as **logicapp**,  and select the Products(Starter, Unlimited)
+   - Select the **Logic App**.
 
-![](media/17.png)
+      ![](media/16.png)
 
- As previously add CORS policy
+   - Amend the Names / Descriptions, Add URL suffix as **logicapp**,  and select the Products(Starter, Unlimited).
 
-- Validate the Logic App works - either from the Azure management portal or the developer poral
+      ![](media/17.png)
 
-![](media/18.png)
+    - As previously add CORS policy
 
-![](media/19.png)
+   - Validate the Logic App works - either from the Azure management portal or the developer portal.
 
-- Check the Logic App audit
+      ![](media/18.png)
 
-![](media/20.png)
+      ![](media/19.png)
 
-- Check the email was sent
+   - Check the Logic App audit
 
-![](media/21.png)
+      ![](media/20.png)
+
+   - Check the email was sent
+
+      ![](media/21.png)
 
 --- 
 ### Summary

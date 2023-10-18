@@ -10,8 +10,7 @@
 
 ![APIM Revisions Menu](media/08.png)
   
-- Add a new revision with description `Adding a caching policy.`
-
+- Add a new revision with the description `Adding a caching policy.`
   
   ![APIM Revision Create](media/09.png)
 
@@ -26,7 +25,7 @@
 
   ![APIM Revision Add Caching](media/11.png)
 
-- Add a 10-second caching policy for the GET operation via the Code editor.
+- Add a 10-second caching policy for the **GET People** operation via the Code editor.
 
   ```xml
   <inbound>
@@ -52,7 +51,7 @@
 
   ![APIM Revision Caching Test](media/13.png)
 
-- Test the API twice. The test trace should then show that the cache-lookup occurred. 
+- Test the API twice. The test trace should then show that the cache lookup occurred. 
 
   ![APIM Revision Caching Test](media/14.png)
 

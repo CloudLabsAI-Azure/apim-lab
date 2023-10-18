@@ -4,21 +4,21 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
 ### Task 5.1: Product definition
 
-- In the Azure Portal, open the resource menu item `Products`. Click on +Add.
+- In the Azure Portal, open the resource menu item `Products`. Click on **+ Add**.
 
   ![APIM Products](media3/products1.png)
 
 - Let's add a new product tier called `Gold Tier`.
 
-  **Display Name :** Gold Tier
+  Display Name : **Gold Tier** **(1)**
 
-  **Description :** Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.
+  Description: **Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.** **(2)**
   
-  **Published :** Selected
+  Published : **Check** **(3)**.
 
-   Click on **Create**.
+   Click on **Create** **(4)**.
 
-  ![APIM Add Product](media3/P5-T5.1-S2.png)
+  ![APIM Add Product](media3/add-product.png)
 
   You can view the recently created Gold Tier product.
 
@@ -28,7 +28,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
   ![APIM Add Product Access](media3/04.png)
 
-  Click on **Add group (1)** to add new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**. 
+- Click on **Add group (1)** to add a new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**. 
 
   ![APIM Add Product Access](media3/P5-T5.1-addgrp.png)
 

@@ -6,13 +6,13 @@ The Developer Portal is an automatically generated, fully customizable website w
 
 The Azure API Management Developer Portal uses role-based access control (RBAC). After creating the Azure API Management instance, you need to first **access the Developer Portal using the admin role**, which will trigger its activation.
 
-- In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in overview section. Click to open the **Developer Portal**.
+- In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in the overview section. Click to open the **Developer Portal**.
 
   ![APIM Developer Portal](media/01.png)
 
   ![APIM Developer Portal Admin Launch](media/02.png)
 
-- You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Back in the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. Press the **Publish (2)** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
+- You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Navigate back to the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. Press the **Publish (2)** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
 
   ![APIM Developer Portal Publish](media/03.png)
 
@@ -26,7 +26,7 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
 
-- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in overview section. Click to open the **Developer Portal**. 
+- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in the overview section. Click to open the **Developer Portal**. 
   
   ![APIM Developer Portal Enable CORS](media/05.png)
 

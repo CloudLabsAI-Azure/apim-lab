@@ -1,6 +1,6 @@
 ## Task 2: How to integrate Azure API Management with Azure Application Insights
 
-Azure API Management allows for easy integration with Azure Application Insights - an extensible service for web developers building and managing apps on multiple platforms. This guide walks through every step of such an integration and describes strategies for reducing performance impact on your Azure API Management instance.
+Azure API Management allows for easy integration with Azure Application Insights - an extensible service for web developers building and managing apps on multiple platforms. This guide walks through every step of such integration and describes strategies for reducing performance impact on your Azure API Management instance.
 
 ### Task 2.1: Create an Azure Application Insights instance
 
@@ -86,13 +86,13 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
 ### Performance implications and log sampling
 
-> Logging all events may have serious performance implications, depending on incoming requests rate, payload size, etc.
+> Logging all events may have serious performance implications, depending on incoming request rate, payload size, etc.
 
-Based on internal load tests, enabling this feature caused a 40%-50% reduction in throughput when request rate exceeded 1,000 requests per second. Azure Application Insights is designed to use statistical analysis for assessing application performances. It is not intended to be an audit system and is not suited for logging each individual request for high-volume APIs.
+Based on internal load tests, enabling this feature caused a 40%-50% reduction in throughput when the request rate exceeded 1,000 requests per second. Azure Application Insights is designed to use statistical analysis for assessing application performances. It is not intended to be an audit system and is not suited for logging each individual request for high-volume APIs.
 
-You can manipulate the number of requests being logged by adjusting the **Sampling** setting (see the steps above). 100% means all requests are logged, while 0% reflects no logging at all. **Sampling** helps to reduce the volume of telemetry, effectively preventing from significant performance degradation, while still carrying the benefits of logging.
+You can manipulate the number of requests being logged by adjusting the **Sampling** setting (see the steps above). 100% means all requests are logged, while 0% reflects no logging at all. **Sampling** helps to reduce the volume of telemetry, effectively preventing significant performance degradation, while still carrying the benefits of logging.
 Sampling is an effective tool in diagnosing often general operational issues. For example, sampling can identify connectivity or integration issues as these would often occur in high quantity, not singular instances. A sampling rate of 50% is as effective in diagnosing such issues as 100% is.
 
-Skipping logging of headers and body of requests and responses will also have positive impact on alleviating performance issues.
+Skipping logging of headers and body of requests and responses will also have a positive impact on alleviating performance issues.
 
 - Now, click on Next from the lower right corner to move on to the next page.
