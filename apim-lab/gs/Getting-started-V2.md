@@ -1,6 +1,6 @@
 # Getting Started with Your Azure API Management Workshop
  
-Welcome to your Azure API Management workshop! We've prepared a seamless environment for you to explore and learn about foundational knowledge of cloud concepts in general and Microsoft Azure in particular. Let's begin by making the most of this experience:
+Welcome to your Azure API Management workshop! We've prepared a seamless environment for you to explore and learn about Azure API Management. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
