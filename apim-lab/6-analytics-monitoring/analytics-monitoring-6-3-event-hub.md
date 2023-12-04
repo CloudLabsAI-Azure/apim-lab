@@ -46,7 +46,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
 >**Note:** The naming convention you can follow for Event Hub `evh-<the-goal>-<environment>-<region>-<application-name>-<owner>-<instance>` 
 
-2. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Reeview + Create**, and click on the **Create**. 
+2. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Review + Create**, and click on the **Create**. 
 
 The **partition count** setting allows you to parallelize consumption across many consumers. For more information, see [Partitions](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#partitions).
 
@@ -66,7 +66,7 @@ The **message retention** setting specifies how long the Event Hubs service keep
 
     ![Event Hub Connection](media/17.png)
 
-1. On the right side of your screen create a ´sendpolicy´ with just ´Send´ permissions
+1. On the right side of your screen create a **sendpolicy** with just **Send** permissions
 
     ![Event Hub Send Policy](media/18.png)
 
@@ -123,7 +123,7 @@ Azure API Management loggers are configured using the [API Management REST API](
 
 1. Your request parameters might then look similar to this: 
 
-    > Note my deviation by intentionally masking my `SharedAccessKey`. Please do not alter your key.
+>**Note:** We are deviating intentionally by masking `SharedAccessKey`. Please do not alter your key.
 
    ```json
     {
