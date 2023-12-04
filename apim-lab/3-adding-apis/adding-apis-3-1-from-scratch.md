@@ -27,7 +27,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
  
     > **Note**: While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for the brevity of the labs.
 
-      ![APIM Add Blank API](media/http-api.png)  
+      ![APIM Add Blank API](media/Ex-3-T-1(1).png)  
 
 4. Once created, inside the *Star Wars* API press **+ Add operation (1)** to declare two new operations:
 
