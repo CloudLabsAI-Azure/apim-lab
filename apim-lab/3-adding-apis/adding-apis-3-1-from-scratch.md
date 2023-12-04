@@ -1,4 +1,4 @@
-![image](https://github.com/shashankms9/apim-lab/assets/104433795/10cf1681-976a-42b4-8af6-7a8fe971bb89)![image](https://github.com/shashankms9/apim-lab/assets/104433795/3b7adf6f-e01d-4bdc-90b2-fdfca4630690)## Exercise 3: Adding APIs
+## Exercise 3: Adding APIs
 ### Overview
 An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
 
