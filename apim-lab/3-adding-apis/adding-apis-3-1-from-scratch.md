@@ -55,7 +55,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
 
   ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
 
-- Click on **Star Wars**. Try the **Get People** operation. Observe a successful `200` response.
+- Click on **Star Wars**. Try the **Get People** operation. Click on **Try it** then Click on **Send**. Observe a successful `200` response.
 
   ![APIM Developer Portal Star Wars Try It](media/06.png)
 
