@@ -46,7 +46,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
     - URL: **GET /people/{id}/**
     - Click on **Save**.
 
-  ![APIM Star Wars API Add Operation](media/04.png)
+  ![APIM Star Wars API Add Operation](media/Ex-3-T-1.png)
 
 ### Task 2: Access Star Wars API from Developer Portal
 
