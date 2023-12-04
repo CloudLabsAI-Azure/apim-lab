@@ -109,15 +109,15 @@ Let's experience how your users will navigate through your portal. In order to d
 
 It's now time to test one of the published APIs. 
 
-- Open the **APIs** page and look at the **Echo API**:
+- Open the **APIs** page and Click on the **Echo API**:
   - Notice the developer information
-  - Test the Echo API using the POST verb by pressing **Try it**, using the defaults, then pressing **Send** at the bottom. 
+  - Test the Echo API using the POST verb by pressing **Test** tab, using the defaults, then pressing **Send** at the bottom. 
 
-  ![APIM Developer Portal Try API](media/16.png)
+  ![APIM Developer Portal Try API](media/Ex-2-T-3(1).png)
   
 - You should see a successful `200` HTTP response.
   
-  ![APIM Developer Portal Try API](media/17.png)
+  ![APIM Developer Portal Try API](media/Ex-2-T-3(2).png)
 
 ### Summary
 
