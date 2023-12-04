@@ -21,7 +21,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/aaa1.png)
 
-1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins.
+1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins. Click on **Save**.
 
    ![](media/aaa2.png)
 
