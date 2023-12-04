@@ -52,27 +52,27 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
 
-   ![](media/05.png)
+   ![](media/ex9-t-38-s-8.png)
 
    - Click on the **Browse** button to get a list of Functions in the subscription
 
-      ![](media/06.png)
+      ![](media/ex9-t-38-s-8-1.png)
 
    - Select the Function App and then the Function
 
-      ![](media/07.png)
+      ![](media/ex9-t-38-s-8-2.png)
 
-      ![](media/08.png)
+      ![](media/ex9-t-38-s-8-3.png)
 
-   - Amend the Names / Descriptions, URL suffix, and select the Products
+   - Select the **Full** tab from the tab and Amend the Names / Descriptions, URL suffix, and select the Products. Click on **Create**.
 
-      ![](media/09.png)
+      ![](media/ex9-t-38-s-8-4.png)
 
    - As previously added CORS policy
 
    - Validate the function works - either from the Azure management portal or the developer portal
 
-      ![](media/10.png)
+      ![](media/ex9-t-38-s-8-5.png)
 
       ![](media/11.png)
 
