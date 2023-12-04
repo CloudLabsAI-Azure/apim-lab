@@ -104,7 +104,7 @@ Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure tha
 
 A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Calculator** API that returned an XML response. 
 
-- On **Design tab (1)**, select **Add two integers operation (2)**, then in **Outbound processing (3)** section click on **add policy icon `</>` (4)** to transform the response body to JSON.
+- On **Design tab (1)**, select **Add two integers operation (2)**, then in **Outbound processing (3)** section click on **Policy code editor `</>` (4)** to transform the response body to JSON.
 
   ![](media/d.png)
 
