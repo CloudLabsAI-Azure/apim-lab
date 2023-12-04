@@ -11,12 +11,12 @@ In this lab, we are going to see how to use JSON Web Tokens with your APIs.
 JSON Web Tokens are an open-industry standard method for representing claims securely between two parties. More info at <https://jwt.io>. 
 
 Use the following sites:
-- 1. <https://www.unixtimestamp.com> to get a future date using the Epoch Unix Timestamp, **make sure to add the date or time _at least one hour from the current time_** as the JWT will not work otherwise (e.g. 01/11/2029 = `1862842300`).
+- <https://www.unixtimestamp.com> to get a future date using the Epoch Unix Timestamp, **make sure to add the date or time _at least one hour from the current time_** as the JWT will not work otherwise (e.g. 01/11/2029 = `1862842300`).
 - Copy the Unix TImestamp value in a notepad.
 
    ![](media/unix.png)
 
-- 2. <https://jwt.io> to create a JWT with payload. In the **Decoded** section make these changes:
+- <https://jwt.io> to create a JWT with payload. In the **Decoded** section make these changes:
   - Leave the **Header** as it is.
   - Use the following **Payload** format and replace the `exp` value with your newly-created Unix timestamp:
 
