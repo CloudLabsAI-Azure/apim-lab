@@ -37,42 +37,42 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 7. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
 
 
-     ```c#
-     //string[] strColors = { "blue", "lightblue", "darkblue" };
-     string[] strColors = { "green", "lightgreen", "darkgreen" };
+      ```c#
+      //string[] strColors = { "blue", "lightblue", "darkblue" };
+      string[] strColors = { "green", "lightgreen", "darkgreen" };
 
-     Random r = new Random();
-     int rInt = r.Next(strColors.Length);
+      Random r = new Random();
+      int rInt = r.Next(strColors.Length);
 
-     return  (ActionResult)new OkObjectResult(strColors[rInt]);
-     ```
+      return  (ActionResult)new OkObjectResult(strColors[rInt]);
+      ```
 
-   ![](media/c1.png)
+      ![](media/c1.png)
 
 
 8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
 
-   ![](media/ex9-t-38-s-8.png)
+   ![](media/05.png)
 
    - Click on the **Browse** button to get a list of Functions in the subscription
 
-      ![](media/ex9-t-38-s-8-1.png)
+      ![](media/06.png)
 
    - Select the Function App and then the Function
 
-      ![](media/ex9-t-38-s-8-2.png)
+      ![](media/07.png)
 
-      ![](media/ex9-t-38-s-8-3.png)
+      ![](media/08.png)
 
-   - Select the **Full** tab from the tab and Amend the Names / Descriptions, URL suffix, and select the Products. Click on **Create**.
+   - Amend the Names / Descriptions, URL suffix, and select the Products
 
-      ![](media/ex9-t-38-s-8-4.png)
+      ![](media/09.png)
 
    - As previously added CORS policy
 
    - Validate the function works - either from the Azure management portal or the developer portal
 
-      ![](media/ex9-t-38-s-8-5.png)
+      ![](media/10.png)
 
       ![](media/11.png)
 
@@ -80,7 +80,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for **Logic Apps** in the portal, and click on **Add**.
+1. Search for **Logic App** in the portal, and click on **Add**.
 
    ![](media/Pg28-logicapp.png)
   
@@ -92,7 +92,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Plan type : **Consumption**
    - Click on **Review + create**.
 
-      ![](media/ex9-t-32-s2.png)
+      ![](media/d.png)
 
 1. On the **Review + Create** tab, click on **Create**.
 
@@ -102,60 +102,61 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/e.png)
 
-   - In the Request body JSON Schema insert the following JSON.
+   - In the Request body JSON Schema **insert the following JSON (1)**, and select **+ New step (2)**.
 
-   ```
-   {
-    "type" : "object",
-     "properties" : {
-         "msg": {
-             "type" : "string"
-         }
-     }
+      ```
+      {
+      "type" : "object",
+      "properties" : {
+            "msg": {
+               "type" : "string"
+            }
+      }
 
-   }
-   ```
+      }
+      ```
 
       ![](media/f.png)
 
-1. Add a new step, search for **Azure Functions**, and Select the **Azure function** that you have created previously.
+1. Search for **Azure Functions**, and select the **Azure function** that you have created previously.
 
    ![](media/g.png)
 
-1. Add a new step to send e-mail, search for **Office 365 Outlook**, Click on **Sign in**and select **send an email (v2)**. 
+1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
 
-   - Specify your Email address to receive the e-mail.
-   - In the body type **msg** and click on add dynamic content, select **msg**, type **Color** and Search **body** in dynamic content and select **Azure function.**
+   - **To**: Specify your Email address, i.e. **<inject key="AzureAdUserEmail"></inject>** to receive the e-mail.
+   - **Subject**: **Color**
+   - **Body**: type **msg**, **:** and click on add dynamic content, select **msg**, type **Color**, **:** and click on add dynamic content, search **body** and select **body** which present in **Azure function**.
 
       ![](media/h.png)
 
-5. Add a new step for **Response**, and **save** the logic App.
+5. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
    ![](media/13.png)
 
    - Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
 
-   ```json
-   {
-     "msg": "text"
-   }
-   ```
+      ```json
+      {
+      "msg": "text"
+      }
+      ```
 
-6. Lets add the function to API Management. In the API blade select **+ Add API** and the **Logic App** tile
+6. Lets add the function to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
 
-   ![](media/14.png)
+   ![](media/addapi.png)
 
    - Select the **Browse** button to get a list of **Logic Apps** in the subscription
 
-      ![](media/15.png)
+      ![](media/browse.png)
 
-   - Select the **Logic App**.
+   - Select the **Logic App**, and choose **Select**.
 
-      ![](media/16.png)
+      ![](media/logicapp.png)
 
-   - Amend the Names / Descriptions, Add URL suffix as **logicapp**,  and select the Products(Starter, Unlimited).
+   - On the **Create from Logic App**, select **Full**. Amend the Names / Descriptions, Add URL suffix as **logicapp**, select the Products(Starter, Unlimited), and select **Create**.
 
-      ![](media/17.png)
+      ![](media/create.png)
 
     - As previously add CORS policy
 

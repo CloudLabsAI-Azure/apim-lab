@@ -21,7 +21,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/aaa1.png)
 
-1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins. Click on **Save**.
+1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins.
 
    ![](media/aaa2.png)
 
@@ -30,15 +30,15 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 >*Note*: Before proceeding further make sure you are signed in the Power platform with the given credentials in the resources tab.
 
-1. Click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
+1. From the left-menu, click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
 
    ![](media/aa1.png)
 
 2. Enter the following details:
 
-   - API : Select the **Star wars (1)** API 
-   - Power Platform Environment: From the dropdown select **ODL_User XXXX Environment (2)**.
-   - Display Name: **Star Wars API (3)**
+   - API : Select the **Star Wars (1)** API 
+   - Power Platform Environment: From the dropdown select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (2)**.
+   - API display name: **Star Wars API (3)**
    - Click on **Create (4)**.
 
      ![](media/Pg25-1.png)
@@ -49,9 +49,9 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 1. Go to [https://make.powerapps.com](https://make.powerapps.com/) and sign in.
 
-1. Select **Data** from the left pane, and then select **More**  and click on discover **Discover all** to see your generated custom connector to your Azure API Management API.
+1. Select **More (1)** from the left pane, and click on **Discover all (2)** to see your generated custom connector to your Azure API Management API.
    
-   ![](media/aaa4.png)
+   ![](media/more.png)
 
 1. Scroll down and select **Custom Connectors**.
 
@@ -61,11 +61,11 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
    ![](media/3.png)
  
-1. On the top left corner, from the drop-down select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
+1. On the top left corner, select **1. General** from the drop-down select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
 
    ![](media/def.png)
 
-1. Select the `GetPeople` action, and in the **Request** section, select **+ Import from sample**. Enter a sample request URL with the search query string:
+1. In the **Request** section, select **+ Import from sample (1)**. Enter a sample request **URL (2)** with the search query string, and select **Import (3)**:
 
    - **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/people?search=Luke**
        
@@ -75,45 +75,51 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
 1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. Copy and paste a sample JSON response into the `Body` section of the response. Close the import panel and select **Update connector**. 
 
-   - Navigate back to the Azure API Management instance Invoke `getpeople`, and copy the Response into a notepad. 
+   - Navigate back to the **API Management service** in Azure Portal.
+   
+   - On the **API Management service** page, from the left menu, under **APIs**, select **APIs**. Select **Star Wars** drop-down and select **v2 (1)**. Select `Get People (2)`, and from the top menu select **Test (3)**, now select **Send (4)** and **copy (5)** the Response into a notepad. 
 
-      ![](media/aa4.png)
+      ![](media/api.png)
   
-   - Paste the response into the `Body` section of the response.
+   - Paste the response into the `Body` section of the response, and select **Import**.
 
       ![](media/aa5.png)
 
       ![](media/5.png)
 
-1. Repeat this import for the `getpeoplebyid` action.
+1. Repeat the step-9 to import for the `getpeoplebyid` action.
 
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
-1. In the **Policies** section select + New policy.
+1. In the **Policies** section select **+ New policy**.
 
 1. Fill out the new policy with the following information:
 
-     - **Name: set-origin-header**
+     - **Name: set-origin-header (1)**
   
-     - **Template: Set HTTP header**
+     - **Template: Set HTTP header (2)**
   
-     - **Header name: Origin**
+     - **Header name: Origin (3)**
   
-     - **Header value: https://make.powerapps.com**
+     - **Header value: https://make.powerapps.com (4)**
   
-     - **Action if the header exists: override**
+     - **Action if the header exists: override (5)**
   
-     - **Run policy on: request**
+     - **Run policy on: request (6)**
 
-       ![](media/7.png)
+       ![](media/setorigin.png)
+      
+       ![](media/action.png)
 
-1. Next, **Update connector**.
+1. Select **Update connector**.
 
-1. From the top left corner select **Test** screen, and create a new connection instance in the **Connections** section. If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, under APIs click on **Subscriptions (1)**, click on **Show/hide keys (2)**. Copy the **Primary key (3)** of the **unlimited** subscription.  
+1. Select **3. Definations**, from the top left corner, select **Test** screen, and create a new connection instance in the **Connections** section by clicking on the **+ New connection**. If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
    ![](media/Pg25-subscriptionid.png)   
 
-1. Navigate back to the **Custom Connectors** page and edit the Star Wars API again. Return to the **Test** page and test each of the API actions.
+1. Navigate back to the Power apps page, and paste the subscription key, select **Create**.
+
+1. Navigate back to the **Custom Connectors** page. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
 
    ![](media/8.png)
 
@@ -129,25 +135,29 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
     * Password: <inject key="AzureAdUserPassword"></inject>
 
-2. Click on Files Upload, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path, and upload **fanclubmembers.xlsx**  to your OneDrive for Business account.
+1. On **Securely store and share files** page, select **Your OneDrive is ready**.
+
+1. Select **+ Add new (1)**, click on **Files Upload (2)**, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path, and upload **fanclubmembers.xlsx**  to your OneDrive for Business account.
 
    ![](media/Pg25-onedrive.png)
  
 3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
 
-4. Under **Create** , select **Excel** and then Create **New connection** with **OneDrive for Business**.
+4. Select **Create (1)** , select **Excel (2)** and then Create **+ New connection** with **OneDrive for Business**.
 
    ![](media/excel.png)
    
-5. Under **Connections** , select **OneDrive for Business** and browse to the file location. 
+5. Under **Connections** , select **OneDrive for Business**, select **Create**, and select **<inject key="AzureAdUserEmail"></inject>**. On **Confirmation required** page, select **Allow access**. 
 
-6. Under **Choose an Excel file** , select the **FanClubMembers.xlsx** file.
+6. Under **Choose an Excel file** , select the **fanClubMembers.xlsx** file.
 
-7. Under **Choose a table** , select the **Members** table.
+7. Under **Choose a table** , select the **MemberList** table.
 
 8. Select **Connect** on the bottom right.
 
 9. Power Apps will generate the app by inspecting your data and matching it with Power Apps screens.
+
+   >**Note:** On **Welcome to Power Apps Studio** page, select **Skip**.
 
 ## **Task 4: Add Favorite Character information**
 
@@ -175,7 +185,7 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 
 1. Select the **+** icon on the left side of the screen to bring up the **Insert** panel.
 
-1. Select **Text Label** and add labels for the **Favorite Character** section header and for each one of the character description fields.
+1. Select **Text Label** and add labels for the **Favorite Character:** section header and for each one of the character description fields.
 
 1. For each label control, change the **Text** property in the right-side **Properties** panel to describe each field.
 
