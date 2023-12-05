@@ -52,27 +52,27 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
 
-   ![](media/05.png)
+   ![](media/ex9-t-38-s-8.png)
 
    - Click on the **Browse** button to get a list of Functions in the subscription
 
-      ![](media/06.png)
+      ![](media/ex9-t-38-s-8-1.png)
 
    - Select the Function App and then the Function
 
-      ![](media/07.png)
+      ![](media/ex9-t-38-s-8-2.png)
 
-      ![](media/08.png)
+      ![](media/ex9-t-38-s-8-3.png)
 
-   - Amend the Names / Descriptions, URL suffix, and select the Products
+   - Select the **Full** tab from the tab and Amend the Names / Descriptions, URL suffix, and select the Products. Click on **Create**.
 
-      ![](media/09.png)
+      ![](media/ex9-t-38-s-8-4.png)
 
    - As previously added CORS policy
 
    - Validate the function works - either from the Azure management portal or the developer portal
 
-      ![](media/10.png)
+      ![](media/ex9-t-38-s-8-5.png)
 
       ![](media/11.png)
 
@@ -80,7 +80,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for **Logic App** in the portal, and click on **Add**.
+1. Search for **Logic Apps** in the portal, and click on **Add**.
 
    ![](media/Pg28-logicapp.png)
   
@@ -92,7 +92,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Plan type : **Consumption**
    - Click on **Review + create**.
 
-      ![](media/d.png)
+      ![](media/ex9-t-32-s2.png)
 
 1. On the **Review + Create** tab, click on **Create**.
 
@@ -122,7 +122,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/g.png)
 
-1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
+1. Add a new step to send e-mail, search for **Office 365 Outlook**, Click on **Sign in**and select **send an email (v2)**. 
 
    - Specify your Email address to receive the e-mail.
    - In the body type **msg** and click on add dynamic content, select **msg**, type **Color** and Search **body** in dynamic content and select **Azure function.**

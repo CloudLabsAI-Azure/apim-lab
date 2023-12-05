@@ -1,4 +1,4 @@
-![image](https://github.com/shashankms9/apim-lab/assets/104433795/10cf1681-976a-42b4-8af6-7a8fe971bb89)![image](https://github.com/shashankms9/apim-lab/assets/104433795/3b7adf6f-e01d-4bdc-90b2-fdfca4630690)## Exercise 3: Adding APIs
+## Exercise 3: Adding APIs
 ### Overview
 An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
 
@@ -27,7 +27,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
  
     > **Note**: While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for the brevity of the labs.
 
-      ![APIM Add Blank API](media/http-api.png)  
+      ![APIM Add Blank API](media/Ex-3-T-1(1).png)  
 
 4. Once created, inside the *Star Wars* API press **+ Add operation (1)** to declare two new operations:
 
@@ -46,7 +46,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
     - URL: **GET /people/{id}/**
     - Click on **Save**.
 
-  ![APIM Star Wars API Add Operation](media/04.png)
+  ![APIM Star Wars API Add Operation](media/Ex-3-T-1.png)
 
 ### Task 2: Access Star Wars API from Developer Portal
 
@@ -55,7 +55,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
 
   ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
 
-- Click on **Star Wars**. Try the **Get People** operation. Observe a successful `200` response.
+- Click on **Star Wars**. Try the **Get People** operation. Click on **Try it** then Click on **Send**. Observe a successful `200` response.
 
   ![APIM Developer Portal Star Wars Try It](media/06.png)
 

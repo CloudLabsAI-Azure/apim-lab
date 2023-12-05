@@ -1,5 +1,5 @@
 # Excercise 2: Developer Portal
-## overview
+## Overview
 The Developer Portal is an automatically generated, fully customizable website with the documentation of your APIs. It is where API consumers can discover your APIs, learn how to use them, request access, and try them out.
 
 ## Task 1: Publishing the Developer Portal
@@ -26,13 +26,14 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
 
-- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in the overview section. Click to open the **Developer Portal**. 
+- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. 
   
   ![APIM Developer Portal Enable CORS](media/05.png)
 
 Now click on **Enable CORS (1)** button, and confirm **Yes (2)** in the popup.
 
-  ![](media/cors.png)
+
+ ![](media/cors.png)
 
 ---
 
@@ -108,15 +109,15 @@ Let's experience how your users will navigate through your portal. In order to d
 
 It's now time to test one of the published APIs. 
 
-- Open the **APIs** page and look at the **Echo API**:
+- Open the **APIs** page and Click on the **Echo API**:
   - Notice the developer information
-  - Test the Echo API using the POST verb by pressing **Try it**, using the defaults, then pressing **Send** at the bottom. 
+  - Test the Echo API using the POST verb by pressing **Test** tab, using the defaults, then pressing **Send** at the bottom. 
 
-  ![APIM Developer Portal Try API](media/16.png)
+  ![APIM Developer Portal Try API](media/Ex-2-T-3(1).png)
   
 - You should see a successful `200` HTTP response.
   
-  ![APIM Developer Portal Try API](media/17.png)
+  ![APIM Developer Portal Try API](media/Ex-2-T-3(2).png)
 
 ### Summary
 
