@@ -80,7 +80,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for **Logic App** in the portal, and click on **Add**.
+1. Search for **Logic Apps** in the portal, and click on **Add**.
 
    ![](media/Pg28-logicapp.png)
   
@@ -92,7 +92,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Plan type : **Consumption**
    - Click on **Review + create**.
 
-      ![](media/d.png)
+      ![](media/ex9-t-32-s2.png)
 
 1. On the **Review + Create** tab, click on **Create**.
 
@@ -122,7 +122,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/g.png)
 
-1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
+1. Add a new step to send e-mail, search for **Office 365 Outlook**, Click on **Sign in**and select **send an email (v2)**. 
 
    - Specify your Email address to receive the e-mail.
    - In the body type **msg** and click on add dynamic content, select **msg**, type **Color** and Search **body** in dynamic content and select **Azure function.**
