@@ -23,7 +23,8 @@
   
   - Name: **x-request-received-time**
   - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
-  - Action: **override**  
+  - Action: **override**
+  - Click **Save** 
 - The corresponding XML in the *Code editor* view should look like this: 
 
   ```xml    

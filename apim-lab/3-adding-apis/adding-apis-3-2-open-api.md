@@ -30,25 +30,27 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
 - Once the API is created, it will show in the list of APIs along with all of its operations.
 
-> Ensure that the backend shows as `HTTP`. If that is not the case, navigate to the **Settings** tab and update the **Web service URL** accordingly.
+  > Ensure that the backend shows as `HTTP`. If that is not the case, navigate to the **Settings** tab and update the **Web service URL** accordingly.
 
-  ![APIM Add Calculator API](media2/03.png)
+   ![APIM Add Calculator API](media2/03.png)
 
 - Back in the Developer Portal, try out the Calculator API via the **Add two integers** GET method, then examine the response.  
 
- > **Note**: Before performing the below steps in the Developer portal, please make sure you are signed up with your account.
+   > **Note**: Before performing the below steps in the Developer portal, please make sure you are signed up with your account.
 
-> Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
+   > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
-![APIM Developer Portal Calculator API Try It](media2/04.png)
+    ![APIM Developer Portal Calculator API Try It](media2/04.png)
 
-![APIM Developer Portal Calculator API Try It](media2/05.png)
+    ![APIM Developer Portal Calculator API Try It](media2/05.png)
+
+    > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
 - Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *Edit* icon from the Frontend block:
 
-![APIM Calculator API Swagger](media2/06.png)
+  ![APIM Calculator API Swagger](media2/06.png)
 
-![APIM Calculator API Swagger](media2/07.png)
+  ![APIM Calculator API Swagger](media2/07.png)
 
 ---
 

@@ -49,7 +49,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
    ![APIM Policy Transform Starter Product](media/19.png)
   
-- Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below.  
+- Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below and click **Save**.  
 Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
 
   ```xml
