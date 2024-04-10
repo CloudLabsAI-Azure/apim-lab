@@ -84,7 +84,7 @@ To deploy a self-hosted gateway:
 
   ![](../../assets/images/apim-app-gateway-deploy-9.png)
 
-    >**Note** that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
+  >**Note** that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
   ![](media/gateway.png)
 
@@ -106,10 +106,10 @@ Our Gateway Node is now deployed, we can test it.
 
 - Inside the **Postman**, make sure that you are on the **Home** page, select **Workspaces** drpo-down, and select **My Workspace**. On the **My Workspace** page, select **New** and select **HTTP**. Now, in the **Enter URL or paste text**, enter the URL, and select **Send**.
 
-    ![](../../assets/images/apim-app-gateway-test-2.png)
+  ![](../../assets/images/apim-app-gateway-test-2.png)
 
 
-    ![](../../assets/images/apim-app-gateway-test-3.png)
+  ![](../../assets/images/apim-app-gateway-test-3.png)
 
 
 ---
