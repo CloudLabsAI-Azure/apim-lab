@@ -13,7 +13,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
   - Name: **get-film**
   - URL: **/film**
  
-![](media/Pg14-1.png)
+![](media/Pg14-11.png)
   
 - Under the Design tab, in the **Responses** configuration tab, press **+ Add response**, Select `200 OK`.
 
