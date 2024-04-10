@@ -13,7 +13,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
 1) Click on **Add API**.  
 2) Click on **HTTP - Manually define an HTTP API**.
 
-  ![](media/a.png)
+    ![](media/a.png)
 
 3) Enter the following details in the **Create an HTTP API** dialog and click on **Create** **(8)**.
   - Select the **Full**  option.  
@@ -46,7 +46,7 @@ Instead of developing an API, for this lab, you will use the existing [*Star War
     - URL: **GET /people/{id}/**
     - Click on **Save**.
 
-  ![APIM Star Wars API Add Operation](media/Ex-3-T-1.png)
+       ![APIM Star Wars API Add Operation](media/Ex-3-T-1.png)
 
 ### Task 2: Access Star Wars API from Developer Portal
 
