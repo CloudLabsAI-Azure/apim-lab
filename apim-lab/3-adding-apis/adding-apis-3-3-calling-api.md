@@ -5,7 +5,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 ![APIM Colors API](media3/01.png)
 
 1. Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
-1. To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAI (3)**.
+1. To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAPI (3)**.
 
       ![APIM Add Colors API](media3/P8-T4.1-S2.png)
   
