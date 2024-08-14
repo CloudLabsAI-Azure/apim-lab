@@ -27,7 +27,7 @@
    
      ![05](media/05.png)
      
-   > If you see the **Action Required** dialog box, then select **Ask Later** option.
+      >**Note**: If you see the **Action Required** dialog box, then select **Ask Later** option.
 
       ![06](media/asklater.png)
   
