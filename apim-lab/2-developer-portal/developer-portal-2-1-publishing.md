@@ -24,6 +24,10 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 ---
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+
+<validation step="3b8a26c1-5a63-401b-805b-ac1d6498c3b9" />
+
 ## Task 2: Enabling CORS for the Developer Portal
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
