@@ -1,5 +1,7 @@
 # Excercise 2: Developer Portal
+
 ## Overview
+
 The Developer Portal is an automatically generated, fully customizable website with the documentation of your APIs. It is where API consumers can discover your APIs, learn how to use them, request access, and try them out.
 
 ## Task 1: Publishing the Developer Portal
@@ -26,20 +28,23 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 Cross-origin resource sharing (CORS) is a mechanism that allows resources on a web page to be requested from another domain, outside the domain from which the first resource was served. CORS is required to let portal visitors use the interactive console in the API reference pages and should be enabled for domains, including custom domains.
 
-- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. 
-  
+- CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**.
+
   ![APIM Developer Portal Enable CORS](media/05.png)
 
 Now click on **Enable CORS (1)** button, and confirm **Yes (2)** in the popup.
 
-
- ![](media/cors.png)
+![](media/cors.png)
 
 ---
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+
+<validation step="3b8a26c1-5a63-401b-805b-ac1d6498c3b9" />
+
 ## Task 3: User Experience
 
-Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening in a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.** 
+Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening in a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.**
 
 - Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** .
 
@@ -53,9 +58,9 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ![](media/exploreapi.png)
 
-  > Notice the difference between the Starter & Unlimited products.
+> Notice the difference between the Starter & Unlimited products.
 
-  ![APIM Developer Portal Products](media/07.png)
+![APIM Developer Portal Products](media/07.png)
 
 - Check out the APIs. As you can see, all operations exposed are described and can also be tested directly within the portal.
 
@@ -63,7 +68,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Register for an account
 
-- Let's create a new account by clicking the **Sign up** button in the top right corner. For this lab, the email can be either personal or work-related, but please make sure to use a different email from the one associated to your Azure subscription.  
+- Let's create a new account by clicking the **Sign up** button in the top right corner. For this lab, the email can be either personal or work-related, but please make sure to use a different email from the one associated to your Azure subscription.
 
   ![APIM Developer Portal Sign-up](media/09.png)
 
@@ -94,7 +99,7 @@ Let's experience how your users will navigate through your portal. In order to d
   ![APIM Subscriptions](media/P3-T3-AS.png)
 
 - Click on Hamburger buttons for the **Unlimited** subscription in submitted state, then select **Activate subscription**.
-  
+
   ![APIM Activate Subscription](media/14.png)
 
 - Provide additional comments, if you like, then **Confirm** the activation. By default, this will send an activation confirmation email to the user.
@@ -107,19 +112,19 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Try an API
 
-It's now time to test one of the published APIs. 
+It's now time to test one of the published APIs.
 
 - Open the **APIs** page and Click on the **Echo API**:
-  - Notice the developer information
-  - Test the Echo API using the POST verb by pressing **Test** tab, using the defaults, then pressing **Send** at the bottom. 
 
-  ![APIM Developer Portal Try API](media/Ex-2-T-3(1).png)
-  
+  - Notice the developer information
+  - Test the Echo API using the POST verb by pressing **Test** tab, using the defaults, then pressing **Send** at the bottom.
+
+  ![APIM Developer Portal Try API](<media/Ex-2-T-3(1).png>)
+
 - You should see a successful `200` HTTP response.
-  
-  ![APIM Developer Portal Try API](media/Ex-2-T-3(2).png)
+
+  ![APIM Developer Portal Try API](<media/Ex-2-T-3(2).png>)
 
 ### Summary
 
-   In this Task, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing. Now, click on Next from the lower right corner to move on to the next page.
-
+In this Task, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing. Now, click on Next from the lower right corner to move on to the next page.
