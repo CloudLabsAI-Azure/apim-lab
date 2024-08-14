@@ -10,47 +10,47 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
 - Navigate back to your Azure API Management instance.
 
-1) On the left menu, open the **APIs** blade.  
-2) Click on **Add API**.  
-3) Under **Create from definition** select **OpenAPI**.
+1. On the left menu, open the **APIs** blade.  
+1. Click on **Add API**.  
+1. Under **Create from definition** select **OpenAPI**.
 
-   ![](media/b.png)
+      ![](media/b.png)
    
-4) Select the **Full** option in the **Create from OpenAPI specification** dialog.  
-5) Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
+1. Select the **Full** option in the **Create from OpenAPI specification** dialog.  
+1. Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
 
    > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
 
-6) While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both`** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
-7) Set the **API URL suffix** to `calc`.  
-8) Assign **Starter** and **Unlimited** products.  
-9) Press **Create**.  
+1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both`** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
+1. Set the **API URL suffix** to `calc`.  
+1. Assign **Starter** and **Unlimited** products.  
+1. Press **Create**.  
 
-   ![APIM Add Calculator API](media2/opeai-api.png)
+      ![APIM Add Calculator API](media2/opeai-api.png)
 
-- Once the API is created, it will show in the list of APIs along with all of its operations.
+1. Once the API is created, it will show in the list of APIs along with all of its operations.
 
-  > Ensure that the backend shows as `HTTP`. If that is not the case, navigate to the **Settings** tab and update the **Web service URL** accordingly.
+   > Ensure that the backend shows as `HTTP`. If that is not the case, navigate to the **Settings** tab and update the **Web service URL** accordingly.
 
-   ![APIM Add Calculator API](media2/03.png)
+      ![APIM Add Calculator API](media2/03.png)
 
-- Back in the Developer Portal, try out the Calculator API via the **Add two integers** GET method, then examine the response.  
+1. Back in the Developer Portal, try out the Calculator API via the **Add two integers** GET method, then examine the response.  
 
    > **Note**: Before performing the below steps in the Developer portal, please make sure you are signed up with your account.
 
    > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
-    ![APIM Developer Portal Calculator API Try It](media2/04.png)
+      ![APIM Developer Portal Calculator API Try It](media2/04.png)
 
-    ![APIM Developer Portal Calculator API Try It](media2/05.png)
+      ![APIM Developer Portal Calculator API Try It](media2/05.png)
 
     > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
-- Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *Edit* icon from the Frontend block:
+1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *Edit* icon from the Frontend block:
 
-  ![APIM Calculator API Swagger](media2/06.png)
+      ![APIM Calculator API Swagger](media2/06.png)
 
-  ![APIM Calculator API Swagger](media2/07.png)
+      ![APIM Calculator API Swagger](media2/07.png)
 
 ---
 
