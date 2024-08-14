@@ -58,19 +58,19 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 1. Now switch to the **Developer Portal** and sign in as a developer with a subscription.
 2. Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
 
-   ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
+      ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
 
 3. Click on **Star Wars**. Try the **Get People** operation. Click on **Try it** then Click on **Send**. Observe a successful `200` response.
 
-   ![APIM Developer Portal Star Wars Try It](media/06.png)
+      ![APIM Developer Portal Star Wars Try It](media/06.png)
 
 4. Now try the **Get People By Id** operation with `id = 2`
 
-   ![APIM Developer Portal Star Wars Try It](media/07.png)
+      ![APIM Developer Portal Star Wars Try It](media/07.png)
 
 5. Examine the successful `200` response with `C-3PO`'s details in the response body payload.
 
-   ![APIM Developer Portal Star Wars Try It](media/08.png)
+      ![APIM Developer Portal Star Wars Try It](media/08.png)
 
 ---
 
