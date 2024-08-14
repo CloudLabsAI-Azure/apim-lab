@@ -55,8 +55,8 @@ Let's experience how your users will navigate through your portal. In order to d
       > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
 
       ![APIM Developer Portal Unauthenticated Launch](media/06.png)
-   
-      * Anonymous User
+
+### Anonymous User
 
 1. As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
@@ -78,7 +78,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Check your inbox for the acceptance email and confirm to activate your account.
 
-   [APIM Developer Portal Sign-up Email](media/10.png)
+   ![APIM Developer Portal Sign-up Email](media/10.png)
 
 ### Sign into account
 
