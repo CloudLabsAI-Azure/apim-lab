@@ -4,20 +4,20 @@
 
 The **find-and-replace** policy finds a substring in a request or response and replaces it with a different string.
 
-- Open **APIs (1)** and click the **Colors API (2)**, then select the **Get random color (3)** operation.
+1. Open **APIs (1)** and click the **Colors API (2)**, then select the **Get random color (3)** operation.
 
-   ![APIM Policy Find & Replace](media/15.png)
+      ![APIM Policy Find & Replace](media/15.png)
   
-- In the **Outbound processing (1)** section, select **Policy code editor** with symbol **</>**.
+1. In the **Outbound processing (1)** section, select **Policy code editor** with symbol **</>**.
 
-   ![APIM Policy Find & Replace](media/c.png)
+      ![APIM Policy Find & Replace](media/c.png)
   
-- Place the cursor after the `<base />` element in the `<outbound>` section.
-- Click on **Show snippets** present in the top right corner, then select the **Find and replace string in body** transformation policy.  
+1. Place the cursor after the `<base />` element in the `<outbound>` section.
+1. Click on **Show snippets** present in the top right corner, then select the **Find and replace string in body** transformation policy.  
 
-  ![APIM Policy Find & Replace](media/16.png)
+      ![APIM Policy Find & Replace](media/16.png)
 
-- Fill in the **`from` and `to` (1)** values accordingly and **Save (2)** the policy.
+1. Fill in the **`from` and `to` (1)** values accordingly and **Save (2)** the policy.
 
      ```xml  
     <outbound>
@@ -27,11 +27,14 @@ The **find-and-replace** policy finds a substring in a request or response and r
    </outbound>
      ```
 
-  ![APIM Policy Find & Replace](media/bluegreen.png)
+      ![APIM Policy Find & Replace](media/bluegreen.png)
 
-- Invoke the API using the Unlimited subscription key.
+1. Invoke the API using the Unlimited subscription key.
 
-  ![APIM Policy Find & Replace](media/green.png)
+      ![APIM Policy Find & Replace](media/green.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="45b2075d-29c8-4f18-8ec1-c67ed80a1934" />
 
 ---
 
