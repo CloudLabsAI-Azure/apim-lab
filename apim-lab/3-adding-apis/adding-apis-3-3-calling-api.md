@@ -68,7 +68,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. Click on the hamburger menu next to *Colors* in the top left corner.
 1. Click on **Config**.
-1. Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random.
+1. Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random
 1. Click on **Submit**
 1. Press **Start** to see how the frontend is calling the API. You should see a **401** response, indicating an auth error. This happens as our API requires a subscription, but we have not yet entered a subscription key.
 
@@ -90,14 +90,14 @@ Concat the base URL and the subscription key for the **Starter** and **Unlimited
     - Select **Start**.
     - Notice there is no rate limit - every light is randomly and continuously updated. 
 
-          ![Colors Website APIM Unlimited Product](media3/12.png)
+        ![Colors Website APIM Unlimited Product](media3/12.png)
 
 1. To see that **Starter** product is limited to 5 calls per minute:
     - Configure the Colors website to use the Starter URL.
     - Select **Start**.
     - Notice that only 5 lights get colored.
 
-          ![Colors Website APIM Starter Product](../../assets/images/color-website-apim-starter-product.png)
+        ![Colors Website APIM Starter Product](../../assets/images/color-website-apim-starter-product.png)
 
 1. Try the same **Starter** URL directly in your web browser and notice the error status/message returned:
 
