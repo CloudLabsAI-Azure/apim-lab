@@ -44,7 +44,7 @@ Now click on **Enable CORS (1)** button, and confirm **Yes (2)** in the popup.
 
 > **Congratulations** on completing the task! Now, it's time to validate it.
 
-<validation step="3b8a26c1-5a63-401b-805b-ac1d6498c3b9" />
+<validation step="d4b92395-ee33-451e-9dad-898856cea431" />
 
 ## Task 3: User Experience
 
