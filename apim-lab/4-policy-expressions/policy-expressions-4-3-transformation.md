@@ -46,60 +46,61 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
 > **Note**: After saving any changes in the policy if you see this below pop-up, click on **Discard**.
 
-   ![APIM Policy Transform Starter Product](media/note.png)
+  ![APIM Policy Transform Starter Product](media/note.png)
 
-- Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation.
+1. Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation.
 
-   ![APIM Policy Transform Starter Product](media/19.png)
+      ![APIM Policy Transform Starter Product](media/19.png)
   
-- Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below and click **Save**.  
-Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
+1. Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below and click **Save**. 
 
-  ```xml
-  <policies>
-      <inbound>
-          <base />
-          <set-header name="Accept-Encoding" exists-action="override">
-              <value>deflate</value>
-          </set-header>
-      </inbound>
-      <backend>
-          <base />
-      </backend>
-      <outbound>
-          <base />
-          <choose>
-              <when condition="@(context.Response.StatusCode == 200 && context.Product?.Name != "Unlimited")">
-                  <set-body>@{
-                          var response = context.Response.Body.As<JObject>();
+    >Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
 
-                          foreach (var key in new [] {"hair_color", "skin_color", "eye_color", "gender"}) {
-                              response.Property(key).Remove();
-                          }
+    ```xml
+    <policies>
+        <inbound>
+            <base />
+            <set-header name="Accept-Encoding" exists-action="override">
+                <value>deflate</value>
+            </set-header>
+        </inbound>
+        <backend>
+            <base />
+        </backend>
+        <outbound>
+            <base />
+            <choose>
+                <when condition="@(context.Response.StatusCode == 200 && context.Product?.Name != "Unlimited")">
+                    <set-body>@{
+                            var response = context.Response.Body.As<JObject>();
 
-                          return response.ToString();
-                      }
-                  </set-body>
-              </when>
-          </choose>
-      </outbound>
-      <on-error>
-          <base />
-      </on-error>
-  </policies>
-  ```
+                            foreach (var key in new [] {"hair_color", "skin_color", "eye_color", "gender"}) {
+                                response.Property(key).Remove();
+                            }
 
-- Test the API on the **Test** **(1)** tab with **id** 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
+                            return response.ToString();
+                        }
+                    </set-body>
+                </when>
+            </choose>
+        </outbound>
+        <on-error>
+            <base />
+        </on-error>
+    </policies>
+    ```
 
-  ![APIM Policy Transform Unlimited Product](media/set-people-id.png)
+1. Test the API on the **Test** **(1)** tab with **id** 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
 
-- With **Starter** or **None** product scope:
+      ![APIM Policy Transform Unlimited Product](media/set-people-id.png)
 
-  ![APIM Policy Transform Unlimited Product](media/20.png)
+1. With **Starter** or **None** product scope:
 
-- With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response.
+      ![APIM Policy Transform Unlimited Product](media/20.png)
 
-  ![APIM Policy Transform Unlimited Product](media/21.png)
+1. With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response.
+
+      ![APIM Policy Transform Unlimited Product](media/21.png)
 
 ---
 
