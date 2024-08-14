@@ -43,23 +43,23 @@ You may have noticed the *Request URL* and may be tempted to put it in your brow
 
    ![APIM Echo API Test 401](media/05.png)
 
-- The reason for this unauthorized access status code is that the *Echo API* requires a subscription key to be set. Whereas tests originating in Azure API Management account for this automatically, external callers cannot (and, naturally, should not).
+1. The reason for this unauthorized access status code is that the *Echo API* requires a subscription key to be set. Whereas tests originating in Azure API Management account for this automatically, external callers cannot (and, naturally, should not).
 
-- Navigate back to APIM in the portal, switch to the **Settings (1)** tab, uncheck **Subscription required (2)**, and press **Save (3)** at the bottom of the page.
+1. Navigate back to APIM in the portal, switch to the **Settings (1)** tab, uncheck **Subscription required (2)**, and press **Save (3)** at the bottom of the page.
 
-- Subscriptions are important and useful, but in this case, we just want to verify the Azure API Management instance is working as intended.
+1. Subscriptions are important and useful, but in this case, we just want to verify the Azure API Management instance is working as intended.
 
    ![APIM Echo API Disable Required Subscription](media/06.png)
 
-- Now there should be no error when you access the link in your browser. In fact, in order to verify the 200, it's easiest to open your Developer Tools (F12), navigate to the **Network** tab, and look at **All** requests to see the 200.
+1. Now there should be no error when you access the link in your browser. In fact, in order to verify the 200, it's easiest to open your Developer Tools (F12), navigate to the **Network** tab, and look at **All** requests to see the 200.
 
    ![APIM Echo API Browser Success](media/07.png)
 
-- Alternatively, open the command prompt and you can issue a verbose (`-v`) CURL command against the **Echo API** and observe the `200` Success:
+1. Alternatively, open the command prompt and you can issue a verbose (`-v`) CURL command against the **Echo API** and observe the `200` Success:
 
    - **curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource?param1=sample**
 
-   ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
+      ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
 
 ### Summary
 In this exercise, you have verified the Azure API management instance. Now, click on Next from the lower right corner to move on to the next page.
