@@ -34,11 +34,11 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 1. CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**.
 
-   ![APIM Developer Portal Enable CORS](media/05.png)
+      ![APIM Developer Portal Enable CORS](media/05.png)
 
 1. Now click on **Enable CORS (1)** button, and confirm **Yes (2)** in the popup.
 
-   ![](media/cors.png)
+      ![](media/cors.png)
 
 ---
 
@@ -55,6 +55,8 @@ Let's experience how your users will navigate through your portal. In order to d
       > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
 
       ![APIM Developer Portal Unauthenticated Launch](media/06.png)
+   
+### Anonymous User
 
 1. As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
