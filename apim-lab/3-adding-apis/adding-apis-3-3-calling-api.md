@@ -4,41 +4,44 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
 ![APIM Colors API](media3/01.png)
 
-- Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
-- To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAI (3)**.
+1. Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
+1. To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAI (3)**.
 
-  ![APIM Add Colors API](media3/P8-T4.1-S2.png)
+      ![APIM Add Colors API](media3/P8-T4.1-S2.png)
   
-- This time we will choose to not provide API URL suffix. Without an API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
+1. This time we will choose to not provide API URL suffix. Without an API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
 
-  - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
-  - Display Name: `Colors API` **(2)**
-  - Name: **colors-api** **(3)**
-  - click on **create** **(4)**.
+    - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
+    - Display Name: `Colors API` **(2)**
+    - Name: **colors-api** **(3)**
+    - click on **create** **(4)**.
 
-    ![APIM Add Colors API](media3/openapi.png)
+        ![APIM Add Colors API](media3/openapi.png)
 
-    ![APIM Add Colors API](media3/03.png)
+        ![APIM Add Colors API](media3/03.png)
 
-- We can test the newly-added API from the **Test** **(1)** tab, select **Get Random Color** **(2)** and click on **Send** **(3)**.
+1. We can test the newly-added API from the **Test** **(1)** tab, select **Get Random Color** **(2)** and click on **Send** **(3)**.
 
-  ![APIM Test Colors API](media3/P8-T4.1-STest.png)
+      ![APIM Test Colors API](media3/P8-T4.1-STest.png)
 
-- Now scroll down and note the successful `200` response.
+1. Now scroll down and note the successful `200` response.
 
-  ![APIM Test Colors API](media3/04.png)
+      ![APIM Test Colors API](media3/04.png)
 
-- Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited**, then press **Save**.
+1. Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited**, then press **Save**.
 
-  ![APIM Colors API Add Products](media3/05.png)
+      ![APIM Colors API Add Products](media3/05.png)
 
-- Switch to the Developer portal and look at the **Colors API**.
-- Try the **Get random color** operation.
-- Notice the successful `200` response and the returned random color.
+1. Switch to the Developer portal and look at the **Colors API**.
+1. Try the **Get random color** operation.
+1. Notice the successful `200` response and the returned random color.
 
-  ![APIM Developer Portal Colors API Try It](media3/06.png)
+      ![APIM Developer Portal Colors API Try It](media3/06.png)
 
-  ![APIM Developer Portal Colors API Try It](media3/07.png)
+      ![APIM Developer Portal Colors API Try It](media3/07.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
 
 ### Task 4.2: Rate limit
 
