@@ -47,6 +47,9 @@ Azure API Management can be configured for response caching which can significan
     </policies>
     ```
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="23e3a74f-bdaf-49f0-9cab-d1090fe06328" />
+
 ### Summary
 In this task, you configured response caching for the "Get random color" call in the Colors API using Azure API Management.
 - Now, click on Next from the lower right corner to move on to the next page.
