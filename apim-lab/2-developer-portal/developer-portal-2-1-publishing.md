@@ -52,9 +52,9 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** .
 
-> **Note**: Keep this browser session open as we will use it frequently throughout our labs.
+   > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
 
-![APIM Developer Portal Unauthenticated Launch](media/06.png)
+   ![APIM Developer Portal Unauthenticated Launch](media/06.png)
 
 ### Anonymous User
 
