@@ -37,6 +37,9 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
    ![APIM Developer Portal Added Product](media3/06.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+> <validation step="8a9c8766-7111-4091-9f67-2fadaa51d74d" />
+
 ### Summary
 
 In this task, you created a new product tier called "Gold Tier" in Azure API Management. You also modified the access control settings for this product by adding the "Developers" and "Guests" groups, allowing them access to this product. This allows developers to subscribe to the "Gold Tier" product and access its associated APIs, establishing control and access policies for different user groups.
