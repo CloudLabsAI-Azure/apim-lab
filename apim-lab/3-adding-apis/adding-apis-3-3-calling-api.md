@@ -104,6 +104,9 @@ Concat the base URL and the subscription key for the **Starter** and **Unlimited
       ![APIM Colors API URL in Browser for Starter Product 429 ](../../assets/images/apim-color-api-url-in-browser-starter-product-429.png)
 
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
+
 ### Summary
 In this Task, you imported and configured the "Colors API" in Azure API Management, successfully tested it in the Developer Portal, and added rate limits to different subscription tiers (Starter and Unlimited).
 - Now, click on Next from the lower right corner to move on to the next page.
