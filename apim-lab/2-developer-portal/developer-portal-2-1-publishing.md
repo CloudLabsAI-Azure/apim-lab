@@ -78,7 +78,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Check your inbox for the acceptance email and confirm to activate your account.
 
-   ![APIM Developer Portal Sign-up Email](media/10.png)
+   [APIM Developer Portal Sign-up Email](media/10.png)
 
 ### Sign into account
 
