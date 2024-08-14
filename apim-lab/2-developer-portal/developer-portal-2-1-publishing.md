@@ -52,17 +52,17 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** .
 
-   > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
+      > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
 
-   ![APIM Developer Portal Unauthenticated Launch](media/06.png)
+      ![APIM Developer Portal Unauthenticated Launch](media/06.png)
 
 1. As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
-   ![](media/exploreapi.png)
+      ![](media/exploreapi.png)
 
-   > **Note**: Notice the difference between the Starter & Unlimited products.
+      > **Note**: Notice the difference between the Starter & Unlimited products.
 
-   ![APIM Developer Portal Products](media/07.png)
+      ![APIM Developer Portal Products](media/07.png)
 
 1. Check out the APIs. As you can see, all operations exposed are described and can also be tested directly within the portal.
 
