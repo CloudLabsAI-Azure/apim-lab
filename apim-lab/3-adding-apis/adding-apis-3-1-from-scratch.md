@@ -19,18 +19,18 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 3. Enter the following details in the **Create an HTTP API** dialog and click on **Create** **(8)**.
 
-- Select the **Full** option.
-- Display name: **Star Wars** **(1)**.
-- Name: **star-wars** **(2)**.
-- Description: **Implementing the Star Wars API** **(3)**.
-- Web service URL: **https://swapi.dev/api** **(4)**.
-- URL scheme: **HTTPS** **(5)** as we strive to enforce HTTPS only.
-- API URL suffix: **sw** **(6)**. This allows us to compartmentalize the Azure API Management URLs for distinct APIs.
-- Products : Assign **Starter** and **Unlimited** **(7)**.
+   - Select the **Full** option.
+   - Display name: **Star Wars** **(1)**.
+   - Name: **star-wars** **(2)**.
+   - Description: **Implementing the Star Wars API** **(3)**.
+   - Web service URL: **https://swapi.dev/api** **(4)**.
+   - URL scheme: **HTTPS** **(5)** as we strive to enforce HTTPS only.
+   - API URL suffix: **sw** **(6)**. This allows us to compartmentalize the Azure API Management URLs for distinct APIs.
+   - Products : Assign **Starter** and **Unlimited** **(7)**.
 
-  > **Note**: While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for the brevity of the labs.
+> **Note**: While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for the brevity of the labs.
 
-  ![APIM Add Blank API](<media/Ex-3-T-1(1).png>)
+![APIM Add Blank API](<media/Ex-3-T-1(1).png>)
 
 4. Once created, inside the _Star Wars_ API press **+ Add operation (1)** to declare two new operations:
 
