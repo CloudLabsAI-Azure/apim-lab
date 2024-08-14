@@ -28,7 +28,6 @@ Azure API Management can be configured for response caching which can significan
     ![Colors Website Caching](media/14.png)
 
 1. Looking at the **Get Random color** GET API policies in the **Code View**, you'll see the caching policy defined:
-
     ```xml
     <policies>
         <inbound>
