@@ -55,22 +55,22 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 ### Task 2: Access Star Wars API from Developer Portal
 
-- Now switch to the **Developer Portal** and sign in as a developer with a subscription.
-- Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
+1. Now switch to the **Developer Portal** and sign in as a developer with a subscription.
+2. Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
 
-  ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
+![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
 
-- Click on **Star Wars**. Try the **Get People** operation. Click on **Try it** then Click on **Send**. Observe a successful `200` response.
+3. Click on **Star Wars**. Try the **Get People** operation. Click on **Try it** then Click on **Send**. Observe a successful `200` response.
 
-  ![APIM Developer Portal Star Wars Try It](media/06.png)
+![APIM Developer Portal Star Wars Try It](media/06.png)
 
-- Now try the **Get People By Id** operation with `id = 2`
+4. Now try the **Get People By Id** operation with `id = 2`
 
-  ![APIM Developer Portal Star Wars Try It](media/07.png)
+![APIM Developer Portal Star Wars Try It](media/07.png)
 
-- Examine the successful `200` response with `C-3PO`'s details in the response body payload.
+5. Examine the successful `200` response with `C-3PO`'s details in the response body payload.
 
-  ![APIM Developer Portal Star Wars Try It](media/08.png)
+![APIM Developer Portal Star Wars Try It](media/08.png)
 
 ---
 
@@ -78,8 +78,8 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 In this task, you added the Star Wars API to Azure API Management and configured two operations:
 
-1)Get People: This operation retrieves a list of people from the Star Wars API.
+1. Get People: This operation retrieves a list of people from the Star Wars API.
 
-2)Get People By Id: This operation retrieves detailed information about a specific person from the Star Wars API based on their ID.
+2. Get People By Id: This operation retrieves detailed information about a specific person from the Star Wars API based on their ID.
 
 - Now, click on Next from the lower right corner to move on to the next page.
