@@ -15,7 +15,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
    - Published : **Check** **(3)**.
    - Click on **Create** **(4)**.
 
-     ![APIM Add Product](media3/add-product.png)
+   ![APIM Add Product](media3/add-product.png)
 
 You can view the recently created Gold Tier product.
 
