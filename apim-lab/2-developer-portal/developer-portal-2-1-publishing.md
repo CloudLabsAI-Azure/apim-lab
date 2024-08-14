@@ -56,7 +56,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
       ![APIM Developer Portal Unauthenticated Launch](media/06.png)
    
-### Anonymous User
+   - Anonymous User
 
 1. As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
