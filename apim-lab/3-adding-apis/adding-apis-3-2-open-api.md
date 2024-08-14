@@ -54,6 +54,10 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
 ---
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="d33e0436-d40e-45c1-9efb-88a15365af11" />
+
 ## Troubleshooting
 
 ### Unable to complete the request
