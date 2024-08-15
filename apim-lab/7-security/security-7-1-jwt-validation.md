@@ -57,7 +57,7 @@ Use the following sites:
     </policies>
     ```
 
-    ![](media/Pg23-2.png)
+       ![](media/Pg23-2.png)
 
 1. Invoke the **Divide two integers** method on the API from the **Test** tab. Observe the `401` Unauthorized error.
 
@@ -85,8 +85,7 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
 - Modify the inbound `validate-jwt` policy to not only validate the JWT but ensure that a specific `admin` claim exists. Recall that we set `admin`: `true` in our JWT token on <https://jwt.io> above.
 
   ```xml
-  <policies>
-      <inbound>
+        <inbound>
           <base />
           <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
               <issuer-signing-keys>
@@ -98,9 +97,7 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
                   </claim>
               </required-claims>
           </validate-jwt>
-      </inbound>
-      ...
-  </policies>
+        </inbound>
   ```
 
 - Invoke the **Divide two integers** method with the `Authorization` header as above and observe the `200` success. We have not fundamentally changed the test scenario as we only restricted the claims to something that we already had in our payload.
@@ -108,7 +105,6 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
 - Now change the `required-claims` with a claim  that does not exist (e.g. `adminx`)
 
   ```xml
-  <policies>
       <inbound>
           <base />
           <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
@@ -122,8 +118,6 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
               </required-claims>
           </validate-jwt>
       </inbound>
-      ...
-  </policies>
   ```
 
 - Invoke the **Divide two integers** method with the `Authorization` header once more and observe the `401` Unauthorized error as the token specifies `admin` but the policy requires `adminx`.
