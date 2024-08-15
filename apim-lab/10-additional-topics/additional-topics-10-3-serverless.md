@@ -36,7 +36,6 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 7. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
 
-
    ```c#
    //string[] strColors = { "blue", "lightblue", "darkblue" };
    string[] strColors = { "green", "lightgreen", "darkgreen" };
@@ -47,7 +46,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    return  (ActionResult)new OkObjectResult(strColors[rInt]);
    ```
 
-   ![](media/c1.png)
+      ![](media/c1.png)
 
 
 8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
