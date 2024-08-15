@@ -29,50 +29,51 @@ Use the following sites:
         }
         ```
 
-  - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is rather a weak secret but serves the demo purpose.
-  - Check **secret base64 encoded**.
-  - Your configuration should be similar to this now:
+    - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is rather a weak secret but serves the demo purpose.
+    - Check **secret base64 encoded**.
+    - Your configuration should be similar to this now:
 
-    ![JWT.io Website](media/01.png)
+           ![JWT.io Website](media/01.png)
 
 ### Task 1.2: Validation
 
-- Back in APIM, open the **Calculator** API and select **All operations**.
+1. Back in APIM, open the **Calculator** API and select **All operations**.
   
-- In the **Code View** add an inbound `validate-jwt` policy with the signing key.
+1. In the **Code View** add an inbound `validate-jwt` policy with the signing key.
 
    ![](media/Pg23-1.png)
 
-  ```xml
-  <policies>
-      <inbound>
-          <base />
-          <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
-              <issuer-signing-keys>
-                  <key>123412341234123412341234</key>
-              </issuer-signing-keys>
-          </validate-jwt>
-      </inbound>
-      ...
-  </policies>
-  ```
+    ```xml
+    <policies>
+        <inbound>
+            <base />
+            <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
+                <issuer-signing-keys>
+                    <key>123412341234123412341234</key>
+                </issuer-signing-keys>
+            </validate-jwt>
+        </inbound>
+        ...
+    </policies>
+    ```
 
- ![](media/Pg23-2.png)
+    ![](media/Pg23-2.png)
 
-- Invoke the **Divide two integers** method on the API from the **Test** tab. Observe the `401` Unauthorized error.
+1. Invoke the **Divide two integers** method on the API from the **Test** tab. Observe the `401` Unauthorized error.
 
-  ![APIM Request with no JWT](media/03.png)
+    ![APIM Request with no JWT](media/03.png)
 
-- Now add the following `Authorization` header to the test:
-  - Name: `Authorization`
-  - Value: `Bearer <jwt token>` 
+1. Now add the following `Authorization` header to the test:
+
+    - Name: `Authorization`
+    - Value: `Bearer <jwt token>` 
     - Replace `<jwt token>` with the **encoded** value from <https://jwt.io> above
 
-  Note the bearer token in the Request payload.
+        Note the bearer token in the Request payload.
 
-  ![APIM Request Add Valid Authorization Header](media/04.png)
+          ![APIM Request Add Valid Authorization Header](media/04.png)
 
-- Execute the test once more to see a `200` Success. 
+1. Execute the test once more to see a `200` Success. 
 
   ![](media/05.png)
 
