@@ -56,7 +56,7 @@ The following policy and payload applies for both examples in this section (webh
 
       ![Webhook Site Setup](media/34.png)
 
-1. Use this URL as the value in the `<set-url>` property in the `send-one-way-request` policy previously defined.
+1. Use this URL as the value in the `<set-url>` property in the `send-one-way-request` policy previously defined and click on **Save**.
 
       ![Webhook Site Setup](media/adding-web-hook.png)
 
