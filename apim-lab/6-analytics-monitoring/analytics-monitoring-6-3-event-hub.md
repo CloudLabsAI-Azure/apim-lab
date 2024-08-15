@@ -119,35 +119,35 @@ Azure API Management loggers are configured using the [API Management REST API](
 
 1. Replace the request **Body** with the following json. Make sure you replace the parameters appropriately:
 
-   ```json
-   {
-       "properties": {
-           "loggerType": "azureEventHub",
-           "description": "adding a new logger",
-           "credentials": {
-               "name": "<your event hub namespace>",
-               "connectionString": "<your Connection string-primary key>"
-           }
-       }
-   }
-   ```
-
-1. Your request parameters might then look similar to this: 
-
->**Note:** We are deviating intentionally by masking `SharedAccessKey`. Please do not alter your key.
-
-   ```json
+    ```json
     {
         "properties": {
             "loggerType": "azureEventHub",
             "description": "adding a new logger",
             "credentials": {
-                "name": "evhns-dev-we-hol-ms-011/evh-logger-dev-we-hol-ms-01",
-                "connectionString": "Endpoint=sb://evhns-dev-we-hol-ms-011.servicebus.windows.net/;SharedAccessKeyName=sendpolicy;SharedAccessKey******=;EntityPath=evh-logger-dev-we-hol-ms-01"
+                "name": "<your event hub namespace>",
+                "connectionString": "<your Connection string-primary key>"
             }
         }
     }
-   ```
+    ```
+
+1. Your request parameters might then look similar to this: 
+
+    >**Note:** We are deviating intentionally by masking `SharedAccessKey`. Please do not alter your key.
+
+    ```json
+        {
+            "properties": {
+                "loggerType": "azureEventHub",
+                "description": "adding a new logger",
+                "credentials": {
+                    "name": "evhns-dev-we-hol-ms-011/evh-logger-dev-we-hol-ms-01",
+                    "connectionString": "Endpoint=sb://evhns-dev-we-hol-ms-011.servicebus.windows.net/;SharedAccessKeyName=sendpolicy;SharedAccessKey******=;EntityPath=evh-logger-dev-we-hol-ms-01"
+                }
+            }
+        }
+    ```
 
 1. Press **Run**.
 1. You should get a **201** response, confirming that the resource has been created.
