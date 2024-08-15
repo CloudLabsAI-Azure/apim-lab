@@ -29,8 +29,10 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
       ![Create Key Vault](media/9.png)
 
 1. In **Review + Create** tab click on **Create**.
+
+1. Once created, click on **Go to resource**, this will open recently created **key-vault**.
   
-1. Next, add a [secret](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault) to the Key Vault instance and Click on **Create**.
+1. Next, select **Secrets** under Objects on the left hand pane, and click on **Generate/Import**.
     - Name:`favoritePerson`
     - Secret value: `3`
  
