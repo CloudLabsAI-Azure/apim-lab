@@ -66,15 +66,14 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 ### Task 2.4: Azure API Management, Key Vault and Managed Service Identity
 
 1. Go back to your **APIM**.
-1. Add a new operation to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want)
+1. Add a new **Operation(+ Add Operation)** to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want) and provide the following values:
   
-1. **Display Name: Get Favorite Person**
+    - **Display Name: Get Favorite Person**
+    - **URL: /favorite** 
 
-1. **URL: /favorite** 
+      ![New operation](media/15.png)
 
-    ![New operation](media/15.png)
-
-1. Update the policies for **this** new operation
+1. Update the policies for **this** new operation, and click on **Save**.
 
     ```xml
     <inbound>
@@ -92,9 +91,9 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
     </inbound>
     ```
 
-    Don't forget to change the `set-url` value with your Key Vault name.
+    >**Note**: Don't forget to change the `set-url` value with your Key Vault name.
 
-### Test 2.5: Test the operation
+### Task 2.5: Test the operation
 
 1. Sign in to the developer portal and test this new operation
 1. Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
