@@ -45,7 +45,7 @@
 
 ### Task 2.3: Test the new revision
 
-1. From the Azure portal, test the `Get People` operation.
+1. From the Azure portal, select the `Get People` operation and click on **Trace**.
   > Note the revision number at the top of the page as well as in the request URL.  
   The request URL should look similar to: `https://<your-apim-name>.azure-api.net/sw/v2;rev=2/people/`.
 
