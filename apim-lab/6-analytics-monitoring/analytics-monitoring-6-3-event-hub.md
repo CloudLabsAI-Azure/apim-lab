@@ -56,7 +56,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
     The **message retention** setting specifies how long the Event Hubs service keeps data. For more information, see [Event retention](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-publishers).
 
-   ![Create Event Hub](media/15.png)
+      ![Create Event Hub](media/15.png)
 
 1. After the event hub is created, you see it in the list of event hubs.
 
