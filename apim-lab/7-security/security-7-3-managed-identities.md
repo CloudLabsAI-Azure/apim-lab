@@ -26,7 +26,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. In the Access configuration tab, select the vault access policy and click on **Review + Create**.
 
-   ![Create Key Vault](media/9.png)
+      ![Create Key Vault](media/9.png)
 
 1. In **Review + Create** tab click on **Create**.
   
@@ -43,13 +43,13 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. Create an **Access policy**.
 
-   ![Create Key Vault](media/11.png)
+      ![Create Key Vault](media/11.png)
 
 1. Click on **+ Create**.
 
 1. Select the `Get` operation from the list of Secret permissions.
 
-   ![Create Key Vault](media/12.png)
+      ![Create Key Vault](media/12.png)
 
 1. Select the principal and search for the name of your **Azure API Management instance** and select it. Click on **Next**
 
