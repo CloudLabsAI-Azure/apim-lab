@@ -170,6 +170,9 @@ Query string parameters and headers can be easily modified prior to sending the 
 
       ![APIM Policy Amend Backend Call](media/25.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
+
 ---
 ### Summary
 In these transformation tasks, you implemented various policies in Azure API Management:
