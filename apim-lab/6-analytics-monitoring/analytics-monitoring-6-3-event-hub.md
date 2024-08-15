@@ -167,7 +167,7 @@ Once your logger is configured in Azure API Management, you can configure your l
 1. Select **All operations (2)**.
 1. On the top of the screen, select the **Design (3)** tab.
 
-   ![APIM Add Log to Event Hub](media/23.png)
+       ![APIM Add Log to Event Hub](media/23.png)
    
 1. In the **Inbound** or **Outbound** processing window, enter the Code editor.
 1. Enter a new line after the `<base />` tag in the `inbound` or `outbound` policy section.
