@@ -21,7 +21,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/aaa1.png)
 
-1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins.
+1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
    ![](media/aaa2.png)
 
@@ -228,6 +228,11 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
    ![](media/powerapps-output1.png)
 
    ![](media/powerapps-output2.png)
+
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="42b46870-763d-4674-95dd-eec0430e096d" />
+
 
 --- 
 
