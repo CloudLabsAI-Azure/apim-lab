@@ -146,7 +146,7 @@ A frequent requirement is to remove headers, especially ones that return securit
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
-1. Back in the same **Calculator** API operation, add **inbound Processing** policies to modify the query string and headers. 
+1. Back in the same **Calculator** API operation, select the **Add two integer opertation** and add **inbound Processing** policies to modify the query string and headers. 
 
     ```xml
     <inbound>
