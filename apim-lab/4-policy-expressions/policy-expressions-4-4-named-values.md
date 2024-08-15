@@ -51,6 +51,9 @@
       "value": "12/30/2021 6:10:47 PM"
     }
     ```
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
 ---
 
 ### Summary
