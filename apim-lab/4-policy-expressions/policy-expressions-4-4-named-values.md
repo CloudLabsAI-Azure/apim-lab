@@ -13,7 +13,7 @@
     - Value: `@(DateTime.Now.ToString())` **(4)**
     - Click on **save** **(5)**
 
-        ![APIM Named Values](media/add-name.png)
+      ![APIM Named Values](media/add-name.png)
 
 1. Back in the **APIs** blade, open the **Add two integers** operation in the Calculator API. 
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
