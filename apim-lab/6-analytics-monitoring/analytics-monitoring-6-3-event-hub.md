@@ -70,7 +70,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 ## Task 3.3: Create Access to the Event Hub
 
 1. Click on the newly-created event hub.
-1. Open the **Shared access policies** blade.
+1. Open the **Shared access policies** blade under Setting.
 1. Click on **+ Add**.
 
     ![Event Hub Connection](media/17.png)
