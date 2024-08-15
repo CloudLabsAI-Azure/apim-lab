@@ -32,8 +32,8 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
    - Select show advanced settings.
    - Select Resource Group: **apim-rg**
-   - Storage account name: apim<inject key="Deployment ID" enableCopy="false" />
-   - Fileshare name: apim
+   - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
+   - Fileshare name: **apim**
 
        ![](media/cloudshell.png)
    
@@ -87,13 +87,11 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
    - Generate a DNS label that meets the criteria
 
-
      ```
      APIMLAB_DNSLABEL_WEB="acicolorweb$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-57)"
      ```
 
    - Generate a container name that meets the criteria
-
 
      ```
      APIMLAB_COLORS_WEB="mycolorsweb-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
