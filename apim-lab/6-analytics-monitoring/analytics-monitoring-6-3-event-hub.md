@@ -34,6 +34,10 @@ An Event Hubs namespace provides a unique scoping container in which you create 
       
       ![Event Hub Namespace Home Page](media/13.png)
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="8c241828-0198-4596-a1f0-4b70ef4fb3aa" />
+
 ---
 
 ## Task 3.2: Create an Event Hub
@@ -57,6 +61,11 @@ The **message retention** setting specifies how long the Event Hubs service keep
 3. After the event hub is created, you see it in the list of event hubs.
 
     ![Event Hub Created](media/16.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="3fefc0a6-157b-4820-a57b-5bd7a536f3df" />
+
+---
 
 ## Task 3.3: Create Access to the Event Hub
 
