@@ -4,34 +4,40 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 ### Task 2.1: Register Azure API Management with Active Directory
 
-- Navigate to your **API management** instance, select **Managed identities** **(1)** from the pan, set the Status to **On** **(2)**, and click on **Save** **(3)** system-assigned identity.
+1. Navigate to your **API management** instance, select **Managed identities** **(1)** from the pan, set the Status to **On** **(2)**, and click on **Save** **(3)** system-assigned identity.
 
-   ![Register APIM](media/managed-identities.png)
+    ![Register APIM](media/managed-identities.png)
 
-- On **Enabled system assigned managed identity** pop-up click on **Yes**.
+1. On **Enabled system assigned managed identity** pop-up click on **Yes**.
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="114baa5f-6313-469d-932a-033f7744f3d2" />
 
 ## Key Vault 
 
 ### Task 2.2: Create Key Vault and add a secret
 
-- Search for **Key Vault** in the Azure portal and Select **Create**.
-- Select Resource Group: **apim-rg**
-- You can follow this naming convention for key vualt: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
-- Enter Key Vault Name: **kv-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
+1. Search for **Key Vault** in the Azure portal and Select **Create**.
+1. Select Resource Group: **apim-rg**
+1. You can follow this naming convention for key vualt: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
+1. Enter Key Vault Name: **kv-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
 
-  ![Create Key Vault](media/8.png)
+    ![Create Key Vault](media/8.png)
 
-- In the Access configuration tab, select the vault access policy and click on **Review + Create**.
+1. In the Access configuration tab, select the vault access policy and click on **Review + Create**.
 
    ![Create Key Vault](media/9.png)
 
-- In **Review + Create** tab click on **Create**.
+1. In **Review + Create** tab click on **Create**.
   
-- Next, add a [secret](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault) to the Key Vault instance and Click on **Create**.
-  - Name:`favoritePerson`
-  - Secret value: `3`
+1. Next, add a [secret](https://docs.microsoft.com/en-us/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault) to the Key Vault instance and Click on **Create**.
+    - Name:`favoritePerson`
+    - Secret value: `3`
  
-   ![Create Key Vault](media/10.png)
+      ![Create Key Vault](media/10.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
 
 ### Task 2.3: Access policy and principal assignment
 
@@ -39,57 +45,57 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
    ![Create Key Vault](media/11.png)
 
-2. Click on **+ Create**.
+1. Click on **+ Create**.
 
-3. Select the `Get` operation from the list of Secret permissions.
+1. Select the `Get` operation from the list of Secret permissions.
 
    ![Create Key Vault](media/12.png)
 
-4. Select the principal and search for the name of your **Azure API Management instance** and select it. Click on **Next**
+1. Select the principal and search for the name of your **Azure API Management instance** and select it. Click on **Next**
 
-  ![Create Key Vault](media/13.png)
+    ![Create Key Vault](media/13.png)
 
-5. Remember to click **Create**.
+1. Remember to click **Create**.
 
-You should see something like this:
+    You should see something like this:
 
-  ![Create Key Vault](media/14.png)
+    ![Create Key Vault](media/14.png)
 
 ### Task 2.4: Azure API Management, Key Vault and Managed Service Identity
 
-- Go back to your **APIM**.
-- Add a new operation to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want)
+1. Go back to your **APIM**.
+1. Add a new operation to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want)
   
-- **Display Name: Get Favorite Person**
+1. **Display Name: Get Favorite Person**
 
-- **URL: /favorite** 
+1. **URL: /favorite** 
 
-  ![New operation](media/15.png)
+    ![New operation](media/15.png)
 
-- Update the policies for **this** new operation
+1. Update the policies for **this** new operation
 
-```xml
-<inbound>
-  <base />
-  <send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
-      <set-url>https://{your-keyvault-name}.vault.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
-      <set-method>GET</set-method>
-      <authentication-managed-identity resource="https://vault.azure.net" />
-  </send-request>
-  <set-variable name="favoritePersonRequest" value="@{
-      var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
-      return "/people/" + secret["value"].ToString() + "/";
-  }" />
-  <rewrite-uri template="@((string)context.Variables["favoritePersonRequest"])" />
-</inbound>
-```
+    ```xml
+    <inbound>
+      <base />
+      <send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
+          <set-url>https://{your-keyvault-name}.vault.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
+          <set-method>GET</set-method>
+          <authentication-managed-identity resource="https://vault.azure.net" />
+      </send-request>
+      <set-variable name="favoritePersonRequest" value="@{
+          var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
+          return "/people/" + secret["value"].ToString() + "/";
+      }" />
+      <rewrite-uri template="@((string)context.Variables["favoritePersonRequest"])" />
+    </inbound>
+    ```
 
-Don't forget to change the `set-url` value with your Key Vault name.
+    Don't forget to change the `set-url` value with your Key Vault name.
 
 ### Test 2.5: Test the operation
 
-- Sign in to the developer portal and test this new operation
-- Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
+1. Sign in to the developer portal and test this new operation
+1. Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
 
 ---
 ### Summary 
