@@ -100,10 +100,12 @@ Azure API Management loggers are configured using the [API Management REST API](
        ![](media/e.png)
 
 1. Press **Sign in** and use your Azure credentials, Enter the following email/username and then click on **Next**. 
-   - Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+    - Email/Username: <inject key="AzureAdUserEmail"></inject>
 
 1. Now enter the following password and click on **Sign in**.
-   - Password: <inject key="AzureAdUserPassword"></inject>
+
+     - Password: <inject key="AzureAdUserPassword"></inject>
 
 1. Enter the required details.
 
