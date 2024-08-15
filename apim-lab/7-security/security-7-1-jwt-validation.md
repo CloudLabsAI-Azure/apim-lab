@@ -82,19 +82,19 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
 1. Modify the inbound `validate-jwt` policy to not only validate the JWT but ensure that a specific `admin` claim exists. Recall that we set `admin`: `true` in our JWT token on <https://jwt.io> above.
 
     ```xml
-        <inbound>
-            <base />
-            <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
-                <issuer-signing-keys>
-                    <key>123412341234123412341234</key>
-                </issuer-signing-keys>
-                <required-claims>
-                    <claim name="admin" match="any">
-                        <value>true</value>
-                    </claim>
-                </required-claims>
-            </validate-jwt>
-        </inbound>
+    <inbound>
+        <base />
+        <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
+            <issuer-signing-keys>
+                <key>123412341234123412341234</key>
+            </issuer-signing-keys>
+            <required-claims>
+                <claim name="admin" match="any">
+                    <value>true</value>
+                </claim>
+            </required-claims>
+        </validate-jwt>
+    </inbound>
     ```
 
 1. Invoke the **Divide two integers** method with the `Authorization` header as above and observe the `200` success. We have not fundamentally changed the test scenario as we only restricted the claims to something that we already had in our payload.
@@ -102,19 +102,19 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
 1. Now change the `required-claims` with a claim  that does not exist (e.g. `adminx`)
 
     ```xml
-        <inbound>
-            <base />
-            <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
-                <issuer-signing-keys>
-                    <key>123412341234123412341234</key>
-                </issuer-signing-keys>
-                <required-claims>
-                    <claim name="adminx" match="any">
-                        <value>true</value>
-                    </claim>
-                </required-claims>
-            </validate-jwt>
-        </inbound>
+    <inbound>
+        <base />
+        <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
+            <issuer-signing-keys>
+                <key>123412341234123412341234</key>
+            </issuer-signing-keys>
+            <required-claims>
+                <claim name="adminx" match="any">
+                    <value>true</value>
+                </claim>
+            </required-claims>
+        </validate-jwt>
+    </inbound>
     ```
 
 1. Invoke the **Divide two integers** method with the `Authorization` header once more and observe the `401` Unauthorized error as the token specifies `admin` but the policy requires `adminx`.
@@ -130,29 +130,26 @@ Let's add the username contained inside the JSON Web Tokens into a specific head
 1. Change the claim back from `adminx` to `admin` as we are interested in a successful test again.
 
     ```xml
-    <policies>
-        <inbound>
-            <base />
-            <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
-                <issuer-signing-keys>
-                    <key>123412341234123412341234</key>
-                </issuer-signing-keys>
-                <required-claims>
-                    <claim name="admin" match="any">
-                        <value>true</value>
-                    </claim>
-                </required-claims>
-            </validate-jwt>
-            <set-header exists-action="override" name="username">
-                <value>@{
-                    Jwt jwt;
-                    context.Request.Headers.GetValueOrDefault("Authorization","scheme param").Split(' ').Last().TryParseJwt(out jwt);
-                    return jwt.Claims.GetValueOrDefault("name", "?");
-                }</value>
-            </set-header>
-        </inbound>
-        ...
-    </policies>
+    <inbound>
+        <base />
+        <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized">
+            <issuer-signing-keys>
+                <key>123412341234123412341234</key>
+            </issuer-signing-keys>
+            <required-claims>
+                <claim name="admin" match="any">
+                    <value>true</value>
+                </claim>
+            </required-claims>
+        </validate-jwt>
+        <set-header exists-action="override" name="username">
+            <value>@{
+                Jwt jwt;
+                context.Request.Headers.GetValueOrDefault("Authorization","scheme param").Split(' ').Last().TryParseJwt(out jwt);
+                return jwt.Claims.GetValueOrDefault("name", "?");
+            }</value>
+        </set-header>
+    </inbound>
     ```
 
 1. Invoke the **Divide two integers** method with the `Authorization` header once more and observe the `200` Success.
