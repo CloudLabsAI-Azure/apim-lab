@@ -30,10 +30,13 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 3. The first time Cloud Shell is started will require you to create a storage account.
 
-   - Select show advanced settings.
+   - Select **Mount storage account**.
+   - Select the **subscription**, and click **Apply**.
+   - Select **I want to create a storage account**, and click on **Next**.
    - Select Resource Group: **apim-rg**
    - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
    - Fileshare name: **apim**
+   - region: **East US** 
 
        ![](media/cloudshell.png)
    
