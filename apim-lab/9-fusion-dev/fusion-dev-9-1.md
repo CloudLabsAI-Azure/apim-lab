@@ -94,7 +94,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
       ![](media/5.png)
 
-1. Repeat the step-9 to import for the `getpeoplebyid` action.
+1. Repeat the step-7 to import for the `getpeoplebyid` action.
 
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
