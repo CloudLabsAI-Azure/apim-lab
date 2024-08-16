@@ -32,7 +32,14 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. From the left-menu, click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
 
-   ![](media/aa1.png)
+   >**Note**: If the **Create a connector** is not visible, then follow these steps:
+      - Click on Activate account and fill the required informations.
+      - Use the email that is provided in the Environment section of the lab. and click on **Next**.
+      - Then Click on **Get Started**.
+      - Go to the API management service page and click on **Create a connector**.
+         >**Note**: It might take some time to appear. Refresh the page and check again.
+
+         ![](media/aa1.png)
 
 2. Enter the following details:
 
