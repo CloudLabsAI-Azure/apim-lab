@@ -4,42 +4,44 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
 ### Task 5.1: Product definition
 
-- In the Azure Portal, open the resource menu item `Products`. Click on **+ Add**.
+1. In the Azure Portal, open the resource menu item `Products`. Click on **+ Add**.
 
-  ![APIM Products](media3/products1.png)
+   ![APIM Products](media3/products1.png)
 
-- Let's add a new product tier called `Gold Tier`.
+1. Let's add a new product tier called `Gold Tier`.
 
-  Display Name : **Gold Tier** **(1)**
+   - Display Name : **Gold Tier** **(1)**
+   - Description: **Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.** **(2)**
+   - Published : **Check** **(3)**.
+   - Click on **Create** **(4)**.
 
-  Description: **Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.** **(2)**
-  
-  Published : **Check** **(3)**.
+     ![APIM Add Product](media3/add-product.png)
 
-   Click on **Create** **(4)**.
+   - You can view the recently created Gold Tier product.
 
-  ![APIM Add Product](media3/add-product.png)
+     ![APIM Add Product](media3/P5-T5.1-S3.png)
 
-  You can view the recently created Gold Tier product.
+1. Next, we'll change the access control by clicking on **Gold Tier** and selecting **Access control** in the left pane.
 
-  ![APIM Add Product](media3/P5-T5.1-S3.png)
+   ![APIM Add Product Access](media3/04.png)
 
-- Next, we'll change the access control by clicking on **Gold Tier** and selecting **Access control** in the left pane.
+1. Click on **Add group (1)** to add a new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**.
 
-  ![APIM Add Product Access](media3/04.png)
+   ![APIM Add Product Access](media3/P5-T5.1-addgrp.png)
 
-- Click on **Add group (1)** to add a new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**. 
+   - The two added roles are shown now.
 
-  ![APIM Add Product Access](media3/P5-T5.1-addgrp.png)
+     ![APIM Developer Portal Added Product](media3/05.png)
 
-  The two added roles are shown now.
+1. Back in the private browsing session, browse to **Products** and observe the new **Gold Tier**.
 
-  ![APIM Developer Portal Added Product](media3/05.png)
+   ![APIM Developer Portal Added Product](media3/06.png)
 
-  Back in the private browsing session, browse to **Products** and observe the new **Gold Tier**. 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+> <validation step="8a9c8766-7111-4091-9f67-2fadaa51d74d" />
 
-  ![APIM Developer Portal Added Product](media3/06.png)
+### Summary
 
- ### Summary
-  In this task, you created a new product tier called "Gold Tier" in Azure API Management. You also modified the access control settings for this product by adding the "Developers" and "Guests" groups, allowing them access to this product. This allows developers to subscribe to the "Gold Tier" product and access its associated APIs, establishing control and access policies for different user groups.
+In this task, you created a new product tier called "Gold Tier" in Azure API Management. You also modified the access control settings for this product by adding the "Developers" and "Guests" groups, allowing them access to this product. This allows developers to subscribe to the "Gold Tier" product and access its associated APIs, establishing control and access policies for different user groups.
+
 - Now, click on Next from the lower right corner to move on to the next page.

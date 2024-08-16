@@ -24,20 +24,23 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 1. Login to [Azure Portal](https://portal.azure.com)
 
-2. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose PowerShell)
+1. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose PowerShell)
 
      ![Azure Cloud Shell](media/01.png)
 
-3. The first time Cloud Shell is started will require you to create a storage account.
+1. The first time Cloud Shell is started will require you to create a storage account.
 
-   - Select show advanced settings.
+   - Select **Mount storage account**.
+   - Select the **subscription**, and click **Apply**.
+   - Select **I want to create a storage account**, and click on **Next**.
    - Select Resource Group: **apim-rg**
-   - Storage account name: apim<inject key="Deployment ID" enableCopy="false" />
-   - Fileshare name: apim
+   - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
+   - Fileshare name: **apim**
+   - region: **East US** 
 
        ![](media/cloudshell.png)
    
-4. We proceed to create a unique identifier suffix for resources created in this Lab:
+1. We proceed to create a unique identifier suffix for resources created in this Lab:
 
    - Define the existing resource group name
 
@@ -87,26 +90,24 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
    - Generate a DNS label that meets the criteria
 
-
      ```
      APIMLAB_DNSLABEL_WEB="acicolorweb$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-57)"
      ```
 
    - Generate a container name that meets the criteria
 
-
      ```
      APIMLAB_COLORS_WEB="mycolorsweb-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
      ```
 
-5. Create the container instance for the colors web:
+1. Create the container instance for the colors web:
 
     ```  
     az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
     ```
 
 
-6. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
+1. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
     ```bash
     # We check the status
@@ -121,32 +122,32 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
       aci-color-web-fernando22287.eastus.azurecontainer.io  Succeeded
       ```
 
-7. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
+1. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
 
    ![Colours Web](media/02.png)
 
 
-   - Generate a DNS label that meets the criteria for color-api
+1. Generate a DNS label that meets the criteria for color-api
   
      ```
      APIMLAB_DNSLABEL_API="aci-color-api-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-53)"
      ```
 
-   - Create a valid container name for color-api
+1. Create a valid container name for color-api
 
      ```
      APIMLAB_CONTAINER_NAME="mycolorsapi-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
      ```
 
 
-8. Now we proceed to create the ACI for the colors-api GitHub container:
+1. Now we proceed to create the ACI for the colors-api GitHub container:
 
    ```
    az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --image $APIMLAB_IMAGE_API --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
 
    ```
 
-9. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
+1. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
    ```
    az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --query "provisioningState" --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
@@ -160,7 +161,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    aci-color-api-fernando22287.eastus.azurecontainer.io  Succeeded
    ```
 
-10. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
+1. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
 
     ![Colours API](media/03.png)
 ---

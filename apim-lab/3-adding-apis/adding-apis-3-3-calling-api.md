@@ -4,41 +4,44 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
 ![APIM Colors API](media3/01.png)
 
-- Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
-- To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAI (3)**.
+1. Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
+1. To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAPI (3)**.
 
-  ![APIM Add Colors API](media3/P8-T4.1-S2.png)
+      ![APIM Add Colors API](media3/P8-T4.1-S2.png)
   
-- This time we will choose to not provide API URL suffix. Without an API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
+1. This time we will choose to not provide API URL suffix. Without an API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
 
-  - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
-  - Display Name: `Colors API` **(2)**
-  - Name: **colors-api** **(3)**
-  - click on **create** **(4)**.
+    - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
+    - Display Name: `Colors API` **(2)**
+    - Name: **colors-api** **(3)**
+    - click on **create** **(4)**.
 
-    ![APIM Add Colors API](media3/openapi.png)
+        ![APIM Add Colors API](media3/openapi.png)
 
-    ![APIM Add Colors API](media3/03.png)
+        ![APIM Add Colors API](media3/03.png)
 
-- We can test the newly-added API from the **Test** **(1)** tab, select **Get Random Color** **(2)** and click on **Send** **(3)**.
+1. We can test the newly-added API from the **Test** **(1)** tab, select **Get Random Color** **(2)** and click on **Send** **(3)**.
 
-  ![APIM Test Colors API](media3/P8-T4.1-STest.png)
+      ![APIM Test Colors API](media3/P8-T4.1-STest.png)
 
-- Now scroll down and note the successful `200` response.
+1. Now scroll down and note the successful `200` response.
 
-  ![APIM Test Colors API](media3/04.png)
+      ![APIM Test Colors API](media3/04.png)
 
-- Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited**, then press **Save**.
+1. Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited**, then press **Save**.
 
-  ![APIM Colors API Add Products](media3/05.png)
+      ![APIM Colors API Add Products](media3/05.png)
 
-- Switch to the Developer portal and look at the **Colors API**.
-- Try the **Get random color** operation.
-- Notice the successful `200` response and the returned random color.
+1. Switch to the Developer portal and look at the **Colors API**.
+1. Try the **Get random color** operation.
+1. Notice the successful `200` response and the returned random color.
 
-  ![APIM Developer Portal Colors API Try It](media3/06.png)
+      ![APIM Developer Portal Colors API Try It](media3/06.png)
 
-  ![APIM Developer Portal Colors API Try It](media3/07.png)
+      ![APIM Developer Portal Colors API Try It](media3/07.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
 
 ### Task 4.2: Rate limit
 
@@ -50,30 +53,30 @@ We are going to use the [Colors](https://colors-web.azurewebsites.net) website t
 
 First, we need to enable CORS for the domain name of the front end. To achieve this we have to do the following in APIM:
 
--  Navigate back to the **Azure Portal**, On the side menu, click on `APIs`, then select the `All APIs` option.
-- Inside the `Inbound processing` area you will see the `cors` policy, which we added in part 2 by pressing the `Enable Cors` button.
-- Click on the **pencil icon** next to that policy to edit it.
+1.  Navigate back to the **Azure Portal**, On the side menu, click on `APIs`, then select the `All APIs` option.
+1. Inside the `Inbound processing` area you will see the `cors` policy, which we added in part 2 by pressing the `Enable Cors` button.
+1. Click on the **pencil icon** next to that policy to edit it.
 
-  ![APIM Policy CORS All APIs](media3/all-api.png)  
+      ![APIM Policy CORS All APIs](media3/all-api.png)  
 
-- Here we will see this form where we can add the domain name of our frontend `https://colors-web.azurewebsites.net` or the `*` for all domains. Press **Add allowed origin**, enter the URL, then press **Save**.
+1. Here we will see this form where we can add the domain name of our frontend `https://colors-web.azurewebsites.net` or the `*` for all domains. Press **Add allowed origin**, enter the URL, then press **Save**.
 
-  ![APIM Policy CORS All APIs](media3/10.png)
+      ![APIM Policy CORS All APIs](media3/10.png)
 
-- After enabling CORS in Azure API Management let's go back to our frontend <https://colors-web.azurewebsites.net> and follow these steps:
-- Copy this URL <https://colors-web.azurewebsites.net> and paste in the browser.
+1. After enabling CORS in Azure API Management let's go back to our frontend <https://colors-web.azurewebsites.net> and follow these steps:
+1. Copy this URL <https://colors-web.azurewebsites.net> and paste in the browser.
 
-- Click on the hamburger menu next to *Colors* in the top left corner.
-- Click on **Config**.
-- Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random.
-- Click on **Submit**
-- Press **Start** to see how the frontend is calling the API. You should see a **401** response, indicating an auth error. This happens as our API requires a subscription, but we have not yet entered a subscription key.
+1. Click on the hamburger menu next to *Colors* in the top left corner.
+1. Click on **Config**.
+1. Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random
+1. Click on **Submit**
+1. Press **Start** to see how the frontend is calling the API. You should see a **401** response, indicating an auth error. This happens as our API requires a subscription, but we have not yet entered a subscription key.
 
-  ![Colors Website APIM 401](media3/11.png)
+      ![Colors Website APIM 401](media3/11.png)
 
-- The subscription keys can be fetched from the Developer Portal. Open the main Developer Portal page, then click on **Profile** in the top menu. 
+1. The subscription keys can be fetched from the Developer Portal. Open the main Developer Portal page, then click on **Profile** in the top menu. 
 
-- Prepare the URL in a text editor:
+1. Prepare the URL in a text editor:
 Concat the base URL and the subscription key for the **Starter** and **Unlimited**:
 
     
@@ -82,24 +85,27 @@ Concat the base URL and the subscription key for the **Starter** and **Unlimited
     **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
     
 
-- To see that **Unlimited** product has no rate limits:
-  - Configure the Colors website to use the Unlimited URL.
-  - Select **Start**.
-  - Notice there is no rate limit - every light is randomly and continuously updated. 
+1. To see that **Unlimited** product has no rate limits:
+    - Configure the Colors website to use the Unlimited URL.
+    - Select **Start**.
+    - Notice there is no rate limit - every light is randomly and continuously updated. 
 
-    ![Colors Website APIM Unlimited Product](media3/12.png)
+        ![Colors Website APIM Unlimited Product](media3/12.png)
 
-- To see that **Starter** product is limited to 5 calls per minute:
-  - Configure the Colors website to use the Starter URL.
-  - Select **Start**.
-  - Notice that only 5 lights get colored.
+1. To see that **Starter** product is limited to 5 calls per minute:
+    - Configure the Colors website to use the Starter URL.
+    - Select **Start**.
+    - Notice that only 5 lights get colored.
 
-    ![Colors Website APIM Starter Product](../../assets/images/color-website-apim-starter-product.png)
+        ![Colors Website APIM Starter Product](../../assets/images/color-website-apim-starter-product.png)
 
-- Try the same **Starter** URL directly in your web browser and notice the error status/message returned:
+1. Try the same **Starter** URL directly in your web browser and notice the error status/message returned:
 
-    ![APIM Colors API URL in Browser for Starter Product 429 ](../../assets/images/apim-color-api-url-in-browser-starter-product-429.png)
+      ![APIM Colors API URL in Browser for Starter Product 429 ](../../assets/images/apim-color-api-url-in-browser-starter-product-429.png)
 
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
 
 ### Summary
 In this Task, you imported and configured the "Colors API" in Azure API Management, successfully tested it in the Developer Portal, and added rate limits to different subscription tiers (Starter and Unlimited).

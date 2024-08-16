@@ -21,7 +21,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/aaa1.png)
 
-1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins.
+1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
    ![](media/aaa2.png)
 
@@ -32,7 +32,14 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. From the left-menu, click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
 
-   ![](media/aa1.png)
+   >**Note**: If the **Create a connector** is not visible, then follow these steps:
+      - Click on Activate account and fill the required informations.
+      - Use the email that is provided in the Environment section of the lab. and click on **Next**.
+      - Then Click on **Get Started**.
+      - Go to the API management service page and click on **Create a connector**.
+         >**Note**: It might take some time to appear. Refresh the page and check again.
+
+         ![](media/aa1.png)
 
 2. Enter the following details:
 
@@ -87,7 +94,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
       ![](media/5.png)
 
-1. Repeat the step-9 to import for the `getpeoplebyid` action.
+1. Repeat the step-7 to import for the `getpeoplebyid` action.
 
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
@@ -228,6 +235,11 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
    ![](media/powerapps-output1.png)
 
    ![](media/powerapps-output2.png)
+
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="42b46870-763d-4674-95dd-eec0430e096d" />
+
 
 --- 
 

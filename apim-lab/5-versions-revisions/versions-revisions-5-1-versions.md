@@ -6,41 +6,44 @@ Proper version management not only helps organize your API, it also aids in Azur
 
 ### Task 1.1: Add a new version
 
-- Select the **Star Wars** API.
-- Click on the ellipsis and select **Add version.**
+1. Select the **Star Wars** API.
+1. Click on the ellipsis and select **Add version.**
 
-   ![APIM Versions Add](media/Ex-5-task1-1.png)
+      ![APIM Versions Add](media/Ex-5-task1-1.png)
   
-- Add a new version with these values,
-  - Version identifier: **v2** **(1)** 
-  - Versioning scheme: **Path** **(2)** 
-  - Full API version name: **star-wars-v2** **(3)** 
-    > This name must be unique across the Azure API Management instance. Therefore, a combination of the API name and its version identifier is both semantic and suitable.
-  - Products: **Starter** and **Unlimited** **(4)** 
-  -  Click on **Create**: **(5)** 
+1. Add a new version with these values,
+    - Version identifier: **v2** **(1)** 
+    - Versioning scheme: **Path** **(2)** 
+    - Full API version name: **star-wars-v2** **(3)** 
+      > This name must be unique across the Azure API Management instance. Therefore, a combination of the API name and its version identifier is both semantic and suitable.
+    - Products: **Starter** and **Unlimited** **(4)** 
+    -  Click on **Create**: **(5)** 
 
-    ![APIM Version Create](media/Ex-5-task1-2.png)
+        ![APIM Version Create](media/Ex-5-task1-2.png)
 
-  - The new version, _v2_, is now added to the Star Wars API. 
-    > Any previous implementation of the newly-versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact on the consumers.
+      - The new version, _v2_, is now added to the Star Wars API. 
+        > Any previous implementation of the newly-versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact on the consumers.
 
-    ![APIM Version Created](media/03.png)
+          ![APIM Version Created](media/03.png)
 
 ### Task 1.2: Test the new version
 
 > Sometimes, the version creation takes just a little bit of time. If you do not see it immediately, please keep refreshing and ensure you select the appropriate version as per the below instructions.
 
-- In the Developer Portal select the `v2` version of the *Star Wars* API.
+1. In the Developer Portal select the `v2` version of the *Star Wars* API.
 
-  ![APIM Developer Portal Versions](media/04.png)
+      ![APIM Developer Portal Versions](media/04.png)
 
-- Notice the request URL and the inclusion of `v2` in the path.
+1. Notice the request URL and the inclusion of `v2` in the path.
 
-  ![APIM Developer Portal Version 2](media/05.png)
+      ![APIM Developer Portal Version 2](media/05.png)
 
-- Test the `GetPeople` operation.
+1. Test the `GetPeople` operation.
 
-  ![APIM Developer Portal Test Version](media/06.png)
+      ![APIM Developer Portal Test Version](media/06.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="150dd1c5-427a-46c3-88b6-6c18bc0ed5a3" />
 
 ### What Versions Enable
 

@@ -27,7 +27,7 @@
    
      ![05](media/05.png)
      
-   > If you see the **Action Required** dialog box, then select **Ask Later** option.
+      >**Note**: If you see the **Action Required** dialog box, then select **Ask Later** option.
 
       ![06](media/asklater.png)
   
@@ -35,7 +35,7 @@
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
       
 1. Now, click on the **Next** from lower right corner to move on next page.
 
