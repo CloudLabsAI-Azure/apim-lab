@@ -34,22 +34,22 @@ To deploy a self-hosted gateway:
 
 - The added Gateway will appear in the list.
 
-  ![](media/view-gateway.png)
+  ![](media/api6.png)
 
 - Select the **OnPremiseGateway** gateway from the list, and a blade will appear allowing for further configuration.
-
-    ![](media/apim-app-gateway-deploy-4.png)
 
 - Under Settings, select the **Deployment** option.
 
   - You can find the scripts for deploying on Docker and Kubernetes, for this lab, we will be using the Docker option.
 
-- Download the **env.conf** file by clicking on it, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`.
+- Download the **env.conf** file by clicking on it as shown in the below image, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`.
+
+    ![](media/api5.png)
 
 - Copy the Docker run command under Deployment scripts, but remove the *-d* parameter. This is the logs are displayed to the terminal.
 
   ```text
-  docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:latest
+  docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
   ```
 
     ![](../../assets/images/apim-app-gateway-deploy-5.png)
