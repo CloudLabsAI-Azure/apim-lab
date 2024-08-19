@@ -30,7 +30,7 @@ To deploy a self-hosted gateway:
     - Our lab will use the **Colors API** **(3)** - this was configured in an earlier module
   - Click on **Add** **(4)** button
 
-    ![](media/add-gateway.png)
+    ![](media/add-gateway-1.png)
 
 - The added Gateway will appear in the list.
 
