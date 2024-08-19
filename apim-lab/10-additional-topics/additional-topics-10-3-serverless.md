@@ -33,12 +33,22 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 8. Click on **File (1)** and select **Open Folder (2)**.
 
-9. 
-10. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
+9. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
 
-   ![](media/c.png)
+10. Please follow these steps:
+    
+    - Navigate to `C:/LabFiles/Function` and click on the **Function** folder **(1)**
+    - Select a language : **C# (2)**
+    - Select a .NET runtime : **.NET 8.0 Isolated LTS (3)**
+    - Select a template for your project's first function : **HTTP trigger (4)**
+    - Provide a function name: **GetRandomColor (5)**
+    - Provide a namespace: **Select the defaut (6)**
+    - AccessRights: **Function (7)**
+    - Select how you would like to open your project: **Open in current window (8)**
 
-11. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
+11. Click on **Yes, i trust the authors** when prompted.
+    
+12. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
 
    ```c#
    //string[] strColors = { "blue", "lightblue", "darkblue" };
@@ -53,7 +63,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       ![](media/c1.png)
 
 
-11. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
+13. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
 
    ![](media/05.png)
 
@@ -133,7 +143,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/h.png)
 
-5. Select **+ New step**, search and select **Response**, now **save** the logic App.
+1. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
    ![](media/13.png)
 
@@ -145,7 +155,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
-6. Lets add the function to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
+1. Lets add the function to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
 
    ![](media/addapi.png)
 
