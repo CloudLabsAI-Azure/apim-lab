@@ -71,8 +71,6 @@ To deploy a self-hosted gateway:
     docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
     ```
 
-      ![](../../assets/images/apim-app-gateway-deploy-6.png)
-
 - The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
   ![](../../assets/images/apim-app-gateway-deploy-7.png)
