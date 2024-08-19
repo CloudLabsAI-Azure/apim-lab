@@ -18,9 +18,9 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 To deploy a self-hosted gateway:
 
-- In the **API Management service**, select the **Gateways** **(1)** option from the menu under **Deployment + infrastructure**, and click **+ Add** **(2)**
+- In the **API Management service**, select the **Self-hosted Gateways** **(1)** option from the menu under **Deployment + infrastructure**, and click **+ Add** **(2)**
 
-    ![](media/create-gateways.png)
+    ![](media/api7.png)
 
 - Enter the following details:
 
