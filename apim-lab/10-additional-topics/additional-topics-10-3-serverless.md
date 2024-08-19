@@ -28,18 +28,17 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 5. On the **Review + Create** tab, click on **Create**.
 
 6. Once the Resource is created click on **Go to Resource**.
-
-   ![](media/b.png)
    
 7. Open Visual Studio Code from desktop.
 
-8. Click on 
+8. Click on **File (1)** and select **Open Folder (2)**.
 
-9. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
+9. 
+10. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
 
    ![](media/c.png)
 
-10. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
+11. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
 
    ```c#
    //string[] strColors = { "blue", "lightblue", "darkblue" };
