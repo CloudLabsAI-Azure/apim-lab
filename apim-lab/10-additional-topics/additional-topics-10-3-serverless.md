@@ -6,35 +6,40 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Create a simple function that is Triggered by an **HTTP Request**.
 
-2. Search for **Azure Function** App in the portal, and select **Create**.
+2. Search for **Function App**  in the portal, click on **Create** and select **Consumption**.
    
    ![](media/Pg28-funcapp.png)
 
-3. Enter the following details:
-   
-   - Resource group: **apim-rg**
-   - Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
-   - Do you want to deploy code or container image? : Select **Code**
-   - Runtime stack : Select **.Net**
-   - Version : 6(LTS)
-   - Region: Select the region you used for previous exercises.
-   - Operating System : Windows
-   - Hosting option and plans : **Consumption (Serverless)**
-   - Then click on **Review + Create**.
+   ![](media/api20.png)
 
-      ![](media/a.png)
+4. Enter the following details:
 
-4. On the **Review + Create** tab, click on **Create**.
+   - Subscription: Select the default subscription (1)
+   - Resource group: **apim-rg (2)**
+   - Function name : **func-<inject key="Deployment ID" enableCopy="false" />** **(3)**
+   - Runtime stack : Select **.Net (4)**
+   - Version : **8(LTS), isolated worker model (5)**
+   - Region: **Select the region you used for previous exercises (6)**
+   - Operating System : **Windows (7)**
+   - Click on **Review + Create (8)**.
 
-5. Once the Resource is created click on **Go to Resource**, and select Create in Azure portal.
+      ![](media/api21.png)
+
+5. On the **Review + Create** tab, click on **Create**.
+
+6. Once the Resource is created click on **Go to Resource**.
 
    ![](media/b.png)
+   
+7. Open Visual Studio Code from desktop.
 
-6. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
+8. Click on 
+
+9. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
 
    ![](media/c.png)
 
-7. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
+10. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
 
    ```c#
    //string[] strColors = { "blue", "lightblue", "darkblue" };
@@ -49,7 +54,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       ![](media/c1.png)
 
 
-8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
+11. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
 
    ![](media/05.png)
 
