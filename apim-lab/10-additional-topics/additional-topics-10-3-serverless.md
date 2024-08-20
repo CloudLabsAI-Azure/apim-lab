@@ -33,9 +33,13 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 8. Click on **File (1)** and select **Open Folder (2)**.
 
+      ![](media/open.png)
+
 9. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
 
-10. Please follow these steps:
+      ![](media/a.png)
+
+10. Please follow these steps after clicking on Create Function:
     
     - Navigate to `C:/LabFiles/Function` and click on the **Function** folder **(1)**
     - Select a language : **C# (2)**
@@ -47,29 +51,39 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
     - Select how you would like to open your project: **Open in current window (8)**
 
 11. Click on **Yes, i trust the authors** when prompted.
+
+       ![](media/api14.png)
+
+12. Replace the existing code with the following, and make sure it closely resembles the image below. Click on `Ctrl+S`.
+
+      ```c#
+      //string[] strColors = { "blue", "lightblue", "darkblue" };
+      string[] strColors = { "green", "lightgreen", "darkgreen" };
+   
+      Random r = new Random();
+      int rInt = r.Next(strColors.Length);
+   
+      return  (ActionResult)new OkObjectResult(strColors[rInt]);
+      ```
+
+       ![](media/api22.png)
+   
+13. Click on **Deploy to Azure** and follow the below steps:
+
+       ![](media/api23.png)
     
-12. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
+    - Select a function app: **func-<inject key="Deployment ID" enableCopy="false" />** 
+    - Click on **Deploy** when prompted.
 
-   ```c#
-   //string[] strColors = { "blue", "lightblue", "darkblue" };
-   string[] strColors = { "green", "lightgreen", "darkgreen" };
+         ![](media/api13.png)
 
-   Random r = new Random();
-   int rInt = r.Next(strColors.Length);
+14. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the **API blade (1)** select **+ Add API (2)** and the **Function App tile (3)**.
 
-   return  (ActionResult)new OkObjectResult(strColors[rInt]);
-   ```
-
-   ![](media/c1.png)
-
-
-13. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
-
-   ![](media/05.png)
+       ![](media/api12.png)
 
    - Click on the **Browse** button to get a list of Functions in the subscription
 
-      ![](media/06.png)
+        ![](media/06.png)
 
    - Select the Function App and then the Function
 
