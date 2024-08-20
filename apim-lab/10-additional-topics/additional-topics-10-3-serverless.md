@@ -41,7 +41,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 10. Please follow these steps after clicking on Create Function:
     
-    - Navigate to `C:/LabFiles/Function` and click on the **Function** folder **(1)**
+    - Navigate to `C:/LabFiles/functions` and click on the **Function** folder **(1)**
     - Select a language : **C# (2)**
     - Select a .NET runtime : **.NET 8.0 Isolated LTS (3)**
     - Select a template for your project's first function : **HTTP trigger (4)**
