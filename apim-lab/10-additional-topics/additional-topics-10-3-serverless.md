@@ -129,9 +129,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/api10.png)
 
-1. In the logic app designer selects **when a HTTP request is received**.
+1. In the logic app designer **search (1)** and **select (2)** **when a HTTP request is received**.
 
-   ![](media/e.png)
+   ![](media/api40.png)
 
    - In the Request body JSON Schema **insert the following JSON (1)**, and select **+ New step (2)**.
 
