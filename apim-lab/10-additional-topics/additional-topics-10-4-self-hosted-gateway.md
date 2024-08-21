@@ -90,7 +90,10 @@ To deploy a self-hosted gateway:
 
 Our Gateway Node is now deployed, we can test it.
 
-- Open the **Developer portal**, go to the **Profile** page, and get the **Primary key** for Unlimited products
+- Navigate back to the apim management service, click on **Subscriptions (1)** from left pane, select and copy the primary key for **Unlimited (2)**.
+
+    ![](media/api1.png)
+  
 - Open Notepad - Make note of URLs including the key.  For our lab test, the machine name is just *localhost*, replace **Unlimited-Key** with the primary key that you copied.
   
   - https://localhost/colors/random?key=Unlimited-Key
