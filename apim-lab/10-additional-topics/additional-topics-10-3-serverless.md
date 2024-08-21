@@ -41,7 +41,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 10. Please follow these steps after clicking on Create Function:
     
-    - Navigate to `C:/LabFiles/functions` and click on the **Function** folder **(1)**
+    - Navigate to `C:/LabFiles/functions` and click on the **functions** folder **(1)**
     - Select a language : **C# (2)**
     - Select a .NET runtime : **.NET 8.0 Isolated LTS (3)**
     - Select a template for your project's first function : **HTTP trigger (4)**
@@ -107,23 +107,27 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for **Logic App** in the portal, and click on **Add**.
+1. Search for **Logic App** in the portal, click on **Add** and select **Consumption**.
 
    ![](media/Pg28-logicapp.png)
+
+   ![](media/api30.png)
   
 1. Enter the following details:
 
-   - Select Resource Group: **apim-rg**
-   - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
-   - Region : Select the regions you have used for previous exercises. 
-   - Plan type : **Consumption**
-   - Click on **Review + create**.
+   - Subscription: Select the default subscription (1)
+   - Resource group: **apim-rg (2)**
+   - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />** **(3)**
+   - Region : Select the regions you have used for previous exercises **(4)**
+   - Click on **Review + create (5)**.
 
-      ![](media/d.png)
+      ![](media/api11.png)
 
 1. On the **Review + Create** tab, click on **Create**.
 
-1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer**.
+1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer** and click on **Add a trigger (2)**.
+
+   ![](media/api10.png)
 
 1. In the logic app designer selects **when a HTTP request is received**.
 
@@ -143,11 +147,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
-      ![](media/f.png)
+      ![](media/apim9.png)
 
 1. Search for **Azure Functions**, and select the **Azure function** that you have created previously.
 
-   ![](media/g.png)
+   ![](media/api17.png)
 
 1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
 
@@ -155,7 +159,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - **Subject**: **Color**
    - **Body**: type **msg**, **:** and click on add dynamic content, select **msg**, type **Color**, **:** and click on add dynamic content, search **body** and select **body** which present in **Azure function**.
 
-      ![](media/h.png)
+        ![](media/api18.png)
+
+        ![](media/api19.png)
 
 1. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
