@@ -6,56 +6,84 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Create a simple function that is Triggered by an **HTTP Request**.
 
-2. Search for **Azure Function** App in the portal, and select **Create**.
+2. Search for **Function App**  in the portal, click on **Create** and select **Consumption**.
    
    ![](media/Pg28-funcapp.png)
 
-3. Enter the following details:
+   ![](media/api20.png)
+
+4. Enter the following details:
+
+   - Subscription: Select the default subscription (1)
+   - Resource group: **apim-rg (2)**
+   - Function name : **func-<inject key="Deployment ID" enableCopy="false" />** **(3)**
+   - Runtime stack : Select **.Net (4)**
+   - Version : **8(LTS), isolated worker model (5)**
+   - Region: **Select the region you used for previous exercises (6)**
+   - Operating System : **Windows (7)**
+   - Click on **Review + Create (8)**.
+
+      ![](media/api21.png)
+
+5. On the **Review + Create** tab, click on **Create**.
+
+6. Once the Resource is created click on **Go to Resource**.
    
-   - Resource group: **apim-rg**
-   - Function name : **func-<inject key="Deployment ID" enableCopy="false" />**
-   - Do you want to deploy code or container image? : Select **Code**
-   - Runtime stack : Select **.Net**
-   - Version : 6(LTS)
-   - Region: Select the region you used for previous exercises.
-   - Operating System : Windows
-   - Hosting option and plans : **Consumption (Serverless)**
-   - Then click on **Review + Create**.
+7. Open Visual Studio Code from desktop.
+
+8. Click on **File (1)** and select **Open Folder (2)**.
+
+      ![](media/open.png)
+
+9. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
 
       ![](media/a.png)
 
-4. On the **Review + Create** tab, click on **Create**.
+10. Please follow these steps after clicking on Create Function:
+    
+    - Navigate to `C:/LabFiles/functions` and click on the **functions** folder **(1)**
+    - Select a language : **C# (2)**
+    - Select a .NET runtime : **.NET 8.0 Isolated LTS (3)**
+    - Select a template for your project's first function : **HTTP trigger (4)**
+    - Provide a function name: **GetRandomColor (5)**
+    - Provide a namespace: **Select the defaut (6)**
+    - AccessRights: **Function (7)**
+    - Select how you would like to open your project: **Open in current window (8)**
 
-5. Once the Resource is created click on **Go to Resource**, and select Create in Azure portal.
+11. Click on **Yes, i trust the authors** when prompted.
 
-   ![](media/b.png)
+       ![](media/api14.png)
 
-6. Select **HTTP Trigger** **(1)** and enter the New Function as **GetRandomColor** **(2)**, and click on the **Create** **(3)**.
+12. Replace the existing code with the following, and make sure it closely resembles the image below. Click on `Ctrl+S`.
 
-   ![](media/c.png)
+      ```c#
+      //string[] strColors = { "blue", "lightblue", "darkblue" };
+      string[] strColors = { "green", "lightgreen", "darkgreen" };
+   
+      Random r = new Random();
+      int rInt = r.Next(strColors.Length);
+   
+      return  (ActionResult)new OkObjectResult(strColors[rInt]);
+      ```
 
-7. Navigate to **Code + Test**, Replace the code with the following, and click on **Save**.
+       ![](media/api22.png)
+   
+13. Click on **Deploy to Azure** and follow the below steps:
 
-   ```c#
-   //string[] strColors = { "blue", "lightblue", "darkblue" };
-   string[] strColors = { "green", "lightgreen", "darkgreen" };
+       ![](media/api50.png)
+    
+    - Select a function app: **func-<inject key="Deployment ID" enableCopy="false" />** 
+    - Click on **Deploy** when prompted.
 
-   Random r = new Random();
-   int rInt = r.Next(strColors.Length);
+         ![](media/api13.png)
 
-   return  (ActionResult)new OkObjectResult(strColors[rInt]);
-   ```
+14. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the **API blade (1)** select **+ Add API (2)** and the **Function App tile (3)**.
 
-      ![](media/c1.png)
-
-
-8. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the API blade select [+ Add API] and the [Function App] tile
-
-   ![](media/05.png)
+       ![](media/api12.png)
 
    - Click on the **Browse** button to get a list of Functions in the subscription
 
-      ![](media/06.png)
+        ![](media/06.png)
 
    - Select the Function App and then the Function
 
@@ -79,27 +107,31 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 - Create a simple logic app that is Triggered by an HTTP Request
 
-1. Search for **Logic App** in the portal, and click on **Add**.
+1. Search for **Logic App** in the portal, click on **Add** and select **Consumption**.
 
    ![](media/Pg28-logicapp.png)
+
+   ![](media/api30.png)
   
 1. Enter the following details:
 
-   - Select Resource Group: **apim-rg**
-   - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />**
-   - Region : Select the regions you have used for previous exercises. 
-   - Plan type : **Consumption**
-   - Click on **Review + create**.
+   - Subscription: Select the default subscription (1)
+   - Resource group: **apim-rg (2)**
+   - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />** **(3)**
+   - Region : Select the regions you have used for previous exercises **(4)**
+   - Click on **Review + create (5)**.
 
-      ![](media/d.png)
+      ![](media/api11.png)
 
 1. On the **Review + Create** tab, click on **Create**.
 
-1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer**.
+1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer** and click on **Add a trigger (2)**.
 
-1. In the logic app designer selects **when a HTTP request is received**.
+   ![](media/api10.png)
 
-   ![](media/e.png)
+1. In the logic app designer **search (1)** and **select (2)** **when a HTTP request is received**.
+
+   ![](media/api40.png)
 
    - In the Request body JSON Schema **insert the following JSON (1)**, and select **+ New step (2)**.
 
@@ -115,11 +147,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
-      ![](media/f.png)
+      ![](media/apim9.png)
 
 1. Search for **Azure Functions**, and select the **Azure function** that you have created previously.
 
-   ![](media/g.png)
+   ![](media/api17.png)
 
 1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
 
@@ -127,9 +159,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - **Subject**: **Color**
    - **Body**: type **msg**, **:** and click on add dynamic content, select **msg**, type **Color**, **:** and click on add dynamic content, search **body** and select **body** which present in **Azure function**.
 
-      ![](media/h.png)
+        ![](media/api18.png)
 
-5. Select **+ New step**, search and select **Response**, now **save** the logic App.
+        ![](media/api19.png)
+
+1. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
    ![](media/13.png)
 
@@ -141,7 +175,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
-6. Lets add the function to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
+1. Lets add the function to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
 
    ![](media/addapi.png)
 
