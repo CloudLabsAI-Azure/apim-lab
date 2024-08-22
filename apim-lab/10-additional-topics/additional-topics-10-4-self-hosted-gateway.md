@@ -71,7 +71,7 @@ To deploy a self-hosted gateway:
 
 - The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
-  ![](../../assets/api2.png)
+  ![](media/api2.png)
 
   >**Note** that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
