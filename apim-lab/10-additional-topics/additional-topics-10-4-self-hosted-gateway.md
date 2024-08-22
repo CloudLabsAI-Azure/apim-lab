@@ -56,6 +56,8 @@ To deploy a self-hosted gateway:
 
   - You can launch Docker Desktop by using the shortcut available on the Jump VM. After launching Docker Desktop, **accept the terms**, click **Continue without signing in**, and **skip** the survey. Docker Engine may take about 2-3 minutes to start. Minimize Docker Desktop and then open the PowerShell.
 
+    ![](media/api4.png)    
+
   - Navigate to the location where the *env.conf* is located, Run command :
     Make sure to replace the demouser with the username.
     ```
@@ -72,6 +74,8 @@ To deploy a self-hosted gateway:
 - The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
   ![](media/api2.png)
+
+  ![](media/api3.png)
 
   >**Note** that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
