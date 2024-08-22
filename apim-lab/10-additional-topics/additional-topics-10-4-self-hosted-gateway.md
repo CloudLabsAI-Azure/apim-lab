@@ -46,13 +46,11 @@ To deploy a self-hosted gateway:
 
     ![](media/api5.png)
 
-- Copy the Docker run command under Deployment scripts, but remove the *-d* parameter. This is the logs are displayed to the terminal.
-
+- Copy the Docker run command under Deployment scripts.
+  
   ```text
   docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
   ```
-
-    ![](../../assets/images/apim-app-gateway-deploy-5.png)
 
 - In the LabVM search for Windows Powershell and run as Administrator (needed for Docker commands).
 
@@ -68,19 +66,12 @@ To deploy a self-hosted gateway:
     ```
   - Run the Docker run command
     ```
-    docker run -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
+    docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
     ```
 
 - The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
-  ![](../../assets/images/apim-app-gateway-deploy-7.png)
-
-- Once downloaded, the log output from the container will display a Sputnik logo (this was an internal code name) and some diagnostic logs.
-
-  ![](../../assets/images/apim-app-gateway-deploy-8.png)
-
-
-  ![](../../assets/images/apim-app-gateway-deploy-9.png)
+  ![](../../assets/api2.png)
 
   >**Note** that in the Gateway blade, we can see the status - it will show there is one healthy Gateway Node connected to the Deployment.   The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
