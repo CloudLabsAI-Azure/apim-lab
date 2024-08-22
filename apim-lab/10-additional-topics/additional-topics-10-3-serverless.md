@@ -70,7 +70,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    
 13. Click on **Deploy to Azure** and follow the below steps:
 
-       ![](media/api23.png)
+       ![](media/api50.png)
     
     - Select a function app: **func-<inject key="Deployment ID" enableCopy="false" />** 
     - Click on **Deploy** when prompted.
