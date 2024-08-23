@@ -19,6 +19,17 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 
 ## Pre-requisites
+   - **Azure Account**: An active Azure account with permissions to create and manage resources.
+   - **Basic API Knowledge**: Understanding of API concepts such as endpoints, operations, and HTTP methods.
+   - **API Management Familiarity**: Basic knowledge of API management tools and concepts.
+   - **Programming Skills**: Proficiency in a programming language (e.g., Python, JavaScript, C#) to work with APIs and integrations.
+   - **OpenAPI Specification**: Familiarity with OpenAPI specifications for importing APIs.
+   - **Web Development Knowledge**: Understanding of web technologies and concepts for customizing the Developer Portal.
+   - **Security Fundamentals**: Basic knowledge of API security practices and measures.
+   - **Analytics Understanding**: Familiarity with analytics and monitoring tools for tracking API performance.
+   - **Fusion Dev Tools**: Basic knowledge of Fusion Dev tools for API management and development.
+
+These prerequisites will ensure you are prepared to engage effectively with the lab’s exercises and make the most of Azure’s API Management tools.
 
 ## Architecture
 
