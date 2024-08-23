@@ -7,6 +7,17 @@
 ## Overview
 
 ## Objective
+By the end of this lab, you will improve your coding workflow by leveraging AI-powered tools. You will:
+   - **Create an API Management Instance**: Set up and verify an Azure API Management instance in your environment.
+   - **Developer Portal**: Deploy and customize the Developer Portal, configure email settings, and manage user experience and product definitions.
+   - **Adding APIs**: Create new APIs, integrate with existing ones (e.g., Star Wars API), import APIs using OpenAPI, and manage testing, subscription keys, and rate limits.
+   - **Policy Expressions**: Configure and implement policy expressions to control API behavior and enforce rules.
+   - **Version and Revisions**: Handle API versions and revisions for updates and compatibility.
+   - **Analytics & Monitoring**: Implement tools for tracking API performance and usage.
+   - **Security**: Integrate and utilize Fusion Dev tools for enhanced API management and development.
+   - **Fusion Dev**: Integrate and utilize Fusion Dev tools for enhanced API management and development.
+   - **Architecture Design Session**: Design and plan the architecture of your API Management setup, focusing on scalability, security, and performance.
+
 
 ## Pre-requisites
 
