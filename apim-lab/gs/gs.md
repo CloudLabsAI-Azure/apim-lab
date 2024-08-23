@@ -1,6 +1,4 @@
 # Azure API Management
----
-
 
 ### Overall Estimated Duration: 7 Hours
 
