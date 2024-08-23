@@ -29,8 +29,6 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
    - **Analytics Understanding**: Familiarity with analytics and monitoring tools for tracking API performance.
    - **Fusion Dev Tools**: Basic knowledge of Fusion Dev tools for API management and development.
 
-These prerequisites will ensure you are prepared to engage effectively with the lab’s exercises and make the most of Azure’s API Management tools.
-
 ## Architecture
 
 ## Architecture Diagram
