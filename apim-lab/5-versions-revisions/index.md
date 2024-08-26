@@ -12,13 +12,13 @@ For more information, visit the [Versions & Revisions](https://azure.microsoft.c
 
 You will be able to complete the following tasks:
 
-Task 1: Version
+**Task 1**: Version
 
 Task 1.1: Add a new version
 
 Task 1.2: Test the new version
 
-Task 2: Revisions
+**Task 2**: Revisions
 
 Task 2.1: Add a new revision
 
