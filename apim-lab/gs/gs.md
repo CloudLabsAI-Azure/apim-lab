@@ -47,7 +47,7 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 ## Architecture
 
-![07](media/arch2.PNG)
+![](media/arch2.PNG.JPG)
 
 ## Architecture Diagram
 
