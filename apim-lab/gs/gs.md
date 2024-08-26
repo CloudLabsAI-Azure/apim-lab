@@ -47,9 +47,29 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 ## Architecture
 
+![07](media/arch2.PNG)
+
 ## Architecture Diagram
 
+The architecture uses Azure API Management to manage and secure APIs. It includes setting up an API Management instance to handle and direct API requests while applying policies like rate limits and CORS for secure access. The Developer Portal is customized to offer easy-to-use API documentation, testing, and subscription features. APIs are hosted on Azure App Services or AKS, with security managed through Azure Key Vault and authentication methods. Analytics tools like Azure Monitor track performance, and Azure Logic Apps and CDN are used to improve integration and content delivery. This setup ensures a secure, scalable, and user-friendly API management system.
+
 ## Explanation of Components
+
+1. **Azure API Management Instance**: Central hub for managing and securing APIs. It directs API traffic, applies policies, and ensures smooth operation.
+
+2. **API Gateway**: Routes requests to backend services and enforces rules like rate limiting and CORS (Cross-Origin Resource Sharing) for secure API access.
+
+3. **Developer Portal**: User-friendly interface for developers to access API documentation, test APIs, and manage subscriptions.
+
+4. **Azure Functions**: Executes serverless code in response to events, useful for processing or integrating with other services.
+
+5. **Azure Key Vault**: Stores sensitive information like API keys and certificates securely.
+
+6. **JWT (JSON Web Tokens)**: Manages user authentication and permissions to ensure secure API access.
+
+7. **Azure Monitor and Application Insights**: Tracks API performance and provides alerts for monitoring and optimization.
+
+8. **Azure Logic Apps**: Automates workflows and integrates with other services based on API events.
 
 # Getting Started with Lab
 
