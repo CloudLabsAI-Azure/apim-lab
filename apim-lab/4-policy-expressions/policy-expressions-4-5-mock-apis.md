@@ -52,6 +52,6 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
 <validation step="3083e0a3-97d5-46ce-bdf3-7c9e6cd526e7" />
 ---
 
-### Summary 
+## Summary 
 In Azure API Management, a "Get Film" operation is created for the Star Wars API. This operation returns a mock response with a 200 OK status code and sample JSON data containing film information. An inbound policy is added to simulate the mock response, and when the API is invoked, it returns a 200 success status with the mocked film data.
 - Now, click on Next from the lower right corner to move on to the next page.
