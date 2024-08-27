@@ -10,7 +10,7 @@ The purpose of this lab is to enhance your coding workflow by leveraging Azure�
 
 Understand how to leverage Azure’s API Management tools to enhance your coding workflow. Gain hands-on experience in setting up API instances, managing user interactions, and optimizing API performance and security. By the end of this lab, you will be able to:
 
-   - **Create an API Management Instance**: Set up and verify an Azure API Management instance in your environment. 
+   - **Verify API Management Instance**: Set up and verify an Azure API Management instance in your environment. 
      Learn how to configure basic settings and ensure the instance is properly integrated with your Azure resources.
    - **Developer Portal**: Deploy and customize the Developer Portal to match your organization’s branding and 
      requirements. Configure email settings, manage user experience, and create product definitions for your API 
