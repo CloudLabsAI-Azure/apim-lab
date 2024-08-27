@@ -8,8 +8,9 @@ The purpose of this lab is to enhance your coding workflow by leveraging Azure�
 
 ## Objective
 
-By the end of this lab, you will improve your coding workflow by leveraging AI-powered tools. You will:
-   - **Create an API Management Instance**: Set up and verify an Azure API Management instance in your environment. 
+Understand how to leverage Azure’s API Management tools to enhance your coding workflow. Gain hands-on experience in setting up API instances, managing user interactions, and optimizing API performance and security. By the end of this lab, you will be able to:
+
+   - **Verify API Management Instance**: Set up and verify an Azure API Management instance in your environment. 
      Learn how to configure basic settings and ensure the instance is properly integrated with your Azure resources.
    - **Developer Portal**: Deploy and customize the Developer Portal to match your organization’s branding and 
      requirements. Configure email settings, manage user experience, and create product definitions for your API 
@@ -17,7 +18,8 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
    - **Adding APIs**: Create new APIs and integrate them with existing APIs, such as the Star Wars API, to enhance 
      functionality. Import APIs using OpenAPI specifications, and manage aspects like testing, subscription keys, and 
      rate limits to ensure seamless operation.
-   - **Policy Expressions**: Configure and implement policy expressions to control API behavior, enforce security rules, 
+   - **Policy Expressions**: Configure and implement policy expressions to control API behavior, enforce security 
+     rules, 
      and handle transformations. Learn to write custom policies to tailor API responses and request handling as per 
      business requirements.
    - **Version and Revisions**: Handle API versions and revisions effectively to maintain backward compatibility and 
@@ -41,7 +43,8 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
    - **Azure Account**: An active Azure account with permissions to create and manage resources.
    - **Basic API Knowledge**: Understanding of API concepts such as endpoints, operations, and HTTP methods.
    - **API Management Familiarity**: Basic knowledge of API management tools and concepts.
-   - **Programming Skills**: Proficiency in a programming language (e.g., Python, JavaScript, C#) to work with APIs and integrations.
+   - **Programming Skills**: Proficiency in a programming language (e.g., Python, JavaScript, C#) to work with APIs and 
+     integrations.
    - **OpenAPI Specification**: Familiarity with OpenAPI specifications for importing APIs.
    - **Web Development Knowledge**: Understanding of web technologies and concepts for customizing the Developer Portal.
    - **Security Fundamentals**: Basic knowledge of API security practices and measures.
@@ -74,7 +77,7 @@ The architecture uses Azure API Management to manage and secure APIs. It include
 
 8. **Azure Logic Apps**: Automates workflows and integrates with other services based on API events.
 
-# Getting Started with Lab
+## Getting Started with Lab
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of lab guide to switch to different exercises of the lab guide.
 

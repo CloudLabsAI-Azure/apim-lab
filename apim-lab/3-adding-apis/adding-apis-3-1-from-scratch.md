@@ -1,6 +1,6 @@
 ## Exercise 3: Adding APIs
 
-## Overview
+## Estimated Duration: 40 minutes
 
 An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
 
@@ -21,7 +21,6 @@ You will be able to complete the following tasks:
 **Task 4.1**: Calling API and testing Subscription Keys
 
 **Task 4.2**: Rate limit
-
 
 
 ## Task 1: Add API from Scratch
@@ -92,10 +91,6 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 ## Summary
 
-In this task, you added the Star Wars API to Azure API Management and configured two operations:
+In this task, you added the Star Wars API to Azure API Management, configuring operations for retrieving a list of characters and details by ID. This demonstrates the ability to integrate and manage APIs effectively within the Azure environment
 
-1. Get People: This operation retrieves a list of people from the Star Wars API.
-
-2. Get People By Id: This operation retrieves detailed information about a specific person from the Star Wars API based on their ID.
-
-- Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page.

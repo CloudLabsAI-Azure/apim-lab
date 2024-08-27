@@ -1,6 +1,6 @@
-## Exercise 1: Create an API Management instance
+## Exercise 1: Verify API Management Instance
 
-## Overview
+## Estimated Duration: 20 minutes
 
 APIs enable digital experiences, simplify application integration, underpin new digital products, and make data and services reusable and universally accessible. With the proliferation and increasing dependency on APIs, organizations need to manage them as first-class assets throughout their lifecycle.
 Azure API Management helps customers meet these challenges:
@@ -71,4 +71,7 @@ You may have noticed the *Request URL* and may be tempted to put it in your brow
       ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
 
 ## Summary
-In this exercise, you have verified the Azure API management instance. Now, click on Next from the lower right corner to move on to the next page.
+
+In this exercise, you verified the setup and functionality of the Azure API Management instance by testing the Echo API and handling any issues related to subscription keys. This ensures that your API management environment is correctly configured and ready for further use. You are now prepared to proceed to the next exercise to deepen your understanding and management of APIs.
+
+## Now, click on the Next from lower right corner to move on next page
