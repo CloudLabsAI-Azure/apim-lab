@@ -1,4 +1,4 @@
-## Exercise 1: Verify Pre-Built API Management Instance
+## Exercise 1: Verify API Management Instance
 
 ## Estimated Duration: 20 minutes
 
