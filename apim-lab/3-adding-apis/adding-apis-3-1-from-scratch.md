@@ -1,6 +1,6 @@
-## Exercise 3: Adding APIs
+# Exercise 3: Adding APIs
 
-### Overview
+## Overview
 
 An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
 
@@ -24,7 +24,7 @@ You will be able to complete the following tasks:
 
 
 
-### Task 1: Add API from Scratch
+## Task 1: Add API from Scratch
 
 Instead of developing an API, for this lab, you will use the existing [_Star Wars_ API](https://swapi.dev):
 
@@ -69,7 +69,7 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 > **Congratulations** on completing the task! Now, it's time to validate it.
 > <validation step="5394ae8d-6ce9-4ef8-ba57-e7dbff0a416b" />
 
-### Task 2: Access Star Wars API from Developer Portal
+## Task 2: Access Star Wars API from Developer Portal
 
 1. Now switch to the **Developer Portal** and sign in as a developer with a subscription.
 2. Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
@@ -90,7 +90,7 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 ---
 
-### Summary
+## Summary
 
 In this task, you added the Star Wars API to Azure API Management and configured two operations:
 
