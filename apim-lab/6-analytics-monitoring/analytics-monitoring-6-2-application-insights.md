@@ -101,4 +101,4 @@ Sampling is an effective tool in diagnosing often general operational issues. Fo
 
 Skipping logging of headers and body of requests and responses will also have a positive impact on alleviating performance issues.
 
-- Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page.
