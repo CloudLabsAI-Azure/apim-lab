@@ -1,6 +1,6 @@
-# Exercise 6: Analytics & Monitoring
+## Exercise 6: Analytics & Monitoring
 
-## Overview
+## Estimated Duration: 40 minutes
 
 In this exercise, you'll set up Azure Monitor and Application Insights to track and analyze API performance. The focus is on collecting metrics, monitoring usage, and gaining insights into API health, which aids in optimizing performance and ensuring the reliability of your API services.
 
@@ -49,4 +49,4 @@ Analytics is available on the _Analytics_ blade in APIM.
 
       ![APIM Azure Monitor Analytics](media/03.png)
 
-- Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page.
