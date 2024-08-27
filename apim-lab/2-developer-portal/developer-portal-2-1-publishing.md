@@ -1,6 +1,6 @@
 ## Excercise 2: Developer Portal
 
-## Overview
+## Estimated Duration : 60 minutes
 
 The Developer Portal is an automatically generated, fully customizable website with the documentation of your APIs. It is where API consumers can discover your APIs, learn how to use them, request access, and try them out.
 
@@ -150,4 +150,6 @@ It's now time to test one of the published APIs.
 
 ## Summary
 
-In this Task, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing. Now, click on Next from the lower right corner to move on to the next page.
+In this Task, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing.
+
+## Now, click on Next from the lower right corner to move on to the next page.
