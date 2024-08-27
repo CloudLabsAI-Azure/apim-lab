@@ -1,4 +1,4 @@
-# Task 3: Event Hub Overview
+## Task 3: Event Hub Overview
 
 [Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/#overview) is a fully managed, real-time data ingestion service. Millions of events per second can be aggregated to build dynamic data pipelines. 
 
@@ -215,4 +215,5 @@ Once your logger is configured in Azure API Management, you can configure your l
 
 ### Summary 
 In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) for API analytics. This involves creating an Event Hubs namespace, configuring an event hub, setting up access, creating an APIM logger, and configuring policies to log events to Event Hubs, providing real-time API usage tracking and monitoring.
-- Now, click on Next from the lower right corner to move on to the next page.
+
+### Now, click on Next from the lower right corner to move on to the next page.
