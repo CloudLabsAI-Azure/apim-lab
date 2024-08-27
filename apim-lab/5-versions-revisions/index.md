@@ -8,4 +8,25 @@ Revisions allow you to safely make _non-breaking_ changes to your API. Developer
 
 For more information, visit the [Versions & Revisions](https://azure.microsoft.com/en-us/blog/versions-revisions) documentation.
 
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+**Task 1**: Version
+
+Task 1.1: Add a new version
+
+Task 1.2: Test the new version
+
+**Task 2**: Revisions
+
+Task 2.1: Add a new revision
+
+Task 2.2: Add caching
+
+Task 2.3: Test the new revision
+
+Task 2.4: Make current revision
+
+
 - Now, click on Next from the lower right corner to move on to the next page.

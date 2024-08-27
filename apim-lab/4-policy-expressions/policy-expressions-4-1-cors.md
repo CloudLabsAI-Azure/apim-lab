@@ -1,3 +1,33 @@
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+**Task 1**: Cross-origin resource sharing (CORS) policy
+
+**Task 2**: Caching policy
+
+**Task 3**: Transformation policies
+
+Task 3.1: Transformation - replace string
+
+Task 3.2: Transformation - conditional
+
+Task 3.3: Transformation - XML to JSON
+
+Task 3.4: Transformation - Delete response headers
+
+Task 3.5: Transformation - Amend what's passed to the backend
+
+**Task 4**: Named Values
+
+**Task 5**: Mock policy
+
+**Task 6**: Send One Way policy
+
+**Task 7**: Abort processing policy
+
+
+
 ## Task 1: Cross-origin resource sharing (CORS) policy
 
 The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-management-cross-domain-policies#CORS>) adds cross-origin resource sharing (CORS) support to an operation or an API to allow cross-domain calls from browser-based clients.

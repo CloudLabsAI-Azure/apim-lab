@@ -7,15 +7,31 @@ The purpose of this lab is to enhance your coding workflow by leveraging Azureâ€
 
 ## Objective
 By the end of this lab, you will improve your coding workflow by leveraging AI-powered tools. You will:
-   - **Create an API Management Instance**: Set up and verify an Azure API Management instance in your environment.
-   - **Developer Portal**: Deploy and customize the Developer Portal, configure email settings, and manage user experience and product definitions.
-   - **Adding APIs**: Create new APIs, integrate with existing ones (e.g., Star Wars API), import APIs using OpenAPI, and manage testing, subscription keys, and rate limits.
-   - **Policy Expressions**: Configure and implement policy expressions to control API behavior and enforce rules.
-   - **Version and Revisions**: Handle API versions and revisions for updates and compatibility.
-   - **Analytics & Monitoring**: Implement tools for tracking API performance and usage.
-   - **Security**: Integrate and utilize Fusion Dev tools for enhanced API management and development.
-   - **Fusion Dev**: Integrate and utilize Fusion Dev tools for enhanced API management and development.
-   - **Architecture Design Session**: Design and plan the architecture of your API Management setup, focusing on scalability, security, and performance.
+   - **Create an API Management Instance**: Set up and verify an Azure API Management instance in your environment. 
+     Learn how to configure basic settings and ensure the instance is properly integrated with your Azure resources.
+   - **Developer Portal**: Deploy and customize the Developer Portal to match your organizationâ€™s branding and 
+     requirements. Configure email settings, manage user experience, and create product definitions for your API 
+     offerings.
+   - **Adding APIs**: Create new APIs and integrate them with existing APIs, such as the Star Wars API, to enhance 
+     functionality. Import APIs using OpenAPI specifications, and manage aspects like testing, subscription keys, and 
+     rate limits to ensure seamless operation.
+   - **Policy Expressions**: Configure and implement policy expressions to control API behavior, enforce security rules, 
+     and handle transformations. Learn to write custom policies to tailor API responses and request handling as per 
+     business requirements.
+   - **Version and Revisions**: Handle API versions and revisions effectively to maintain backward compatibility and 
+     manage updates. Learn best practices for versioning strategies to ensure smooth transitions and minimal disruption 
+     to users.
+   - **Analytics & Monitoring**: Implement and utilize tools for tracking API performance and usage, and generate 
+     insightful reports. Set up monitoring to detect anomalies, analyze trends, and optimize API performance based on 
+     real-time data.
+   - **Security**: Integrate security measures such as OAuth, JWT, and IP restrictions to protect your APIs from 
+     unauthorized access. Implement robust authentication and authorization practices to safeguard sensitive data and 
+     ensure secure interactions.
+   - **Fusion Dev**: Utilize Fusion Dev tools to enhance API management, streamline development workflows, and automate 
+     tasks. Explore features that support API lifecycle management and improve collaboration within development teams.
+   - **Architecture Design Session**: Design and plan the architecture of your API Management setup with a focus on 
+     scalability, security, and performance. Develop a comprehensive strategy to address potential challenges and 
+     optimize the infrastructure for future growth.
 
 
 ## Pre-requisites
@@ -31,9 +47,29 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 ## Architecture
 
+![](media/arch2.PNG.JPG)
+
 ## Architecture Diagram
 
+The architecture uses Azure API Management to manage and secure APIs. It includes setting up an API Management instance to handle and direct API requests while applying policies like rate limits and CORS for secure access. The Developer Portal is customized to offer easy-to-use API documentation, testing, and subscription features. APIs are hosted on Azure App Services or AKS, with security managed through Azure Key Vault and authentication methods. Analytics tools like Azure Monitor track performance, and Azure Logic Apps and CDN are used to improve integration and content delivery. This setup ensures a secure, scalable, and user-friendly API management system.
+
 ## Explanation of Components
+
+1. **Azure API Management Instance**: Central hub for managing and securing APIs. It directs API traffic, applies policies, and ensures smooth operation.
+
+2. **API Gateway**: Routes requests to backend services and enforces rules like rate limiting and CORS (Cross-Origin Resource Sharing) for secure API access.
+
+3. **Developer Portal**: User-friendly interface for developers to access API documentation, test APIs, and manage subscriptions.
+
+4. **Azure Functions**: Executes serverless code in response to events, useful for processing or integrating with other services.
+
+5. **Azure Key Vault**: Stores sensitive information like API keys and certificates securely.
+
+6. **JWT (JSON Web Tokens)**: Manages user authentication and permissions to ensure secure API access.
+
+7. **Azure Monitor and Application Insights**: Tracks API performance and provides alerts for monitoring and optimization.
+
+8. **Azure Logic Apps**: Automates workflows and integrates with other services based on API events.
 
 # Getting Started with Lab
 

@@ -4,6 +4,26 @@
 
 The Developer Portal is an automatically generated, fully customizable website with the documentation of your APIs. It is where API consumers can discover your APIs, learn how to use them, request access, and try them out.
 
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+**Task 1**: Publishing the Developer Portal
+
+**Task 2**: Enabling CORS for the Developer Portal
+
+**Task 3**: User Experience
+
+**Task 4**: Customizing the Developer Portal
+
+   Task 4.1: Site Configuration
+   
+   Task 4.2: Email Configuration
+   
+**Task 5**: Product Management
+
+   Task 5.1: Product definition
+   
 ## Task 1: Publishing the Developer Portal
 
 The Azure API Management Developer Portal uses role-based access control (RBAC). After creating the Azure API Management instance, you need to first **access the Developer Portal using the admin role**, which will trigger its activation.

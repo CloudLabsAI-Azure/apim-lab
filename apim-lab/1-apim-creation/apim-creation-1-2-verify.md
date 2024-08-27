@@ -8,6 +8,12 @@ Azure API Management helps customers meet these challenges:
 - Protect, accelerate, and observe APIs
 - Enable API discovery and consumption by internal and external users
 
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+**Task 1**: Verifying the Azure API Management instance
+
 ## Task 1: Verifying the Azure API Management instance
 Azure API Management instance has already been pre-deployed as part of the deployment for this lab.
 

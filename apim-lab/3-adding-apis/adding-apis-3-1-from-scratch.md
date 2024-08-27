@@ -8,6 +8,22 @@ An API represents a set of operations that can be invoked. New APIs are defined,
 
   ![APIM APIs](media/01.png)
 
+## Lab objectives
+
+You will be able to complete the following tasks:
+
+**Task 1**: Add API from Scratch
+
+**Task 2**: Access Star Wars API from Developer Portal
+
+**Task 3**: Import API using OpenAPI
+
+**Task 4.1**: Calling API and testing Subscription Keys
+
+**Task 4.2**: Rate limit
+
+
+
 ### Task 1: Add API from Scratch
 
 Instead of developing an API, for this lab, you will use the existing [_Star Wars_ API](https://swapi.dev):
