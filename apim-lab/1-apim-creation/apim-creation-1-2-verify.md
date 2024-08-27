@@ -1,4 +1,4 @@
-# Exercise 1: Create an API Management instance
+## Exercise 1: Create an API Management instance
 
 ## Overview
 
