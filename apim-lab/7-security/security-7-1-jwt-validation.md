@@ -1,5 +1,7 @@
-# Exercise 7: Security 
-## Overview
+## Exercise 7: Security 
+
+## Estimated Duration: 40 minutes
+
 APIM focuses heavily on security in all three major areas of the product. Going into detail on each aspect is a large topic entirely of its own. Therefore, in this section we will focus more narrowly on one of the common approaches to secure access to an API.
 
 Lab objectives
@@ -187,4 +189,4 @@ Let's add the username contained inside the JSON Web Tokens into a specific head
 
 Based on what you have learned thus far, consider how you can improve your policies. For example, you may not want to hard-code the `issuer-signing-key` and instead use a Named Value that you can more easily administer and change outside of an API's policies. If you have time in this exercise, go ahead and give it a try.
 
-- Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page.
