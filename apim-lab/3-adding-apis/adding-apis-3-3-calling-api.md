@@ -111,4 +111,4 @@ Concat the base URL and the subscription key for the **Starter** and **Unlimited
 
 In this Task, you imported and configured the "Colors API" in Azure API Management, successfully tested it in the Developer Portal, and added rate limits to different subscription tiers (Starter and Unlimited).
 
-## Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page.
