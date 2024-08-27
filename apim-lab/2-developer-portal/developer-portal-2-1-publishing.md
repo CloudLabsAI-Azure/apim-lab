@@ -1,4 +1,4 @@
-# Excercise 2: Developer Portal
+## Excercise 2: Developer Portal
 
 ## Overview
 
