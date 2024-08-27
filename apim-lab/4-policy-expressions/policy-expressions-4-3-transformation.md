@@ -172,7 +172,7 @@ Query string parameters and headers can be easily modified prior to sending the 
 
 
 ---
-### Summary
+## Summary
 In these transformation tasks, you implemented various policies in Azure API Management:
 
 1. You applied find-and-replace policies to modify response strings in the Colors API.
