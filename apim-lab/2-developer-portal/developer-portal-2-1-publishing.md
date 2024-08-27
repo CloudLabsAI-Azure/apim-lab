@@ -1,4 +1,4 @@
-# Excercise 2: Developer Portal
+## Excercise 2: Developer Portal
 
 ## Overview
 
@@ -148,6 +148,6 @@ It's now time to test one of the published APIs.
 
       ![APIM Developer Portal Try API](<media/Ex-2-T-3(2).png>)
 
-### Summary
+## Summary
 
 In this Task, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing. Now, click on Next from the lower right corner to move on to the next page.

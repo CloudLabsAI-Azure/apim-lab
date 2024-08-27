@@ -1,11 +1,13 @@
 # Azure API Management
 
-#### Overall Estimated Duration: 7 Hours
+## Overall Estimated Duration: 7 Hours
 
 ## Overview
+
 The purpose of this lab is to enhance your coding workflow by leveraging Azure’s API Management tools. You will gain hands-on experience in setting up and verifying an API Management instance, deploying and customizing the Developer Portal, and managing user experience and product definitions. The lab will guide you through creating and integrating APIs, working with existing APIs like the Star Wars API, importing APIs using OpenAPI, and managing testing, subscription keys, and rate limits. Additionally, you’ll configure policy expressions, handle API versions and revisions, implement analytics and monitoring tools, and establish security measures. The integration of Fusion Dev tools and the design of a scalable, secure API management architecture will also be covered, equipping you with the skills to optimize your API development and management processes effectively.
 
 ## Objective
+
 By the end of this lab, you will improve your coding workflow by leveraging AI-powered tools. You will:
    - **Create an API Management Instance**: Set up and verify an Azure API Management instance in your environment. 
      Learn how to configure basic settings and ensure the instance is properly integrated with your Azure resources.
@@ -35,6 +37,7 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 
 ## Pre-requisites
+
    - **Azure Account**: An active Azure account with permissions to create and manage resources.
    - **Basic API Knowledge**: Understanding of API concepts such as endpoints, operations, and HTTP methods.
    - **API Management Familiarity**: Basic knowledge of API management tools and concepts.
@@ -47,11 +50,11 @@ By the end of this lab, you will improve your coding workflow by leveraging AI-p
 
 ## Architecture
 
-![](media/arch2.PNG.JPG)
+The architecture uses Azure API Management to manage and secure APIs. It includes setting up an API Management instance to handle and direct API requests while applying policies like rate limits and CORS for secure access. The Developer Portal is customized to offer easy-to-use API documentation, testing, and subscription features. APIs are hosted on Azure App Services or AKS, with security managed through Azure Key Vault and authentication methods. Analytics tools like Azure Monitor track performance, and Azure Logic Apps and CDN are used to improve integration and content delivery. This setup ensures a secure, scalable, and user-friendly API management system.
 
 ## Architecture Diagram
 
-The architecture uses Azure API Management to manage and secure APIs. It includes setting up an API Management instance to handle and direct API requests while applying policies like rate limits and CORS for secure access. The Developer Portal is customized to offer easy-to-use API documentation, testing, and subscription features. APIs are hosted on Azure App Services or AKS, with security managed through Azure Key Vault and authentication methods. Analytics tools like Azure Monitor track performance, and Azure Logic Apps and CDN are used to improve integration and content delivery. This setup ensures a secure, scalable, and user-friendly API management system.
+![](media/arch2.PNG.JPG)
 
 ## Explanation of Components
 
