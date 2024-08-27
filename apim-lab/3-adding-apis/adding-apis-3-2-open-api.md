@@ -67,7 +67,7 @@ This is likely a mixed-content CORS error in which you are attempting a call to 
 ![APIM Calculator CORS Error](../../assets/images/apim-calc-cors-error.png)
 
 ---
-### Summary
+## Summary
 In this task, you imported the "Calc API" using the OpenAPI specification in Azure API Management, allowing HTTPS access to an HTTP-only backend service. You configured the API, tested it in the Developer Portal, and explored its OpenAPI definition.
 Then, you added and configured the "Products" feature in Azure API Management, creating a "Gold Tier" product and managing access control for developers and guests, thereby allowing users to subscribe and access the associated APIs and products in the Developer Portal.
 - Now, click on Next from the lower right corner to move on to the next page.
