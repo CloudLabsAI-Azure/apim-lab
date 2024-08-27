@@ -1,4 +1,4 @@
-# Exercise 3: Adding APIs
+## Exercise 3: Adding APIs
 
 ## Overview
 
