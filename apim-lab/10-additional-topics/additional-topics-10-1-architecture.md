@@ -1,5 +1,7 @@
 ## Excercise 9 (Optional)
 
+## Estimated Duration: 50 minutes
+
 ## Lab objectives
 
 You will be able to complete the following tasks:
