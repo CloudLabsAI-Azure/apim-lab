@@ -1,4 +1,4 @@
-## Task 2: How to integrate Azure API Management with Azure Application Insights
+## Continuation for Exercise 6, Task 2: How to integrate Azure API Management with Azure Application Insights
 
 Azure API Management allows for easy integration with Azure Application Insights - an extensible service for web developers building and managing apps on multiple platforms. This guide walks through every step of such integration and describes strategies for reducing performance impact on your Azure API Management instance.
 
@@ -101,4 +101,4 @@ Sampling is an effective tool in diagnosing often general operational issues. Fo
 
 Skipping logging of headers and body of requests and responses will also have a positive impact on alleviating performance issues.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.
