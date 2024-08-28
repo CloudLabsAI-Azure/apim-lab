@@ -67,4 +67,4 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
     </policies>
     ```
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.
