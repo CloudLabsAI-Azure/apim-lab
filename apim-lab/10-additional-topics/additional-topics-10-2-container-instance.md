@@ -1,4 +1,4 @@
-## Task 2: Provision your own instance of ColoursWeb/ColoursAPI
+## Continuation for Exercise 9,Task 2: Provision your own instance of ColoursWeb/ColoursAPI
 
 Some of the demos use the ColoursWeb web application and the ColoursAPI API application. In this lab we will show you how to deploy your own instances of the Colours Web and Colours API. Note - ColoursWeb / ColoursAPI is a new version of ColorsWeb/ColorsAPI ... do not mix the web client and API versions.
 
@@ -168,4 +168,4 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 ## Summary
 In this Task, you have deployed Azure Container Instances (ACI) for both the Colours Web and Colours API applications using GitHub container images. Then you accessed the applications via fully qualified domain names (FQDNs) to verify successful deployment and functionality.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.
