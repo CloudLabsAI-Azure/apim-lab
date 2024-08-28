@@ -1,4 +1,4 @@
-## Task 3: Import API using OpenAPI
+## Continuation for Exercise 3,Task 3: Import API using OpenAPI
 
 Instead of importing operations one-by-one, you can also import a full API. The [OpenAPI specification](https://www.openapis.org/) (aka [Swagger](https://swagger.io)) is a definition format to describe RESTful APIs. The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.
 
@@ -71,4 +71,4 @@ This is likely a mixed-content CORS error in which you are attempting a call to 
 
 In this task, you imported the "Calc API" using the OpenAPI specification in Azure API Management, allowing HTTPS access to an HTTP-only backend service. You configured the API, tested it in the Developer Portal, and explored its OpenAPI definition.Then, you added and configured the "Products" feature in Azure API Management, creating a "Gold Tier" product and managing access control for developers and guests, thereby allowing users to subscribe and access the associated APIs and products in the Developer Portal.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.

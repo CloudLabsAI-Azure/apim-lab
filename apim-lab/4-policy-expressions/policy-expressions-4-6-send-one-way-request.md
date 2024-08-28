@@ -1,4 +1,4 @@
-## Task 6: Send One Way policy
+## Continuation for Exercise 4,Task 6: Send One Way policy
 
 APIM integrates well with [external services](https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-send-request) via HTTP-based interaction.
 
@@ -87,4 +87,4 @@ An optional lab to connect to Microsoft Teams:
 ## Summary 
 In this task, a "Send One-Way" policy is set up in Azure API Management (APIM) to send a webhook message without waiting for a response. The policy is applied to the "Add two integers" operation in the Calculator API.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.

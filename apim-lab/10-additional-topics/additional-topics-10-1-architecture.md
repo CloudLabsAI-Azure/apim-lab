@@ -46,4 +46,4 @@ Download Diagram:
 - [drawio editable png](../../assets/diagrams/apimADSv2.png)
 - [Visio](../../assets/diagrams/apimADSv2.vsdx)
 
-## Now, click on Next from the lower right corner to move on to the next page.
+## Now, click on Next from the lower right corner to move on to the next page for tasks.

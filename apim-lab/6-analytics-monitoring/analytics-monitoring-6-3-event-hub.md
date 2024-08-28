@@ -1,4 +1,4 @@
-## Task 3: Event Hub Overview
+## Continuation for Exercise 6,Task 3: Event Hub Overview
 
 [Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/#overview) is a fully managed, real-time data ingestion service. Millions of events per second can be aggregated to build dynamic data pipelines. 
 

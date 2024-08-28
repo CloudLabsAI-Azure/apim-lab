@@ -1,4 +1,4 @@
-## Task 3: Transformation policies
+## Continuation for Exercise 4,Task 3: Transformation policies
 
 ### Task 3.1: Transformation - replace string
 
@@ -183,4 +183,4 @@ In these transformation tasks, you implemented various policies in Azure API Man
 
 1. Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.

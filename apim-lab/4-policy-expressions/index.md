@@ -53,4 +53,4 @@ Editing **Inbound processing / Outbound processing / Backend**:
 
   ![APIM Inbound Form Editor](media/ip.png)
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for the tasks.

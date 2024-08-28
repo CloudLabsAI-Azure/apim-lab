@@ -93,4 +93,4 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 In this task, you added the Star Wars API to Azure API Management, configuring operations for retrieving a list of characters and details by ID. This demonstrates the ability to integrate and manage APIs effectively within the Azure environment
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.
