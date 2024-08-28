@@ -1,4 +1,4 @@
-## Task 2: Managed Identities
+## Continuation for Exercise 7,Task 2: Managed Identities
 
 In Azure, an Active Directory identity can be assigned to a managed resource such as an Azure Function, App Service or even an Azure API Management instance. Once an identity is assigned, it has many capabilities to work with other resources that leverage Azure AD for authentication, much like a service principal.
 
@@ -101,4 +101,5 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 ---
 ### Summary 
 In this Task, Azure API Management (APIM) is configured to securely access secrets from Azure Key Vault using Managed Service Identity (MSI), enhancing security and enabling the retrieval of secrets for API management operations, as demonstrated during testing in the developer portal.
+
 ### Now, click on Next from the lower right corner to move on to the next page.
