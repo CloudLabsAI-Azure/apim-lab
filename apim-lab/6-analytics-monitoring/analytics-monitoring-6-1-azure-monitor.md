@@ -49,4 +49,4 @@ Analytics is available on the _Analytics_ blade in APIM.
 
       ![APIM Azure Monitor Analytics](media/03.png)
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks.
