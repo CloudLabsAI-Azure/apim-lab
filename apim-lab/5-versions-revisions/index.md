@@ -31,4 +31,4 @@ Task 2.3: Test the new revision
 Task 2.4: Make current revision
 
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### Now, click on Next from the lower right corner to move on to the next page for tasks.
