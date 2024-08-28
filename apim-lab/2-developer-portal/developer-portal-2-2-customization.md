@@ -1,4 +1,4 @@
-## Task 4: Customizing the Developer Portal
+## Continuation for Exercise-2, Task 4: Customizing the Developer Portal
 
 ### Task 4.1: Site Configuration
 
@@ -28,4 +28,4 @@ Look at the available notifications and notifications templates which are custom
 
 ![APIM Notification Template Edit](media2/06.png)
 
-### Click on Next from the lower right corner to move on to the next page.
+### Click on Next from the lower right corner to move on to the next page for further tasks.
