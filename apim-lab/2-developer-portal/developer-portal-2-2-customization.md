@@ -10,6 +10,12 @@ Before you make your portal available to visitors, you should personalize the au
 
 A video on customization is available at <https://www.youtube.com/watch?v=5mMtUSmfUlw>.
 
+In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in the overview section. Click to open the **Developer Portal**. Feel free to explore the different options available for customization.
+
+   ![APIM Developer Portal](media/01.png)
+
+   ![APIM Developer Portal Admin Launch](media/02.png)
+
 ![APIM Developer Portal Config](media2/01.png)
 
 ![APIM Developer Portal Config](media2/02.png)
@@ -19,6 +25,8 @@ A video on customization is available at <https://www.youtube.com/watch?v=5mMtUS
 ### Task 4.2: Email Configuration
 
 The templates for the email notifications are managed from the Azure Management Portal, directly on the blade's resource menu.
+
+In the Azure Portal, navigate to the Azure API Management instance, from the left navigation pane, under Deployment + infrastructure, click on **Notifications** 
 
 Look at the available notifications and notifications templates which are customizable.
 
