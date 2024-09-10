@@ -65,6 +65,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
    >**Note**: If the **Create a connector** is not visible, then follow these steps:
       - Click on Activate account and fill the required informations.
       - Use the email that is provided in the Environment section of the lab. and click on **Next**.
+      - Enter any random 10-digit number in Phone number
       - Then Click on **Get Started**.
       - Go to the API management service page and click on **Create a connector**.
          >**Note**: It might take some time to appear. Refresh the page and check again.
