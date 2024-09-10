@@ -16,7 +16,7 @@ Before you can use Azure Application Insights, you first need to create an insta
      
    - Name: **appi-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
 
-        ![App Insights Create Instance](media/05.png)
+        ![App Insights Create Instance](media/appl_insight.png)
 
 3. Click **Review + Create**, followed by **Create**.
 
