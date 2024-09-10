@@ -26,7 +26,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 1. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose PowerShell)
 
-     ![Azure Cloud Shell](media/01.png)
+     ![Azure Cloud Shell](media/cldshellicon.png)
 
 1. The first time Cloud Shell is started will require you to create a storage account.
 
@@ -36,9 +36,10 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    - Select Resource Group: **apim-rg**
    - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
    - Fileshare name: **apim**
-   - region: **East US** 
+   - region: **East US**
+   - Then click on **Create**
 
-       ![](media/cloudshell.png)
+       ![](media/cldshl-strgaccount.png)
    
 1. We proceed to create a unique identifier suffix for resources created in this Lab:
 
