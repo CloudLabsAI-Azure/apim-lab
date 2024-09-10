@@ -167,7 +167,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
-   ![](media/13.png)
+   ![](media/T3.2S8.png)
 
    - Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
 
