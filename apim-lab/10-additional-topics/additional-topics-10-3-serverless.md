@@ -54,7 +54,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
        ![](media/api14.png)
 
-12. Replace the existing code with the following, and make sure it closely resembles the image below. Click on `Ctrl+S`.
+12. Add the below mentioned code in the existing code as shown in the image below. Click on `Ctrl+S`.
 
       ```c#
       //string[] strColors = { "blue", "lightblue", "darkblue" };
@@ -66,18 +66,20 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       return  (ActionResult)new OkObjectResult(strColors[rInt]);
       ```
 
-       ![](media/api22.png)
+       ![](media/T3.1S11.png)
    
 13. Click on **Deploy to Azure** and follow the below steps:
 
        ![](media/api50.png)
     
+    **Note:** If you recieve an error mentioning you are not sign in to Azure, click on Sign in and use the environment credentials to login, and then click on Deploy to Azure. 
+     
     - Select a function app: **func-<inject key="Deployment ID" enableCopy="false" />** 
     - Click on **Deploy** when prompted.
 
          ![](media/api13.png)
 
-14. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the **API blade (1)** select **+ Add API (2)** and the **Function App tile (3)**.
+15. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the **API blade (1)** select **+ Add API (2)** and the **Function App tile (3)**.
 
        ![](media/api12.png)
 
