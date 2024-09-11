@@ -101,6 +101,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/11.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="b25ed567-5d6a-4ddf-a9e0-dee66fcf78d7" />
+
 ### Task 3.2: Azure Logic Apps
 
 - Create a simple logic app that is Triggered by an HTTP Request
@@ -206,6 +209,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       ![](media/21.png)
 
 --- 
+> **Congratulations** on completing the task! Now, it's time to validate it.
+<validation step="c60e228d-7a4a-49bb-a8da-dfa8c1415230" />
+
 ## Summary
 In this task, you have integrated Azure Functions and Logic Apps with Azure API Management, exposing them as APIs with management capabilities. you have configured, tested, and audited these serverless resources within API Management for seamless integration with other services.
 
