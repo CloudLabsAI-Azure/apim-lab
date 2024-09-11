@@ -31,10 +31,6 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    
 7. Open Visual Studio Code from desktop.
 
-8. Click on **File (1)** and select **Open Folder (2)**.
-
-      ![](media/open.png)
-
 9. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
 
       ![](media/a.png)
