@@ -70,7 +70,8 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 Let's experience how your users will navigate through your portal. In order to do this, **we recommend opening in a private tab in your browser or using another browser to avoid seeing the admin/edit version of the portal.**
 
-1. Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** .
+1. Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** in the browser window in incognito mode.
+
 
       > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
 
