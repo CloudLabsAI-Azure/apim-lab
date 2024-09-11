@@ -68,8 +68,9 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
       - Enter any random 10-digit number in Phone number
       - Then Click on **Get Started**.
       - Go to the API management service page and click on **Create a connector**.
+         >**Note**: If **You need a Power Apps license to use this app** error is showing up, try with the following link :- [https://make.powerapps.com](https://make.powerapps.com/)
+         ![](media/demo.png)
          >**Note**: It might take some time to appear. Refresh the page and check again.
-
          ![](media/aa1.png)
 
 2. Enter the following details:
