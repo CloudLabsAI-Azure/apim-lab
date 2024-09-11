@@ -59,7 +59,7 @@ To deploy a self-hosted gateway:
     ![](media/api4.png)    
 
   - Navigate to the location where the *env.conf* is located, Run command :
-    Make sure to replace the demouser with the username.
+
     ```
     cd C:/Users/demouser/Downloads
     ```
@@ -85,27 +85,46 @@ To deploy a self-hosted gateway:
 
 Our Gateway Node is now deployed, we can test it.
 
-- Navigate back to the apim management service, click on **Subscriptions (1)** from left pane, select and copy the primary key for **Unlimited (2)**.
+- Navigate back to the apim management service, click on **Subscriptions (1)** from left pane, select the primary key for **Unlimited (2)**.
 
     ![](media/api1.png)
+
+- Click on the **...** (ellipsis) on the right-hand side of the **Unlimited** option and select **Show/hide keys**. This will enable the copy icon. Now, click on the copy icon to copy the **primary key**.
+
+    ![](media/api1a.png)
+
+    ![](media/api1b.png)
   
 - Open Notepad - Make note of URLs including the key.  For our lab test, the machine name is just *localhost*, replace **Unlimited-Key** with the primary key that you copied.
-  
-  - https://localhost/colors/random?key=Unlimited-Key
+
+  ```  
+  https://localhost/colors/random?key=Unlimited-Key
+  ```
 
     ![](../../assets/images/apim-app-gateway-test-1.png)
 
 - Use Postman to test the API, you can find the **Postman** shortcut on the desktop, create an account with the **Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>**, log in to the postman.
 
+  > **Note**: If you encounter an error like **"Only alphanumeric characters and hyphens are allowed,"** remove any **'*'** or other special characters from the password.
+
+- On the **Welcome to Postman!** page, enter **Odl_User** as **your name**, select your role, and click on **Continue**.
+
+    ![](media/api1c.png)
+
 - If tested with a browser, then a warning needs to be accepted to proceed - this is because trusted TLS certificates have not been set up Diagnostics 
  for the API call will be logged by the container.
 
-- Inside the **Postman**, make sure that you are on the **Home** page, select **Workspaces** drpo-down, and select **My Workspace**. On the **My Workspace** page, select **New** and select **HTTP**. Now, in the **Enter URL or paste text**, enter the URL, and select **Send**.
+- Inside the **Postman**, make sure that you are on the **Home** page, select **Workspaces** drpo-down, and select **My Workspace**.
 
-  ![](../../assets/images/apim-app-gateway-test-2.png)
+  ![](../../assets/images/apim-app-gateway-test-2c.png)
 
+- On the **My Workspace** page, select **New** and select **HTTP**.
 
-  ![](../../assets/images/apim-app-gateway-test-3.png)
+  ![](../../assets/images/apim-app-gateway-test-2a.png)
+
+- Now, in the **Enter URL or paste text**, enter the URL, and select **Send**.
+
+  ![](../../assets/images/apim-app-gateway-test-2b.png)
 
 
 ---
