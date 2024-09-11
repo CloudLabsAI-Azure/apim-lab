@@ -40,10 +40,10 @@ In this section, we provide you with a template architecture diagram for your Az
 ![](../../assets/images/apim-architecture-design-session-v2.png)
 | <a href="https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fapim-lab%2Fmain%2Fassets%2Fdiagrams%2FapimADSv2.drawio" target="_blank">Edit As New</a> 
 
-Download Diagram:
+<!-- Download Diagram:
 - [drawio](../../assets/diagrams/apimADSv2.drawio)
 - [drawio editable svg](../../assets/diagrams/apimADSv2.svg)
 - [drawio editable png](../../assets/diagrams/apimADSv2.png)
-- [Visio](../../assets/diagrams/apimADSv2.vsdx)
+- [Visio](../../assets/diagrams/apimADSv2.vsdx) -->
 
 ## Now, click on Next from the lower right corner to move on to the next page for tasks.
