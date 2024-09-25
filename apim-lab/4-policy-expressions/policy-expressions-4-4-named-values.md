@@ -19,7 +19,7 @@
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
 1. Create a new header by pressing **+ Add header**:
 
-      ![APIM Named Values](media/upd29.png)
+      ![APIM Named Values](media/updt29.png)
   
     - Name: **x-request-received-time**
     - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
