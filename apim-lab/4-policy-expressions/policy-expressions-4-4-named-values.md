@@ -15,7 +15,7 @@
 
       ![APIM Named Values](media/add-name.png)
 
-1. Back in the **APIs** blade, open the **All Operations** operation in the Calculator API. 
+1. Back in the **APIs** blade, open the **All Operations** in the Calculator API. 
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
 1. Create a new header by pressing **+ Add header**:
 
