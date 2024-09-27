@@ -74,6 +74,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 
       > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
+      
 
       ![APIM Developer Portal Unauthenticated Launch](media/06.png)
 
