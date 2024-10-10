@@ -124,7 +124,7 @@ The architecture uses Azure API Management to manage and secure APIs. It include
  
    Learner Support Contacts:
  
-   - Email Support: labs-support@spektrasystems.com
+   - Email Support: cloudlabs-support@spektrasystems.com
    - Live Chat Support: https://cloudlabs.ai/labs-support
  
 1. Now, click on Next from the lower right corner to move on to the next page.
