@@ -85,30 +85,41 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
       ![Colors Website APIM 401](media3/11.png)
 
-1. The subscription keys can be fetched from the Developer Portal. Open the main Developer Portal page, then click on **Profile** in the top menu. 
+1. Navigate back to the developer portal to fetch subscription keys. Open the main Developer Portal page, then click on **Profile** in the top menu.
 
+      ![](./media3/dpportal.png)
+
+2. Click on the **Show** and copy the Primary key of **Starter** and **Unlimited** product subscription.
+
+      ![](./media3/keys.png)
+        
 1. Prepare the URL in a text editor:
-Concat the base URL and the subscription key for the **Starter** and **Unlimited**:
 
+   Concat the base URL and the subscription key for the **Starter** and **Unlimited** product subscription:
+      
+   **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
+        
+   **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
     
-    **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
-  
-    **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
-    
-
 1. To see that **Unlimited** product has no rate limits:
-    - Configure the Colors website to use the Unlimited URL.
+    
+    - Click on the hamburger menu on the Colors website(1), select config and provide the url created for the **Unlimited** product subscription(2), Click on **Submit(3)**.
+      
     - Select **Start**.
+    
     - Notice there is no rate limit - every light is randomly and continuously updated. 
 
         ![Colors Website APIM Unlimited Product](media3/12.png)
 
 1. To see that **Starter** product is limited to 5 calls per minute:
-    - Configure the Colors website to use the Starter URL.
+   
+    - Click on the hamburger menu on the Colors website(1), select config and provide the url created for the **Starter** product subscription(2), Click on **Submit(3)**.
+    
     - Select **Start**.
+    
     - Notice that only 5 lights get colored.
 
-        ![Colors Website APIM Starter Product](../../assets/images/color-website-apim-starter-product.png)
+        ![](./media3/colors1.png)
 
 1. Try the same **Starter** URL directly in your web browser and notice the error status/message returned:
 
