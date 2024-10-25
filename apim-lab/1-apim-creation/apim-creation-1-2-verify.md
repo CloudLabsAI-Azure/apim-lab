@@ -22,9 +22,11 @@ Azure API Management instance has already been pre-deployed as part of the deplo
 
 1) Navigate to the **resource groups** in the Azure Portal and select the **apim-rg** resource group.
 
+   ![resourcegroup](media/rg.png)
+
    ![01](media/P2-T1-S1.1.png)
 
-2) On the resource groups **apim-rg**, select API Management service resource type with name **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** . 
+3) On the resource groups **apim-rg**, select API Management service resource type with name **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** . 
    
    ![02](media/02.png)
    
