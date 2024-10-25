@@ -57,19 +57,30 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 1. Inside the `Inbound processing` area you will see the `cors` policy, which we added in part 2 by pressing the `Enable Cors` button.
 1. Click on the **pencil icon** next to that policy to edit it.
 
-      ![APIM Policy CORS All APIs](media3/all-api.png)  
+   ![APIM Policy CORS All APIs](media3/all-api.png)  
 
 1. Here we will see this form where we can add the domain name of our frontend `https://colors-web.azurewebsites.net` or the `*` for all domains. Press **Add allowed origin**, enter the URL, then press **Save**.
 
-      ![APIM Policy CORS All APIs](media3/10.png)
+   ![APIM Policy CORS All APIs](media3/10.png)
 
 1. After enabling CORS in Azure API Management let's go back to our frontend <https://colors-web.azurewebsites.net> and follow these steps:
+
 1. Copy this URL <https://colors-web.azurewebsites.net> and paste in the browser.
 
 1. Click on the hamburger menu next to *Colors* in the top left corner.
+
+   ![](./media3/hamburger.png)
+   
 1. Click on **Config**.
+
+   ![](./media3/config.png)
+   
 1. Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random
+
+   ![](./media3/colors.png)
+
 1. Click on **Submit**
+
 1. Press **Start** to see how the frontend is calling the API. You should see a **401** response, indicating an auth error. This happens as our API requires a subscription, but we have not yet entered a subscription key.
 
       ![Colors Website APIM 401](media3/11.png)
