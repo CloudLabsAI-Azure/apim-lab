@@ -69,7 +69,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. Click on the hamburger menu next to *Colors* in the top left corner.
 
-   ![](./media3/hamburger.png)
+   ![](./media3/hamburgermenu.png)
    
 1. Click on **Config**.
 
