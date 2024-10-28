@@ -46,4 +46,6 @@ The ability to terminate a response gracefully is of importance in a number of c
 
   Now that you have seen how to gracefully terminate a request with a response, it is time to clean up the code to prevent a downstream impact in subsequent labs. **Please remove the `<choose>` logic above to let all requests flow again, then save the changes.**
 
+  ![](./media/remove.png)
+
 ### Now, click on Next from the lower right corner to move on to the next page.

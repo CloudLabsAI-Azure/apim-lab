@@ -43,6 +43,7 @@
       ```
 
 1. Test the operation by selecting the **Starter** or **Unlimited** product scope. 
+
 1. Examine the backend trace to find the added header with the evaluated named value:
 
     ```json
@@ -51,6 +52,9 @@
       "value": "12/30/2021 6:10:47 PM"
     }
     ```
+   ![](./media/trace01.png)
+
+   ![](./media/trace02.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it.
 <validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
