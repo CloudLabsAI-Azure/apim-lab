@@ -75,6 +75,8 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
          ![](media/api13.png)
 
+         ![](media/funcdep01.png)
+
 15. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the **API blade (1)** select **+ Add API (2)** and the **Function App tile (3)**.
 
        ![](media/api12.png)
