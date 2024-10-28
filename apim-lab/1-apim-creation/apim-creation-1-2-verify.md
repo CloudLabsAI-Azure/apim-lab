@@ -22,9 +22,11 @@ Azure API Management instance has already been pre-deployed as part of the deplo
 
 1) Navigate to the **resource groups** in the Azure Portal and select the **apim-rg** resource group.
 
+   ![resourcegroup](media/rg.png)
+
    ![01](media/P2-T1-S1.1.png)
 
-2) On the resource groups **apim-rg**, select API Management service resource type with name **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** . 
+3) On the resource groups **apim-rg**, select API Management service resource type with name **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** . 
    
    ![02](media/02.png)
    
@@ -64,11 +66,15 @@ You may have noticed the *Request URL* and may be tempted to put it in your brow
 
    ![APIM Echo API Browser Success](media/07.png)
 
-1. Alternatively, open the command prompt and you can issue a verbose (`-v`) CURL command against the **Echo API** and observe the `200` Success:
+1. Alternatively, search for the **Command Prompt** in the **windows search bar(1)**, Open the **Command Prompt** and paste the command mentioned below you can issue a verbose (`-v`) CURL command against the **Echo API** and observe the `200` Success:
 
-   - **curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource?param1=sample**
+   ```
+   curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource?param1=sample
+   ```
 
-      ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
+   ![](./media/commandpro.png)
+     
+   ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
 
 ## Summary
 

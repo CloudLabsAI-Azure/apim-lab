@@ -57,47 +57,69 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 1. Inside the `Inbound processing` area you will see the `cors` policy, which we added in part 2 by pressing the `Enable Cors` button.
 1. Click on the **pencil icon** next to that policy to edit it.
 
-      ![APIM Policy CORS All APIs](media3/all-api.png)  
+   ![APIM Policy CORS All APIs](media3/all-api.png)  
 
 1. Here we will see this form where we can add the domain name of our frontend `https://colors-web.azurewebsites.net` or the `*` for all domains. Press **Add allowed origin**, enter the URL, then press **Save**.
 
-      ![APIM Policy CORS All APIs](media3/10.png)
+   ![APIM Policy CORS All APIs](media3/10.png)
 
 1. After enabling CORS in Azure API Management let's go back to our frontend <https://colors-web.azurewebsites.net> and follow these steps:
+
 1. Copy this URL <https://colors-web.azurewebsites.net> and paste in the browser.
 
 1. Click on the hamburger menu next to *Colors* in the top left corner.
+
+   ![](./media3/hamburgermenu.png)
+   
 1. Click on **Config**.
+
+   ![](./media3/config.png)
+   
 1. Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random
+
+   ![](./media3/colors.png)
+
 1. Click on **Submit**
+
 1. Press **Start** to see how the frontend is calling the API. You should see a **401** response, indicating an auth error. This happens as our API requires a subscription, but we have not yet entered a subscription key.
 
       ![Colors Website APIM 401](media3/11.png)
 
-1. The subscription keys can be fetched from the Developer Portal. Open the main Developer Portal page, then click on **Profile** in the top menu. 
+1. Navigate back to the developer portal to fetch subscription keys. Open the main Developer Portal page, then click on **Profile** in the top menu.
 
+      ![](./media3/dpportal.png)
+
+2. Click on the **Show** and copy the Primary key of **Starter** and **Unlimited** product subscription.
+
+      ![](./media3/keys.png)
+        
 1. Prepare the URL in a text editor:
-Concat the base URL and the subscription key for the **Starter** and **Unlimited**:
 
+   Concat the base URL and the subscription key for the **Starter** and **Unlimited** product subscription:
+      
+   **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
+        
+   **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
     
-    **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
-  
-    **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
-    
-
 1. To see that **Unlimited** product has no rate limits:
-    - Configure the Colors website to use the Unlimited URL.
+    
+    - Click on the hamburger menu on the Colors website(1), select config and provide the url created for the **Unlimited** product subscription(2), Click on **Submit(3)**.
+      
     - Select **Start**.
+    
     - Notice there is no rate limit - every light is randomly and continuously updated. 
 
         ![Colors Website APIM Unlimited Product](media3/12.png)
 
 1. To see that **Starter** product is limited to 5 calls per minute:
-    - Configure the Colors website to use the Starter URL.
+   
+    - Click on the hamburger menu on the Colors website(1), select config and provide the url created for the **Starter** product subscription(2), Click on **Submit(3)**.
+    
     - Select **Start**.
+    
     - Notice that only 5 lights get colored.
 
-        ![Colors Website APIM Starter Product](../../assets/images/color-website-apim-starter-product.png)
+        ![](./media3/colors1.png)
 
 1. Try the same **Starter** URL directly in your web browser and notice the error status/message returned:
 
