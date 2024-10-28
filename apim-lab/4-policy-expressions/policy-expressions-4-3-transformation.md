@@ -138,7 +138,7 @@ A frequent requirement is to remove headers, especially ones that return securit
     </outbound>
     ```
 
-1. Invoke the API and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
+1. Test the same **Calculator** API operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
 
       ![APIM Policy Delete Response Header](media/23.png)
 
