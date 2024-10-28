@@ -42,7 +42,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
     - Select a .NET runtime : **.NET 8.0 Isolated LTS (3)**
     - Select a template for your project's first function : **HTTP trigger (4)**
     - Provide a function name: **GetRandomColor (5)**
-    - Provide a namespace: **Select the defaut (6)**
+    - Provide a namespace: **Select the default (6)**
     - AccessRights: **Function (7)**
     - Select how you would like to open your project: **Open in current window (8)**
 
