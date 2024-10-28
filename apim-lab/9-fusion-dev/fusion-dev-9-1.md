@@ -150,17 +150,23 @@ If you are unable to create a Power Connector from Azure API Management, you can
       
        ![](media/action.png)
 
+       ![](media/origin001.png)
+
 1. Select **Update connector**.
 
 1. Select **3. Definations**, from the top left corner, select **Test** screen, and create a new connection instance in the **Connections** section by clicking on the **+ New connection**. If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
-   ![](media/Pg25-subscriptionid.png)   
+   ![](media/Pg25-subscriptionid.png)
 
 1. Navigate back to the Power apps page, and paste the subscription key, select **Create**.
+
+   ![](./media/addcon01.png)
 
 1. Navigate back to the **Custom Connectors** page. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
 
    ![](media/8.png)
+
+   ![](./media/res01.png)
 
 ## **Task 3: Generate the Star Wars Fan Club Application**
 
