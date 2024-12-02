@@ -46,7 +46,7 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 > **Congratulations** on completing the task! Now, it's time to validate it.
 
-<validation step="3b8a26c1-5a63-401b-805b-ac1d6498c3b9" />
+   <validation step="3b8a26c1-5a63-401b-805b-ac1d6498c3b9" />
 
 ## Task 2: Enabling CORS for the Developer Portal
 
@@ -64,7 +64,7 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 > **Congratulations** on completing the task! Now, it's time to validate it.
 
-<validation step="d4b92395-ee33-451e-9dad-898856cea431" />
+   <validation step="d4b92395-ee33-451e-9dad-898856cea431" />
 
 ## Task 3: User Experience
 
@@ -72,7 +72,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Navigate to **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.developer.azure-api.net** in the browser window in incognito mode.
 
-   > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
+      > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
       
       ![APIM Developer Portal Unauthenticated Launch](media/06.png)
 
