@@ -29,24 +29,24 @@ Azure API Management instance has already been pre-deployed as part of the deplo
 3) On the resource groups **apim-rg**, select API Management service resource type with name **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** . 
    
    ![02](media/02.png)
-   
-   Please verify that the Azure API Management instance functions correctly by following these steps:
 
-1) Navigate to the Azure API Management instance in the Azure Portal.  
-2) Select the **APIs (1)** blade, then select the ***Echo API (2)***.
+   > **Note:** Please verify that the Azure API Management instance functions correctly by following these steps:
 
-     ![APIM Echo API Test Send](media/P2-T1-S2.1.png)
+      - Select the **APIs (1)** blade, then select the ***Echo API (2)***.
 
-4) Press the **Test (1)** tab, then select the **GET Retrieve resource (2)** operation and note the **Request URL (3)** in a text editor for later use.  
-5) Press **Send (4)** to issue a simple request.  
+           ![APIM Echo API Test Send](media/P2-T1-S2.1.png)
 
-     ![APIM Echo API Test Send](media/03.png)
+      - Press the **Test (1)** tab, then select the **GET Retrieve resource (2)** operation and note the **Request URL (3)** in a text editor for later use.
+     
+      - Press **Send (4)** to issue a simple request.  
 
-6) Scroll down and observe the `200` Success HTTP response.  
+           ![APIM Echo API Test Send](media/03.png)
 
-     ![APIM Echo API Test Success](media/04.png)
+      - Scroll down and observe the `200` Success HTTP response.  
 
-At this time you have successfully verified that Azure API Management is set up!
+           ![APIM Echo API Test Success](media/04.png)
+
+You have successfully confirmed that Azure API Management is now set up!
 
 ## Verification Failure (and Path to Success)
 
