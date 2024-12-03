@@ -106,7 +106,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
 ### Task 3.3: Transformation - XML to JSON
 
-A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Calculator** API that returned an XML response. 
+A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Basic Calculator** API that returned an XML response. 
 
 1. On **Design tab (1)**, select **Add two integers operation (2)**, then in **Outbound processing (3)** section click on **Policy code editor `</>` (4)** to transform the response body to JSON.
 
@@ -119,6 +119,8 @@ A frequent requirement is to transform content, especially to maintain compatibi
     </outbound>
     ```
 
+1. Click on **Save**.
+
 1. Test the API and examine the response. Note that it's now JSON.
 
       ![APIM Policy Transform XML to JSON](media/22.png)
@@ -127,7 +129,7 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
 A frequent requirement is to remove headers, especially ones that return security-related or superfluous information.
 
-1. Add an outbound policy to the same **Calculator** API operation to remove specific response headers.
+1. Add an outbound policy to the same **Basic Calculator** API operation to remove specific response headers.
 
     ```xml
     <outbound>
@@ -138,7 +140,7 @@ A frequent requirement is to remove headers, especially ones that return securit
     </outbound>
     ```
 
-1. Test the same **Calculator** API operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
+1. Test the same **Add two integers** operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
 
       ![APIM Policy Delete Response Header](media/23.png)
 
