@@ -70,8 +70,9 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 ## Task 2: Access Star Wars API from Developer Portal
 
-1. Now switch to the **Developer Portal** and sign in as a developer with a subscription.
-2. Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
+1. Now switch to the **Developer Portal** in the **In-Private** window where you were previously signed in.
+
+2. Select **Explore APIs** on the **Home** page. You should see both **Echo API** and **Star Wars**.
 
       ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
 
