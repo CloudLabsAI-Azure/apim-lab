@@ -34,9 +34,9 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
       ![APIM Add Calculator API](media2/03.png)
 
-1. Back in the Developer Portal, try out the Calculator API via the **Add two integers** GET method, then examine the response.  
+1. Back in the Developer Portal, try out the **Basic Calculator** API via the **Add two integers** GET method, then examine the response. Click on **Try it** by accepting the default values and hit **Send**.
 
-   > **Note**: Before performing the below steps in the Developer portal, please make sure you are signed up with your account.
+   > **Note**: Ensured you are signed up with your account in the **Developer Portal**.
 
    > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
@@ -46,7 +46,7 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
     > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
-1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *Edit* icon from the Frontend block:
+1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *OpenAPI Editor (JSON)* option from the dropdown in the Frontend block:
 
       ![APIM Calculator API Swagger](media2/06.png)
 
