@@ -41,8 +41,12 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
       ![APIM Developer Portal Colors API Try It](media3/07.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+      <validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
 
 ### Task 4.2: Rate limit
 
@@ -54,7 +58,7 @@ We are going to use the [Colors](https://colors-web.azurewebsites.net) website t
 
 First, we need to enable CORS for the domain name of the front end. To achieve this we have to do the following in APIM:
 
-1.  Navigate back to the **Azure Portal**, On the side menu, click on `APIs`, then select the `All APIs` option.
+1. Navigate back to the **Azure Portal**, On the side menu, click on `APIs`, then select the `All APIs` option.
 1. Inside the `Inbound processing` area you will see the `cors` policy, which we added in part 2 by pressing the `Enable Cors` button.
 1. Click on the **pencil icon** next to that policy to edit it.
 
@@ -125,7 +129,10 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
       ![APIM Colors API URL in Browser for Starter Product 429 ](../../assets/images/apim-color-api-url-in-browser-starter-product-429.png)
 
 
-      > **Congratulations** on completing the task! Now, it's time to validate it.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
       <validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
 
