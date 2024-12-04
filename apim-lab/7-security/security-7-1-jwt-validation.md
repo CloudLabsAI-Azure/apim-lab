@@ -44,7 +44,7 @@ Use the following sites:
 
    ![](media/unix.png)
 
-1. <https://jwt.io> to create a JWT with payload. In the **Decoded** section make these changes:
+1. <https://jwt.io> to create a JWT with payload. Scroll down and make the below changes in the **Decoded** section:
     - Leave the **Header** as it is.
     - Use the following **Payload** format and replace the `exp` value with your newly-created Unix timestamp:
 
@@ -58,16 +58,16 @@ Use the following sites:
         ```
 
     - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is rather a weak secret but serves the demo purpose.
-    - Check **secret base64 encoded**.
+    - Check the box for **secret base64 encoded**.
     - Your configuration should be similar to this now:
 
         ![JWT.io Website](media/01.png)
 
 ### Task 1.2: Validation
 
-1. Back in APIM, open the **Calculator** API and select **All operations**.
+1. Back in APIM, open the **Basic Calculator** API and select **All operations**.
   
-1. In the **Code View** add an inbound `validate-jwt` policy with the signing key.
+1. In the **Code View** add an inbound `validate-jwt` policy with the signing key. Click on **Save**.
 
    ![](media/Pg23-1.png)
 
@@ -88,7 +88,7 @@ Use the following sites:
 
     ![APIM Request with no JWT](media/03.png)
 
-1. Now add the following `Authorization` header to the test:
+1. Click on **+ Add Header** in the same Test tab and add the below details:
 
     - Name: `Authorization`
     - Value: `Bearer <jwt token>` 
