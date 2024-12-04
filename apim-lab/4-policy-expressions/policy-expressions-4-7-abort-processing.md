@@ -6,8 +6,8 @@ The ability to terminate a response gracefully is of importance in a number of c
 
 1. Open **Calculator** API and Select **Design** Tab
 1. Open the **Add two integers** operation.  
-1. Open the **Code View**.
-1. Add the **inbound** policy to test for a condition (just `true` for our example) and return an error.
+1. Naviage to the **Inbound processing** tab and open the **Code View**.
+1. Add the **inbound** policy to test for a condition (just `true` for our example) and click on **Save**.
 
     ![](media/Pg-16.png)
   
@@ -36,6 +36,7 @@ The ability to terminate a response gracefully is of importance in a number of c
         </set-header>
     </inbound>
     ```
+      > **Note:** Click on **Save** when the warning pop-up appears.
 
 1. Invoke the API. 
 1. Observe the 500 error.
