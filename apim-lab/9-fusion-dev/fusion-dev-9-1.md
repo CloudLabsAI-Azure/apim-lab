@@ -43,15 +43,15 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 1.1: Update CORS policy
 
-1. Check Azure API Management, under Developer Portal select Portal Overview to see if CORS has been enabled globally. Here's what the Portal overview will look like if CORS has been enabled:
+1. In your Azure API Management resource, navigate to the **Portal Overview** under **Developer Portal** from the left pane to verify if CORS has been enabled globally. Here's what the Portal overview will look like if CORS has been enabled:
 
    ![](media/1.png)
  
-1. Now go to **All APIs (1)**, and click on **edit icon (2)**.
+1. Now go to **All APIs (1)**, and click on **edit icon (2)** from the Inbound Processing tab.
 
    ![](media/aaa1.png)
 
-1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
+1. Click on **+ Add Allowed origin** and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
    ![](media/aaa2.png)
 
