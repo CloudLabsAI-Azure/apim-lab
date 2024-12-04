@@ -41,8 +41,12 @@ Before you can use Azure Application Insights, you first need to create an insta
 
     > Behind the scenes, a [Logger](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/logger/createorupdate) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="65dfec7c-e946-478a-8012-7430913523bd" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    <validation step="65dfec7c-e946-478a-8012-7430913523bd" />
 
 ### Task 2.3: Enable Application Insights logging for your API
 
