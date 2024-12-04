@@ -138,7 +138,7 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
 A frequent requirement is to remove headers, especially ones that return security-related or superfluous information.
 
-1. Add an outbound policy to the same **Basic Calculator** API operation to remove specific response headers.
+1. Add an outbound policy to the same **Basic Calculator** API operation to remove specific response headers and click on **Save**.
 
     ```xml
     <outbound>
@@ -158,7 +158,7 @@ A frequent requirement is to remove headers, especially ones that return securit
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
-1. Back in the same **Calculator** API operation, select the **Add two integer opertation** and add **inbound Processing** policies to modify the query string and headers. 
+1. Back in the same **Calculator** API operation, select the **Add two integer opertation** and add **inbound Processing** policies to modify the query string and headers and click on **Save**.
 
     ```xml
     <inbound>
