@@ -30,10 +30,8 @@ In the Azure Portal, navigate to the Azure API Management instance, from the lef
 
 Look at the available notifications and notifications templates which are customizable.
 
-![APIM Notifications](media2/04.png)
+   ![APIM Notifications](media/mapi31.png)
 
-![APIM Notification Templates](media2/05.png)
-
-![APIM Notification Template Edit](media2/06.png)
+   ![APIM Notifications](media/mapi32.png)
 
 ### Click on Next from the lower right corner to move on to the next page for further tasks.
