@@ -22,9 +22,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 ### Task 2.1: Deploying Web and API containers with Azure Container Instances
 
-1. Login to [Azure Portal](https://portal.azure.com)
-
-1. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose PowerShell)
+1. Open the **Azure Cloud Shell** and choose **Bash**.
 
      ![Azure Cloud Shell](media/cldshellicon.png)
 
@@ -34,10 +32,10 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    - Select the **subscription**, and click **Apply**.
    - Select **I want to create a storage account**, and click on **Next**.
    - Select Resource Group: **apim-rg**
+   - Region: **East US**
    - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
    - Fileshare name: **apim**
-   - region: **East US**
-   - Then click on **Create**
+   - Click on **Create**
 
        ![](media/cldshl-strgaccount.png)
    
