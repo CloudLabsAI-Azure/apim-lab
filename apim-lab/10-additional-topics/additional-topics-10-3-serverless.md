@@ -19,7 +19,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Function name : **func-<inject key="Deployment ID" enableCopy="false" />** **(3)**
    - Runtime stack : Select **.Net (4)**
    - Version : **8(LTS), isolated worker model (5)**
-   - Region: **Select the region you used for previous exercises (6)**
+   - Region: **Select the default region (6)**
    - Operating System : **Windows (7)**
    - Click on **Review + Create (8)**.
 
@@ -68,10 +68,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
        ![](media/api50.png)
     
-    **Note:** If you recieve an error mentioning you are not sign in to Azure, click on Sign in and use the environment credentials to login, and then click on Deploy to Azure. 
+    **Note:** If you recieve an error mentioning you are not sign in to Azure, click on Sign in from the Resources dropdown and use the environment credentials to login, and then click on Deploy to Azure. 
      
     - Select a function app: **func-<inject key="Deployment ID" enableCopy="false" />** 
     - Click on **Deploy** when prompted.
+    - Wait until the deployment is succeeded
 
          ![](media/api13.png)
 
@@ -81,6 +82,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
        ![](media/api12.png)
 
+   - Select **Full**
    - Click on the **Browse** button to get a list of Functions in the subscription
 
         ![](media/06.png)
@@ -91,10 +93,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/08.png)
 
-   - Amend the Names / Descriptions, URL suffix, and select the Products
+   - Amend the Names / Descriptions, URL suffix, and select the **Starter** and **Unlimited** for the Products
 
       ![](media/09.png)
 
+   - Click on **Create**
    - As previously added CORS policy
 
    - Validate the function works - either from the Azure management portal or the developer portal
@@ -136,7 +139,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/api40.png)
 
-   - In the Request body JSON Schema **insert the following JSON (1)**, and select **+ New step (2)**.
+   - In the Request body JSON Schema **insert the following JSON (1)**, and select **+Add an Action (2)**.
 
       ```
       {
