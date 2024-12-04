@@ -26,7 +26,7 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 1. Assign **Starter** and **Unlimited** **(5)** products.  
 1. Press **Create (6)**.  
 
-      ![APIM Add Calculator API](media2/opeai-api-1.png)
+      ![APIM Add Calculator API](media/opeai-api-1.png)
 
 1. Once the API is created, it will show in the list of APIs along with all of its operations.
 
