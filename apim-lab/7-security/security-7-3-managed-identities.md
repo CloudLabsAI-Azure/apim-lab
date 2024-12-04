@@ -19,24 +19,27 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. Search for **Key Vault** in the Azure portal and Select **Create**.
 1. Select Resource Group: **apim-rg**
-1. You can follow this naming convention for key vualt: `kv-<environment>-<region>-<application-name>-<owner>-<instance>`
 1. Enter Key Vault Name: **kv-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
 
     ![Create Key Vault](media/8.png)
 
-1. In the Access configuration tab, select the vault access policy and click on **Review + Create**.
+1. Click on **Next**.
+1. In the **Access configuration** tab, check the box for vault access policy and click on **Review + Create**.
 
       ![Create Key Vault](media/9.png)
 
-1. In **Review + Create** tab click on **Create**.
+1. In **Review + Create** tab, click on **Create**.
 
 1. Once created, click on **Go to resource**, this will open recently created **key-vault**.
   
 1. Next, select **Secrets** under Objects on the left hand pane, and click on **Generate/Import**.
+
+      ![Create Key Vault](media/10.png)
+
+1. Provide the below details and click on **Create**.
+   
     - Name:`favoritePerson`
     - Secret value: `3`
- 
-      ![Create Key Vault](media/10.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it.
 <validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
@@ -57,7 +60,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
     ![Create Key Vault](media/13.png)
 
-1. Remember to click **Create**.
+1. Click on Next again and click on **Create**.
 
     You should see something like this:
 
@@ -66,13 +69,18 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 ### Task 2.4: Azure API Management, Key Vault and Managed Service Identity
 
 1. Go back to your **APIM**.
-1. Add a new **Operation(+ Add Operation)** to the **Star Wars** API (if you did the previous parts of the labs, choose the version of the API you want) and provide the following values:
+1. Navigate to the **APIs** tab from the left pane.
+1. Add a new **Operation(+ Add Operation)** to the **Star Wars** API and choose **Original** in the dropdown and provide the following values:
   
     - **Display Name: Get Favorite Person**
     - **URL: /favorite** 
 
       ![New operation](media/15.png)
 
+1. Click on **Save**.
+
+1. Navigate to the Inbound processing tab in this operation.
+   
 1. Update the policies for **this** new operation, and click on **Save**.
 
     ```xml
