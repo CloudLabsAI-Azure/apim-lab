@@ -42,7 +42,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
     </inbound>
     ```
 
-      ![APIM Policy Mock Inbound](media/32.png)
+      ![APIM Policy Mock Inbound](media/mapi8.png)
 
 1. Invoke the API from the **Test** tab to receive a `200` success with the mocked film data .
 
