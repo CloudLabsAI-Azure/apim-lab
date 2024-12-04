@@ -25,6 +25,8 @@
 
       ![APIM Revision Add Caching](media/11.png)
 
+1. Navigate to the **Inbound processing** tab.
+   
 1. Add a 10-second caching policy for the **GET People** operation via the Code editor.
 
     ```xml
@@ -45,12 +47,13 @@
 
 ### Task 2.3: Test the new revision
 
+1. Navigate to the **Test** tab from the top.
+
 1. From the Azure portal, select the `Get People` operation and click on **Trace**.
   
-  > Note the revision number at the top of the page as well as in the request URL.  
-  The request URL should look similar to: `https://<your-apim-name>.azure-api.net/sw/v2;rev=2/people/`.
+     > **Note**: The revision number at the top of the page as well as in the request URL. The request URL should look similar to: `https://<your-apim-name>.azure-api.net/sw/v2;rev=2/people/`.
 
-   ![APIM Revision Caching Test](media/13.png)
+      ![APIM Revision Caching Test](media/13.png)
 
 1. Test the API twice. The test trace should then show that the cache lookup occurred. 
 
@@ -59,11 +62,11 @@
 ### Task 2.4: Make current revision
 
 1. Select the **Revisions** tab.
-1. Click on the ellipsis for `rev2` and make it the current revision.
+1. Click on the ellipsis for `rev2` and select the **current revision** option.
 
       ![APIM Revision Make Current](media/15.png)
 
-1. Choose to post to the public change log for the API and provide a meaningful update.
+1. Check the **Post to the Public Change log for the API** and provide the description as `Adding a caching policy to improve API response time`. Click on **Save**.
 
       ![APIM Revision Make Current](media/16.png)
 
@@ -74,8 +77,12 @@
       ![APIM Revision Make Current](media/17.png)
 
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="1f315944-8264-47c9-ab2d-6d4fe20e4f6e" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+      <validation step="1f315944-8264-47c9-ab2d-6d4fe20e4f6e" />
 --- 
 
 ### Summary
