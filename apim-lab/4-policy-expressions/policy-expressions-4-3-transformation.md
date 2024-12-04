@@ -13,9 +13,12 @@ The **find-and-replace** policy finds a substring in a request or response and r
       ![APIM Policy Find & Replace](media/c.png)
   
 1. Place the cursor after the `<base />` element in the `<outbound>` section.
+
+      ![APIM Policy Find & Replace](media/mapi2.png)
+
 1. Click on **Show snippets** present in the top right corner, then select the **Find and replace string in body** transformation policy.  
 
-      ![APIM Policy Find & Replace](media/16.png)
+      ![APIM Policy Find & Replace](media/mapi39.png)
 
 1. Fill in the **`from` and `to` (1)** values accordingly and **Save (2)** the policy.
 
@@ -123,6 +126,8 @@ A frequent requirement is to transform content, especially to maintain compatibi
     </outbound>
     ```
 
+      ![APIM Policy Find & Replace](media/mapi1.png)
+   
 1. Click on **Save**.
 
 1. Test the API and examine the response. Note that it's now JSON.
@@ -143,6 +148,7 @@ A frequent requirement is to remove headers, especially ones that return securit
         <set-header name="x-powered-by" exists-action="delete" />
     </outbound>
     ```
+      ![APIM Policy Find & Replace](media/mapi4.png)
 
 1. Test the same **Add two integers** operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
 
@@ -165,6 +171,7 @@ Query string parameters and headers can be easily modified prior to sending the 
         </set-header>
     </inbound>
     ```
+      ![APIM Policy Find & Replace](media/mapi5.png)
 
 1. Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. If Tracing is not enabled, press **Enable Tracing**, and on the Pop-up select **Enable Tracing for one hour**.
 
@@ -174,7 +181,9 @@ Query string parameters and headers can be easily modified prior to sending the 
 
       ![APIM Policy Amend Backend Call](media/24.png)
 
-      ![APIM Policy Amend Backend Call](media/25.png)
+      ![APIM Policy Find & Replace](media/mapi6.png)
+
+      ![APIM Policy Find & Replace](media/mapi7.png)
 
 
 ---
