@@ -76,6 +76,13 @@ You may have noticed the *Request URL* and may be tempted to put it in your brow
      
    ![APIM Echo API Curl Success](../../assets/images/apim-echo-api-test-6.png)
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+      <validation step="a68aef90-9b22-4d42-98cb-9ea25d35a217" />
+
 ## Summary
 
 In this exercise, you verified the setup and functionality of the Azure API Management instance by testing the Echo API and handling any issues related to subscription keys. This ensures that your API management environment is correctly configured and ready for further use. You are now prepared to proceed to the next exercise to deepen your understanding and management of APIs.
