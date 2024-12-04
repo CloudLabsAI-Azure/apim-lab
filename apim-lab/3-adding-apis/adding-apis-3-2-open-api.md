@@ -16,17 +16,17 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
       ![](media/b.png)
    
-1. Select the **Full** option in the **Create from OpenAPI specification** dialog.  
-1. Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
+1. Select the **Full (1)** option in the **Create from OpenAPI specification** dialog.  
+1. Enter `http://calcapi.cloudapp.net/calcapi.json` **(2)** as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
 
    > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
 
-1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both`** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
-1. Set the **API URL suffix** to `calc`.  
-1. Assign **Starter** and **Unlimited** products.  
-1. Press **Create**.  
+1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both` (3)** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
+1. Set the **API URL suffix** to **calc (4)**  
+1. Assign **Starter** and **Unlimited** **(5)** products.  
+1. Press **Create (6)**.  
 
-      ![APIM Add Calculator API](media2/opeai-api.png)
+      ![APIM Add Calculator API](media2/opeai-api-1.png)
 
 1. Once the API is created, it will show in the list of APIs along with all of its operations.
 
