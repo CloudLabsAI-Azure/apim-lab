@@ -110,8 +110,6 @@ If you are unable to create a Power Connector from Azure API Management, you can
        
       ![](media/aa3.png)
 
-      ![](media/4.png)
-
 1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. Copy and paste a sample JSON response into the `Body` section of the response. Close the import panel and select **Update connector**. 
 
    - Navigate back to the **API Management service** in Azure Portal.
