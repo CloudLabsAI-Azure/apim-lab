@@ -92,9 +92,11 @@ Use the following sites:
 
     - Name: `Authorization`
     - Value: `Bearer <jwt token>` 
-    - Replace `<jwt token>` with the **encoded** value from <https://jwt.io> above
+    - Replace `<jwt token>` with the **encoded** value from <https://jwt.io>
+  
+        ![APIM Request Add Valid Authorization Header](media/mapi92.png)
 
-        Note the bearer token in the Request payload.
+         - Note the bearer token in the Request payload.
 
         ![APIM Request Add Valid Authorization Header](media/04.png)
 
