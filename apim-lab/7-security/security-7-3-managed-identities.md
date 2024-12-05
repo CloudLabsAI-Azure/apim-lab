@@ -10,8 +10,12 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. On **Enabled system assigned managed identity** pop-up click on **Yes**.
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="114baa5f-6313-469d-932a-033f7744f3d2" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+         
+    <validation step="114baa5f-6313-469d-932a-033f7744f3d2" />
 
 ## Key Vault 
 
@@ -41,8 +45,12 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
     - Name:`favoritePerson`
     - Secret value: `3`
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+         
+    <validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
 
 ### Task 2.3: Access policy and principal assignment
 
