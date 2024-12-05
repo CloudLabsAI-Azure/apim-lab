@@ -56,13 +56,36 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 1.2: Create a custom connector
 
->*Note*: Before proceeding further make sure you are signed in the Power platform with the given credentials in the resources tab.
+1. Navigate to the following link: [Power Platform](https://www.microsoft.com/en-us/power-platform/products/power-apps/free)
 
-1. You can export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within the Power Platform. Click on this link: [here](https://github.com/Azure/apim-lab/blob/main/apim-lab/9-fusion-dev/Star%20Wars%20API.swagger.json).
+1. Click on **Start Free**.
 
-1. Once the link is opened in a new tab, click on 
+   ![](media/mapi100.png)
 
-If you are unable to create a Power Connector from Azure API Management, you can also e
+1. Select your mail: <inject key="AzureAdUserEmail"></inject> and click on **Start free**.
+
+   ![](media/mapi101.png)
+
+1. Enter your password: <inject key="AzureAdUserPassword"></inject> and ensure you are signed up for the free trial.
+
+1. Navigate back to your API management service, from the left pane, click on **Power platform** present under APIs tab and click on **Activate Account**.
+
+   ![](media/mapi95.png)
+  
+1. Select **Create a connector.**
+   
+     ![](media/aa1.png)
+
+   >**Note:** The option is expected to appear within an hour. Kindly proceed with the subsequent exercises and revisit this section afterward.
+
+ 1. On the **Create a Connector** page, enter the following details:
+
+   - API : Select the **Star Wars (1)** API 
+   - Power Platform Environment: From the dropdown select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (2)**.
+   - API display name: **Star Wars API (3)**
+   - Click on **Create (4)**.
+
+     ![](media/Pg25-1.png)
 
 ### Task 2: View your custom connector in Power Platform
 
@@ -90,14 +113,14 @@ If you are unable to create a Power Connector from Azure API Management, you can
        
       ![](media/aa3.png)
 
-1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. Copy and paste a sample JSON response into the `Body` section of the response. Close the import panel and select **Update connector**. 
+1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. To get the sample JSON response, follow the below steps:
 
    - Navigate back to the **API Management service** in Azure Portal.
    
    - On the **API Management service** page, from the left menu, under **APIs**, select **APIs**. Select **Star Wars** drop-down and select **v2 (1)**. Select `Get People (2)`, and from the top menu select **Test (3)**, now select **Send (4)** and **copy (5)** the Response into a notepad. 
 
       ![](media/api.png)
-  
+
    - Paste the response into the `Body` section of the response, and select **Import**.
 
       ![](media/aa5.png)
@@ -109,6 +132,8 @@ If you are unable to create a Power Connector from Azure API Management, you can
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
 1. In the left pane, select **+ New policy** under the **Policies** section.
+
+   ![](media/mapi102.png)
 
 1. Fill out the new policy with the following information:
 
@@ -130,9 +155,11 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
        ![](media/origin001.png)
 
-1. Click on the **tick** mark on the top right which will create the connector.
+1. Click on the **tick** mark on the top right which will update the Connector.
 
 1. Select **6.Test**, from the top left corner and click on **+New connection** in the **Connections** section.
+
+      ![](media/mapi103.png)
 
       > **Note:** If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
@@ -196,7 +223,7 @@ Your generated app will now be in edit mode in the Power Apps Studio.
 
 2. Search for **Star Wars (3)** in the search field and choose the connection to the **Star Wars API (4)**.
 
-     ![](media/9.1.png)
+     ![](media/mapi104.png)
 
 ### Task 4.2: Customize the generated app
 
@@ -209,6 +236,8 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 ### Task 4.3: Add controls to the View Detail screen
 
 1. In the Tree view, select **DetailScreen1**.
+
+   ![](media/mapi105.png)
 
 1. Select the **+** icon on the left side of the screen to bring up the **Insert** panel.
 
