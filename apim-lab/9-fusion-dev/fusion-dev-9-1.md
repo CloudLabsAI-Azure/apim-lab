@@ -104,11 +104,11 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
       ![](media/5.png)
 
-1. Repeat the step-7 to import for the `getpeoplebyid` action.
+1. Repeat the step-7 to import for the `getpeoplebyid` action. Provide the id as `1`.
 
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
-1. In the **Policies** section select **+ New policy**.
+1. In the left pane, select **+ New policy** under the **Policies** section.
 
 1. Fill out the new policy with the following information:
 
@@ -130,17 +130,21 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
        ![](media/origin001.png)
 
-1. Select **Update connector**.
+1. Click on the **tick** mark on the top right which will create the connector.
 
-1. Select **3. Definations**, from the top left corner, select **Test** screen, and create a new connection instance in the **Connections** section by clicking on the **+ New connection**. If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
+1. Select **6.Test**, from the top left corner and click on **+New connection** in the **Connections** section.
 
-   ![](media/Pg25-subscriptionid.png)
+      > **Note:** If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
-1. Navigate back to the Power apps page, and paste the subscription key, select **Create**.
+      ![](media/Pg25-subscriptionid.png)
 
-   ![](./media/addcon01.png)
+   - Navigate back to the Power apps page, and paste the subscription key, select **Create**.
 
-1. Navigate back to the **Custom Connectors** page. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
+      ![](./media/addcon01.png)
+
+1. Navigate back to the **Custom Connectors** page and click on the pencil icon i.e **Edit**.
+
+1. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
 
    ![](media/8.png)
 
@@ -166,7 +170,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
  
 3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
 
-4. Select **Create (1)** , select **Excel (2)** and then Create **+ New connection** with **OneDrive for Business**.
+4. Select **Create (1)** , select **Excel (2)** and then click on **+ New connection**.
 
    ![](media/excel.png)
    
@@ -218,7 +222,7 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 
 ### Task 4.4: Connect the Detail Screen to the Star Wars API
 
-1. In the left pane, select the **Tree view** and then the **BrowseGallery1** on **Browsescreen1**.
+1. In the left pane, select the **Tree view** and then the **BrowseGallery1** under **Browsescreen1**.
 
 2. Using the drop-down menu, select the **OnSelect** action that will be executed when a user selects a Fan Club member from the gallery.
 
