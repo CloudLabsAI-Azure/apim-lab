@@ -66,9 +66,9 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. Navigate back to your API management service, from the left pane, click on **Power platform** present under APIs tab and select **Create a connector.**
    
-   >**Note:** The option is expected to take an hour to appear. Please proceed with the next exercises and come back here.
+     ![](media/aa1.png)
 
-             ![](media/aa1.png)
+   >**Note:** The option is expected to appear within an hour. Kindly proceed with the subsequent exercises and revisit this section afterward.
 
  1. On the **Create a Connector** page, enter the following details:
 
