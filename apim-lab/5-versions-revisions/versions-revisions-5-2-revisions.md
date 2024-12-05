@@ -43,6 +43,12 @@
     </outbound>
     ```
 
+      ![APIM Created Revision](media/mapi50.png)
+
+      ![APIM Created Revision](media/mapi51.png)
+
+1. Once the code is updated, the new policy will be created.
+   
       ![APIM Revision Add Caching](media/12.png)
 
 ### Task 2.3: Test the new revision
