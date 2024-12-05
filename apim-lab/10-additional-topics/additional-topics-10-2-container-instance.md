@@ -122,8 +122,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 1. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
 
-   ![Colours Web](media/02.png)
-
+      ![Colours Web](media/02.png)
 
 1. Generate a DNS label that meets the criteria for color-api
   
@@ -136,7 +135,6 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
      ```
      APIMLAB_CONTAINER_NAME="mycolorsapi-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-55)"
      ```
-
 
 1. Now we proceed to create the ACI for the colors-api GitHub container:
 
