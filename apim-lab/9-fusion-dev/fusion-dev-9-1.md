@@ -60,9 +60,9 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. Click on **Start Free**.
 
-1. Select your mail:  and click on **Start free**.
+1. Select your mail: <inject key="AzureAdUserEmail"></inject> and click on **Start free**.
 
-1. Enter your password: 
+1. Enter your password: <inject key="AzureAdUserPassword"></inject>
 
 1. Navigate back to your API management service, from the left pane, click on **Power platform** present under APIs tab and select **Create a connector.**
    
