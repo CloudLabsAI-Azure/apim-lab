@@ -47,7 +47,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
 1. From the **Event Hubs** blade select **+ Event Hub**
    
-    ![Add Event Hub](media/14.png)
+    ![Add Event Hub](media/mapi70.png)
 
 1. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Review + Create**, and click on the **Create**. 
 
@@ -108,13 +108,13 @@ Azure API Management loggers are configured using the [API Management REST API](
 1. Enter the required details.
 
 1. Fill in the following **Parameters**:
-    - LoggerId: **event-hub-logger** (you will use it in the next steps)
-    - ResourceGroupName: **apim-rg** 
+    - LoggerId: **event-hub-logger (1)** (you will use it in the next steps)
+    - ResourceGroupName: **apim-rg (2)** 
     - ServiceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
-    - SubscriptionId: Select the subscription given by default.
-    - api-version: **2022-08-01**
+    - SubscriptionId: Select the subscription given by default **(3)**.
+    - api-version: **2022-08-01 (4)**
 
-        ![RREST API Try It](media/21.png)
+        ![RREST API Try It](media/mapi72.png)
 
 1. Replace the request **Body** with the following json. Make sure you replace the parameters appropriately:
 
