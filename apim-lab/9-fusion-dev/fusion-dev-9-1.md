@@ -60,11 +60,19 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. Click on **Start Free**.
 
+   ![](media/mapi100.png)
+
 1. Select your mail: <inject key="AzureAdUserEmail"></inject> and click on **Start free**.
 
-1. Enter your password: <inject key="AzureAdUserPassword"></inject>
+   ![](media/mapi101.png)
 
-1. Navigate back to your API management service, from the left pane, click on **Power platform** present under APIs tab and select **Create a connector.**
+1. Enter your password: <inject key="AzureAdUserPassword"></inject> and ensure you are signed up for the free trial.
+
+1. Navigate back to your API management service, from the left pane, click on **Power platform** present under APIs tab and click on **Activate Account**.
+
+   ![](media/mapi95.png)
+  
+1. Select **Create a connector.**
    
      ![](media/aa1.png)
 
@@ -125,6 +133,8 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. In the left pane, select **+ New policy** under the **Policies** section.
 
+   ![](media/mapi102.png)
+
 1. Fill out the new policy with the following information:
 
      - **Name: set-origin-header (1)**
@@ -148,6 +158,8 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 1. Click on the **tick** mark on the top right which will update the Connector.
 
 1. Select **6.Test**, from the top left corner and click on **+New connection** in the **Connections** section.
+
+      ![](media/mapi103.png)
 
       > **Note:** If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
@@ -211,7 +223,7 @@ Your generated app will now be in edit mode in the Power Apps Studio.
 
 2. Search for **Star Wars (3)** in the search field and choose the connection to the **Star Wars API (4)**.
 
-     ![](media/9.1.png)
+     ![](media/mapi104.png)
 
 ### Task 4.2: Customize the generated app
 
@@ -224,6 +236,8 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 ### Task 4.3: Add controls to the View Detail screen
 
 1. In the Tree view, select **DetailScreen1**.
+
+   ![](media/mapi105.png)
 
 1. Select the **+** icon on the left side of the screen to bring up the **Insert** panel.
 
