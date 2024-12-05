@@ -29,9 +29,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
       ![APIM Policy Mock Frontend](media/31.png)
 
 1. Click on **Save**.
-1. Under **Inbound processing (1)** section , click on **Policy code editor (2)**
-
-      ![APIM Policy Mock Frontend](media/Pg14-2.png)
+1. Under **Inbound processing (1)** section , click on **Policy code editor (2)** for the **Get Film** Operation.
   
 1. Add **Mock Response** under **Other policies** after the `<base />` tag and click on **Save**.
 
