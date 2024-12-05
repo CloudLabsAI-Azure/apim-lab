@@ -56,7 +56,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 1.2: Create a custom connector
 
-1. Navigate to the following link: (Power Platform)[https://www.microsoft.com/en-us/power-platform/products/power-apps/free]
+1. Navigate to the following link: [Power Platform[(https://www.microsoft.com/en-us/power-platform/products/power-apps/free)
 
 1. Click on **Start Free**.
 
