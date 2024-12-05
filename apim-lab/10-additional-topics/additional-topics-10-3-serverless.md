@@ -214,8 +214,12 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       ![](media/21.png)
 
 --- 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="c60e228d-7a4a-49bb-a8da-dfa8c1415230" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+         
+   <validation step="c60e228d-7a4a-49bb-a8da-dfa8c1415230" />
 
 ## Summary
 In this task, you have integrated Azure Functions and Logic Apps with Azure API Management, exposing them as APIs with management capabilities. you have configured, tested, and audited these serverless resources within API Management for seamless integration with other services.
