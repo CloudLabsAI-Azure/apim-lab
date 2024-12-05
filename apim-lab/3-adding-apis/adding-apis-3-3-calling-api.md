@@ -98,11 +98,11 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
         
 1. Prepare the URL in a text editor:
 
-   Concat the base URL and the subscription key for the **Starter** and **Unlimited** product subscription:
+   - Concat the base URL and the subscription key for the **Starter** and **Unlimited** product subscription:
       
-   **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
+   - Starter: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
         
-   **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
+   - Unlimied: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
     
 1. To see that **Unlimited** product has no rate limits:
     
