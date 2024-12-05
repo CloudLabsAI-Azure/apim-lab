@@ -34,7 +34,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
   
 1. Next, select **Secrets** under Objects on the left hand pane, and click on **Generate/Import**.
 
-      ![Create Key Vault](media/10.png)
+      ![Create Key Vault](media/mapi93.png)
 
 1. Provide the below details and click on **Create**.
    
@@ -46,11 +46,9 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 ### Task 2.3: Access policy and principal assignment
 
-1. Create an **Access policy**.
+1. Select **Access policies (1)** from the left pane and click on **+ Create (2)**.
 
-      ![Create Key Vault](media/11.png)
-
-1. Click on **+ Create**.
+      ![Create Key Vault](media/mapi94.png)
 
 1. Select the `Get` operation from the list of Secret permissions.
 
