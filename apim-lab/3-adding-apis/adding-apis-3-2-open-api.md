@@ -16,17 +16,17 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
       ![](media/b.png)
    
-1. Select the **Full** option in the **Create from OpenAPI specification** dialog.  
-1. Enter `http://calcapi.cloudapp.net/calcapi.json` as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
+1. Select the **Full (1)** option in the **Create from OpenAPI specification** dialog.  
+1. Enter `http://calcapi.cloudapp.net/calcapi.json` **(2)** as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
 
    > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
 
-1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both`** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
-1. Set the **API URL suffix** to `calc`.  
-1. Assign **Starter** and **Unlimited** products.  
-1. Press **Create**.  
+1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both` (3)** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
+1. Set the **API URL suffix** to **calc (4)**  
+1. Assign **Starter** and **Unlimited** **(5)** products.  
+1. Press **Create (6)**.  
 
-      ![APIM Add Calculator API](media2/opeai-api.png)
+      ![APIM Add Calculator API](opeai-api-1.png)
 
 1. Once the API is created, it will show in the list of APIs along with all of its operations.
 
@@ -34,9 +34,9 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
       ![APIM Add Calculator API](media2/03.png)
 
-1. Back in the Developer Portal, try out the Calculator API via the **Add two integers** GET method, then examine the response.  
+1. Back in the Developer Portal, try out the **Basic Calculator** API via the **Add two integers** GET method, then examine the response. Click on **Try it** by accepting the default values and hit **Send**.
 
-   > **Note**: Before performing the below steps in the Developer portal, please make sure you are signed up with your account.
+   > **Note**: Ensured you are signed up with your account in the **Developer Portal**.
 
    > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
@@ -46,7 +46,7 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
     > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
 
-1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *Edit* icon from the Frontend block:
+1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *OpenAPI Editor (JSON)* option from the dropdown in the Frontend block:
 
       ![APIM Calculator API Swagger](media2/06.png)
 
@@ -55,8 +55,12 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 ---
 
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="d33e0436-d40e-45c1-9efb-88a15365af11" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+   <validation step="d33e0436-d40e-45c1-9efb-88a15365af11" />
 
 ## Troubleshooting
 

@@ -32,7 +32,6 @@ Task 4.4: Connect the Detail Screen to the Star Wars API
 
 Task 4.5: Show the Star Wars character information on the Detail Screen
 
-
 ## Task 1: Power Apps and APIM
 
 The *premier* Star Wars Fan club is growing and the club officers would like to upgrade from their existing member tracking worksheet to a mobile application that would be available to their members all over the world. The members would also like to see information about their favorite Star Wars movies and characters in the application that would update as new shows and movies are released.
@@ -43,46 +42,27 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 1.1: Update CORS policy
 
-1. Check Azure API Management, under Developer Portal select Portal Overview to see if CORS has been enabled globally. Here's what the Portal overview will look like if CORS has been enabled:
+1. In your Azure API Management resource, navigate to the **Portal Overview** under **Developer Portal** from the left pane to verify if CORS has been enabled globally. Here's what the Portal overview will look like if CORS has been enabled:
 
    ![](media/1.png)
  
-1. Now go to **All APIs (1)**, and click on **edit icon (2)**.
+1. Now go to **All APIs (1)**, and click on **edit icon (2)** from the Inbound Processing tab.
 
    ![](media/aaa1.png)
 
-1. Add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
+1. Click on **+ Add Allowed origin** and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
    ![](media/aaa2.png)
-
 
 ### Task 1.2: Create a custom connector
 
 >*Note*: Before proceeding further make sure you are signed in the Power platform with the given credentials in the resources tab.
 
-1. From the left-menu, click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
+1. You can export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within the Power Platform. Click on this link: [here](https://github.com/Azure/apim-lab/blob/main/apim-lab/9-fusion-dev/Star%20Wars%20API.swagger.json).
 
-   >**Note**: If the **Create a connector** is not visible, then follow these steps:
-      - Click on Activate account and fill the required informations.
-      - Use the email that is provided in the Environment section of the lab. and click on **Next**.
-      - Enter any random 10-digit number in Phone number
-      - Then Click on **Get Started**.
-      - Go to the API management service page and click on **Create a connector**.
-         >**Note**: If **You need a Power Apps license to use this app** error is showing up, try with the following link :- [https://make.powerapps.com](https://make.powerapps.com/)
-         ![](media/demo.png)
-         >**Note**: It might take some time to appear. Refresh the page and check again.
-         ![](media/aa1.png)
+1. Once the link is opened in a new tab, click on 
 
-2. Enter the following details:
-
-   - API : Select the **Star Wars (1)** API 
-   - Power Platform Environment: From the dropdown select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (2)**.
-   - API display name: **Star Wars API (3)**
-   - Click on **Create (4)**.
-
-     ![](media/Pg25-1.png)
-
-If you are unable to create a Power Connector from Azure API Management, you can also export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within the Power Platform. You can find a sample [here](https://github.com/Azure/apim-lab/blob/main/apim-lab/9-fusion-dev/Star%20Wars%20API.swagger.json).
+If you are unable to create a Power Connector from Azure API Management, you can also e
 
 ### Task 2: View your custom connector in Power Platform
 
@@ -110,8 +90,6 @@ If you are unable to create a Power Connector from Azure API Management, you can
        
       ![](media/aa3.png)
 
-      ![](media/4.png)
-
 1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. Copy and paste a sample JSON response into the `Body` section of the response. Close the import panel and select **Update connector**. 
 
    - Navigate back to the **API Management service** in Azure Portal.
@@ -126,11 +104,11 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
       ![](media/5.png)
 
-1. Repeat the step-7 to import for the `getpeoplebyid` action.
+1. Repeat the step-7 to import for the `getpeoplebyid` action. Provide the id as `1`.
 
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
-1. In the **Policies** section select **+ New policy**.
+1. In the left pane, select **+ New policy** under the **Policies** section.
 
 1. Fill out the new policy with the following information:
 
@@ -152,17 +130,21 @@ If you are unable to create a Power Connector from Azure API Management, you can
 
        ![](media/origin001.png)
 
-1. Select **Update connector**.
+1. Click on the **tick** mark on the top right which will create the connector.
 
-1. Select **3. Definations**, from the top left corner, select **Test** screen, and create a new connection instance in the **Connections** section by clicking on the **+ New connection**. If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
+1. Select **6.Test**, from the top left corner and click on **+New connection** in the **Connections** section.
 
-   ![](media/Pg25-subscriptionid.png)
+      > **Note:** If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
-1. Navigate back to the Power apps page, and paste the subscription key, select **Create**.
+      ![](media/Pg25-subscriptionid.png)
 
-   ![](./media/addcon01.png)
+   - Navigate back to the Power apps page, and paste the subscription key, select **Create**.
 
-1. Navigate back to the **Custom Connectors** page. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
+      ![](./media/addcon01.png)
+
+1. Navigate back to the **Custom Connectors** page and click on the pencil icon i.e **Edit**.
+
+1. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
 
    ![](media/8.png)
 
@@ -188,7 +170,7 @@ If you are unable to create a Power Connector from Azure API Management, you can
  
 3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
 
-4. Select **Create (1)** , select **Excel (2)** and then Create **+ New connection** with **OneDrive for Business**.
+4. Select **Create (1)** , select **Excel (2)** and then click on **+ New connection**.
 
    ![](media/excel.png)
    
@@ -240,7 +222,7 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 
 ### Task 4.4: Connect the Detail Screen to the Star Wars API
 
-1. In the left pane, select the **Tree view** and then the **BrowseGallery1** on **Browsescreen1**.
+1. In the left pane, select the **Tree view** and then the **BrowseGallery1** under **Browsescreen1**.
 
 2. Using the drop-down menu, select the **OnSelect** action that will be executed when a user selects a Fan Club member from the gallery.
 
@@ -275,10 +257,12 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
    ![](media/powerapps-output2.png)
 
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="42b46870-763d-4674-95dd-eec0430e096d" />
-
-
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+         
+      <validation step="42b46870-763d-4674-95dd-eec0430e096d" />
 --- 
 
 ### Summary

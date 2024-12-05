@@ -15,7 +15,7 @@
 
       ![APIM Named Values](media/add-name.png)
 
-1. Back in the **APIs** blade, open the **All Operations** in the Calculator API. 
+1. Back in the **APIs** blade, open the **Add two integers** in the Basic Calculator API. 
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
 1. Create a new header by pressing **+ Add header**:
 
@@ -56,8 +56,12 @@
 
    ![](./media/trace02.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+         
+      <validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
 ---
 
 ## Summary

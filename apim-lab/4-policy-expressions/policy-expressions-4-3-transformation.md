@@ -13,9 +13,12 @@ The **find-and-replace** policy finds a substring in a request or response and r
       ![APIM Policy Find & Replace](media/c.png)
   
 1. Place the cursor after the `<base />` element in the `<outbound>` section.
+
+      ![APIM Policy Find & Replace](media/mapi2.png)
+
 1. Click on **Show snippets** present in the top right corner, then select the **Find and replace string in body** transformation policy.  
 
-      ![APIM Policy Find & Replace](media/16.png)
+      ![APIM Policy Find & Replace](media/mapi39.png)
 
 1. Fill in the **`from` and `to` (1)** values accordingly and **Save (2)** the policy.
 
@@ -33,8 +36,12 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
       ![APIM Policy Find & Replace](media/green.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="45b2075d-29c8-4f18-8ec1-c67ed80a1934" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+      <validation step="45b2075d-29c8-4f18-8ec1-c67ed80a1934" />
 
 ---
 
@@ -106,7 +113,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
 ### Task 3.3: Transformation - XML to JSON
 
-A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Calculator** API that returned an XML response. 
+A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Basic Calculator** API that returned an XML response. 
 
 1. On **Design tab (1)**, select **Add two integers operation (2)**, then in **Outbound processing (3)** section click on **Policy code editor `</>` (4)** to transform the response body to JSON.
 
@@ -119,6 +126,10 @@ A frequent requirement is to transform content, especially to maintain compatibi
     </outbound>
     ```
 
+      ![APIM Policy Find & Replace](media/mapi1.png)
+   
+1. Click on **Save**.
+
 1. Test the API and examine the response. Note that it's now JSON.
 
       ![APIM Policy Transform XML to JSON](media/22.png)
@@ -127,7 +138,7 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
 A frequent requirement is to remove headers, especially ones that return security-related or superfluous information.
 
-1. Add an outbound policy to the same **Calculator** API operation to remove specific response headers.
+1. Add an outbound policy to the same **Basic Calculator** API operation to remove specific response headers and click on **Save**.
 
     ```xml
     <outbound>
@@ -137,8 +148,9 @@ A frequent requirement is to remove headers, especially ones that return securit
         <set-header name="x-powered-by" exists-action="delete" />
     </outbound>
     ```
+      ![APIM Policy Find & Replace](media/mapi4.png)
 
-1. Test the same **Calculator** API operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
+1. Test the same **Add two integers** operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
 
       ![APIM Policy Delete Response Header](media/23.png)
 
@@ -146,7 +158,7 @@ A frequent requirement is to remove headers, especially ones that return securit
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
-1. Back in the same **Calculator** API operation, select the **Add two integer opertation** and add **inbound Processing** policies to modify the query string and headers. 
+1. Back in the same **Calculator** API operation, select the **Add two integer opertation** and add **inbound Processing** policies to modify the query string and headers and click on **Save**.
 
     ```xml
     <inbound>
@@ -159,6 +171,7 @@ Query string parameters and headers can be easily modified prior to sending the 
         </set-header>
     </inbound>
     ```
+      ![APIM Policy Find & Replace](media/mapi5.png)
 
 1. Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. If Tracing is not enabled, press **Enable Tracing**, and on the Pop-up select **Enable Tracing for one hour**.
 
@@ -168,7 +181,9 @@ Query string parameters and headers can be easily modified prior to sending the 
 
       ![APIM Policy Amend Backend Call](media/24.png)
 
-      ![APIM Policy Amend Backend Call](media/25.png)
+      ![APIM Policy Find & Replace](media/mapi6.png)
+
+      ![APIM Policy Find & Replace](media/mapi7.png)
 
 
 ---

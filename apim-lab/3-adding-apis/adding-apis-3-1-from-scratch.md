@@ -65,13 +65,18 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
      ![APIM Star Wars API Add Operation](media/Ex-3-T-1.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-> <validation step="5394ae8d-6ce9-4ef8-ba57-e7dbff0a416b" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+      <validation step="5394ae8d-6ce9-4ef8-ba57-e7dbff0a416b" />
 
 ## Task 2: Access Star Wars API from Developer Portal
 
-1. Now switch to the **Developer Portal** and sign in as a developer with a subscription.
-2. Select **Explore APIs**. You should see both **Echo API** and **Star Wars**.
+1. Now switch to the **Developer Portal** in the **In-Private** window where you were previously signed in.
+
+2. Select **Explore APIs** on the **Home** page. You should see both **Echo API** and **Star Wars**.
 
       ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
 

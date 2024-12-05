@@ -11,6 +11,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
   
 1. This time we will choose to not provide API URL suffix. Without an API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
 
+    - Click on **Basic**
     - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
     - Display Name: `Colors API` **(2)**
     - Name: **colors-api** **(3)**
@@ -40,8 +41,12 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
       ![APIM Developer Portal Colors API Try It](media3/07.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+      <validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
 
 ### Task 4.2: Rate limit
 
@@ -53,31 +58,29 @@ We are going to use the [Colors](https://colors-web.azurewebsites.net) website t
 
 First, we need to enable CORS for the domain name of the front end. To achieve this we have to do the following in APIM:
 
-1.  Navigate back to the **Azure Portal**, On the side menu, click on `APIs`, then select the `All APIs` option.
+1. Navigate back to the **Azure Portal**, On the side menu, click on `APIs`, then select the `All APIs` option.
 1. Inside the `Inbound processing` area you will see the `cors` policy, which we added in part 2 by pressing the `Enable Cors` button.
 1. Click on the **pencil icon** next to that policy to edit it.
 
-   ![APIM Policy CORS All APIs](media3/all-api.png)  
+      ![APIM Policy CORS All APIs](media3/all-api.png)  
 
 1. Here we will see this form where we can add the domain name of our frontend `https://colors-web.azurewebsites.net` or the `*` for all domains. Press **Add allowed origin**, enter the URL, then press **Save**.
 
-   ![APIM Policy CORS All APIs](media3/10.png)
+      ![APIM Policy CORS All APIs](media3/10.png)
 
-1. After enabling CORS in Azure API Management let's go back to our frontend <https://colors-web.azurewebsites.net> and follow these steps:
-
-1. Copy this URL <https://colors-web.azurewebsites.net> and paste in the browser.
+1. After enabling CORS in Azure API Management, copy this frontend URL <https://colors-web.azurewebsites.net> and paste in the browser.
 
 1. Click on the hamburger menu next to *Colors* in the top left corner.
 
-   ![](./media3/hamburgermenu.png)
+      ![](./media3/hamburgermenu.png)
    
 1. Click on **Config**.
 
-   ![](./media3/config.png)
+      ![](./media3/config.png)
    
 1. Replace the **API URL** with: https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random
 
-   ![](./media3/colors.png)
+      ![](./media3/colors.png)
 
 1. Click on **Submit**
 
@@ -89,7 +92,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
       ![](./media3/dpportal.png)
 
-2. Click on the **Show** and copy the Primary key of **Starter** and **Unlimited** product subscription.
+1. Click on the **Show** and copy the Primary key of **Starter** and **Unlimited** product subscription.
 
       ![](./media3/keys.png)
         
@@ -103,31 +106,35 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
     
 1. To see that **Unlimited** product has no rate limits:
     
-    - Click on the hamburger menu on the Colors website(1), select config and provide the url created for the **Unlimited** product subscription(2), Click on **Submit(3)**.
+    - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Unlimited** product subscription and click on **Submit**.
       
     - Select **Start**.
     
     - Notice there is no rate limit - every light is randomly and continuously updated. 
 
-        ![Colors Website APIM Unlimited Product](media3/12.png)
+         ![Colors Website APIM Unlimited Product](media3/12.png)
 
 1. To see that **Starter** product is limited to 5 calls per minute:
    
-    - Click on the hamburger menu on the Colors website(1), select config and provide the url created for the **Starter** product subscription(2), Click on **Submit(3)**.
+    - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Starter** product subscription and click on **Submit**.
     
     - Select **Start**.
     
     - Notice that only 5 lights get colored.
 
-        ![](./media3/colors1.png)
+         ![](./media3/colors1.png)
 
 1. Try the same **Starter** URL directly in your web browser and notice the error status/message returned:
 
       ![APIM Colors API URL in Browser for Starter Product 429 ](../../assets/images/apim-color-api-url-in-browser-starter-product-429.png)
 
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+      <validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
 
 ## Summary
 

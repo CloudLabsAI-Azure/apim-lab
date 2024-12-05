@@ -16,10 +16,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
 
 1. Click on **Create** to create the namespace, then enter the following:
    
-    - Resource Group : Select **apim-rg**.
-   
-        > **Note:** The naming convention you can follow for Event Hub Namespace: `evhns-<environment>-<region>-<application-name>-<owner>-<instance>`
-   
+    - Resource Group : Select **apim-rg**
     - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
     - **Location** : Select the region you used in previous exercise.
     - **Pricing Tier**: Choose **Basic** for the dropdown.  To learn about differences between tiers, see [Quotas and limits](event-hubs-quotas.md), [Event Hubs Premium](event-hubs-premium-overview.md), and [Event Hubs Dedicated](event-hubs-dedicated-overview.md) articles. 
@@ -35,8 +32,12 @@ An Event Hubs namespace provides a unique scoping container in which you create 
     ![Event Hub Namespace Home Page](media/13.png)
 
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="8c241828-0198-4596-a1f0-4b70ef4fb3aa" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+   
+    <validation step="8c241828-0198-4596-a1f0-4b70ef4fb3aa" />
 
 ---
 
@@ -46,9 +47,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
 1. From the **Event Hubs** blade select **+ Event Hub**
    
-    ![Add Event Hub](media/14.png)
-
-    >**Note:** The naming convention you can follow for Event Hub `evh-<the-goal>-<environment>-<region>-<application-name>-<owner>-<instance>` 
+    ![Add Event Hub](media/mapi70.png)
 
 1. Type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Review + Create**, and click on the **Create**. 
 
@@ -70,11 +69,8 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 ## Task 3.3: Create Access to the Event Hub
 
 1. Click on the newly-created event hub.
-1. Open the **Shared access policies** blade under Setting.
+1. Open the **Shared access policies** blade under **Settings** tab.
 1. Click on **+ Add**.
-
-    ![Event Hub Connection](media/17.png)
-
 1. On the right side of your screen create a **sendpolicy** with just **Send** permissions
 
     ![Event Hub Send Policy](media/18.png)
@@ -82,6 +78,8 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 1. Click on the new policy created and copy the **Connection string-primary key** to a notepad. Also, copy the **Event Hub namespace**. You will use both values in the next section.
 
     ![Event Hub Connection](media/19.png)
+
+    ![Event Hub Connection](media/17.png)
 
 ---
 
@@ -97,7 +95,7 @@ Azure API Management loggers are configured using the [API Management REST API](
 
 1. Click on Try It.
 
-       ![](media/e.png)
+     ![](media/e.png)
 
 1. Press **Sign in** and use your Azure credentials, Enter the following email/username and then click on **Next**. 
 
@@ -110,12 +108,13 @@ Azure API Management loggers are configured using the [API Management REST API](
 1. Enter the required details.
 
 1. Fill in the following **Parameters**:
-    - LoggerId: **event-hub-logger** (you will use it in the next steps)
-    - ResourceGroupName: **apim-rg** 
+    - LoggerId: **event-hub-logger (1)** (you will use it in the next steps)
+    - ResourceGroupName: **apim-rg (2)** 
     - ServiceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
-    - SubscriptionId: Select the subscription given by default.
+    - SubscriptionId: Select the subscription given by default **(3)**.
+    - api-version: **2022-08-01 (4)**
 
-        ![RREST API Try It](media/21.png)
+        ![RREST API Try It](media/mapi72.png)
 
 1. Replace the request **Body** with the following json. Make sure you replace the parameters appropriately:
 
@@ -132,22 +131,7 @@ Azure API Management loggers are configured using the [API Management REST API](
     }
     ```
 
-1. Your request parameters might then look similar to this: 
-
-    >**Note:** We are deviating intentionally by masking `SharedAccessKey`. Please do not alter your key.
-
-    ```json
-        {
-            "properties": {
-                "loggerType": "azureEventHub",
-                "description": "adding a new logger",
-                "credentials": {
-                    "name": "evhns-dev-we-hol-ms-011/evh-logger-dev-we-hol-ms-01",
-                    "connectionString": "Endpoint=sb://evhns-dev-we-hol-ms-011.servicebus.windows.net/;SharedAccessKeyName=sendpolicy;SharedAccessKey******=;EntityPath=evh-logger-dev-we-hol-ms-01"
-                }
-            }
-        }
-    ```
+    >**Note:** Update the name of the **Events Hub Namespace** and the **Shared Access key** which we copied earlier in the notepad.
 
 1. Press **Run**.
 1. You should get a **201** response, confirming that the resource has been created.
@@ -167,7 +151,7 @@ Once your logger is configured in Azure API Management, you can configure your l
 1. Select **All operations (2)**.
 1. On the top of the screen, select the **Design (3)** tab.
 
-       ![APIM Add Log to Event Hub](media/23.png)
+      ![APIM Add Log to Event Hub](media/23.png)
    
 1. In the **Inbound** or **Outbound** processing window, enter the Code editor.
 1. Enter a new line after the `<base />` tag in the `inbound` or `outbound` policy section.
@@ -192,7 +176,7 @@ Once your logger is configured in Azure API Management, you can configure your l
     </log-to-eventhub>
     ```
 
-1. Replace `<your logger id>` with the value you used for `{loggerId}` in the request URL to create the logger in the previous step (e.g. `event-hub-logger`).
+1. Replace `<your logger id>` with event-hub-logger which we used in the request URL to create the logger in the previous task.
 
     > You can use any expression that returns a string as the value for the `log-to-eventhub` element. In this example, a string in JSON format containing the date and time, service name, request ID, request IP address, and operation name is logged.
 

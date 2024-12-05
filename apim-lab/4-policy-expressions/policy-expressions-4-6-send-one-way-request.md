@@ -60,6 +60,10 @@ The following policy and payload applies for both examples in this section (webh
 
       ![Webhook Site Setup](media/adding-web-hook.png)
 
+      > **Note:** Click on **Save** when the warning pop-up appears.
+
+      ![APIM Policy Find & Replace](media/mapi40.png)
+
 1. Invoke the API from the Azure API Management **Test** tab by clicking the **Trace** button and observe the `200` success response.
 
 1. Check the **Trace** for the **Outbound** one-way message.

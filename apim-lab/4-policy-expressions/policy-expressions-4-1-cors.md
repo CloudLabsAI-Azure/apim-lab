@@ -32,7 +32,7 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
 
     ![APIM Policy CORS All APIs](media/08.png)  
 
-1. Click on the **Edit button** to view the XML present within the **CORS** policy.
+1. Click on **CORS** under the **Inbound processing** tab to view the XML present within the **CORS** policy.
 
     ![APIM Policy CORS All APIs](media/all-api1.png)  
 

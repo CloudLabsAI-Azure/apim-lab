@@ -20,8 +20,12 @@ Before you can use Azure Application Insights, you first need to create an insta
 
 3. Click **Review + Create**, followed by **Create**.
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="c50fd98d-9969-4471-95d7-ae0959ed081f" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    <validation step="c50fd98d-9969-4471-95d7-ae0959ed081f" />
 
 ### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
@@ -29,20 +33,24 @@ Before you can use Azure Application Insights, you first need to create an insta
 2. Select **Application Insights** from the menu on the left.
 3. Click **+ Add**.
 
-    ![APIM App Insights Logger](media/06.png)
+      ![APIM App Insights Logger](media/06.png)
 
-    ![APIM App Insights Logger](media/07.png)
+4. Select the **Application Insights** resource we created in the previous task and click on **Create**.
 
-5. Select the previously created **Application Insights** instance and provide a short description.
-6. Click **Create**.
-7. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
+     ![APIM App Insights Logger](media/07.png)
+   
+5. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
 
     ![APIM App Insights Logger](media/08.png)
 
     > Behind the scenes, a [Logger](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/logger/createorupdate) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="65dfec7c-e946-478a-8012-7430913523bd" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    <validation step="65dfec7c-e946-478a-8012-7430913523bd" />
 
 ### Task 2.3: Enable Application Insights logging for your API
 
@@ -57,7 +65,7 @@ Before you can use Azure Application Insights, you first need to create an insta
 
     ![APIM API App Insights Logger](media/09.png)
 
-9. Click **Save**.
+9. Click on **Save**.
 
     > Overriding the default value **0** in the **Number of payload bytes to log** field may significantly decrease the performance of your APIs.
 
@@ -84,11 +92,13 @@ Any request you make to the Colors API in Azure API Management will be subject t
 ### Task 2.4: Viewing Azure Application Insights Data
 
 1. Go back to the **Application Insights** blade and click on the Application Insights instance.
+1. On the feft hand side pane, click on the **Transaction search (1)** under **Investigate** to see details on a transactional level.
 1. In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
-1. On the Left hand side pane, click on the **Transaction search** under **Investigate** to see details on a transactional level:
-1. Unselect **Availability** from Event Types.
+1. Unselect **Availability (2)** from Event Types.
 
-    ![APIM API App Insights Logger](media/10.png)
+    ![APIM API App Insights Logger](media/mapi61.png)
+
+    > **Note:** The logs may take up to 30 minutes to appear. Kindly continue with the next exercise and check back later.
 
 ### Performance implications and log sampling
 

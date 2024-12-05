@@ -22,9 +22,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 ### Task 2.1: Deploying Web and API containers with Azure Container Instances
 
-1. Login to [Azure Portal](https://portal.azure.com)
-
-1. Open the **Azure Cloud Shell** and choose **Bash Shell** (do not choose PowerShell)
+1. Open the **Azure Cloud Shell** and choose **Bash**.
 
      ![Azure Cloud Shell](media/cldshellicon.png)
 
@@ -34,10 +32,10 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    - Select the **subscription**, and click **Apply**.
    - Select **I want to create a storage account**, and click on **Next**.
    - Select Resource Group: **apim-rg**
+   - Region: **East US**
    - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
    - Fileshare name: **apim**
-   - region: **East US**
-   - Then click on **Create**
+   - Click on **Create**
 
        ![](media/cldshl-strgaccount.png)
    
@@ -103,10 +101,9 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 1. Create the container instance for the colors web:
 
-    ```  
-    az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
-    ```
-
+      ```  
+      az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
+      ```
 
 1. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
