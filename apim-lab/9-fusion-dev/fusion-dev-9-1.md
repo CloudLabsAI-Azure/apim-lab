@@ -32,7 +32,6 @@ Task 4.4: Connect the Detail Screen to the Star Wars API
 
 Task 4.5: Show the Star Wars character information on the Detail Screen
 
-
 ## Task 1: Power Apps and APIM
 
 The *premier* Star Wars Fan club is growing and the club officers would like to upgrade from their existing member tracking worksheet to a mobile application that would be available to their members all over the world. The members would also like to see information about their favorite Star Wars movies and characters in the application that would update as new shows and movies are released.
@@ -55,34 +54,15 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/aaa2.png)
 
-
 ### Task 1.2: Create a custom connector
 
 >*Note*: Before proceeding further make sure you are signed in the Power platform with the given credentials in the resources tab.
 
-1. From the left-menu, click on **Power platform** option from your Azure API Management instance, and select **Create a connector.**
+1. You can export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within the Power Platform. Click on this link: [here](https://github.com/Azure/apim-lab/blob/main/apim-lab/9-fusion-dev/Star%20Wars%20API.swagger.json).
 
-   >**Note**: If the **Create a connector** is not visible, then follow these steps:
-      - Click on Activate account and fill the required informations.
-      - Use the email that is provided in the Environment section of the lab. and click on **Next**.
-      - Enter any random 10-digit number in Phone number
-      - Then Click on **Get Started**.
-      - Go to the API management service page and click on **Create a connector**.
-         >**Note**: If **You need a Power Apps license to use this app** error is showing up, try with the following link :- [https://make.powerapps.com](https://make.powerapps.com/)
-         ![](media/demo.png)
-         >**Note**: It might take some time to appear. Refresh the page and check again.
-         ![](media/aa1.png)
+1. Once the link is opened in a new tab, click on 
 
-2. Enter the following details:
-
-   - API : Select the **Star Wars (1)** API 
-   - Power Platform Environment: From the dropdown select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (2)**.
-   - API display name: **Star Wars API (3)**
-   - Click on **Create (4)**.
-
-     ![](media/Pg25-1.png)
-
-If you are unable to create a Power Connector from Azure API Management, you can also export an `OpenAPI v2 (JSON)` file that can be imported as a Custom Connector within the Power Platform. You can find a sample [here](https://github.com/Azure/apim-lab/blob/main/apim-lab/9-fusion-dev/Star%20Wars%20API.swagger.json).
+If you are unable to create a Power Connector from Azure API Management, you can also e
 
 ### Task 2: View your custom connector in Power Platform
 
