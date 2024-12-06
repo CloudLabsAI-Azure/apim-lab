@@ -61,8 +61,12 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
     ![Event Hub Created](media/16.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it.
-<validation step="3fefc0a6-157b-4820-a57b-5bd7a536f3df" />
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - If you receive a success message, you can proceed to the next task.
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+    <validation step="3fefc0a6-157b-4820-a57b-5bd7a536f3df" />
 
 ---
 
