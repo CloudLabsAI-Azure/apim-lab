@@ -73,19 +73,19 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
    ![](media/mapi95.png)
   
 1. Select **Create a connector.**
-   
-     ![](media/aa1.png)
 
-   >**Note:** The option is expected to appear within an hour. Kindly proceed with the subsequent exercises and revisit this section afterward.
+   ![](media/aa1.png)
 
- 1. On the **Create a Connector** page, enter the following details:
+   > **Note:** The option is expected to appear within an hour. Kindly proceed with the subsequent exercises and revisit this section afterward.
 
-   - API : Select the **Star Wars (1)** API 
-   - Power Platform Environment: From the dropdown select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (2)**.
-   - API display name: **Star Wars API (3)**
-   - Click on **Create (4)**.
+1. On the **Create a Connector** page, enter the following details:
 
-     ![](media/Pg25-1.png)
+   - API : Select the **Star Wars (1)** API.
+   - Power Platform Environment: From the dropdown select **ODL_User <inject key="DeploymentID" enableCopy="false"/>'s Environment (2)**.
+   - API display name: **Star Wars API (3)**.
+   - Click on **Create (4)**.
+
+        ![](media/Pg25-1.png)
 
 ### Task 2: View your custom connector in Power Platform
 
