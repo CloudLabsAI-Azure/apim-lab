@@ -42,7 +42,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-      <validation step="8a9c8766-7111-4091-9f67-2fadaa51d74d" />
+      <validation step="2e2d1834-0062-4f20-a48f-f8dced076551" />
 
 ## Summary
 
