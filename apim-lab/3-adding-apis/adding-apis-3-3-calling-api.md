@@ -46,7 +46,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
+      <validation step="36a8b8d2-effa-45bf-991f-d4179cefe240" />
 
 ### Task 4.2: Rate limit
 
@@ -134,7 +134,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
+      <validation step="2604bc24-b350-4fb9-afb7-e40a9f2a1638" />
 
 ## Summary
 
