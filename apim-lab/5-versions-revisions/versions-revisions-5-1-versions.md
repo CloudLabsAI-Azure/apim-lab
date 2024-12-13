@@ -47,7 +47,7 @@ Proper version management not only helps organize your API, it also aids in Azur
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="150dd1c5-427a-46c3-88b6-6c18bc0ed5a3" />
+      <validation step="e5ba956c-b16b-4cc1-8d22-e9f5ae3747af" />
 
 ### What Versions Enable
 

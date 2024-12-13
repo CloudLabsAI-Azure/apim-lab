@@ -41,7 +41,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-      <validation step="45b2075d-29c8-4f18-8ec1-c67ed80a1934" />
+      <validation step="03f0ec31-cabc-4f84-a209-5bcc3555da80" />
 
 ---
 

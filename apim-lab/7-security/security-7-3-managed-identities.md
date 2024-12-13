@@ -15,7 +15,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-    <validation step="114baa5f-6313-469d-932a-033f7744f3d2" />
+    <validation step="81e62a80-5358-4fed-b065-bc72a572b667" />
 
 ## Key Vault 
 
@@ -50,7 +50,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-    <validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
+    <validation step="e6ee8598-4874-4ef3-8911-a357aa8a6719" />
 
 ### Task 2.3: Access policy and principal assignment
 

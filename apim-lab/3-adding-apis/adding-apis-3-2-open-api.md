@@ -60,7 +60,7 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="d33e0436-d40e-45c1-9efb-88a15365af11" />
+   <validation step="732c9c59-ced2-4d95-a295-a08a3df0a339" />
 
 ## Troubleshooting
 

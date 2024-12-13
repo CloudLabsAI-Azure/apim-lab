@@ -51,7 +51,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="3083e0a3-97d5-46ce-bdf3-7c9e6cd526e7" />
+      <validation step="054c6556-1c46-4010-b909-6b1a3f809cee" />
 ---
 
 ## Summary 

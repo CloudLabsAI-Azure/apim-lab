@@ -70,7 +70,7 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="5394ae8d-6ce9-4ef8-ba57-e7dbff0a416b" />
+      <validation step="89d4320b-abe8-4310-8e85-c3c319c256b5" />
 
 ## Task 2: Access Star Wars API from Developer Portal
 

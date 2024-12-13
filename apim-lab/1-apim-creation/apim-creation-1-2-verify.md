@@ -81,7 +81,7 @@ You may have noticed the *Request URL* and may be tempted to put it in your brow
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="a68aef90-9b22-4d42-98cb-9ea25d35a217" />
+      <validation step="36cc4953-c3d5-476e-80e6-32869d2b277c" />
 
 ## Summary
 

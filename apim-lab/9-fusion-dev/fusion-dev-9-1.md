@@ -291,7 +291,7 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-      <validation step="42b46870-763d-4674-95dd-eec0430e096d" />
+      <validation step="fdc63dba-e60b-4791-b6aa-1093db177beb" />
 --- 
 
 ### Summary

@@ -37,7 +37,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-    <validation step="8c241828-0198-4596-a1f0-4b70ef4fb3aa" />
+    <validation step="ae115616-e108-4860-a2ad-a11bff9da3d8" />
 
 ---
 
@@ -66,7 +66,7 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="3fefc0a6-157b-4820-a57b-5bd7a536f3df" />
+    <validation step="d0facaaf-174d-49ad-bf28-cebf59682217" />
 
 ---
 
