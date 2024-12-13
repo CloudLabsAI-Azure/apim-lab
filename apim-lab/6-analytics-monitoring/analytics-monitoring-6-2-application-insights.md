@@ -25,7 +25,7 @@ Before you can use Azure Application Insights, you first need to create an insta
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="c50fd98d-9969-4471-95d7-ae0959ed081f" />
+    <validation step="d4804419-405e-4129-a5d4-02d38dea796a" />
 
 ### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
@@ -50,7 +50,7 @@ Before you can use Azure Application Insights, you first need to create an insta
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="65dfec7c-e946-478a-8012-7430913523bd" />
+    <validation step="6c0b0f9f-c119-4a88-8d81-09f9968c829e" />
 
 ### Task 2.3: Enable Application Insights logging for your API
 
