@@ -61,7 +61,7 @@
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-      <validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
+      <validation step="5688eb89-0d35-40c2-ae9c-b6bdeced4765" />
 ---
 
 ## Summary
