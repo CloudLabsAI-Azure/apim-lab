@@ -2,6 +2,6 @@
 
 ### 31 December 2024
 
-- Have updated the content for **Exercise 9,Task 3: API Proxy to Serverless**. We are no longer provided with the Functions option in function app. Have added the steps to do the same via VS Code. 
+- Updated the content for **Exercise 9,Task 3: API Proxy to Serverless**. The Functions option in the Function App is no longer available. Included the steps to create the function and deploy it to the Function App using VS Code.
 
- 
+- 
