@@ -38,7 +38,7 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
    - Display name: **Star Wars** **(1)**.
    - Name: **star-wars** **(2)**.
    - Description: **Implementing the Star Wars API** **(3)**.
-   - Web service URL: **https://swapi.dev/api** **(4)**.
+   - Web service URL: **https://swapi.tech/api** **(4)**.
    - URL scheme: **HTTPS** **(5)** as we strive to enforce HTTPS only.
    - API URL suffix: **sw** **(6)**. This allows us to compartmentalize the Azure API Management URLs for distinct APIs.
    - Products : Assign **Starter** and **Unlimited** **(7)**.
