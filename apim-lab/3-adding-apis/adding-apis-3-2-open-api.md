@@ -21,7 +21,10 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
    > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
 
-1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both` (3)** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
+1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both` (3)** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.
+
+   > **Note if the URL scheme is showing as http(s), select it.**
+
 1. Set the **API URL suffix** to **calc (4)**  
 1. Assign **Starter** and **Unlimited** **(5)** products.  
 1. Press **Create (6)**.  
