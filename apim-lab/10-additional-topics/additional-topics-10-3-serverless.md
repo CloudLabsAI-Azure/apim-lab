@@ -163,6 +163,8 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/api17.png)
 
+   ![](media/E9T3.2S6-2.png)
+
 1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
 
    - **To**: Specify your Email address, i.e. **<inject key="AzureAdUserEmail"></inject>** to receive the e-mail.
@@ -171,7 +173,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
         ![](media/api18.png)
 
-        ![](media/api19.png)
+        ![](media/E9T3.2S7-2.png)
 
 1. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
