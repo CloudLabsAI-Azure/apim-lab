@@ -85,7 +85,7 @@ The architecture uses Azure API Management to manage and secure APIs. It include
 
 1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide on separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
-   ![08](media/02.png)
+   ![08](media/02upd.png)
  
     > You will see the DeploymentID value on **Environment Details** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
 
