@@ -11,11 +11,11 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
   
 1. This time we will choose to not provide API URL suffix. Without an API URL suffix, there could be endpoint conflicts, you can always leverage [rewrite-uri](https://learn.microsoft.com/en-us/azure/api-management/api-management-transformation-policies#RewriteURL) policy to convert a request URL form to the form expected by the backend web service.
 
-    - Click on **Basic**
-    - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
-    - Display Name: `Colors API` **(2)**
-    - Name: **colors-api** **(3)**
-    - click on **create** **(4)**.
+      - Click on **Basic**
+      - OpenAPI specification: `https://colors-api.azurewebsites.net/swagger/v1/swagger.json` **(1)**.
+      - Display Name: `Colors API` **(2)**
+      - Name: **colors-api** **(3)**
+      - click on **create** **(4)**.
 
         ![APIM Add Colors API](media3/openapi.png)
 
@@ -94,33 +94,33 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. Click on the **Show** and copy the Primary key of **Starter** and **Unlimited** product subscription.
 
-      ![](./media3/keys.png)
+      ![](./media3/keysupd.png)
         
 1. Prepare the URL in a text editor:
 
-   - Concat the base URL and the subscription key for the **Starter** and **Unlimited** product subscription:
+      - Concat the base URL and the subscription key for the **Starter** and **Unlimited** product subscription:
       
-   - Starter: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
+      - Starter: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=STARTER_PRIMARY_KEY_HERE**
         
-   - Unlimied: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
+      - Unlimied: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random?key=UNLIMITED_PRIMARY__KEY_HERE**
     
 1. To see that **Unlimited** product has no rate limits:
     
-    - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Unlimited** product subscription and click on **Submit**.
+      - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Unlimited** product subscription and click on **Submit**.
       
-    - Select **Start**.
+      - Select **Start**.
     
-    - Notice there is no rate limit - every light is randomly and continuously updated. 
+      - Notice there is no rate limit - every light is randomly and continuously updated. 
 
          ![Colors Website APIM Unlimited Product](media3/12.png)
 
 1. To see that **Starter** product is limited to 5 calls per minute:
    
-    - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Starter** product subscription and click on **Submit**.
+      - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Starter** product subscription and click on **Submit**.
     
-    - Select **Start**.
+      - Select **Start**.
     
-    - Notice that only 5 lights get colored.
+      - Notice that only 5 lights get colored.
 
          ![](./media3/colors1.png)
 
