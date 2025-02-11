@@ -29,7 +29,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
       
 1. Confirm that you see the **Event Hubs Namespace** page similar to the following example:   
       
-    ![Event Hub Namespace Home Page](media/13.png)
+    ![Event Hub Namespace Home Page](media/13upd.png)
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -79,9 +79,9 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
     ![Event Hub Send Policy](media/18.png)
 
-1. Click on the new policy created and copy the **Connection string-primary key** to a notepad. Also, copy the **Event Hub namespace**. You will use both values in the next section.
+1. Click on the new policy created and copy the **Primary connection string** to a notepad. Also, copy the **Event Hub namespace**. You will use both values in the next section.
 
-    ![Event Hub Connection](media/19.png)
+    ![Event Hub Connection](media/19upd.png)
 
     ![Event Hub Connection](media/17.png)
 

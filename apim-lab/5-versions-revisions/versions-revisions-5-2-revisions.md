@@ -29,6 +29,8 @@
    
 1. Add a 10-second caching policy for the **GET People** operation via the Code editor.
 
+      ![APIM Created Revision](media/mapi51.png)
+
     ```xml
     <inbound>
         <base />
@@ -44,8 +46,6 @@
     ```
 
       ![APIM Created Revision](media/mapi50.png)
-
-      ![APIM Created Revision](media/mapi51.png)
 
 1. Once the code is updated, the new policy will be created.
    

@@ -58,14 +58,14 @@ Before you can use Azure Application Insights, you first need to create an insta
 2. Click on the **Colors** API.
 3. Go to the **Settings** tab from the top bar.
 4. Scroll down to the **Diagnostics Logs** section.
-5. On the **Application Insights** tab check the **Enable** box.
-6. In the **Destination** dropdown select the logger you just added in the **Application Insights** blade.
-7. Set sampling to **100** to capture all events.
-8. Check the **Always log errors** checkbox.
+5. On the **Application Insights** tab check the **Enable(1)** box.
+6. In the **Destination (2)** dropdown select the logger you just added in the **Application Insights** blade.
+7. Set sampling to **100 (3)** to capture all events.
+8. Check the **Always log errors (4)** checkbox.
 
-    ![APIM API App Insights Logger](media/09.png)
+    ![APIM API App Insights Logger](media/09upd.png)
 
-9. Click on **Save**.
+9. Click on **Save (5)**.
 
     > Overriding the default value **0** in the **Number of payload bytes to log** field may significantly decrease the performance of your APIs.
 

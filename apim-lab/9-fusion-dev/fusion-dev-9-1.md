@@ -117,7 +117,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    - Navigate back to the **API Management service** in Azure Portal.
    
-   - On the **API Management service** page, from the left menu, under **APIs**, select **APIs**. Select **Star Wars** drop-down and select **v2 (1)**. Select `Get People (2)`, and from the top menu select **Test (3)**, now select **Send (4)** and **copy (5)** the Response into a notepad. 
+   - On the **API Management service** page, from the left menu, under **APIs**, select **APIs**. Select **Star Wars** drop-down and select **v2 (1)**. Select `Get People (2)`, and from the top menu select **Test (3)**, select the product scope as **Unlimited** and now select **Send (4)** and **copy (5)** the Response into a notepad.  
 
       ![](media/api.png)
 
