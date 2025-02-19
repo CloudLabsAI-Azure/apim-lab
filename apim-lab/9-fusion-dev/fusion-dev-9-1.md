@@ -1,4 +1,4 @@
-## Exercise 8:  Fusion Dev
+## Exercise 8:  Fusion Dev(Read Only)
 
 ## Estimated Duration : 30 minutes
 

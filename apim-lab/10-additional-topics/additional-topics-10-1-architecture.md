@@ -1,4 +1,4 @@
-## Excercise 9 (Optional)
+## Excercise 9 (Read Only)
 
 ## Estimated Duration: 50 minutes
 
