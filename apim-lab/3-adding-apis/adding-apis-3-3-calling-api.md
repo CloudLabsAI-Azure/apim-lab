@@ -29,6 +29,8 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
       ![APIM Test Colors API](media3/04.png)
 
+   > **Note:** If you encounter with **401 error**, switch to the **Settings** tab, **uncheck** Subscription required, and press **Save** at the bottom of the page and reperform step 4.
+
 1. Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited**, then press **Save**.
 
       ![APIM Colors API Add Products](media3/05.png)
