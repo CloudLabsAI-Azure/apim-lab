@@ -15,11 +15,14 @@
 
       ![APIM Named Values](media/add-name.png)
 
-1. Back in the **APIs** blade, open the **Add two integers** in the Basic Calculator API. 
+1. Back in the **APIs** blade, open the **Add two integers** in the Basic Calculator API.
+
+    ![APIM Named Values](media/u3.png)  
+    
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
 1. Create a new header by pressing **+ Add header**:
 
-      ![APIM Named Values](media/updt29.png)
+      ![APIM Named Values](media/u3.png)
   
     - Name: **x-request-received-time**
     - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
