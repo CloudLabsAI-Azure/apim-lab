@@ -15,16 +15,20 @@
 
       ![APIM Named Values](media/add-name.png)
 
-1. Back in the **APIs** blade, open the **Add two integers** in the Basic Calculator API. 
+1. Back in the **APIs** blade, open the **Add two integers** in the Basic Calculator API.
+
+    ![APIM Named Values](media/k1.png)  
+    
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
 1. Create a new header by pressing **+ Add header**:
-
-      ![APIM Named Values](media/updt29.png)
   
     - Name: **x-request-received-time**
     - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
     - Action: **override**
-    - Click **Save** 
+    - Click **Save**
+
+      ![APIM Named Values](media/k2.png)
+      
     - The corresponding XML in the *Code editor* view should look like this: 
 
       ```xml    

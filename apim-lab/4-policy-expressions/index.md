@@ -14,6 +14,8 @@ Policies can be applied at multiple scopes and follow this hierarchy. It is impo
 
 ![APIM Policies Scopes](media/01.png)
 
+**Note:** This page is a read-only and you are just exploring to the configurations of Frontend/Inbound/Outbound/Backend.
+
 ### Azure API Management Portal oddities
 
 > The Azure API Management Portal is good, but it's not perfect.  
@@ -38,8 +40,6 @@ Editing the Frontend:
   - The **Code View** editor allows amendments to the OpenAPI / Swagger definition.
 
     ![APIM Frontend Code Editor](media/code.png)
-
-    
 
 Editing **Inbound processing / Outbound processing / Backend**:
 

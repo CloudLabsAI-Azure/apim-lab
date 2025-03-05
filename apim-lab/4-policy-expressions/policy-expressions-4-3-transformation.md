@@ -109,7 +109,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
       ![APIM Policy Transform Unlimited Product](media/21.png)
 
----
+      > **Note:** If you encounter with **401 error**, switch to the **Settings** tab, **uncheck** Subscription required, and press **Save** at the bottom of the page and reperform step 3.
 
 ### Task 3.3: Transformation - XML to JSON
 
