@@ -1,6 +1,6 @@
 ## Exercise 8:  Fusion Dev(Read Only)
 
-## Estimated Duration : 30 minutes
+## Estimated Duration : 40 minutes
 
 In this exercise, you'll create a Star Wars Fan Club mobile application using Power Apps and Azure API Management. You'll connect your member data from an Excel worksheet, integrate Star Wars character information through a custom connector, and customize the app to display favorite character details for each member.
 
