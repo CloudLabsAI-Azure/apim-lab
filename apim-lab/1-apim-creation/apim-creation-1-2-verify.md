@@ -1,6 +1,6 @@
 ## Exercise 1: Verify API Management Instance
 
-## Estimated Duration: 20 minutes
+## Estimated Duration: 30 minutes
 
 APIs enable digital experiences, simplify application integration, underpin new digital products, and make data and services reusable and universally accessible. With the proliferation and increasing dependency on APIs, organizations need to manage them as first-class assets throughout their lifecycle.
 Azure API Management helps customers meet these challenges:
