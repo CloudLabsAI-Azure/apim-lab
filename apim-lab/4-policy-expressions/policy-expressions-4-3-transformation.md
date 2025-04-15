@@ -55,7 +55,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
   ![APIM Policy Transform Starter Product](media/note.png)
 
-1. Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation.
+1. Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation and then open Policy code editor under **Outbound processing (3)**.
 
       ![APIM Policy Transform Starter Product](media/19.png)
   
@@ -64,37 +64,42 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
     >Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
 
     ```xml
-    <policies>
-        <inbound>
-            <base />
-            <set-header name="Accept-Encoding" exists-action="override">
-                <value>deflate</value>
-            </set-header>
-        </inbound>
-        <backend>
-            <base />
-        </backend>
-        <outbound>
-            <base />
-            <choose>
-                <when condition="@(context.Response.StatusCode == 200 && context.Product?.Name != "Unlimited")">
-                    <set-body>@{
-                            var response = context.Response.Body.As<JObject>();
-
-                            foreach (var key in new [] {"hair_color", "skin_color", "eye_color", "gender"}) {
-                                response.Property(key).Remove();
-                            }
-
-                            return response.ToString();
-                        }
-                    </set-body>
-                </when>
-            </choose>
-        </outbound>
-        <on-error>
-            <base />
-        </on-error>
-    </policies>
+        <policies>
+          <inbound>
+              <base />
+              <set-header name="Accept-Encoding" exists-action="override">
+                  <value>deflate</value>
+              </set-header>
+          </inbound>
+          <backend>
+              <base />
+          </backend>
+          <outbound>
+              <base />
+              <choose>
+                  <when condition="@(context.Response.StatusCode == 200 && context.Product?.Name != "Unlimited")">
+                      <set-body>@{
+                          var response = context.Response.Body.As<JObject>();
+                          var props = response["result"]?["properties"] as JObject;
+      
+                          if (props != null) {
+                              foreach (var key in new [] {"hair_color", "skin_color", "eye_color", "gender"}) {
+                                  var prop = props.Property(key);
+                                  if (prop != null) {
+                                      prop.Remove();
+                                  }
+                              }
+                          }
+      
+                          return response.ToString();
+                      }</set-body>
+                  </when>
+              </choose>
+          </outbound>
+          <on-error>
+              <base />
+          </on-error>
+      </policies>
     ```
 
 1. Test the API on the **Test** **(1)** tab with **id** 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
