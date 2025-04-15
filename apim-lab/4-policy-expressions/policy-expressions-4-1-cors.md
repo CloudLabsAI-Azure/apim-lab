@@ -34,33 +34,10 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
 
 1. Click on **CORS** under the **Inbound processing** tab to view the XML present within the **CORS** policy.
 
-    ![APIM Policy CORS All APIs](media/all-api1.png)  
+    ![APIM Policy CORS All APIs](media/all-api1.png)
+   
+    ![APIM Policy CORS All APIs](media/all-api-policy.png)  
 
-    ```xml
-    <policies>
-        <inbound>
-            <cors allow-credentials="true">
-                <allowed-origins>
-                    <origin>https://apim-sk-12212021.developer.azure-api.net</origin>
-                    <origin>https://colors-web.azurewebsites.net/</origin>
-                </allowed-origins>
-                <allowed-methods preflight-result-max-age="300">
-                    <method>*</method>
-                </allowed-methods>
-                <allowed-headers>
-                    <header>*</header>
-                </allowed-headers>
-                <expose-headers>
-                    <header>*</header>
-                </expose-headers>
-            </cors>
-        </inbound>
-        <backend>
-            <forward-request />
-        </backend>
-        <outbound />
-        <on-error />
-    </policies>
-    ```
+    
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks.
