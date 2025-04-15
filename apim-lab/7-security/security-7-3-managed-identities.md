@@ -112,6 +112,8 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 1. Sign in to the developer portal and test this new operation
 1. Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
 
+   >**Note:** Ensure to select the product as **Unlimited** while testing.
+
 ---
 ### Summary 
 In this Task, Azure API Management (APIM) is configured to securely access secrets from Azure Key Vault using Managed Service Identity (MSI), enhancing security and enabling the retrieval of secrets for API management operations, as demonstrated during testing in the developer portal.
