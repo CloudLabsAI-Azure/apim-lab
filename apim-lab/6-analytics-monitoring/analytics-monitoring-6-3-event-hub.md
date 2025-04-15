@@ -116,9 +116,9 @@ Azure API Management loggers are configured using the [API Management REST API](
     - ResourceGroupName: **apim-rg (2)** 
     - ServiceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
     - SubscriptionId: Select the subscription given by default **(3)**.
-    - api-version: **2022-08-01 (4)**
+    - api-version: **2024-05-01 (4)**
 
-        ![RREST API Try It](media/mapi72.png)
+        ![RREST API Try It](media/api1504.png)
 
 1. Replace the request **Body** with the following json. Make sure you replace the parameters appropriately:
 
