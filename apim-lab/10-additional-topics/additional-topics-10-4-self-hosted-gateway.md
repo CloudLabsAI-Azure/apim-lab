@@ -110,6 +110,10 @@ Our Gateway Node is now deployed, we can test it.
 - On the **Welcome to Postman!** page, enter **Odl_User** as **your name**, select your role, and click on **Continue**.
 
     ![](media/api1c.png)
+  
+  > **Note:** If Postman prompts for an OTP during login, go to [**Outlook.com**](https://outlook.com), click **Sign in**, and use the **Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>** to access the inbox and retrieve the OTP code.
+
+    ![](media/outlook-signin.png)
 
 - If tested with a browser, then a warning needs to be accepted to proceed - this is because trusted TLS certificates have not been set up Diagnostics 
  for the API call will be logged by the container.

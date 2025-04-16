@@ -102,7 +102,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 1. Create the container instance for the colors web:
 
       ```  
-      az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --image $APIMLAB_IMAGE_API --os-type Linux --cpu 2 --memory 3.5 --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
+      az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --os-type Linux --cpu 2 --memory 3.5 --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --no-wait
       ```
 
 1. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
@@ -139,7 +139,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 1. Now we proceed to create the ACI for the colors-api GitHub container:
 
    ```
-   az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --image $APIMLAB_IMAGE_WEB --os-type Linux  --dns-name-label $APIMLAB_DNSLABEL_WEB --ports 80 --restart-policy OnFailure --cpu 2 --memory 3.5 --no-wait
+   az container create --resource-group $APIMLAB_RGNAME --name $APIMLAB_CONTAINER_NAME --image $APIMLAB_IMAGE_API --os-type Linux --cpu 2 --memory 3.5 --dns-name-label $APIMLAB_DNSLABEL_API --ports 80 --restart-policy OnFailure --no-wait
    ```
 
 1. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
