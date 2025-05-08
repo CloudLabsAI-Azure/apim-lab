@@ -85,7 +85,7 @@ Welcome to your Azure API Management workshop! We've prepared a seamless environ
 
 Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of lab guide to switch to different exercises of the lab guide.
 
-   ![07](media/01upd.png)
+   ![07](media/api-06.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -95,7 +95,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
-   ![08](media/environment.png)
+   ![08](media/api-03.png)
  
   > You will see the DeploymentID value on **Environment Details** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
 
@@ -103,25 +103,25 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-  ![](media/nleg4.png)
+  ![](media/api-04.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-   ![](media/resources-vm-manage.png) 
+   ![](media/api-02.png) 
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](media/labzoom-1.png)
+   ![](media/api-01.png)
 
 ## Let's Get Started with Azure Portal
 
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
-   ![09](media/09.png)
+   ![09](media/api-08.png)
    
 1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
@@ -155,6 +155,6 @@ Learner Support Contacts:
  
 Now, click on Next from the lower right corner to move on to the next page.
 
-  ![](media/next-page.png)
+  ![](media/api-07.png)
 
 ### Happy Learning!!

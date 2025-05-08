@@ -11,8 +11,10 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 - Navigate back to your Azure API Management instance.
 
 1. On the left menu, open the **APIs** blade.  
-1. Click on **Add API**.  
-1. Under **Create from definition** select **OpenAPI**.
+
+1. Click on **+ Add API (1)**.  
+
+1. Under **Create from definition** select **OpenAPI (2)**.
 
       ![](media/b.png)
    

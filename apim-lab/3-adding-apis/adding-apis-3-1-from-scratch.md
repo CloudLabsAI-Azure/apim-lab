@@ -27,8 +27,8 @@ You will be able to complete the following tasks:
 
 Instead of developing an API, for this lab, you will use the existing [_Star Wars_ API](https://swapi.dev):
 
-1. Click on **Add API**.
-2. Click on **HTTP - Manually define an HTTP API**.
+1. Click on **+ Add API (1)**.
+2. Click on **HTTP - Manually define an HTTP API (2)**.
 
    ![](media/a.png)
 
@@ -56,12 +56,12 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
      ![01](media/03.png)
 
-5. Again click on **+ Add operation** to add another operation and give the following details
+5. Again click on **+ Add operation (1)** to add another operation and give the following details
 
-   - Display name: **Get People By Id**
+   - Display name: **Get People By Id (2)**
    - Name will be populated with: **get-people-by-id**
-   - URL: **GET /people/{id}/**
-   - Click on **Save**.
+   - URL: **GET /people/{id}/ (3)**
+   - Click on **Save (4)**.
 
      ![APIM Star Wars API Add Operation](media/Ex-3-T-1.png)
 
@@ -76,13 +76,13 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 1. Now switch to the **Developer Portal** in the **In-Private** window where you were previously signed in.
 
-2. Select **Explore APIs** on the **Home** page. You should see both **Echo API** and **Star Wars**.
+2. Select **APIs** on the **Home** page. You should see both **Echo API** and **Star Wars**.
 
-      ![APIM Developer Portal Echo & Star Wars APIs](media/05.png)
+      ![APIM Developer Portal Echo & Star Wars APIs](media/api-18.png)
 
-3. Click on **Star Wars**. Try the **Get People** operation. Click on **Try it** then Click on **Send**. Observe a successful `200` response.
+3. Click on **Star Wars**. Try the **Get People** operation. Click on **Try this operation** then Click on **Send**. Observe a successful `200` response.
 
-      ![APIM Developer Portal Star Wars Try It](media/06.png)
+      ![APIM Developer Portal Star Wars Try It](media/api-19.png)
 
 4. Now try the **Get People By Id** operation with `id = 2`
 
@@ -90,7 +90,7 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 5. Examine the successful `200` response with `C-3PO`'s details in the response body payload.
 
-      ![APIM Developer Portal Star Wars Try It](media/08.png)
+      ![APIM Developer Portal Star Wars Try It](media/api-20.png)
 
 ---
 
