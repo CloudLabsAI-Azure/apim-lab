@@ -6,7 +6,7 @@ Azure API Management can be configured for response caching which can significan
 
       ![APIM Adding Enable Caching](media/10.png)
 
-1. Click on **Add policy**.
+1. Click on **+ Add policy**.
     
       ![APIM Adding Enable Caching](media/11.png)
 
