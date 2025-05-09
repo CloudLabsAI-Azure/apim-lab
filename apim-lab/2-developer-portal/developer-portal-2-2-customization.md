@@ -14,11 +14,11 @@ In the Azure Portal, Navigate to the Azure API Management instance, and locate t
 
    ![APIM Developer Portal](media/01.png)
 
-   ![APIM Developer Portal Admin Launch](media/02.png)
+   ![APIM Developer Portal Admin Launch](media/api-12.png)
 
-![APIM Developer Portal Config](media2/01.png)
+![APIM Developer Portal Config](media/api-15.png)
 
-![APIM Developer Portal Config](media2/02.png)
+![APIM Developer Portal Config](media/api-16.png)
 
 ![APIM Developer Portal Styles](media2/03.png)
 

@@ -4,7 +4,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
 ### Task 5.1: Product definition
 
-1. In the Azure Portal, open the resource menu item `Products`. Click on **+ Add**.
+1. In the Azure Portal, open the resource menu item `Products` (1). Click on **+ Add (2)**.
 
    ![APIM Products](media3/products1.png)
 
@@ -35,7 +35,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
 1. Back in the private browsing session, browse to **Products** and observe the new **Gold Tier**.
 
-   ![APIM Developer Portal Added Product](media3/06.png)
+   ![APIM Developer Portal Added Product](media/api-17.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.

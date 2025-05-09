@@ -32,7 +32,7 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
    ![APIM Developer Portal](media/01.png)
 
-   ![APIM Developer Portal Admin Launch](media/02.png)
+   ![APIM Developer Portal Admin Launch](media/api-12.png)
 
 1. You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Navigate back to the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. Press the **Publish (2)** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
 
@@ -80,21 +80,21 @@ Let's experience how your users will navigate through your portal. In order to d
 
       > **Note**: Keep this browser session open as we will use it frequently throughout our labs.
       
-      ![APIM Developer Portal Unauthenticated Launch](media/06.png)
+      ![APIM Developer Portal Unauthenticated Launch](media/api-11.png)
 
 ### Anonymous User
 
 1. As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
-      ![](media/exploreapi.png)
+      ![](media/api-13.png)
 
       > **Note**: Notice the difference between the Starter & Unlimited products.
 
-      ![APIM Developer Portal Products](media/07.png)
+      ![APIM Developer Portal Products](media/api-09.png)
 
 1. Check out the APIs. As you can see, all operations exposed are described and can also be tested directly within the portal.
 
-      ![APIM Developer Portal APIs](media/08.png)
+      ![APIM Developer Portal APIs](media/api-10.png)
 
 ### Register for an account
 
@@ -138,15 +138,17 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Back in the private browser, refresh the profile page to see the activated **Unlimited** subscription.
 
-      ![APIM Subscription Activated](media/15.png)
+      ![APIM Subscription Activated](media/api-14.png)
 
 ### Try an API
 
 It's now time to test one of the published APIs.
 
-1. Open the **APIs** page and Click on the **Echo API**:
+1. Open the **APIs (1)** page and Click on the **Echo API (2)**:
+
 1. Notice the developer information
-1. Test the Echo API using the POST verb by pressing **Test** tab, using the defaults, then pressing **Send** at the bottom.
+
+1. Test the **Echo API (3)** using the POST verb by pressing **Test (4)** tab, using the defaults, then pressing **Send (5)** at the bottom.
 
       ![APIM Developer Portal Try API](<media/Ex-2-T-3(1).png>)
 
