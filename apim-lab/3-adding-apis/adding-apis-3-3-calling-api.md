@@ -5,7 +5,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 ![APIM Colors API](media3/01.png)
 
 1. Create a new API with OpenAPI specification and import swagger from <https://colors-api.azurewebsites.net/swagger/v1/swagger.json>.
-1. To create new API navigate to **APIs (1)**, click on **Add API (2)** and under Create from definition click on **OpenAPI (3)**.
+1. To create new API navigate to **APIs (1)**, click on **+ Add API (2)** and under Create from definition click on **OpenAPI (3)**.
 
       ![APIM Add Colors API](media3/P8-T4.1-S2.png)
   
@@ -21,7 +21,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
         ![APIM Add Colors API](media3/03.png)
 
-1. We can test the newly-added API from the **Test** **(1)** tab, select **Get Random Color** **(2)** and click on **Send** **(3)**.
+1. We can test the newly-added API from the **Test** **(2)** tab, select **Get Random Color** **(1)** and click on **Send** **(3)**.
 
       ![APIM Test Colors API](media3/P8-T4.1-STest.png)
 
@@ -31,17 +31,19 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
    > **Note:** If you encounter with **401 error**, switch to the **Settings** tab, **uncheck** Subscription required, and press **Save** at the bottom of the page and reperform step 4.
 
-1. Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited**, then press **Save**.
+1. Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited** **(1)**, then press **Save (2)**.
 
       ![APIM Colors API Add Products](media3/05.png)
 
-1. Switch to the Developer portal and look at the **Colors API**.
+1. Switch to the **Developer portal**, select **APIs** and look at the **Colors API**.
+
 1. Try the **Get random color** operation.
+
 1. Notice the successful `200` response and the returned random color.
 
-      ![APIM Developer Portal Colors API Try It](media3/06.png)
+      ![APIM Developer Portal Colors API Try It](media/api-22.png)
 
-      ![APIM Developer Portal Colors API Try It](media3/07.png)
+      ![APIM Developer Portal Colors API Try It](media/api-21.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -92,11 +94,11 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. Navigate back to the developer portal to fetch subscription keys. Open the main Developer Portal page, then click on **Profile** in the top menu.
 
-      ![](./media3/dpportal.png)
+      ![](./media/api-23.png)
 
 1. Click on the **Show** and copy the Primary key of **Starter** and **Unlimited** product subscription.
 
-      ![](./media3/keysupd.png)
+      ![](./media/api-24.png)
         
 1. Prepare the URL in a text editor:
 
