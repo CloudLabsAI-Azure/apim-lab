@@ -58,11 +58,11 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
       ![Create Key Vault](media/mapi94.png)
 
-1. Select the `Get` operation from the list of Secret permissions.
+1. Select the `Get` operation from the list of Secret permissions and click on **Next**.
 
       ![Create Key Vault](media/12.png)
 
-1. Select the principal and search for the name of your **Azure API Management instance** and select it. Click on **Next**
+1. Select the principal and search for **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** which is the name of your **Azure API Management instance** and select it. Click on **Next**
 
     ![Create Key Vault](media/13.png)
 
@@ -87,7 +87,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. Navigate to the Inbound processing tab in this operation.
    
-1. Update the policies for **this** new operation, and click on **Save**.
+1. Update the policies for **this** new operation, and click on **Save**, and update the Key vault name in the `set-url` value.
 
     ```xml
     <inbound>
@@ -104,8 +104,6 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
       <rewrite-uri template="@((string)context.Variables["favoritePersonRequest"])" />
     </inbound>
     ```
-
-    >**Note**: Don't forget to change the `set-url` value with your Key Vault name.
 
 ### Task 2.5: Test the operation
 
