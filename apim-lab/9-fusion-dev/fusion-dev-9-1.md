@@ -191,9 +191,9 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. On **Securely store and share files** page, select **Your OneDrive is ready**.
 
-1. Select **+ Add new (1)**, click on **Files Upload (2)**, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path, and upload **fanclubmembers.xlsx**  to your OneDrive for Business account.
+1. Select **+ Create or upload (1)**, click on **Files Upload (2)**, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path, and upload **fanclubmembers.xlsx**  to your OneDrive for Business account.
 
-   ![](media/Pg25-onedrive.png)
+   ![](media/upload-onedrive-1005.png)
  
 3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
 

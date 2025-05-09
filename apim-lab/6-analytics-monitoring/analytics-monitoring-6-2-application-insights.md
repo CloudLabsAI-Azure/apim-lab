@@ -63,7 +63,7 @@ Before you can use Azure Application Insights, you first need to create an insta
 7. Set sampling to **100 (3)** to capture all events.
 8. Check the **Always log errors (4)** checkbox.
 
-    ![APIM API App Insights Logger](media/09upd.png)
+    ![APIM API App Insights Logger](media/pg21T2.3S8-1005.png)
 
 9. Click on **Save (5)**.
 

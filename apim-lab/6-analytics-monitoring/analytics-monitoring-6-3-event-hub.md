@@ -15,15 +15,16 @@ An Event Hubs namespace provides a unique scoping container in which you create 
     ![Select Event Hubs in Portal](media/11.png)
 
 1. Click on **Create** to create the namespace, then enter the following:
-   
-    - Resource Group : Select **apim-rg**
-    - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
-    - **Location** : Select the region you used in previous exercise.
-    - **Pricing Tier**: Choose **Basic** for the dropdown.  To learn about differences between tiers, see [Quotas and limits](event-hubs-quotas.md), [Event Hubs Premium](event-hubs-premium-overview.md), and [Event Hubs Dedicated](event-hubs-dedicated-overview.md) articles. 
-    - **Throughput Units** : Leave the setting as it is. To learn more about throughput units or processing units: [Event Hubs scalability](event-hubs-scalability.md).  
-    - Select **Review + Create** at the bottom of the page, followed by **Create**.
+
+    - Subscription : Select the default subscription (1)
+    - Resource Group : Select **apim-rg (2)**
+    - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
+    - **Location** : Select the region you used in previous exercise (4).
+    - **Pricing Tier**: Choose **Basic (5)** for the dropdown.  To learn about differences between tiers, see [Quotas and limits](event-hubs-quotas.md), [Event Hubs Premium](event-hubs-premium-overview.md), and [Event Hubs Dedicated](event-hubs-dedicated-overview.md) articles. 
+    - **Throughput Units** : Leave the setting as it is (6). To learn more about throughput units or processing units: [Event Hubs scalability](event-hubs-scalability.md).  
+    - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
       
-        ![Create an Event Hub Namespace](media/12.png)
+        ![Create an Event Hub Namespace](media/create-eventhub-1005.png)
 
 1. Once it has been created, select **Go to resource**.
       
@@ -108,6 +109,8 @@ Azure API Management loggers are configured using the [API Management REST API](
 1. Now enter the following password and click on **Sign in**.
 
      - Password: <inject key="AzureAdUserPassword"></inject>
+
+    > **Note:** If Create your profile window shows up, enter any display name and crete. 
 
 1. Enter the required details.
 

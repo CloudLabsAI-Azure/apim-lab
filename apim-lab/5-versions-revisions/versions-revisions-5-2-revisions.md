@@ -2,7 +2,7 @@
 
 ### Task 2.1: Add a new revision
 
-1. Select the **Star Wars** API **v2**.
+1. Go back to the Azure portal in the **API Management Service**, and select the **Star Wars** API **v2**.
 
       ![](media/07.png)
 
@@ -10,7 +10,7 @@
 
       ![APIM Revisions Menu](media/08.png)
   
-1. Add a new revision with the description `Adding a caching policy.`
+1. Add a new revision with the description `Adding a caching policy` and click on **Create**.
   
       ![APIM Revision Create](media/09.png)
 
@@ -68,7 +68,7 @@
 ### Task 2.4: Make current revision
 
 1. Select the **Revisions** tab.
-1. Click on the ellipsis for `rev2` and select the **current revision** option.
+1. Click on the ellipsis for `rev2` and select the **Make Current** option.
 
       ![APIM Revision Make Current](media/15.png)
 
