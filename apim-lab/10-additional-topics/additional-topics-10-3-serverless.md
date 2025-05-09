@@ -17,13 +17,14 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Subscription: Select the default subscription (1)
    - Resource group: **apim-rg (2)**
    - Function name : **func-<inject key="Deployment ID" enableCopy="false" />** **(3)**
-   - Runtime stack : Select **.Net (4)**
-   - Version : **8(LTS), isolated worker model (5)**
-   - Region: **Select the default region (6)**
-   - Operating System : **Windows (7)**
-   - Click on **Review + Create (8)**.
+   - Operating System : **Windows (4)**
+   - Runtime stack : Select **.Net (5)**
+   - Version : **8(LTS), isolated worker model (6)**
+   - Region: **Select the default region (7)**
 
-      ![](media/api21.png)
+   - Click on **Review + Create (9)**.
+
+      ![](media/func-1712634.png)
 
 5. On the **Review + Create** tab, click on **Create**.
 
@@ -165,7 +166,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/E9T3.2S6-2.png)
 
-1. Add a new step to send e-mail, search for **Office 365 Outlook**, and select **send an email (v2)**. 
+1. Add a new step to send e-mail, search for **Send an email (1)**, and select **send an email (v2) (2)** under Office 365 Outlook. Click on **Sign in** and sign in using the environment credentials
 
    - **To**: Specify your Email address, i.e. **<inject key="AzureAdUserEmail"></inject>** to receive the e-mail.
    - **Subject**: **Color**
