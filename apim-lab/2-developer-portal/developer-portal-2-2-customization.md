@@ -1,4 +1,4 @@
-## Continuation for Exercise-2, Task 4: Customizing the Developer Portal
+## Continuation for Exercise-2, Task 4: Customizing the Developer Portal (Read-Only)
 
 ### Task 4.1: Site Configuration
 
