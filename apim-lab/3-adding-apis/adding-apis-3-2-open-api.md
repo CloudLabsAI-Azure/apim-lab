@@ -1,4 +1,4 @@
-## Continuation for Exercise 3,Task 3: Import API using OpenAPI
+## Continuation for Exercise 3,Task 3: Import API using OpenAPI (Read-Only)
 
 Instead of importing operations one-by-one, you can also import a full API. The [OpenAPI specification](https://www.openapis.org/) (aka [Swagger](https://swagger.io)) is a definition format to describe RESTful APIs. The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.
 
