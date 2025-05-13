@@ -1,4 +1,4 @@
-## Exercise 1: Verify API Management Instance
+## Exercise 1: Verify API Management Instance (Read-Only)
 
 ## Estimated Duration: 30 minutes
 
@@ -14,9 +14,9 @@ Azure API Management helps customers meet these challenges:
 
 You will be able to complete the following tasks:
 
-**Task 1**: Verifying the Azure API Management instance
+**Task 1**: Verifying the Azure API Management instance 
 
-## Task 1: Verifying the Azure API Management instance
+## Task 1: Verifying the Azure API Management instance 
 
 Azure API Management instance has already been pre-deployed as part of the deployment for this lab.
 
