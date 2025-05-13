@@ -1,4 +1,4 @@
-## Continuation for Exercise 4,Task 4: Named Values
+## Continuation for Exercise 4,Task 4: Named Values (Read-Only)
 
 **Named Values** (aka **Properties**) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage `string` constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
