@@ -30,7 +30,7 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 1. Click on **+ Add API (1)**.
 2. Click on **HTTP - Manually define an HTTP API (2)**.
 
-   ![](media/a.png)
+   ![](media/add-api-1305.png)
 
 3. Enter the following details in the **Create an HTTP API** dialog and click on **Create** **(8)**.
 
