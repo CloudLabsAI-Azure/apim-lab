@@ -1,4 +1,4 @@
-## Continuation for Exercise 4,Task 3: Transformation policies
+## Continuation for Exercise 4,Task 3: Transformation policies (Read-Only)
 
 ### Task 3.1: Transformation - replace string
 
