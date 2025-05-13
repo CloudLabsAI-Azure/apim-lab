@@ -28,7 +28,7 @@ The templates for the email notifications are managed from the Azure Management 
 
 In the Azure Portal, navigate to the Azure API Management instance, from the left navigation pane, under Deployment + infrastructure, click on **Notifications** 
 
-Look at the available notifications and notifications templates which are customizable.
+Now go to **Notification Template** and look at the available notifications templates which are customizable.
 
    ![APIM Notifications](media/mapi31.png)
 
