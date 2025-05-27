@@ -110,7 +110,9 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
     
 1. To see that **Unlimited** product has no rate limits:
     
-      - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Unlimited** product subscription and click on **Submit**.
+      - Click on the **hamburger** menu on the Colors website, select **config** and provide the **url (1)** created for the **Unlimited** product subscription and click on **Submit (2)**.
+
+        ![](./media/1.png)
       
       - Select **Start**.
     
@@ -120,7 +122,9 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. To see that **Starter** product is limited to 5 calls per minute:
    
-      - Click on the **hamburger** menu on the Colors website, select **config** and provide the url created for the **Starter** product subscription and click on **Submit**.
+      - Click on the **hamburger** menu on the Colors website, select **config** and provide the **url (1)** created for the **Starter** product subscription and click on **Submit (2)**.
+
+        ![](./media/2.png)
     
       - Select **Start**.
     
