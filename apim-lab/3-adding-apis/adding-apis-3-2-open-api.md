@@ -57,15 +57,6 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
       ![APIM Calculator API Swagger](media2/07.png)
 
----
-
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - If you receive a success message, you can proceed to the next task.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="d33e0436-d40e-45c1-9efb-88a15365af11" />
 
 ## Troubleshooting
 
