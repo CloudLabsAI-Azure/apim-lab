@@ -81,45 +81,45 @@
         "Order": 19
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-2-container-instance.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/2-developer-portal/developer-portal-2-2-customization.md",
         "Order": 20
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-3-serverless.md",
-        "Order": 21
-      },
-      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-4-self-hosted-gateway.md",
-        "Order": 22
-      },
-      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/2-developer-portal/developer-portal-2-2-customization.md",
-        "Order": 23
-      },
-      {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/3-adding-apis/adding-apis-3-2-open-api.md",
-        "Order": 24
+        "Order": 21
       },
        {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/4-policy-expressions/policy-expressions-4-4-named-values.md",
-        "Order": 25
+        "Order": 22
       },
        {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/4-policy-expressions/policy-expressions-4-5-mock-apis.md",
-        "Order": 26
+        "Order": 23
       },
        {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/4-policy-expressions/policy-expressions-4-6-send-one-way-request.md",
-        "Order": 27
+        "Order": 24
       },
       {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/9-fusion-dev/fusion-dev-9-1.md",
+        "Order": 25
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-2-container-instance.md",
+        "Order": 26
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-3-serverless.md",
+        "Order": 27
+      },
+      {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-4-self-hosted-gateway.md",
         "Order": 28
       },
       {
         "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-1-architecture.md",
         "Order": 29
-      },
+      }
     ]
   }
 ]
