@@ -23,7 +23,7 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
 1. We can test the newly-added API from the **Test** **(2)** tab, select **Get Random Color** **(1)** and click on **Send** **(3)**.
 
-      ![APIM Test Colors API](media3/P8-T4.1-STest.png)
+      ![APIM Test Colors API](media3/P8-T4.1-STesta.png)
 
 1. Now scroll down and note the successful `200` response.
 
@@ -33,15 +33,17 @@ Let's add another API, the [Colors API](https://colors-api.azurewebsites.net/swa
 
 1. Products can be configured after the API is initially created as well. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited** **(1)**, then press **Save (2)**.
 
-      ![APIM Colors API Add Products](media3/05.png)
+      ![APIM Colors API Add Products](media3/05a.png)
 
 1. Switch to the **Developer portal**, select **APIs** and look at the **Colors API**.
 
 1. Try the **Get random color** operation.
 
-1. Notice the successful `200` response and the returned random color.
-
       ![APIM Developer Portal Colors API Try It](media/api-22.png)
+
+1. Next, navigate to the **Test** tab, select **Get Random Color**, and click **Send**.
+
+1. Notice the successful `200` response and the returned random color.
 
       ![APIM Developer Portal Colors API Try It](media/api-21.png)
 
@@ -70,7 +72,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. Here we will see this form where we can add the domain name of our frontend `https://colors-web.azurewebsites.net` or the `*` for all domains. Press **Add allowed origin**, enter the URL, then press **Save**.
 
-      ![APIM Policy CORS All APIs](media3/10.png)
+      ![APIM Policy CORS All APIs](media3/10a.png)
 
 1. After enabling CORS in Azure API Management, copy this frontend URL <https://colors-web.azurewebsites.net> and paste in the browser.
 

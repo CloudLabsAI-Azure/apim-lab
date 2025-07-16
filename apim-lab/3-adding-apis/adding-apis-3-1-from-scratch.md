@@ -1,6 +1,8 @@
-## Exercise 3: Adding APIs
+# Exercise 3: Adding APIs
 
-## Estimated Duration: 50 minutes
+### Estimated Duration: 50 minutes
+
+## Lab Overview
 
 An API represents a set of operations that can be invoked. New APIs are defined, and then the desired operations are added. An API is added to a product and can be published; it may then be subscribed to and used by developers.
 
@@ -10,18 +12,13 @@ An API represents a set of operations that can be invoked. New APIs are defined,
 
 ## Lab objectives
 
-You will be able to complete the following tasks:
+In this lab, you will perform:
 
-**Task 1**: Add API from Scratch
-
-**Task 2**: Access Star Wars API from Developer Portal
-
-**Task 3**: Import API using OpenAPI
-
-**Task 4.1**: Calling API and testing Subscription Keys
-
-**Task 4.2**: Rate limit
-
+- Task 1: Add API from Scratch
+- Task 2: Access Star Wars API from Developer Portal
+- Task 3: Import API using OpenAPI
+- Task 4.1: Calling API and testing Subscription Keys
+- Task 4.2: Rate limit
 
 ## Task 1: Add API from Scratch
 
@@ -78,13 +75,13 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 2. Select **APIs** on the **Home** page. You should see both **Echo API** and **Star Wars**.
 
-      ![APIM Developer Portal Echo & Star Wars APIs](media/api-18.png)
+      ![APIM Developer Portal Echo & Star Wars APIs](media/api-18a.png)
 
-3. Click on **Star Wars**. Try the **Get People** operation. Click on **Try this operation** then Click on **Send**. Observe a successful `200` response.
+3. Click on **Star Wars**, then select the **Get People** operation. Click **Try this operation**, scroll down, and click **Send**. You should see a successful `200` response. After reviewing it, go ahead and close the panel.
 
       ![APIM Developer Portal Star Wars Try It](media/api-19.png)
 
-4. Now try the **Get People By Id** operation with `id = 2`
+4. Now try the **Get People By Id** operation by entering `id = 2` in the **Parameters** section. Then scroll down and click **Send**.
 
       ![APIM Developer Portal Star Wars Try It](media/07.png)
 
@@ -98,4 +95,4 @@ Instead of developing an API, for this lab, you will use the existing [_Star War
 
 In this task, you added the Star Wars API to Azure API Management, configuring operations for retrieving a list of characters and details by ID. This demonstrates the ability to integrate and manage APIs effectively within the Azure environment
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next exercise.

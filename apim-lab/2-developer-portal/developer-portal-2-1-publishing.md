@@ -1,28 +1,20 @@
-## Excercise 2: Developer Portal
+# Excercise 2: Developer Portal
 
-## Estimated Duration : 60 minutes
+### Estimated Duration : 60 minutes
+
+## Lab Overview
 
 The Developer Portal is an automatically generated, fully customizable website with the documentation of your APIs. It is where API consumers can discover your APIs, learn how to use them, request access, and try them out.
 
 ## Lab objectives
 
-You will be able to complete the following tasks:
+In this lab, you will perform:
 
-**Task 1**: Publishing the Developer Portal
-
-**Task 2**: Enabling CORS for the Developer Portal
-
-**Task 3**: User Experience
-
-**Task 4**: Customizing the Developer Portal
-
-   Task 4.1: Site Configuration
-   
-   Task 4.2: Email Configuration
-   
-**Task 5**: Product Management
-
-   Task 5.1: Product definition
+- Task 1: Publishing the Developer Portal
+- Task 2: Enabling CORS for the Developer Portal
+- Task 3: User Experience
+- Task 4: Product Management
+   - Task 4.1: Product definition
    
 ## Task 1: Publishing the Developer Portal
 
@@ -30,17 +22,18 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
 1. In the Azure Portal, Navigate to the Azure API Management instance, and locate the Developer Portal in the overview section. Click to open the **Developer Portal**.
 
-   ![APIM Developer Portal](media/01.png)
+   ![APIM Developer Portal](media/01a.png)
 
-   ![APIM Developer Portal Admin Launch](media/api-12.png)
+   ![APIM Developer Portal Admin Launch](media/api-12a.png)
 
 1. You can now proceed with publishing the Developer Portal to allow anonymous and authenticated roles. Navigate back to the Azure Portal, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**. Press the **Publish (2)** button and confirm with **Yes** in the popup. The portal will then be available for users to access.
 
-   ![APIM Developer Portal Publish](media/03upd2.png)
+   ![APIM Developer Portal Publish](media/03upd2a.png)
+   ![APIM Developer Portal Publish](media/03upd2b.png)   
 
 1. You will see confirmation once the Developer Portal has been published.
 
-   ![APIM Developer Portal Published](media/04.png)
+   ![APIM Developer Portal Published](media/04a.png)
 
 ---
 
@@ -57,7 +50,7 @@ Cross-origin resource sharing (CORS) is a mechanism that allows resources on a w
 
 1. CORS is enabled by using policies. We will go deeper on this topic in later exercises. For now, we will enable this using a built-in UI. In the Azure Portal, Navigate to the Azure API Management instance, locate **Developer Portal** in the left-hand resource menu, then click on **Portal overview (1)**.
 
-      ![APIM Developer Portal Enable CORS](media/05.png)
+      ![APIM Developer Portal Enable CORS](media/05a.png)
 
 1. Now click on **Enable CORS (1)** button, and confirm **Yes (2)** in the popup.
 
@@ -86,7 +79,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. As an unauthenticated user, explore the portal by clicking on the 'APIs' and 'Products' links located in the top right corner to view the available **APIs** and **Products**.
 
-      ![](media/api-13.png)
+      ![](media/api-13a.png)
 
       > **Note**: Notice the difference between the Starter & Unlimited products.
 
@@ -98,7 +91,7 @@ Let's experience how your users will navigate through your portal. In order to d
 
 ### Register for an account
 
-1. Let's create a new account by clicking the **Sign up** button in the top right corner. For this lab, the email can be either personal or work-related, but please make sure to use a different email from the one associated to your Azure subscription.
+1. Click the **Sign in** button at the top right corner, then select **Sign up** to create a new account. For this lab, you can use either a personal or work email address, but be sure to use one that is **different** from the email linked to your Azure subscription.
 
       ![APIM Developer Portal Sign-up](media/09.png)
 
@@ -115,10 +108,16 @@ Let's experience how your users will navigate through your portal. In order to d
 1. Click on **Products**, then **Starter**.
 1. Enter `Starter` as the subscription name, then press **Subscribe**. You should receive a confirmation email shortly.
 
-      ![APIM Developer Portal Product Subscribe](media/12.png)
+      ![APIM Developer Portal Product Subscribe](media/12a.png)
 
 1. Next, click back on **Products**, then **Unlimited**.
+
+      ![APIM Developer Portal Product Subscribe](media/12b.png)
+
 1. Enter `Unlimited` as the subscription name, then press **Subscribe**.
+
+      ![APIM Developer Portal Product Subscribe](media/12c.png)
+
    > Note that the `Unlimited` subscription requires admin approval.
 1. You should receive an email confirming your subscription request.
 
@@ -126,15 +125,15 @@ Let's experience how your users will navigate through your portal. In order to d
 
 1. Navigate back to Azure Portal, under APIs click on **Subscriptions (1)** blade to see the two new subscriptions `Starter` and `Unlimited` that were just added.
 
-      ![APIM Subscriptions](media/P3-T3-AS.png)
+      ![APIM Subscriptions](media/P3-T3-ASa.png)
 
 1. Click on Hamburger buttons for the **Unlimited** subscription in submitted state, then select **Activate subscription**.
 
-      ![APIM Activate Subscription](media/14.png)
+      ![APIM Activate Subscription](media/14a.png)
 
 1. Provide additional comments, if you like, then **Confirm** the activation. By default, this will send an activation confirmation email to the user.
 
-      ![APIM Activate Subscription](media/P3-T3-ActSubscription.png)
+      ![APIM Activate Subscription](media/P3-T3-ActSubscriptiona.png)
 
 1. Back in the private browser, refresh the profile page to see the activated **Unlimited** subscription.
 
@@ -154,7 +153,7 @@ It's now time to test one of the published APIs.
 
 1. You should see a successful `200` HTTP response.
 
-      ![APIM Developer Portal Try API](<media/Ex-2-T-3(2).png>)
+      ![APIM Developer Portal Try API](./media/Ex-2-T-3(2)a.png)
 
 ## Summary
 
