@@ -8,11 +8,9 @@ We can use Event Hubs with Azure API Management to obtain analytics of our API u
 
 An Event Hubs namespace provides a unique scoping container in which you create one or more event hubs. To create a namespace in your resource group using the Azure portal, follow these steps:
 
-1. In the Azure portal select **Create a resource** at the top left of the screen.
-1. Search for **Event Hubs**, then click on the resource.  
-    >**Note**:*If you cannot find it there, please try the same **Event Hubs** term in the top search bar.*
+1. In the search bar of the Azure portal, type **Event Hubs (1)**. From the search results, select **Event Hubs (2)**.
 
-    ![Select Event Hubs in Portal](media/11.png)
+    ![Select Event Hubs in Portal](media/11a.png)
 
 1. Click on **Create** to create the namespace, then enter the following:
 
@@ -24,7 +22,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
     - **Throughput Units** : Leave the setting as it is (6). To learn more about throughput units or processing units: [Event Hubs scalability](event-hubs-scalability.md).  
     - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
       
-        ![Create an Event Hub Namespace](media/create-eventhub-1005.png)
+        ![Create an Event Hub Namespace](media/create-eventhub-1005a.png)
 
 1. Once it has been created, select **Go to resource**.
       
@@ -56,11 +54,11 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
     The **message retention** setting specifies how long the Event Hubs service keeps data. For more information, see [Event retention](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-publishers).
 
-      ![Create Event Hub](media/15.png)
+      ![Create Event Hub](media/15a.png)
 
 1. After the event hub is created, you see it in the list of event hubs.
 
-    ![Event Hub Created](media/16.png)
+    ![Event Hub Created](media/16a.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -82,9 +80,9 @@ We will create an Event hub to receive logs from our APIM. To create an event hu
 
 1. Click on the new policy created and copy the **Primary connection string** to a notepad. Also, copy the **Event Hub namespace**. You will use both values in the next section.
 
-    ![Event Hub Connection](media/19upd.png)
+    ![Event Hub Connection](media/19upda.png)
 
-    ![Event Hub Connection](media/17.png)
+    ![Event Hub Connection](media/17a.png)
 
 ---
 
@@ -96,7 +94,7 @@ Azure API Management loggers are configured using the [API Management REST API](
 
 1. Open the following link [REST API Try It](https://docs.microsoft.com/en-us/rest/api/apimanagement/current-ga/logger/create-or-update)
 
-    ![REST API Try It](media/20.png)
+    ![REST API Try It](media/20a.png)
 
 1. Click on Try It.
 
@@ -110,7 +108,9 @@ Azure API Management loggers are configured using the [API Management REST API](
 
      - Password: <inject key="AzureAdUserPassword"></inject>
 
-    > **Note:** If Create your profile window shows up, enter any display name and crete. 
+    > **Note:** If Create your profile window shows up, enter any display name and click on Next. 
+
+    ![ API Try It](media/api1504b.png)    
 
 1. Enter the required details.
 
@@ -163,24 +163,46 @@ Once your logger is configured in Azure API Management, you can configure your l
 1. In the **Inbound** or **Outbound** processing window, enter the Code editor.
 1. Enter a new line after the `<base />` tag in the `inbound` or `outbound` policy section.
 1. Select **Show snippets**.
-1. In the window on the right, select **Advanced policies** > **Log to EventHub**. This inserts the `log-to-eventhub` policy statement template.
+1. In the right-hand pane, click on **Hide Snippets**, scroll down to the **Advanced policies** section, and select **Log to EventHub**. This will insert a template for the `log-to-eventhub` policy statement.
 
     ![APIM Add Log to Event Hub](media/24.png)
 
-1. Replace the policy with this snippet:
+1. Replace the entire code block with the snippet provided below to ensure there are no errors in the policy configuration:
 
-    ```xml
-    <log-to-eventhub logger-id="<your logger id>">
-        @{
-            return new JObject(
-                new JProperty("EventTime", DateTime.UtcNow.ToString()),
-                new JProperty("ServiceName", context.Deployment.ServiceName),
-                new JProperty("RequestId", context.RequestId),
-                new JProperty("RequestIp", context.Request.IpAddress),
-                new JProperty("OperationName", context.Operation.Name)
-            ).ToString();
-        }
-    </log-to-eventhub>
+    ```
+    <!--
+        - Policies are applied in the order they appear.
+        - Position <base/> inside a section to inherit policies from the outer scope.
+        - Comments within policies are not preserved.
+    -->
+    <!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+    <policies>
+        <!-- Throttle, authorize, validate, cache, or transform the requests -->
+        <inbound>
+            <base />
+            <log-to-eventhub logger-id="event-hub-logger">@{
+                    return new JObject(
+                        new JProperty("EventTime", DateTime.UtcNow.ToString()),
+                        new JProperty("ServiceName", context.Deployment.ServiceName),
+                        new JProperty("RequestId", context.RequestId),
+                        new JProperty("RequestIp", context.Request.IpAddress),
+                        new JProperty("OperationName", context.Operation.Name)
+                    ).ToString();
+                }</log-to-eventhub>
+        </inbound>
+        <!-- Control if and how the requests are forwarded to services  -->
+        <backend>
+            <base />
+        </backend>
+        <!-- Customize the responses -->
+        <outbound>
+            <base />
+        </outbound>
+        <!-- Handle exceptions and customize error responses  -->
+        <on-error>
+            <base />
+        </on-error>
+    </policies>
     ```
 
 1. Replace `<your logger id>` with event-hub-logger which we used in the request URL to create the logger in the previous task.
@@ -198,7 +220,7 @@ Once your logger is configured in Azure API Management, you can configure your l
 1. Issue a handful of test Echo API calls from within Azure API Management (e.g. **Get Retrieve Resource** operation).
 1. In the Azure portal open the Event Hub you created earlier. You should see recent events. If not, give it a minute, then refresh.
 
-    ![Event Hub APIM events](media/26.png)
+    ![Event Hub APIM events](media/26a.png)
 
 > What to do with the data that is now in Event Hub is beyond the scope of this lab as this lab primarily focused on Azure API Management to Event Hub integration.
 
@@ -207,4 +229,4 @@ Once your logger is configured in Azure API Management, you can configure your l
 ### Summary 
 In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) for API analytics. This involves creating an Event Hubs namespace, configuring an event hub, setting up access, creating an APIM logger, and configuring policies to log events to Event Hubs, providing real-time API usage tracking and monitoring.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

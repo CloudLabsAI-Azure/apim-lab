@@ -10,7 +10,7 @@ Azure API Management can be configured for response caching which can significan
     
       ![APIM Adding Enable Caching](media/11.png)
 
-1. Select **Cache responses**.
+1. Scroll down and select **Cache responses**.
 
       ![APIM Enable Caching](media/12.png)
 
@@ -27,7 +27,10 @@ Azure API Management can be configured for response caching which can significan
 
     ![Colors Website Caching](media/14.png)
 
-1. Looking at the **Get Random color** GET API policies in the **Code View**, you'll see the caching policy defined:
+1. Looking at the **Get Random color** GET API policies in the **Policy Code editor**, you'll see the caching policy defined:
+
+    ![Colors Website Caching](media/14a.png)
+
     ```xml
     <policies>
         <inbound>

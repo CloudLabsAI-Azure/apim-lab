@@ -71,4 +71,4 @@
 ## Summary
 In this task, a Named Value (TimeNow) with the current timestamp is created in Azure API Management (APIM). This value is then used to dynamically set the "x-request-received-time" header in the Calculator API's inbound policy, resulting in the header being populated with the current timestamp when testing the API operation.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

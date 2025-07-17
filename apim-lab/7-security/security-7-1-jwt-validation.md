@@ -1,34 +1,26 @@
-## Exercise 7: Security 
+# Exercise 7: Security 
 
-## Estimated Duration: 50 minutes
+### Estimated Duration: 50 minutes
+
+## Lab Overview
 
 APIM focuses heavily on security in all three major areas of the product. Going into detail on each aspect is a large topic entirely of its own. Therefore, in this section we will focus more narrowly on one of the common approaches to secure access to an API.
 
-Lab objectives
+## Lab objectives
 
 You will be able to complete the following tasks:
 
-**Task 1**: JSON Web Tokens (JWT)
-
-Task 1.1: Creation
-
-Task 1.2: Validation
-
-Task 1.3: Check that a Claim Exists
-
-Task 1.4: Extract Claim and Pass to Backend
-
-**Task 2**: Managed Identities
-
-Task 2.1: Register Azure API Management with Active Directory
-
-Task 2.2: Create Key Vault and add a secret
-
-Task 2.3: Access policy and principal assignment
-
-Task 2.4: Azure API Management, Key Vault and Managed Service Identity
-
-Task 2.5: Test the operation
+- Task 1: JSON Web Tokens (JWT)
+    - Task 1.1: Creation
+    - Task 1.2: Validation
+    - Task 1.3: Check that a Claim Exists
+    - Task 1.4: Extract Claim and Pass to Backend
+- Task 2: Managed Identities
+    - Task 2.1: Register Azure API Management with Active Directory
+    - Task 2.2: Create Key Vault and add a secret
+    - Task 2.3: Access policy and principal assignment
+    - Task 2.4: Azure API Management, Key Vault and Managed Service Identity
+    - Task 2.5: Test the operation
 
 ## Task 1: JSON Web Tokens (JWT)
 
@@ -191,4 +183,4 @@ Let's add the username contained inside the JSON Web Tokens into a specific head
 
 Based on what you have learned thus far, consider how you can improve your policies. For example, you may not want to hard-code the `issuer-signing-key` and instead use a Named Value that you can more easily administer and change outside of an API's policies. If you have time in this exercise, go ahead and give it a try.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

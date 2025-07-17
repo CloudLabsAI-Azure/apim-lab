@@ -150,4 +150,4 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 In this Task, you imported and configured the "Colors API" in Azure API Management, successfully tested it in the Developer Portal, and added rate limits to different subscription tiers (Starter and Unlimited).
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next exercise.

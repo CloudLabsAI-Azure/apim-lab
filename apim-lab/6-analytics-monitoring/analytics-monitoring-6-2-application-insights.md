@@ -6,19 +6,19 @@ Azure API Management allows for easy integration with Azure Application Insights
 
 Before you can use Azure Application Insights, you first need to create an instance of the service. The naming convention for Application Insights is: `appi-<environment>-<region>-<application-name>-<owner>-<instance>`
 
-1. Open the **Azure portal** and navigate to **Application Insights**.
+1. In the search bar of the Azure portal, type **Application Insights (1)**. From the search results, select **Application Insights (2)**.
 
-    ![App Insights Create Instance](media/04.png)
+    ![App Insights Create Instance](media/04a.png)
 
 2. Click **+ Create**, then fill in the form.
 
-    - Resource Group: **apim-rg**
+    - Resource Group: **apim-rg (1)**
      
-   - Name: **appi-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
+   - Name: **appi-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** **(2)**
 
-        ![App Insights Create Instance](media/appl_insight.png)
+        ![App Insights Create Instance](media/appi-dev-hol-ms-1794367.png)
 
-3. Click **Review + Create**, followed by **Create**.
+3. Click **Review + Create** **(3)**, followed by **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -30,18 +30,20 @@ Before you can use Azure Application Insights, you first need to create an insta
 ### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
 1. Navigate to your **APIM** instance in the **Azure portal**.
-2. Select **Application Insights** from the menu on the left.
+
+2. From the menu on the left, select **Application Insights** under the **Monitoring** section.
+
 3. Click **+ Add**.
 
       ![APIM App Insights Logger](media/06.png)
 
 4. Select the **Application Insights** resource we created in the previous task and click on **Create**.
 
-     ![APIM App Insights Logger](media/07.png)
+     ![APIM App Insights Logger](media/07a.png)
    
 5. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
 
-    ![APIM App Insights Logger](media/08.png)
+    ![APIM App Insights Logger](media/08a.png)
 
     > Behind the scenes, a [Logger](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/logger/createorupdate) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
 
@@ -55,15 +57,22 @@ Before you can use Azure Application Insights, you first need to create an insta
 ### Task 2.3: Enable Application Insights logging for your API
 
 1. Select **APIs** from the menu on the left.
+
 2. Click on the **Colors** API.
+
 3. Go to the **Settings** tab from the top bar.
+
 4. Scroll down to the **Diagnostics Logs** section.
+
 5. On the **Application Insights** tab check the **Enable(1)** box.
+
 6. In the **Destination (2)** dropdown select the logger you just added in the **Application Insights** blade.
+
 7. Set sampling to **100 (3)** to capture all events.
+
 8. Check the **Always log errors (4)** checkbox.
 
-    ![APIM API App Insights Logger](media/pg21T2.3S8-1005.png)
+    ![APIM API App Insights Logger](media/pg21T2.3S8-1005a.png)
 
 9. Click on **Save (5)**.
 

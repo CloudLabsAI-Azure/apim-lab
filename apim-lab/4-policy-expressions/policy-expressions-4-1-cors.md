@@ -1,28 +1,27 @@
 # Exercise 4: Configure and implement policy expression to contol API behaviour and enforce rules.
 
+### Estimated Duration: 30 minutes
+
+## Lab Overview
+
+
+
 ## Lab objectives
 
-You will be able to complete the following tasks:
+In this lab, you will perform:
 
-**Task 1**: Cross-origin resource sharing (CORS) policy
-
-**Task 2**: Caching policy
-
-**Task 3**: Transformation policies
-    
-- Task 3.1: Transformation - replace string
-- Task 3.2: Transformation - conditional
-- Task 3.3: Transformation - XML to JSON
-- Task 3.4: Transformation - Delete response headers
-- Task 3.5: Transformation - Amend what's passed to the backend
-  
-**Task 4**: Named Values
-
-**Task 5**: Mock policy
-
-**Task 6**: Send One Way policy
-
-**Task 7**: Abort processing policy
+- Task 1: Cross-origin resource sharing (CORS) policy
+- Task 2: Caching policy
+- Task 3: Transformation policies  
+    - Task 3.1: Transformation - replace string
+    - Task 3.2: Transformation - conditional
+    - Task 3.3: Transformation - XML to JSON
+    - Task 3.4: Transformation - Delete response headers
+    - Task 3.5: Transformation - Amend what's passed to the backend 
+- Task 4: Named Values
+- Task 5: Mock policy
+- Task 6: Send One Way policy
+- Task 7: Abort processing policy
 
 ## Task 1: Cross-origin resource sharing (CORS) policy
 
@@ -38,6 +37,4 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
    
     ![APIM Policy CORS All APIs](media/all-api-policy.png)  
 
-    
-
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
