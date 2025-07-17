@@ -36,24 +36,25 @@ Use the following sites:
 
    ![](media/unix.png)
 
-1. <https://jwt.io> to create a JWT with payload. Scroll down and make the below changes in the **Decoded** section:
+1. <https://jwt.io> to create a JWT with payload. Scroll down and make the below changes in the **JWT Encoder** section:
+
+    ![](media/unixa.png)
+
     - Leave the **Header** as it is.
-    - Use the following **Payload** format and replace the `exp` value with your newly-created Unix timestamp:
+    - Use the following **Payload** format and replace the `iat` value with your newly-created Unix timestamp:
 
         ```json
         {
         "sub": "1234567890",
         "name": "John Doe",
         "admin" : true,
-        "exp": 1862842300
+        "iat": 1862842300
         }
         ```
-
-    - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is rather a weak secret but serves the demo purpose.
-    - Check the box for **secret base64 encoded**.
+        
     - Your configuration should be similar to this now:
 
-        ![JWT.io Website](media/01.png)
+        ![JWT.io Website](media/01a.png)
 
 ### Task 1.2: Validation (Read-Only)
 

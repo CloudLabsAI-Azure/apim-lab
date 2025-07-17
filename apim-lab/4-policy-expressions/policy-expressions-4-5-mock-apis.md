@@ -4,18 +4,18 @@
 
 Mocking in Azure API Management is a useful mechanism for API consumers to interact with APIs without waiting for the backend to be ready. 
 
-1. Open the **Star Wars** API and select **+ Add Operation**
-
-    ![](media/30.png)
+1. Open the **Star Wars > Original (1)** API and select **+ Add Operation (2)**
 
 1. Create a new GET operation:
-    - Display name: **Get Film**
-    - Name: **get-film**
-    - URL: **/film**
+    - Display name: **Get Film** **(3)**
+    - Name: **get-film** **(4)**
+    - URL: **/film** **(5)**
  
-      ![](media/Pg14-11.png)
+      ![](media/30a.png)
   
-1. Under the Design tab, in the **Responses** configuration tab, press **+ Add response**, Select `200 OK`.
+1. In the **Responses (1)** configuration tab, press **+ Add response (2)**, Select `200 OK` **(3)**.
+
+    ![APIM Policy Mock Response](media/33a.png)
 
 1. Click on **+ Add representation** under Representations, from the content-type  drop-down select `application/json` and add this below sample data under **Sample**:
 
@@ -29,7 +29,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
       ![APIM Policy Mock Frontend](media/31.png)
 
 1. Click on **Save**.
-1. Under **Inbound processing (1)** section , click on **Policy code editor (2)** for the **Get Film** Operation.
+1. Under **Inbound processing** section , click on **Policy code editor** for the **Get Film** Operation.
   
 1. Add **Mock Response** under **Other policies** after the `<base />` tag and click on **Save**.
 
@@ -42,7 +42,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
 
       ![APIM Policy Mock Inbound](media/mapi8.png)
 
-1. Invoke the API from the **Test** tab to receive a `200` success with the mocked film data .
+1. Invoke the API from the **Test** tab, click on **Send** to receive a `200` success with the mocked film data .
 
     ![APIM Policy Mock Response](media/33.png)
 
