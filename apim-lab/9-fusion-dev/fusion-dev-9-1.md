@@ -39,11 +39,11 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
  
 1. Now go to **All APIs (1)**, and click on **edit icon (2)** from the Inbound Processing tab.
 
-   ![](media/aaa1.png)
+   ![](media/aaa1a.png)
 
 1. Click on **+ Add Allowed origin** and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
-   ![](media/aaa2.png)
+   ![](media/aaa2a.png)
 
 ### Task 1.2: Create a custom connector
 
@@ -281,4 +281,4 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 ### Summary
 In this exercise, you have integrated the Star Wars API with Azure API Management, exported it as a Power Platform Custom Connector, and created a Canvas App to allow Fan Club members to search and view information about their favorite Star Wars characters.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

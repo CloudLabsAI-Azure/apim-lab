@@ -6,25 +6,15 @@
 
 You will be able to complete the following tasks:
 
-**Task 1**: Architecture Design Session
-
-**Task 2**: Provision your own instance of ColoursWeb/ColoursAPI
-
-Task 2.1: Deploying Web and API containers with Azure Container Instances
-
-**Task 3**: API Proxy to Serverless
-
-Task 3.1: Azure Functions
-
-Task 3.2: Azure Logic Apps
-
-**Task 4**: Self-hosted Gateway
-
-Task 4.1: Deploy the Self-hosted Gateway
-
-Task 4.2: Testing the API
-
-
+- Task 1: Architecture Design Session
+- Task 2: Provision your own instance of ColoursWeb/ColoursAPI
+    - Task 2.1: Deploying Web and API containers with Azure Container Instances
+- Task 3: API Proxy to Serverless
+    - Task 3.1: Azure Functions
+    - Task 3.2: Azure Logic Apps
+- Task 4: Self-hosted Gateway
+    - Task 4.1: Deploy the Self-hosted Gateway
+    - Task 4.2: Testing the API
 
 ## Task 1: Architecture Design Session
 
@@ -45,5 +35,3 @@ In this section, we provide you with a template architecture diagram for your Az
 - [drawio editable svg](../../assets/diagrams/apimADSv2.svg)
 - [drawio editable png](../../assets/diagrams/apimADSv2.png)
 - [Visio](../../assets/diagrams/apimADSv2.vsdx) -->
-
-## Now, click on Next from the lower right corner to move on to the next page for tasks.

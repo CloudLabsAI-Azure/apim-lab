@@ -6,11 +6,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Create a simple function that is Triggered by an **HTTP Request**.
 
-2. Search for **Function App**  in the portal, click on **Create** and select **Consumption**.
+2. Search for **Function App**  in the portal, click on **Select** and select **Consumption**.
    
    ![](media/Pg28-funcapp.png)
 
-   ![](media/api20.png)
+   ![](media/api20a.png)
 
 4. Enter the following details:
 
@@ -22,11 +22,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Version : **8(LTS), isolated worker model (6)**
    - Region: **Select the default region (7)**
 
-   - Click on **Review + Create (9)**.
+    ![](media/func-1712634.png)
 
-      ![](media/func-1712634.png)
-
-5. On the **Review + Create** tab, click on **Create**.
+5. On the **Review + Create (8)** tab, click on **Create**.
 
 6. Once the Resource is created click on **Go to Resource**.
    
@@ -38,14 +36,14 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 10. Please follow these steps after clicking on Create Function:
     
-    - Navigate to `C:/LabFiles/functions` and click on the **functions** folder **(1)**
-    - Select a language : **C# (2)**
-    - Select a .NET runtime : **.NET 8.0 Isolated LTS (3)**
-    - Select a template for your project's first function : **HTTP trigger (4)**
-    - Provide a function name: **GetRandomColor (5)**
-    - Provide a namespace: **Select the default (6)**
-    - AccessRights: **Function (7)**
-    - Select how you would like to open your project: **Open in current window (8)**
+    - Navigate to `C:/LabFiles/functions` and click on the **functions** folder.
+    - Select a language : **C#**
+    - Select a .NET runtime : **.NET 8.0 Isolated LTS**
+    - Select a template for your project's first function : **HTTP trigger**
+    - Provide a function name: **GetRandomColor**
+    - Provide a namespace: **Select the default**
+    - AccessRights: **Function**
+    - Select how you would like to open your project: **Open in current window**
 
 11. Click on **Yes, i trust the authors** when prompted.
 
@@ -62,6 +60,39 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    
       return  (ActionResult)new OkObjectResult(strColors[rInt]);
       ```
+
+      ```C#
+      using Microsoft.AspNetCore.Http;
+      using Microsoft.AspNetCore.Mvc;
+      using Microsoft.Azure.Functions.Worker;
+      using Microsoft.Extensions.Logging;
+
+      namespace Company.Function;
+
+      public class GetRandomColor
+      {
+         private readonly ILogger<GetRandomColor> _logger;
+
+         public GetRandomColor(ILogger<GetRandomColor> logger)
+         {
+            _logger = logger;
+         }
+
+         [Function("GetRandomColor")]
+         public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
+         {
+            _logger.LogInformation("C# HTTP trigger function processed a request.");
+            //string[] strColors = { "blue", "lightblue", "darkblue" };
+            string[] strColors = { "green", "lightgreen", "darkgreen" };
+
+            Random r = new Random();
+            int rInt = r.Next(strColors.Length);
+
+            return  (ActionResult)new OkObjectResult(strColors[rInt]);
+         }
+      }
+      ```
+
 
        ![](media/T3.1S11.png)
    
@@ -86,26 +117,27 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Select **Full**
    - Click on the **Browse** button to get a list of Functions in the subscription
 
-        ![](media/06.png)
+      ![](media/06a.png)
 
    - Select the Function App and then the Function
 
-      ![](media/07.png)
+      ![](media/07a.png)
 
-      ![](media/08.png)
+      ![](media/08a.png)
 
    - Amend the Names / Descriptions, URL suffix, and select the **Starter** and **Unlimited** for the Products
 
-      ![](media/09.png)
+      ![](media/09a.png)
 
    - Click on **Create**
    - As previously added CORS policy
 
-   - Validate the function works - either from the Azure management portal or the developer portal
+   - Validate the function works - either from the Azure management portal or the developer portal: Click **Test** (1), select **GET GetRandomColor** (2), and click **Send** (3).
 
-      ![](media/10.png)
 
-      ![](media/11.png)
+      ![](media/10a.png)
+
+      ![](media/11a.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -134,7 +166,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/api11.png)
 
-1. On the **Review + Create** tab, click on **Create**.
+1. Click on **Create**.
 
 1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer** and click on **Add a trigger (2)**.
 
@@ -159,6 +191,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       ```
 
       ![](media/apim9.png)
+      ![](media/apim9a.png)
 
 1. Search for **Azure Functions**, and select the **Azure function** that you have created previously.
 
@@ -167,6 +200,8 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    ![](media/E9T3.2S6-2.png)
 
 1. Add a new step to send e-mail, search for **Send an email (1)**, and select **send an email (v2) (2)** under Office 365 Outlook. Click on **Sign in** and sign in using the environment credentials
+
+   ![](media/api18a.png)
 
    - **To**: Specify your Email address, i.e. **<inject key="AzureAdUserEmail"></inject>** to receive the e-mail.
    - **Subject**: **Color**
@@ -178,7 +213,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Select **+ New step**, search and select **Response**, now **save** the logic App.
 
-   ![](media/T3.2S8.png)
+   ![](media/T3.2S8a.png)
 
    - Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case `msg`) can be extracted and referred to in the subsequent logic
 
@@ -206,15 +241,15 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
     - As previously add CORS policy
 
-   - Validate the Logic App works - either from the Azure management portal or the developer portal.
+   - Validate the Logic App works - either from the Azure management portal or the developer portal. Click **Test** (1), select **GET GetRandomColor** (2), and click **Send** (3).
 
-      ![](media/18.png)
+      ![](media/18a.png)
 
-      ![](media/19.png)
+      ![](media/19a.png)
 
-   - Check the Logic App audit
+   - Go to **Run history**, Click the latest run and verify all steps in the flow are completed successfully.
 
-      ![](media/20.png)
+      ![](media/20a.png)
 
    - Check the email was sent
 
