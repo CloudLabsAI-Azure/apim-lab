@@ -1,36 +1,27 @@
-## Exercise 8:  Fusion Dev(Read Only)
+# Exercise 8:  Fusion Dev(Read Only)
 
-## Estimated Duration : 40 minutes
+### Estimated Duration : 40 minutes
+
+## Lab Overview
 
 In this exercise, you'll create a Star Wars Fan Club mobile application using Power Apps and Azure API Management. You'll connect your member data from an Excel worksheet, integrate Star Wars character information through a custom connector, and customize the app to display favorite character details for each member.
 
 ## Lab objectives
 
-You will be able to complete the following tasks:
+In this lab, you will perform:
 
-**Task 1**: Power Apps and APIM
-
-Task 1.1: Update CORS policy
-
-Task 1.2: Create a custom connector
-
-**Task 2**: View your custom connector in Power Platform
-
-**Task 3**: Generate the Star Wars Fan Club Application
-
-Task 3.1: Connect to the backing data source
-
-**Task 4**: Add Favorite Character information
-
-Task 4.1: Add the Star Wars API Data Source
-
-Task 4.2: Customize the generated app
-
-Task 4.3: Add controls to the View Detail screen
-
-Task 4.4: Connect the Detail Screen to the Star Wars API
-
-Task 4.5: Show the Star Wars character information on the Detail Screen
+- Task 1: Power Apps and APIM
+   - Task 1.1: Update CORS policy
+   - Task 1.2: Create a custom connector
+- Task 2: View your custom connector in Power Platform
+- Task 3: Generate the Star Wars Fan Club Application
+   - Task 3.1: Connect to the backing data source
+- Task 4: Add Favorite Character information
+   - Task 4.1: Add the Star Wars API Data Source
+   - Task 4.2: Customize the generated app
+   - Task 4.3: Add controls to the View Detail screen
+   - Task 4.4: Connect the Detail Screen to the Star Wars API
+   - Task 4.5: Show the Star Wars character information on the Detail Screen
 
 ## Task 1: Power Apps and APIM
 
@@ -48,11 +39,11 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
  
 1. Now go to **All APIs (1)**, and click on **edit icon (2)** from the Inbound Processing tab.
 
-   ![](media/aaa1.png)
+   ![](media/aaa1a.png)
 
 1. Click on **+ Add Allowed origin** and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
-   ![](media/aaa2.png)
+   ![](media/aaa2a.png)
 
 ### Task 1.2: Create a custom connector
 
@@ -290,4 +281,4 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 ### Summary
 In this exercise, you have integrated the Star Wars API with Azure API Management, exported it as a Power Platform Custom Connector, and created a Canvas App to allow Fan Club members to search and view information about their favorite Star Wars characters.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

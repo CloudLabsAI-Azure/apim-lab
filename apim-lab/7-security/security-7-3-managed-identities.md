@@ -6,7 +6,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. Navigate to your **API management** instance, select **Managed identities** **(1)** from the pan, set the Status to **On** **(2)**, and click on **Save** **(3)** system-assigned identity.
 
-    ![Register APIM](media/managed-identities.png)
+    ![Register APIM](media/managed-identitiesa.png)
 
 1. On **Enabled system assigned managed identity** pop-up click on **Yes**.
 
@@ -22,23 +22,24 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 ### Task 2.2: Create Key Vault and add a secret
 
 1. Search for **Key Vault** in the Azure portal and Select **Create**.
-1. Select Resource Group: **apim-rg**
-1. Enter Key Vault Name: **kv-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**
+1. Select Resource Group: **apim-rg (1)**
+1. Enter Key Vault Name: **kv-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** **(2)**
+1. Select the Pricing tier: **Standard (3)**
 
-    ![Create Key Vault](media/8.png)
+    ![Create Key Vault](media/8a.png)
 
 1. Click on **Next**.
-1. In the **Access configuration** tab, check the box for vault access policy and click on **Review + Create**.
+1. In the **Access configuration** tab, check the box for **vault access policy (1)** and click on **Review + Create (2)**.
 
-      ![Create Key Vault](media/9.png)
+    ![Create Key Vault](media/9a.png)
 
 1. In **Review + Create** tab, click on **Create**.
 
 1. Once created, click on **Go to resource**, this will open recently created **key-vault**.
   
-1. Next, select **Secrets** under Objects on the left hand pane, and click on **Generate/Import**.
+1. Next, select **Secrets (1)** under Objects on the left hand pane, and click on **Generate/Import (2)**.
 
-      ![Create Key Vault](media/mapi93.png)
+      ![Create Key Vault](media/mapi93a.png)
 
 1. Provide the below details and click on **Create**.
    
@@ -64,7 +65,7 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. Select the principal and search for **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** which is the name of your **Azure API Management instance** and select it. Click on **Next**
 
-    ![Create Key Vault](media/13.png)
+    ![Create Key Vault](media/13a.png)
 
 1. Click on Next again and click on **Create**.
 
@@ -85,24 +86,47 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 
 1. Click on **Save**.
 
-1. Navigate to the Inbound processing tab in this operation.
+1. Navigate to the **Inbound processing (1)** tab and select **Policy code editor (2)**in this operation.
+
+    ![Create Key Vault](media/14a.png)
    
-1. Update the policies for **this** new operation, and click on **Save**, and update the Key vault name in the `set-url` value.
+1. Update the policies for **this** new operation, and click on **Save**, and update the **Key vault name** in the `set-url` value.
 
     ```xml
-    <inbound>
-      <base />
-      <send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
-          <set-url>https://{your-keyvault-name}.vault.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
-          <set-method>GET</set-method>
-          <authentication-managed-identity resource="https://vault.azure.net" />
-      </send-request>
-      <set-variable name="favoritePersonRequest" value="@{
-          var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
-          return "/people/" + secret["value"].ToString() + "/";
-      }" />
-      <rewrite-uri template="@((string)context.Variables["favoritePersonRequest"])" />
-    </inbound>
+    <!--
+        - Policies are applied in the order they appear.
+        - Position <base/> inside a section to inherit policies from the outer scope.
+        - Comments within policies are not preserved.
+    -->
+    <!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+    <policies>
+        <!-- Throttle, authorize, validate, cache, or transform the requests -->
+        <inbound>
+        <base />
+        <send-request mode="new" response-variable-name="secretResponse" timeout="20" ignore-error="false">
+            <set-url>https://{your-keyvault-name}.vault.azure.net/secrets/favoritePerson/?api-version=7.0</set-url>
+            <set-method>GET</set-method>
+            <authentication-managed-identity resource="https://vault.azure.net" />
+        </send-request>
+        <set-variable name="favoritePersonRequest" value="@{
+            var secret = ((IResponse)context.Variables["secretResponse"]).Body.As<JObject>();
+            return "/people/" + secret["value"].ToString() + "/";
+        }" />
+        <rewrite-uri template="@((string)context.Variables["favoritePersonRequest"])" />
+        </inbound>
+        <!-- Control if and how the requests are forwarded to services  -->
+        <backend>
+            <base />
+        </backend>
+        <!-- Customize the responses -->
+        <outbound>
+            <base />
+        </outbound>
+        <!-- Handle exceptions and customize error responses  -->
+        <on-error>
+            <base />
+        </on-error>
+    </policies>
     ```
 
 ### Task 2.5: Test the operation
@@ -116,4 +140,4 @@ In Azure, an Active Directory identity can be assigned to a managed resource suc
 ### Summary 
 In this Task, Azure API Management (APIM) is configured to securely access secrets from Azure Key Vault using Managed Service Identity (MSI), enhancing security and enabling the retrieval of secrets for API management operations, as demonstrated during testing in the developer portal.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

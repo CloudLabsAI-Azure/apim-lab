@@ -1,4 +1,4 @@
-## Continuation for Exericse 9,Task 4: Self-hosted Gateway
+# Continuation for Exericse 9,Task 4: Self-hosted Gateway
 
 With the Azure API Management self-hosted gateway, organizations have the ability to deploy an instance of the Azure API Management gateway component to the environments where they host their applications and/or APIs - for example, in an on-premise data center.
 
@@ -44,7 +44,7 @@ To deploy a self-hosted gateway:
 
 - Download the **env.conf** file by clicking on it as shown in the below image, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`.
 
-    ![](media/api5.png)
+    ![](media/api5a.png)
 
 - Copy the Docker run command under Deployment scripts.
   
@@ -58,6 +58,7 @@ To deploy a self-hosted gateway:
 
     ![](media/api4.png)    
 
+  - Open a command prompt
   - Navigate to the location where the *env.conf* is located, Run command :
 
     ```

@@ -12,11 +12,11 @@
   
 1. Add a new revision with the description `Adding a caching policy` and click on **Create**.
   
-      ![APIM Revision Create](media/09.png)
+      ![APIM Revision Create](media/09a.png)
 
     > The new revision is online but not yet current. The previous revision continues to remain the active default. Having added the new revision has not resulted in any change for your API consumers.
 
-      ![APIM Created Revision](media/10.png)
+      ![APIM Created Revision](media/10a.png)
 
 ### Task 2.2: Add caching
 
@@ -29,7 +29,7 @@
    
 1. Add a 10-second caching policy for the **GET People** operation via the Code editor.
 
-      ![APIM Created Revision](media/mapi51.png)
+      ![APIM Created Revision](media/mapi51a.png)
 
     ```xml
     <inbound>
@@ -44,6 +44,33 @@
         <cache-store duration="10" />
     </outbound>
     ```
+      ```
+      <!--
+      - Policies are applied in the order they appear.
+      - Position <base/> inside a section to inherit policies from the outer scope.
+      - Comments within policies are not preserved.
+      -->
+      <!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+      <policies>
+      <!-- Throttle, authorize, validate, cache, or transform the requests -->
+      <inbound>
+            <base />
+            <cache-lookup vary-by-developer="false" vary-by-developer-groups="false" allow-private-response-caching="false" must-revalidate="false" downstream-caching-type="none" />
+      </inbound>
+      <backend>
+            <base />
+      </backend>
+      <outbound>
+            <base />
+            <cache-store duration="10" />
+      </outbound>
+      <on-error>
+            <base />
+      </on-error>
+      </policies>
+      ```
+
+
 
       ![APIM Created Revision](media/mapi50.png)
 
@@ -94,4 +121,4 @@
 ### Summary
 In this Task, a new revision is added to the Star Wars API in Azure API Management. This revision remains inactive until made current. Then, caching policies are applied to the GET operation of this new revision. Testing the API shows cache-lookup behavior. Finally, the new revision is made the current one, eliminating the need for URL updates for API consumers, illustrating the advantages of revisioning over versioning in APIM.
 
-### Now, click on Next from the lower right corner to move on to the next page.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

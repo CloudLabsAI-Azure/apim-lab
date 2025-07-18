@@ -30,7 +30,13 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
    - Select **Mount storage account**.
    - Select the **subscription**, and click **Apply**.
+
+     ![Azure Cloud Shell](media/cldshellicona.png)
+
    - Select **I want to create a storage account**, and click on **Next**.
+
+     ![Azure Cloud Shell](media/cldshelliconb.png)
+
    - Select Resource Group: **apim-rg**
    - Region: **East US**
    - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
@@ -108,7 +114,6 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 1. Now we run the following command to check the status of the deployment and get the FQDN to access the app:
 
     ```bash
-    # We check the status
     az container show --resource-group $APIMLAB_RGNAME --name $APIMLAB_COLORS_WEB --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table
     ```
 
@@ -120,7 +125,9 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
       aci-color-web-fernando22287.eastus.azurecontainer.io  Succeeded
       ```
 
-1. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page for our Colours Web:
+1. Once you see the 'Succeeded' message, copy the generated FQDN URL and open it in a new browser tab. You should now see the homepage of the Colours Web application.
+
+   >**Note**: If you receive a message stating that the site does not have a secure connection, click on **Continue to site** to proceed.
 
       ![Colours Web](media/02.png)
 
@@ -158,9 +165,11 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 1. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
 
-    ![Colours API](media/03.png)
+   >**Note**: If you receive a message stating that the site does not have a secure connection, click on **Continue to site** to proceed.
+
+   ![Colours API](media/03.png)
 ---
 ## Summary
 In this Task, you have deployed Azure Container Instances (ACI) for both the Colours Web and Colours API applications using GitHub container images. Then you accessed the applications via fully qualified domain names (FQDNs) to verify successful deployment and functionality.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

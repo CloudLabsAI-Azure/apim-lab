@@ -19,7 +19,7 @@ Proper version management not only helps organize your API, it also aids in Azur
     - Products: **Starter** and **Unlimited** **(4)** 
     -  Click on **Create**: **(5)** 
 
-        ![APIM Version Create](media/Ex-5-task1-2.png)
+        ![APIM Version Create](media/Ex-5-task1-2a.png)
 
       - The new version, _v2_, is now added to the Star Wars API. 
         > Any previous implementation of the newly-versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact on the consumers.
@@ -30,17 +30,23 @@ Proper version management not only helps organize your API, it also aids in Azur
 
 > Sometimes, the version creation takes just a little bit of time. If you do not see it immediately, please keep refreshing and ensure you select the appropriate version as per the below instructions.
 
-1. In the Developer Portal select the `v2` version of the *Star Wars* API.
+1. Return to the **Developer portal**, refresh the page, and then click on **APIs** at the top.
+
+      ![APIM Developer Portal Versions](media/04a.png)
+
+1. Select the `v2` version of the *Star Wars* API.
 
       ![APIM Developer Portal Versions](media/04.png)
 
-1. Notice the request URL and the inclusion of `v2` in the path.
+1. Notice the Endpoint URL and the inclusion of `v2` in the path.
 
-      ![APIM Developer Portal Version 2](media/05.png)
+      ![APIM Developer Portal Version 2](media/05a.png)
 
-1. Test the `GetPeople` operation.
+1. To test the `GetPeople` operation, click on **Try this operation (1)**, then scroll down on the right and click **Send (2)**.
 
-      ![APIM Developer Portal Test Version](media/06.png)
+      ![APIM Developer Portal Test Version](media/06a.png)
+
+1. Review the HTTP response that appears below. 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -53,4 +59,4 @@ Proper version management not only helps organize your API, it also aids in Azur
 
 Now that you have created a new version of the API, you have the ability to introduce breaking changes. Oftentimes times a breaking change in a backend API necessitates an API version change in APIM. Leaving a legacy implementation behind to focus on more contemporary API implementations also is a common versioning use case. Whatever the reason may be, Azure API Management provides means to abstract breaking changes in a responsible and safe manner.  
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

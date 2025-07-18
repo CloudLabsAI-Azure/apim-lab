@@ -1,6 +1,6 @@
-## Exercise 4: Policy Expressions
+# Exercise 4: Policy Expressions [Read-Only]
 
-## Estimated Duration: 90 minutes
+### Estimated Duration: 90 minutes
 
 Policy Expressions are used to control traffic to and modify the behavior of the Backend API. At the time of this writing, [APIM Policy Expressions support C# 7](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions). Please note that a specific subset of .NET Framework types, not the entire Framework, are made available. This is to cover the most frequently-needed types and operations without introducing bloat into APIM.  
 
@@ -14,7 +14,7 @@ Policies can be applied at multiple scopes and follow this hierarchy. It is impo
 
 ![APIM Policies Scopes](media/01.png)
 
-**Note:** This page is a read-only and you are just exploring to the configurations of Frontend/Inbound/Outbound/Backend.
+**Note:** This page is a **read-only** and you are just exploring to the configurations of Frontend/Inbound/Outbound/Backend.
 
 ### Azure API Management Portal oddities
 
@@ -28,7 +28,7 @@ There are two things to pay particular attention to:
 
 ### Getting Started - Frontend/Inbound/Outbound/Backend
 
-Select an API (e.g. **Colors**). Policy can be configured for **Inbound processing**, **Backend**, and **Outbound processing**. Most commonly, policies are applied in the **Inbound processing** section. Select the pencil icon to visually edit any section or the `</>` code brackets to edit the underlying XML. The configuration can be scoped to the API (All operations) or to an individual operation.
+Select an API (e.g. **Colors**). Policy can be configured for **Inbound processing**, **Backend** **(1)**, and **Outbound processing**. Most commonly, policies are applied in the **Inbound processing** section. Select the pencil icon **(2)** to visually edit any section or the `</>` code brackets to edit the underlying XML. The configuration can be scoped to the API (All operations) or to an individual operation.
 
 The **Frontend** section allows for editing of the OpenAPI / Swagger definition.
 
@@ -43,7 +43,7 @@ Editing the Frontend:
 
 Editing **Inbound processing / Outbound processing / Backend**:
 
-- Using the **Code Editor**:
+- Using the **Code Editor (1)**:
 
   ![APIM Inbound Code Editor](media/codeedit.png)
 
@@ -53,4 +53,4 @@ Editing **Inbound processing / Outbound processing / Backend**:
 
   ![APIM Inbound Form Editor](media/ip.png)
 
-### Now, click on Next from the lower right corner to move on to the next page for the tasks.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next exercise.

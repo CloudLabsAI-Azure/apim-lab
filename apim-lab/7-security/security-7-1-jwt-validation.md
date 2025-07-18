@@ -1,34 +1,26 @@
-## Exercise 7: Security 
+# Exercise 7: Security 
 
-## Estimated Duration: 50 minutes
+### Estimated Duration: 50 minutes
+
+## Lab Overview
 
 APIM focuses heavily on security in all three major areas of the product. Going into detail on each aspect is a large topic entirely of its own. Therefore, in this section we will focus more narrowly on one of the common approaches to secure access to an API.
 
-Lab objectives
+## Lab objectives
 
 You will be able to complete the following tasks:
 
-**Task 1**: JSON Web Tokens (JWT)
-
-Task 1.1: Creation
-
-Task 1.2: Validation
-
-Task 1.3: Check that a Claim Exists
-
-Task 1.4: Extract Claim and Pass to Backend
-
-**Task 2**: Managed Identities
-
-Task 2.1: Register Azure API Management with Active Directory
-
-Task 2.2: Create Key Vault and add a secret
-
-Task 2.3: Access policy and principal assignment
-
-Task 2.4: Azure API Management, Key Vault and Managed Service Identity
-
-Task 2.5: Test the operation
+- Task 1: JSON Web Tokens (JWT)
+    - Task 1.1: Creation
+    - Task 1.2: Validation
+    - Task 1.3: Check that a Claim Exists
+    - Task 1.4: Extract Claim and Pass to Backend
+- Task 2: Managed Identities
+    - Task 2.1: Register Azure API Management with Active Directory
+    - Task 2.2: Create Key Vault and add a secret
+    - Task 2.3: Access policy and principal assignment
+    - Task 2.4: Azure API Management, Key Vault and Managed Service Identity
+    - Task 2.5: Test the operation
 
 ## Task 1: JSON Web Tokens (JWT)
 
@@ -44,24 +36,25 @@ Use the following sites:
 
    ![](media/unix.png)
 
-1. <https://jwt.io> to create a JWT with payload. Scroll down and make the below changes in the **Decoded** section:
+1. <https://jwt.io> to create a JWT with payload. Scroll down and make the below changes in the **JWT Encoder** section:
+
+    ![](media/unixa.png)
+
     - Leave the **Header** as it is.
-    - Use the following **Payload** format and replace the `exp` value with your newly-created Unix timestamp:
+    - Use the following **Payload** format and replace the `iat` value with your newly-created Unix timestamp:
 
         ```json
         {
         "sub": "1234567890",
         "name": "John Doe",
         "admin" : true,
-        "exp": 1862842300
+        "iat": 1862842300
         }
         ```
-
-    - In the **Verify Signature** area use a 256-bit key that will also be used in the Azure API Management policy. We used `123412341234123412341234` as an example, which is rather a weak secret but serves the demo purpose.
-    - Check the box for **secret base64 encoded**.
+        
     - Your configuration should be similar to this now:
 
-        ![JWT.io Website](media/01.png)
+        ![JWT.io Website](media/01a.png)
 
 ### Task 1.2: Validation (Read-Only)
 
@@ -191,4 +184,4 @@ Let's add the username contained inside the JSON Web Tokens into a specific head
 
 Based on what you have learned thus far, consider how you can improve your policies. For example, you may not want to hard-code the `issuer-signing-key` and instead use a Named Value that you can more easily administer and change outside of an API's policies. If you have time in this exercise, go ahead and give it a try.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.

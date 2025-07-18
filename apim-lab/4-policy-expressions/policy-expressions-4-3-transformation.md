@@ -10,7 +10,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
   
 1. In the **Outbound processing (1)** section, select **Policy code editor** with symbol **</>**.
 
-      ![APIM Policy Find & Replace](media/c.png)
+      ![APIM Policy Find & Replace](media/ca.png)
   
 1. Place the cursor after the `<base />` element in the `<outbound>` section.
 
@@ -34,7 +34,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
 1. Invoke the API using the Unlimited subscription key.
 
-      ![APIM Policy Find & Replace](media/green.png)
+      ![APIM Policy Find & Replace](media/greena.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -55,9 +55,9 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
   ![APIM Policy Transform Starter Product](media/note.png)
 
-1. Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation and then open Policy code editor under **Outbound processing (3)**.
+1. Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation and then open **Policy code editor (3)** under **Outbound processing**.
 
-      ![APIM Policy Transform Starter Product](media/19.png)
+      ![APIM Policy Transform Starter Product](media/19a.png)
   
 1. Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below and click **Save**. 
 
@@ -108,11 +108,11 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
 1. With **Starter** or **None** product scope:
 
-      ![APIM Policy Transform Unlimited Product](media/20.png)
+      ![APIM Policy Transform Unlimited Product](media/20a.png)
 
 1. With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response.
 
-      ![APIM Policy Transform Unlimited Product](media/21.png)
+      ![APIM Policy Transform Unlimited Product](media/21a.png)
 
       > **Note:** If you encounter with **401 error**, switch to the **Settings** tab, **uncheck** Subscription required, and press **Save** at the bottom of the page and reperform step 3.
 
@@ -203,4 +203,4 @@ In these transformation tasks, you implemented various policies in Azure API Man
 
 1. Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
