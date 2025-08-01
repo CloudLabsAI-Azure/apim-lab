@@ -1,4 +1,4 @@
-## Exercise 4: Policy Expressions
+## Exercise 4: Policy Expressions (Read-Only)
 
 ## Estimated Duration: 90 minutes
 

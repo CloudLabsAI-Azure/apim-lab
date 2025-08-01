@@ -1,4 +1,4 @@
-## Continuation for Exercise 4,Task 6: Send One Way policy
+## Continuation for Exercise 4,Task 6: Send One Way policy (Read-Only)
 
 APIM integrates well with [external services](https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-send-request) via HTTP-based interaction.
 

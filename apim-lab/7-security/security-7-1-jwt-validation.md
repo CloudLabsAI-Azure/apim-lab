@@ -63,7 +63,7 @@ Use the following sites:
 
         ![JWT.io Website](media/01.png)
 
-### Task 1.2: Validation
+### Task 1.2: Validation (Read-Only)
 
 1. Back in APIM, open the **Basic Calculator** API and select **All operations**.
   
@@ -104,7 +104,7 @@ Use the following sites:
 
     ![](media/05.png)
 
-### Task 1.3: Check that a Claim Exists
+### Task 1.3: Check that a Claim Exists (Read-Only)
 
 Not only is it important that a JWT is valid, but, as we use it for authorization, we must also assert that the token contains expected claims before granting access to our APIs.
 
@@ -149,7 +149,7 @@ Not only is it important that a JWT is valid, but, as we use it for authorizatio
 
 1. Invoke the **Divide two integers** method with the `Authorization` header once more and observe the `401` Unauthorized error as the token specifies `admin` but the policy requires `adminx`.
 
-### Task 1.4: Extract Claim and Pass to Backend
+### Task 1.4: Extract Claim and Pass to Backend (Read-Only)
 
 It may often be necessary to pass (specific) claims onto the backend API to inform further processing. One such way - and this can be tailored to an API's individuality - is to extract a claim and place it into a designated header the backend expects.
 
