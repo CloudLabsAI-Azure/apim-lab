@@ -1,6 +1,6 @@
 ## Excercise 9 (Read Only)
 
-## Estimated Duration: 50 minutes
+## Estimated Duration: 60 minutes
 
 ## Lab objectives
 
