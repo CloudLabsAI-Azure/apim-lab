@@ -4,7 +4,8 @@
 
 ## Overview
 
-The purpose of this lab is to enhance your coding workflow by leveraging Azure’s API Management tools. You will gain hands-on experience in setting up and verifying an API Management instance, deploying and customizing the Developer Portal, and managing user experience and product definitions. The lab will guide you through creating and integrating APIs, working with existing APIs like the Star Wars API, importing APIs using OpenAPI, and managing testing, subscription keys, and rate limits. Additionally, you’ll configure policy expressions, handle API versions and revisions, implement analytics and monitoring tools, and establish security measures. The integration of Fusion Dev tools and the design of a scalable, secure API management architecture will also be covered, equipping you with the skills to optimize your API development and management processes effectively.
+This lab provides a comprehensive introduction to Azure API Management service, guiding you through the essential steps to set up, configure, and optimize API services in Azure. You will learn how to access an API Management instance, customize the Developer Portal, and integrate APIs. The lab ses cover practical scenarios such as importing APIs, applying security policies, monitoring usage, and scaling your architecture for enterprise needs. By completing this lab, you will gain the skills needed to manage APIs efficiently and securely within the Azure ecosystem.
+
 
 ## Objective
 
@@ -85,7 +86,7 @@ Welcome to your Azure API Management workshop! We've prepared a seamless environ
 
 Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of lab guide to switch to different exercises of the lab guide.
 
-   ![07](media/api-06.png)
+   ![07](media/acc-lab-env-0109.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -95,7 +96,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
-   ![08](media/api-03.png)
+   ![08](media/exp-lab-res-0109.png)
  
   > You will see the DeploymentID value on **Environment Details** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
 
@@ -103,41 +104,41 @@ To get a better understanding of your lab resources and credentials, navigate to
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-  ![](media/api-04.png)
+  ![](media/split-feature-0109.png)
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
-   ![](media/api-02.png) 
+   ![](media/resources-0109.png) 
 
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](media/api-01.png)
+   ![](media/zoomin-0109.png)
 
 ## Let's Get Started with Azure Portal
 
-1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
+1. In the Lab VM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
    ![09](media/api-08.png)
    
 1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
-     ![04](media/04.png)
+     ![04](media/azure-signin1-0109.png)
      
 1. Now enter the following password and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
    
-     ![05](media/05.png)
-     
-      >**Note**: If you see the **Action Required** dialog box, then select **Ask Later** option.
-
-      ![06](media/asklater.png)
+     ![05](media/azure-signin2-0109.png)
   
 1. If you see the pop-up **Stay Signed in?**, click No
+
+1. If you see a window for **Let's keep you account secure**, click on **Next** and follow steps to proceed with MFA setup.
+
+   ![](media/mfa1-0109.png)
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
