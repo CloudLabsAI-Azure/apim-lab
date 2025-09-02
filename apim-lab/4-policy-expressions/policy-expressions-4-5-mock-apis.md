@@ -1,23 +1,23 @@
-## Continuation for Exercise 4,Task 5: Mock policy
+## Exercise 4 Task 5: Mock policy
 
-### Mock responses
+In this task, you will create a mock response for an API operation in the Star Wars API.
 
 Mocking in Azure API Management is a useful mechanism for API consumers to interact with APIs without waiting for the backend to be ready. 
 
-1. Open the **Star Wars > Original (1)** API and select **+ Add Operation (2)**
+1. From your APIM instance, open the **Star Wars (1)** API and select **+ Add Operation (2)**. 
 
 1. Create a new GET operation:
     - Display name: **Get Film** **(3)**
     - Name: **get-film** **(4)**
     - URL: **/film** **(5)**
  
-      ![](media/30a.png)
+      ![](media/E4T5S2-0209.png)
   
 1. In the **Responses (1)** configuration tab, press **+ Add response (2)**, Select `200 OK` **(3)**.
 
     ![APIM Policy Mock Response](media/33a.png)
 
-1. Click on **+ Add representation** under Representations, from the content-type  drop-down select `application/json` and add this below sample data under **Sample**:
+1. Click on **+ Add representation (1)** under Representations, from the content-type  drop-down select `application/json`**(2)** and add this below sample data under **Sample (3)** and click on **Save (4)**:
 
     ```json
     {
@@ -26,12 +26,11 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
     }
     ```
   
-      ![APIM Policy Mock Frontend](media/31.png)
+      ![APIM Policy Mock Frontend](media/E4T5S4-0209.png)
 
-1. Click on **Save**.
 1. Under **Inbound processing** section , click on **Policy code editor** for the **Get Film** Operation.
   
-1. Add **Mock Response** under **Other policies** after the `<base />` tag and click on **Save**.
+1. In the inbound policy editor, add **Mock Response** under **Other policies** after the `<base />` tag and click on **Save**.
 
     ```xml    
     <inbound>
@@ -42,9 +41,9 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
 
       ![APIM Policy Mock Inbound](media/mapi8.png)
 
-1. Invoke the API from the **Test** tab, click on **Send** to receive a `200` success with the mocked film data .
+1. Invoke the API from the **Test (1)** tab, click on **Send (2)** to receive a `200` success **(3)** with the mocked film data .
 
-    ![APIM Policy Mock Response](media/33.png)
+    ![APIM Policy Mock Response](media/E4T5S7-0209.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -55,6 +54,9 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
 ---
 
 ## Summary 
-In Azure API Management, a "Get Film" operation is created for the Star Wars API. This operation returns a mock response with a 200 OK status code and sample JSON data containing film information. An inbound policy is added to simulate the mock response, and when the API is invoked, it returns a 200 success status with the mocked film data.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+In this task, you created a mock response for the "Get Film" operation in the Star Wars API using Azure API Management. The mock response returns a 200 OK status with sample JSON data containing film information, allowing API consumers to interact with the API without needing a backend service.
+
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
+
+  ![](../gs/media/api-07.png)

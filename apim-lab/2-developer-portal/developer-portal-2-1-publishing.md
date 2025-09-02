@@ -7,7 +7,7 @@ In this exercise, you will learn how to publish and customize the Developer Port
 
 ## Objectives
 
-In this lab, you will perform:
+In this Exercise, you will perform:
 
 - Task 1: Publishing the Developer Portal
 - Task 2: Enabling CORS for the Developer Portal
@@ -15,8 +15,10 @@ In this lab, you will perform:
    - Task 3.1: Register for an account
    - Task 3.2: Approving Subscriptions
    - Task 3.3: Try an API
-- Task 4: Product Management
-   - Task 4.1: Product definition
+- Task 4: Customizing the Developer Portal (Read-Only)
+   - Task 4.1: Site Configuration and Customization
+   - Task 4.2: Email Configuration
+   - Task 4.3: Product Management
    
 ### Task 1: Publishing the Developer Portal
 
@@ -163,7 +165,7 @@ It's now time to test one of the published APIs.
 
 ## Summary
 
-In this Task, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing.
+In the above Tasks, you accessed, configured, and tested the Azure API Management Developer Portal, allowing users to explore APIs, sign up for accounts, manage subscriptions, and perform API testing.
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 2.
 

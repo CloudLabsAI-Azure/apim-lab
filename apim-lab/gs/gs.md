@@ -98,8 +98,6 @@ To get a better understanding of your lab resources and credentials, navigate to
 
    ![08](media/exp-lab-res-0109.png)
  
-  > You will see the DeploymentID value on **Environment Details** tab, use it wherever you see SUFFIX or DeploymentID in lab steps.
-
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.

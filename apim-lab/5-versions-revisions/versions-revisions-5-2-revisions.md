@@ -1,18 +1,20 @@
-## Continuation for Exercise 5,Task 2: Revisions
+## Exercise 5 Task 2: Create a new revision of an API
+
+In this task, you will create a new revision of the existing Star Wars API version 2.
 
 ### Task 2.1: Add a new revision
 
-1. Go back to the Azure portal in the **API Management Service**, and select the **Star Wars** API **v2**.
+1. Navigate back to the **APIM instance**, and select the **Star Wars** API **v2**.
 
       ![](media/07.png)
 
-1. Select the **Revisions** tab.
+1. Select the **Revisions (1)** tab and click on **+ Add Revision (2)**
 
-      ![APIM Revisions Menu](media/08.png)
+      ![APIM Revisions Menu](media/E5T2.1S2-0209.png)
   
-1. Add a new revision with the description `Adding a caching policy` and click on **Create**.
+1. On the **Create a new revision of Stars Wars v2** window, enter the description as `Adding a caching policy` **(1)** and click on **Create (2)**.
   
-      ![APIM Revision Create](media/09a.png)
+      ![APIM Revision Create](media/E5T2.1S3-0209.png)
 
     > The new revision is online but not yet current. The previous revision continues to remain the active default. Having added the new revision has not resulted in any change for your API consumers.
 
@@ -27,62 +29,36 @@
 
 1. Navigate to the **Inbound processing** tab.
    
-1. Add a 10-second caching policy for the **GET People** operation via the Code editor.
+1. Replace the existing policies **(1)** with the below xml to add a 10-second caching policy for the **GET People** operation via the Code editor and click on **Save (2)**
 
       ![APIM Created Revision](media/mapi51a.png)
 
     ```xml
-    <inbound>
-        <base />
-        <cache-lookup vary-by-developer="false" vary-by-developer-groups="false" allow-private-response-caching="false" must-revalidate="false" downstream-caching-type="none" />
-    </inbound>
-    <backend>
-        <base />
-    </backend>
-    <outbound>
-        <base />
-        <cache-store duration="10" />
-    </outbound>
-    ```
-      ```
-      <!--
-      - Policies are applied in the order they appear.
-      - Position <base/> inside a section to inherit policies from the outer scope.
-      - Comments within policies are not preserved.
-      -->
-      <!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
       <policies>
-      <!-- Throttle, authorize, validate, cache, or transform the requests -->
-      <inbound>
+            <!-- Throttle, authorize, validate, cache, or transform the requests -->
+            <inbound>
             <base />
             <cache-lookup vary-by-developer="false" vary-by-developer-groups="false" allow-private-response-caching="false" must-revalidate="false" downstream-caching-type="none" />
-      </inbound>
-      <backend>
+            </inbound>
+            <backend>
             <base />
-      </backend>
-      <outbound>
+            </backend>
+            <outbound>
             <base />
             <cache-store duration="10" />
-      </outbound>
-      <on-error>
-            <base />
-      </on-error>
+            </outbound>
       </policies>
-      ```
+    ```
+      
+      ![APIM Created Revision](media/E5T2.2S3-0209.png)
 
-
-
-      ![APIM Created Revision](media/mapi50.png)
-
-1. Once the code is updated, the new policy will be created.
+1. Once the code is updated, the new `cache-policy` will be created.
    
       ![APIM Revision Add Caching](media/12.png)
 
 ### Task 2.3: Test the new revision
 
-1. Navigate to the **Test** tab from the top.
-
-1. From the Azure portal, select the `Get People` operation and click on **Trace**.
+1. Navigate to the **Test** tab from the top, and click on **Trace** button.
   
      > **Note**: The revision number at the top of the page as well as in the request URL. The request URL should look similar to: `https://<your-apim-name>.azure-api.net/sw/v2;rev=2/people/`.
 
@@ -94,14 +70,13 @@
 
 ### Task 2.4: Make current revision
 
-1. Select the **Revisions** tab.
-1. Click on the ellipsis for `rev2` and select the **Make Current** option.
+1. Now, select the **Revisions (1)** tab. Click on the ellipsis for `rev2` **(2)** and select the **Make Current (3)** option.
 
-      ![APIM Revision Make Current](media/15.png)
+      ![APIM Revision Make Current](media/E5T2.4S1-0209.png)
 
-1. Check the **Post to the Public Change log for the API** and provide the description as `Adding a caching policy to improve API response time`. Click on **Save**.
+1. On the **Make revision current** window, check the **Post to the Public Change log for the API (1)** and provide the description as `Adding a caching policy to improve API response time` **(2)**. Click on **Save (3)**.
 
-      ![APIM Revision Make Current](media/16.png)
+      ![APIM Revision Make Current](media/E5T2.4S2-0209.png)
 
 1. The new revision is now the current/live one. When you test now, note that the URL no longer contains a specific revision. The old revision is still online and can now be accessed with the `rev` qualifier. 
 
@@ -119,6 +94,9 @@
 --- 
 
 ### Summary
-In this Task, a new revision is added to the Star Wars API in Azure API Management. This revision remains inactive until made current. Then, caching policies are applied to the GET operation of this new revision. Testing the API shows cache-lookup behavior. Finally, the new revision is made the current one, eliminating the need for URL updates for API consumers, illustrating the advantages of revisioning over versioning in APIM.
 
-### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+In this task you created a new revision of an existing API and added a caching policy to it. You then made the new revision the current one.
+
+### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
+
+  ![](../gs/media/api-07.png)
