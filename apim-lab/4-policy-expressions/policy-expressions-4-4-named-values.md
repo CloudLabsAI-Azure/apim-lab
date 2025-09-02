@@ -1,12 +1,15 @@
-## Continuation for Exercise 4,Task 4: Named Values (Read-Only)
+## Exercise 4 Task 4: Named Values
+
+In this task, you will create a Named Value in Azure API Management (APIM) that holds the current timestamp. This Named Value will then be used in the inbound policy of the Calculator API to set a custom header with the current timestamp when an API request is received.
 
 **Named Values** (aka **Properties**) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage `string` constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
-1. Open the `Named values` blade in the resource menu and press **+ Add**.
+1. Navigate to youa **APIM instance** in the Azure portal.From the left menu, select **Named values (1)** under **APIs** and click on **+ Add (2)** to add a new named value.
 
-      ![APIM Named Values](media/api-management.png)
+    ![APIM Named Values](media/E4T4S1-0209.png)
   
-1. Create the new property:
+1. On the Add named value window, enter the following details. 
+
     - Name: **TimeNow** **(1)**
     - Display name: **TimeNow** **(2)**
     - Type: **Plain** **(3)**
@@ -15,19 +18,22 @@
 
       ![APIM Named Values](media/add-name.png)
 
-1. Back in the **APIs** blade, open the **Add two integers** in the Basic Calculator API.
+1. Navigate back in the **APIs (1)** blade, open the **Add (3)** operation in the **Basic Calculator API (2)**.
 
-    ![APIM Named Values](media/k1.png)  
+    ![APIM Named Values](media/E4T4S3-0209.png)  
     
 1. Amend the inbound `set-header` policy by clicking on the pencil icon.
-1. Create a new header by pressing **+ Add header**:
-  
-    - Name: **x-request-received-time**
-    - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))`
-    - Action: **override**
-    - Click **Save**
 
-      ![APIM Named Values](media/k2.png)
+    ![APIM Named Values](media/E4T4S4-0209.png)
+
+1. Create a new header by pressing **+ Add header (1)**:
+  
+    - Name: **x-request-received-time (2)**
+    - Value: `@(DateTime.UtcNow.ToString("MM/dd/yyyy h:mm:ss tt"))` **(3)**
+    - Action: **override (4)**
+    - Click **Save (5)**
+
+      ![APIM Named Values](media/E4T4S5-0209.png)
       
     - The corresponding XML in the *Code editor* view should look like this: 
 
@@ -48,7 +54,7 @@
 
 1. Test the operation by selecting the **Starter** or **Unlimited** product scope. 
 
-1. Examine the backend trace to find the added header with the evaluated named value:
+1. Examine the backend trace to find the added header with the evaluated named value. On the Test tab, click on **Trace (1)** and then **Trace (2)** from the top menu and select **Backend (3)**.
 
     ```json
     {
@@ -56,9 +62,9 @@
       "value": "12/30/2021 6:10:47 PM"
     }
     ```
-   ![](./media/trace01.png)
+   ![](./media/E4T4S7-0209.png)
 
-   ![](./media/trace02.png)
+   ![](./media/E4T4S7.2-0209.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -69,6 +75,9 @@
 ---
 
 ## Summary
-In this task, a Named Value (TimeNow) with the current timestamp is created in Azure API Management (APIM). This value is then used to dynamically set the "x-request-received-time" header in the Calculator API's inbound policy, resulting in the header being populated with the current timestamp when testing the API operation.
 
-### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+In this task, you created a Named Value in Azure API Management (APIM) to hold the current timestamp. You then used this Named Value in the inbound policy of the Calculator API to set a custom header with the current timestamp when an API request is received.
+
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
+
+  ![](../gs/media/api-07.png)

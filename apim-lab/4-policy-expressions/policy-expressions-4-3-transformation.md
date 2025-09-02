@@ -1,26 +1,28 @@
-## Continuation for Exercise 4,Task 3: Transformation policies
+## Exercise 4 Task 3: Transformation policies
+
+In this task, you will explore and apply various transformation policies to your APIs. You will learn how to modify API responses and requests using find-and-replace, conditional logic, format conversion (XML to JSON), header manipulation, and dynamic parameter updates. These techniques help tailor API behavior to meet different requirements and improve compatibility, security, and flexibility.
 
 ### Task 3.1: Transformation - replace string
 
 The **find-and-replace** policy finds a substring in a request or response and replaces it with a different string.
 
-1. Open **APIs (1)** and click the **Colors API (2)**, then select the **Get random color (3)** operation.
+1. From your Azure API Management instance, open **APIs (1)** and click the **Colors API (2)**, then select the **Get random color (3)** operation.
 
       ![APIM Policy Find & Replace](media/15.png)
   
-1. In the **Outbound processing (1)** section, select **Policy code editor** with symbol **</>**.
+1. In the **Outbound processing (1)** section, select **Policy code editor** symbol **</> (2)**.
 
       ![APIM Policy Find & Replace](media/ca.png)
   
-1. Place the cursor after the `<base />` element in the `<outbound>` section.
+1. Place the cursor after the `<base />` **(1)** element in the `<outbound>` section and click on the **Show snippets (2)** button in the top right corner.
 
-      ![APIM Policy Find & Replace](media/mapi2.png)
+      ![APIM Policy Find & Replace](media/E4T3.1S3-0209.png)
 
-1. Click on **Show snippets** present in the top right corner, then select the **Find and replace string in body** transformation policy.  
+1. From the Show snippets dorpdown, select the **Find and replace string in body** transformation policy which will insert the `<find-and-replace>` element in the `<outbound>` section. 
 
       ![APIM Policy Find & Replace](media/mapi39.png)
 
-1. Fill in the **`from` and `to` (1)** values accordingly and **Save (2)** the policy.
+1. Enter **blue** for the `from` value and **green** for the `to` value in the find and replace element. Click on Save (2). Your outbound section should now look like below.
 
      ```xml  
     <outbound>
@@ -32,7 +34,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
       ![APIM Policy Find & Replace](media/bluegreen.png)
 
-1. Invoke the API using the Unlimited subscription key.
+1. Go back to the tab where you have the **Colors** API test console open. Invoke the API using the Unlimited subscription key.You should see that the color blue is replaced with green.
 
       ![APIM Policy Find & Replace](media/greena.png)
 
@@ -47,7 +49,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
 ### Task 3.2: Transformation - conditional
 
-Policies can be applied very granularly. In this example, you are modifying the **Star Wars** API to return a limited set of information if the caller is using the **Starter** subscription. Other products, such as the **Unlimited** subscription, will receive the full response.  
+Policies can be applied very granularly. In this task, you are modifying the **Star Wars** API to return a limited set of information if the caller is using the **Starter** subscription. Other products, such as the **Unlimited** subscription, will receive the full response.  
 
 The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions#ContextVariables) that is implicitly available in every policy expression provides access to the `Response` and `Product` below. 
 
@@ -55,13 +57,13 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
   ![APIM Policy Transform Starter Product](media/note.png)
 
-1. Click **Star Wars (1)** API, then select the **Get People By Id (2)** operation and then open **Policy code editor (3)** under **Outbound processing**.
+1. From your **Azure API Management** instance, click **Star Wars (1)** API, then select the **Get People By Id (2)** operation and then open **Policy code editor (3)** under **Outbound processing**.
 
       ![APIM Policy Transform Starter Product](media/19a.png)
   
 1. Similarly to the **Colors** API, we will add the outbound policy to conditionally change the response body. Replace the existing entries in the operation with the entire `<policies>` code below and click **Save**. 
 
-    >Note that the inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
+    >**Note:** The inbound `Accept-Encoding` header is set to `deflate` to ensure that the response body is not encoded as that causes the JSON parsing to fail.  
 
     ```xml
         <policies>
@@ -102,27 +104,31 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
       </policies>
     ```
 
-1. Test the API on the **Test** **(1)** tab with **id** 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
+1. Test the API by going to the **Test** **(1)** tab, enter the **id** as 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
 
       ![APIM Policy Transform Unlimited Product](media/set-people-id.png)
 
 1. With **Starter** or **None** product scope:
 
-      ![APIM Policy Transform Unlimited Product](media/20a.png)
+      ![APIM Policy Transform Unlimited Product](media/E4T3.2S4-0209.png)
 
 1. With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response.
 
-      ![APIM Policy Transform Unlimited Product](media/21a.png)
+      ![APIM Policy Transform Unlimited Product](media/E4T3.2S5-0209.png)
 
       > **Note:** If you encounter with **401 error**, switch to the **Settings** tab, **uncheck** Subscription required, and press **Save** at the bottom of the page and reperform step 3.
 
-### Task 3.3: Transformation - XML to JSON (Read-Only)
+### Task 3.3: Transformation - XML to JSON 
 
-A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Basic Calculator** API that returned an XML response. 
+A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this task we are going back to the **Basic Calculator** API that returned an XML response. 
 
-1. On **Design tab (1)**, select **Add two integers operation (2)**, then in **Outbound processing (3)** section click on **Policy code editor `</>` (4)** to transform the response body to JSON.
+1. From you **Azure API Management** instance, select the **Basic Calculator API**. 
 
-      ![](media/d.png)
+1. On **Design tab (1)**, select **Add (2)** operation, then in **Outbound processing (3)** section click on **Policy code editor `</>` (4)** to transform the response body to JSON.
+
+      ![](media/E4T3.3S2-0209.png)
+
+1. Add the following outbound policy to transform the XML response to JSON and click on **Save**.
 
     ```xml
     <outbound>
@@ -131,19 +137,21 @@ A frequent requirement is to transform content, especially to maintain compatibi
     </outbound>
     ```
 
-      ![APIM Policy Find & Replace](media/mapi1.png)
-   
-1. Click on **Save**.
+      ![APIM Policy Find & Replace](media/E4T3.3S3-0209.png)
 
 1. Test the API and examine the response. Note that it's now JSON.
 
-      ![APIM Policy Transform XML to JSON](media/22.png)
+      ![APIM Policy Transform XML to JSON](media/E4T3.3S4-0209.png)
 
-### Task 3.4: Transformation - Delete response headers (Read-Only)
+### Task 3.4: Transformation - Delete response headers
+
+In this task, you will remove specific response headers from the **Basic Calculator** API.
 
 A frequent requirement is to remove headers, especially ones that return security-related or superfluous information.
 
-1. Add an outbound policy to the same **Basic Calculator** API operation to remove specific response headers and click on **Save**.
+1. Go back to the same **Basic Calculator** API. **Add** operation and open the **Policy code editor** under **Outbound processing**.
+
+1. Add the following outbound policy **(1)** to the **Add** operation to remove specific response headers and click on **Save (2)**.
 
     ```xml
     <outbound>
@@ -153,17 +161,23 @@ A frequent requirement is to remove headers, especially ones that return securit
         <set-header name="x-powered-by" exists-action="delete" />
     </outbound>
     ```
-      ![APIM Policy Find & Replace](media/mapi4.png)
+      ![APIM Policy Find & Replace](media/E4T3.4S2-0209.png)
 
-1. Test the same **Add two integers** operation and examine the response, which now no longer contains the two headers. See above screenshot for how it looked prior.
+1. Test the same **Add** operation and examine the response.
 
-      ![APIM Policy Delete Response Header](media/23.png)
+      ![APIM Policy Delete Response Header](media/E4T3.4S3-0209.png)
 
-### Task 3.5: Transformation - Amend what's passed to the backend (Read-Only)
+### Task 3.5: Transformation - Amend what's passed to the backend
+
+In this task, you will modify the query string parameters and headers sent to the backend service.
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
-1. Back in the same **Calculator** API operation, select the **Add two integer opertation** and add **inbound Processing** policies to modify the query string and headers and click on **Save**.
+1. Back in the same **Basic Calculator (1)** API operation, from the **Design (2)** tab select the **Add (3)** operation and add **inbound Processing (4)** policies to modify the query string and headers. 
+
+    ![APIM Policy Find & Replace](media/E4T3.5S1-0209.png)
+
+1. Enter the following inbound policy **(1)** to modify the query string and headers and click on **Save (2)**.
 
     ```xml
     <inbound>
@@ -176,24 +190,26 @@ Query string parameters and headers can be easily modified prior to sending the 
         </set-header>
     </inbound>
     ```
-      ![APIM Policy Find & Replace](media/mapi5.png)
 
-1. Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. If Tracing is not enabled, press **Enable Tracing**, and on the Pop-up select **Enable Tracing for one hour**.
+    ![APIM Policy Find & Replace](media/E4T3.5S2-0209.png)
 
-      ![](media/trace.png)
+1. Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. 
 
-1. In the **Trace tab**, select **Backend**.
+    >**Note:** If Tracing is not enabled, you will receive a pop up to enable it, select **Enable Tracing for one hour**.
 
-      ![APIM Policy Amend Backend Call](media/24.png)
+1. In the **Trace tab (1)**, select **Backend (2)**.
 
-      ![APIM Policy Find & Replace](media/mapi6.png)
+      ![APIM Policy Amend Backend Call](media/E4T3.5S4-0209.png)
 
-      ![APIM Policy Find & Replace](media/mapi7.png)
+      ![APIM Policy Find & Replace](media/E4T3.5S4.1-0209.png)
+
+      ![APIM Policy Find & Replace](media/E4T3.5S4.2-0209.png)
 
 
 ---
 ## Summary
-In these transformation tasks, you implemented various policies in Azure API Management:
+
+In the above transformation tasks, you implemented various policies in Azure API Management:
 
 1. You applied find-and-replace policies to modify response strings in the Colors API.
 
@@ -203,4 +219,6 @@ In these transformation tasks, you implemented various policies in Azure API Man
 
 1. Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
 
-### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
+
+  ![](../gs/media/api-07.png)

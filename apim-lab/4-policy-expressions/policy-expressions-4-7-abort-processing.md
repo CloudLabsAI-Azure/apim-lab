@@ -1,15 +1,16 @@
-## Continuation for Exercise 4,Task 7: Abort processing policy (Read-Only)
+## Continuation for Exercise 4,Task 7: Abort processing policy
 
-### Aborting the processing
+In this task, you will learn how to use the `return-response` policy to abort processing and return a custom response. 
 
 The ability to terminate a response gracefully is of importance in a number of cases such as error handling or business logic. Using the `return-response` policies short-circuits the request and yields a response that often does not originate from the backend. Consider what general situations may make sense without shifting too much business logic into APIM.
 
-1. Open **Calculator** API and Select **Design** Tab
-1. Open the **Add two integers** operation.  
-1. Naviage to the **Inbound processing** tab and open the **Code View**.
-1. Add the **inbound** policy to test for a condition (just `true` for our example) and click on **Save**.
+1. From the APIM instance, open **Basic Calculator (1)** API and open the **Add (2)** operation from the **Design** Tab
 
-    ![](media/Pg-16.png)
+1. Naviage to the **Inbound processing** tab and open the **Code View (3)**.
+
+    ![](media/E4T7S2-0209.png)
+
+1. Add the **inbound (1)** policy to test for a condition (just `true` for our example) and click on **Save (2)**.
   
     ```xml
     <inbound>
@@ -36,17 +37,26 @@ The ability to terminate a response gracefully is of importance in a number of c
         </set-header>
     </inbound>
     ```
+
+    ![](media/E4T7S3-0209.png)     
+     
       > **Note:** Click on **Save** when the warning pop-up appears.
 
-1. Invoke the API. 
-1. Observe the 500 error.
+1. Test the operation and observe that you receive a 500 Internal server error. 
 
-    ![APIM Policy Abort Response](media/39.png)
+    ![APIM Policy Abort Response](media/E4T7S4-0209.png)
 
-  ### Clean Up
+### Clean Up
 
-  Now that you have seen how to gracefully terminate a request with a response, it is time to clean up the code to prevent a downstream impact in subsequent labs. **Please remove the `<choose>` logic above to let all requests flow again, then save the changes.**
+  Now that you have seen how to gracefully terminate a request with a response, it is time to clean up the code to prevent a downstream impact in subsequent labs.
+  Open the Inbound polic of the **Add** operation and Please remove the `<choose>` logic above to let all requests flow again, then save the changes.
 
-  ![](./media/remove.png)
+  ![](./media/E4T7cleanup-0209.png)
 
-### Now, click on Next from the lower right corner to move on to the next page.
+## Summary
+
+In this task, you learned how to use the `return-response` policy to abort processing and return a custom response. You successfully tested the policy by simulating an internal server error.
+
+### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
+
+  ![](../gs/media/api-07.png)
