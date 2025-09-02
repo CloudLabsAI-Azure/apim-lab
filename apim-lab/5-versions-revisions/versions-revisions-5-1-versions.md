@@ -1,6 +1,6 @@
 ## Exercise 5: Version and Revisions
 
-## Estimated Duration: 50 minutes
+## Estimated Duration: 50 Minutes
 
 ## Overview
 
@@ -99,3 +99,4 @@ In this task, you created a new version of an existing API. You also tested the 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 5.
 
   ![](../gs/media/api-07.png)
+
