@@ -1,18 +1,16 @@
-## Continuation for Exercise 9,Task 3: API Proxy to Serverless
+## Exercise 9 Task 3: API Proxy to Serverless
+
+In this task, we will show you how to deploy serverless services and expose them via Azure API Management.
 
 Azure Serverless (Functions and Logic Apps) can be configured to benefit from the advantages of Azure API Management.
 
 ### Task 3.1: Azure Functions
 
-1. Create a simple function that is Triggered by an **HTTP Request**.
+1. Search and select for **Function App**  in the portal, click on **Create**. Select **Consumption (1)** option and click on **Select (2)**.
 
-2. Search for **Function App**  in the portal, click on **Select** and select **Consumption**.
-   
-   ![](media/Pg28-funcapp.png)
+   ![](media/E9T3.1S1-0309.png)
 
-   ![](media/api20a.png)
-
-4. Enter the following details:
+1. On the **Create Function App** page, enter the following details:
 
    - Subscription: Select the default subscription (1)
    - Resource group: **apim-rg (2)**
@@ -24,19 +22,17 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
     ![](media/func-1712634.png)
 
-5. On the **Review + Create (8)** tab, click on **Create**.
-
-6. Once the Resource is created click on **Go to Resource**.
+1. On the **Review + Create (8)** tab, click on **Create**.  Once the Resource is created click on **Go to Resource**.
    
-7. Open Visual Studio Code from desktop.
+1. Open Visual Studio Code from your LabVM.
 
-9. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
+1. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
 
       ![](media/a.png)
 
-10. Please follow these steps after clicking on Create Function:
+1. Please follow these steps after clicking on Create Function:
     
-    - Navigate to `C:/LabFiles/functions` and click on the **functions** folder.
+    - Navigate to `C:/LabFiles/` and select the **functions** folder.
     - Select a language : **C#**
     - Select a .NET runtime : **.NET 8.0 Isolated LTS**
     - Select a template for your project's first function : **HTTP trigger**
@@ -45,23 +41,13 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
     - AccessRights: **Function**
     - Select how you would like to open your project: **Open in current window**
 
-11. Click on **Yes, i trust the authors** when prompted.
+1. Click on **Yes, i trust the authors** when prompted.
 
        ![](media/api14.png)
 
-12. Add the below mentioned code in the existing code as shown in the image below. Click on `Ctrl+S`.
+1. Replace the code in the `GetRandomColor.cs` file with the below mentioned code. 
 
       ```c#
-      //string[] strColors = { "blue", "lightblue", "darkblue" };
-      string[] strColors = { "green", "lightgreen", "darkgreen" };
-   
-      Random r = new Random();
-      int rInt = r.Next(strColors.Length);
-   
-      return  (ActionResult)new OkObjectResult(strColors[rInt]);
-      ```
-
-      ```C#
       using Microsoft.AspNetCore.Http;
       using Microsoft.AspNetCore.Mvc;
       using Microsoft.Azure.Functions.Worker;
@@ -93,51 +79,57 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
+      ![](media/E9T3.1S8-0309.png)
 
-       ![](media/T3.1S11.png)
-   
-13. Click on **Deploy to Azure** and follow the below steps:
+1. After replacing the code, save the file by clicking on **File** and then **Save** or you can use the shortcut **Ctrl+S**.
 
-       ![](media/api50.png)
-    
-    **Note:** If you recieve an error mentioning you are not sign in to Azure, click on Sign in from the Resources dropdown and use the environment credentials to login, and then click on Deploy to Azure. 
-     
+1. Click on the **Azure tab (1)** in VS Code and select **Sign in to Azure (2)** option.
+
+   ![](media/E9T3.1S10-0309.png)
+
+1. On the Visual Studio Code pop-up, click on **Allow**.
+
+   ![](media/E9T3.1S11-0309.png)
+
+1. Use the Azure credentials provided in the environment to login.
+
+   >**Note:** On the Automatically Sign in to all desktop apps and websites on this device? prompt, select **No, this app only**.
+
+1. Now, we are going to publish the function to Azure. Navigate to the **Azure tab** in VS code. Click on the **Azure functions (1)** icon and select **Deploy to Azure... (2)**.
+
+      ![](media/E9T3.1S12-0309.png)
+         
     - Select a function app: **func-<inject key="Deployment ID" enableCopy="false" />** 
     - Click on **Deploy** when prompted.
     - Wait until the deployment is succeeded
 
          ![](media/api13.png)
 
-         ![](media/func01.png)
+         ![](media/E9T3.1S13-0309.png)
 
 15. Lets add the function to Azure API Management. Navigate back to the **API Management service**, in the **API blade (1)** select **+ Add API (2)** and the **Function App tile (3)**.
 
        ![](media/api12.png)
 
-   - Select **Full**
-   - Click on the **Browse** button to get a list of Functions in the subscription
+1. On the **Create from Function** page select **Full** and click on the **Browse** button to get a list of Functions in the subscription
 
       ![](media/06a.png)
 
-   - Select the Function App and then the Function
+1. In the **Import Azure functions** page, click on **Select** on the right side. On the Select Azure Function app window, select your **Function App (1)** and click on **Select (2)**. Then select the **Function (3)** and click on **Select (4)**.
 
-      ![](media/07a.png)
+      ![](media/E9T3.1S16-0309.png)
 
-      ![](media/08a.png)
+      ![](media/E9T3.1S16.1-0309.png)
 
-   - Amend the Names / Descriptions, URL suffix, and select the **Starter** and **Unlimited** for the Products
+1. You can keep Name / Descriptions, URL suffix as default and select the **Starter** and **Unlimited** for the Products. Then click on **Create**.
 
-      ![](media/09a.png)
+      ![](media/E9T3.1S17-0309.png)
 
-   - Click on **Create**
-   - As previously added CORS policy
+1. Validate the function works - either from the Azure management portal or the developer portal: Click **Test** (1), select **GET GetRandomColor** (2), and click **Send** (3).
 
-   - Validate the function works - either from the Azure management portal or the developer portal: Click **Test** (1), select **GET GetRandomColor** (2), and click **Send** (3).
+   ![](media/10a.png)
 
-
-      ![](media/10a.png)
-
-      ![](media/11a.png)
+   ![](media/11a.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -148,25 +140,23 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 ### Task 3.2: Azure Logic Apps
 
-- Create a simple logic app that is Triggered by an HTTP Request
+1. We will be creating a simple logic app that is Triggered by an HTTP Request
 
-1. Search for **Logic App** in the portal, click on **Add** and select **Consumption**.
+1. Search for **Logic App** in the Azure portal search bar and select it and click on **Add (1)**. On the Create Logic App page, click on **Consumption (3)** and **Select (3)**.
 
-   ![](media/Pg28-logicapp.png)
+   ![](media/E9T3.2S2.1-0309.png)
 
-   ![](media/api30.png)
+   ![](media/E9T3.2S2.2-0309.png)
   
-1. Enter the following details:
+1. On the **Create Logic App (Multi-tenant)** page, enter the following details:
 
    - Subscription: Select the default subscription (1)
    - Resource group: **apim-rg (2)**
    - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />** **(3)**
-   - Region : Select the regions you have used for previous exercises **(4)**
-   - Click on **Review + create (5)**.
+   - Region : Select the regions you have used for previous task **(4)**
+   - Click on **Review + create (5)** then click on **Create**.
 
       ![](media/api11.png)
-
-1. Click on **Create**.
 
 1. Once the Resource is created click on **Go to Resource**, from the left menu under Development Tools select **Logic app designer** and click on **Add a trigger (2)**.
 
@@ -174,9 +164,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. In the logic app designer **search (1)** and **select (2)** **when a HTTP request is received**.
 
-   ![](media/api40.png)
+   ![](media/E9T3.2S5-0309.png)
 
-   - In the Request body JSON Schema **insert the following JSON (1)**, and select **+Add an Action (2)**.
+   - In the Request body JSON Schema **insert the following JSON (1)**. Click on + icon in the designer and select **+ Add an Action (2)**.
 
       ```
       {
@@ -190,28 +180,33 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
-      ![](media/apim9.png)
-      ![](media/apim9a.png)
+      ![](media/E9T3.2S5.2-0309.png)
 
-1. Search for **Azure Functions**, and select the **Azure function** that you have created previously.
+      ![](media/E9T3.2S5.3-0309.png)
 
-   ![](media/api17.png)
+1. Search for **Azure Functions (1)**, and select the **Azure function (2)** that you have created previously.
 
-   ![](media/E9T3.2S6-2.png)
+   ![](media/E9T3.2S6-0309.png)
+
+1. Now select the **Function App (1)** and the **Function (2)** and click on **Add action (3)**.
+
+   ![](media/E9T3.2S6.2-0309.png)
 
 1. Add a new step to send e-mail, search for **Send an email (1)**, and select **send an email (v2) (2)** under Office 365 Outlook. Click on **Sign in** and sign in using the environment credentials
 
    ![](media/api18a.png)
 
    - **To**: Specify your Email address, i.e. **<inject key="AzureAdUserEmail"></inject>** to receive the e-mail.
+
    - **Subject**: **Color**
-   - **Body**: type **msg**, **:** and click on add dynamic content, select **msg**, type **Color**, **:** and click on add dynamic content, search **body** and select **body** which present in **Azure function**.
 
-        ![](media/api18.png)
+   - **Body**: type **msg (1)**, **:** and click on add dynamic content **(2)**, select **msg**. Similarly type **Color**, **:** and click on add dynamic content, search **body** and select **body** which present in **Azure function**.
 
-        ![](media/E9T3.2S7-2.png)
+        ![](media/E9T3.2S8.2-0309.png)
 
-1. Select **+ New step**, search and select **Response**, now **save** the logic App.
+        ![](media/E9T3.2S8.3-0309.png)
+
+1. Select **+** to add a new action, search and select **Response**, now **save** the logic App.
 
    ![](media/T3.2S8a.png)
 
@@ -223,7 +218,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
       }
       ```
 
-1. Lets add the function to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
+1. Lets add the logic app to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
 
    ![](media/addapi.png)
 
@@ -235,25 +230,25 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/logicapp.png)
 
-   - On the **Create from Logic App**, select **Full**. Amend the Names / Descriptions, Add URL suffix as **logicapp**, select the Products(Starter, Unlimited), and select **Create**.
+   - On the **Create from Logic App**, select **Full**. you can keep the Name / Descriptions, Add URL suffix as **logicapp**. Select the Products (Starter, Unlimited), and select **Create**.
 
       ![](media/create.png)
 
-    - As previously add CORS policy
 
-   - Validate the Logic App works - either from the Azure management portal or the developer portal. Click **Test** (1), select **GET GetRandomColor** (2), and click **Send** (3).
+
+1. Validate the Logic App works - either from the Azure management portal or the developer portal. Click **Test** (1), select **GET GetRandomColor** (2), and click **Send** (3).
 
       ![](media/18a.png)
 
       ![](media/19a.png)
 
-   - Go to **Run history**, Click the latest run and verify all steps in the flow are completed successfully.
+1. Navigate to your logic app. Go to **Run history** under Development tools from the left menu. Click the latest run and verify all steps in the flow are completed successfully.
 
       ![](media/20a.png)
 
-   - Check the email was sent
+1. Login to [outlook](https://www.microsoft.com/en-gb/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f&sdf=0) using the Azure credentials and check the email was sent
 
-      ![](media/21.png)
+      ![](media/email.png)
 
 --- 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -264,6 +259,9 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    <validation step="c60e228d-7a4a-49bb-a8da-dfa8c1415230" />
 
 ## Summary
+
 In this task, you have integrated Azure Functions and Logic Apps with Azure API Management, exposing them as APIs with management capabilities. you have configured, tested, and audited these serverless resources within API Management for seamless integration with other services.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 9.
+
+  ![](../gs/media/api-07.png)

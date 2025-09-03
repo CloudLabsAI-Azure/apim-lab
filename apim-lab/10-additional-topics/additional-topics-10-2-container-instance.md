@@ -1,6 +1,8 @@
-## Continuation for Exercise 9,Task 2: Provision your own instance of ColoursWeb/ColoursAPI
+## Exercise 9 Task 2: Provision your own instance of ColoursWeb/ColoursAPI
 
-Some of the demos use the ColoursWeb web application and the ColoursAPI API application. In this lab we will show you how to deploy your own instances of the Colours Web and Colours API. Note - ColoursWeb / ColoursAPI is a new version of ColorsWeb/ColorsAPI ... do not mix the web client and API versions.
+In this task, we will show you how to deploy your own instances of the Colours Web and Colours API. Note - ColoursWeb / ColoursAPI is a new version of ColorsWeb/ColorsAPI, do not mix the web client and API versions.
+
+Some of the demos use the ColoursWeb web application and the ColoursAPI API application. 
 
 The code for the ColoursWeb / ColoursAPI applications is available here:
 
@@ -9,7 +11,7 @@ The code for the ColoursWeb / ColoursAPI applications is available here:
 
 Docker Containers exist for these applications and so provide an easy deployment option.
 
-> IMPORTANT: Due to the new pull restrictions on Docker Hub images, in this lab, we will be using the GitHub registry
+> IMPORTANT: Due to the new pull restrictions on Docker Hub images, in this exercise, we will be using the GitHub registry
 
 - Github (Colours)
   - `docker pull ghcr.io/markharrison/coloursapi:latest`
@@ -24,33 +26,33 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 1. Open the **Azure Cloud Shell** and choose **Bash**.
 
-     ![Azure Cloud Shell](media/cldshellicon.png)
+     ![Azure Cloud Shell](media/E9T2.1S1-0309.png)
 
-1. The first time Cloud Shell is started will require you to create a storage account.
+1. The first time Cloud Shell is started it will require you to create a storage account.
 
-   - Select **Mount storage account**.
-   - Select the **subscription**, and click **Apply**.
+   - Select **Mount storage account (1)**.
+   - Select the **subscription (2)**, and click **Apply (3)**.
 
-     ![Azure Cloud Shell](media/cldshellicona.png)
+     ![Azure Cloud Shell](media/E9T2.1S2.1-0309.png)
 
-   - Select **I want to create a storage account**, and click on **Next**.
+   - Select **I want to create a storage account (1)**, and click on **Next (2)**.
 
-     ![Azure Cloud Shell](media/cldshelliconb.png)
+     ![Azure Cloud Shell](media/E9T2.1S2.2-0309.png)
 
-   - Select Resource Group: **apim-rg**
-   - Region: **East US**
-   - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" />**
-   - Fileshare name: **apim**
-   - Click on **Create**
+   - Select Resource Group: **apim-rg (1)**
+   - Region: **East US (2)**
+   - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" /> (3)**
+   - Fileshare name: **apim (4)**
+   - Click on **Create (5)**
 
-       ![](media/cldshl-strgaccount.png)
+       ![](media/E9T2.1S2.3-0309.png)
    
 1. We proceed to create a unique identifier suffix for resources created in this Lab:
 
    - Define the existing resource group name
 
      ```
-     APIMLAB_RGNAME=myColorsAppRg
+     APIMLAB_RGNAME=apim-rg
      ```
 
    - Define other variables
@@ -125,13 +127,15 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
       aci-color-web-fernando22287.eastus.azurecontainer.io  Succeeded
       ```
 
+      >**Note:** If the status is showing as pending, wait for a few minutes and run the command again.
+
 1. Once you see the 'Succeeded' message, copy the generated FQDN URL and open it in a new browser tab. You should now see the homepage of the Colours Web application.
 
    >**Note**: If you receive a message stating that the site does not have a secure connection, click on **Continue to site** to proceed.
 
       ![Colours Web](media/02.png)
 
-1. Generate a DNS label that meets the criteria for color-api
+1. Go back to cloudshell, to generate a DNS label that meets the criteria for color-api
   
      ```
      APIMLAB_DNSLABEL_API="aci-color-api-$(echo "$APIMLAB_UNIQUE_SUFFIX" | tr -cd '[:alnum:]' | cut -c 1-53)"
@@ -163,13 +167,18 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    aci-color-api-fernando22287.eastus.azurecontainer.io  Succeeded
    ```
 
-1. Once we have a "Succeeded" message we proceed to navigate to the FQDN. And we should see our home page (Swagger UI) for our Colours API:
+    >**Note:** If the status is showing as pending, wait for a few minutes and run the command again.  
+
+1. Once you see the 'Succeeded' message, copy the generated FQDN URL and open it in a new browser tab. And we should see our home page (Swagger UI) for our Colours API:
 
    >**Note**: If you receive a message stating that the site does not have a secure connection, click on **Continue to site** to proceed.
 
    ![Colours API](media/03.png)
 ---
 ## Summary
+
 In this Task, you have deployed Azure Container Instances (ACI) for both the Colours Web and Colours API applications using GitHub container images. Then you accessed the applications via fully qualified domain names (FQDNs) to verify successful deployment and functionality.
 
-### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 9.
+
+  ![](../gs/media/api-07.png)

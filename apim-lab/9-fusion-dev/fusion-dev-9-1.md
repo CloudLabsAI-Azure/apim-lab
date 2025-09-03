@@ -1,14 +1,14 @@
-# Exercise 8:  Fusion Dev(Read Only)
+# Exercise 8:  Fusion Dev (Read Only)
 
 ### Estimated Duration : 40 minutes
 
-## Lab Overview
+## Overview
 
 In this exercise, you'll create a Star Wars Fan Club mobile application using Power Apps and Azure API Management. You'll connect your member data from an Excel worksheet, integrate Star Wars character information through a custom connector, and customize the app to display favorite character details for each member.
 
-## Lab objectives
+## Objectives
 
-In this lab, you will perform:
+In this exercise, you will perform:
 
 - Task 1: Power Apps and APIM
    - Task 1.1: Update CORS policy
@@ -47,7 +47,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 1.2: Create a custom connector
 
-1. Navigate to the following link: [Power Platform](https://www.microsoft.com/en-us/power-platform/products/power-apps/free)
+1. Navigate to the following link: [Power Platform](https://www.microsoft.com/en-us/power-platform/products/power-apps/free) in a new browser tab.
 
 1. Click on **Start Free**.
 
@@ -59,13 +59,11 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. Enter your password: <inject key="AzureAdUserPassword"></inject> and ensure you are signed up for the free trial.
 
-1. Navigate back to your API management service, from the left pane, click on **Power platform** present under APIs tab and click on **Activate Account**.
+1. Navigate back to your API management service, from the left pane, click on **Power platform (1)** present under APIs section and click on **Create connector (2)**.
 
-   ![](media/mapi95.png)
-  
-1. Select **Create a connector.**
+   ![](media/E8T1.2S5-0309.png)
 
-   ![](media/aa1.png)
+   >**Note:** If you see **Activate account** button, then click on it to activate your Power Platform account and then click on **Create connector**.
 
    > **Note:** The option is expected to appear within an hour. Kindly proceed with the subsequent exercises and revisit this section afterward.
 
@@ -80,7 +78,9 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 2: View your custom connector in Power Platform
 
-1. Go to [https://make.powerapps.com](https://make.powerapps.com/) and sign in.
+In this task, you will view and edit the custom connector that you created in the previous task in Power Platform.
+
+1. Once the connector is created, go to [https://make.powerapps.com](https://make.powerapps.com/) and sign in.
 
 1. Select **More (1)** from the left pane, and click on **Discover all (2)** to see your generated custom connector to your Azure API Management API.
    
@@ -279,6 +279,9 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 --- 
 
 ### Summary
+
 In this exercise, you have integrated the Star Wars API with Azure API Management, exported it as a Power Platform Custom Connector, and created a Canvas App to allow Fan Club members to search and view information about their favorite Star Wars characters.
 
-### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
+
+  ![](../gs/media/api-07.png)
