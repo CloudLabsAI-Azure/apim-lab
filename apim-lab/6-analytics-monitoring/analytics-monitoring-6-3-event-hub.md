@@ -1,6 +1,6 @@
 ## Exercise 6 Task 3: Event Hub Overview
 
-In this task you will be creating an Azure Event Hub and will integrate it with your Azure API Management instance.
+In this task, you will create an Azure Event Hub and integrate it with your Azure API Management instance.
 
 [Azure Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/#overview) is a fully managed, real-time data ingestion service. Millions of events per second can be aggregated to build dynamic data pipelines. 
 
@@ -16,9 +16,9 @@ An Event Hubs namespace provides a unique scoping container in which you create 
 
     ![Select Event Hubs in Portal](media/11a.png)
 
-1. Click on **Create** and on the Create Namespace page. enter the following details:
+1. Click on **Create** and on the Create Namespace page. Enter the following details:
 
-    - Subscription : Select the default subscription **(1)**
+    - Subscription: Select the default subscription **(1)**
     - Resource Group : Select **apim-rg (2)**
     - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
     - **Location** : Select the region of your APIM instance **(4)**.
@@ -26,7 +26,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
     - **Throughput Units** : Leave as default **(6)**. 
     - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
       
-        ![Create an Event Hub Namespace](media/create-eventhub-1005a.png)
+      ![Create an Event Hub Namespace](media/create-eventhub-1005a.png)
 
 1. Once it has been created, select **Go to resource** and confirm that you see the **Event Hubs Namespace** page similar to the following:   
       
@@ -43,13 +43,13 @@ An Event Hubs namespace provides a unique scoping container in which you create 
 
 ### Task 3.2: Create an Event Hub
 
-We will create an Event hub to receive logs from our APIM. To create an event hub within the namespace, follow these steps:
+We will create an Event Hub to receive logs from our APIM. To create an event hub within the namespace, follow these steps:
 
 1. From the **Event Hubs Namespace**, go to **Event Hubs (1)** under Entities and select **+ Event Hub (2)**
    
     ![Add Event Hub](media/E6T3.2S1-0309.png)
 
-1. On the **Create Event Hub** page, type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** , then select **Review + Create**, and click on the **Create**. 
+1. On the **Create Event Hub** page, type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (1)** , then select **Review + Create (2)**, and click on the **Create**. 
 
       ![Create Event Hub](media/E6T3.2S2-0309.png)
 
@@ -234,4 +234,5 @@ In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) f
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/api-07.png)
+
 
