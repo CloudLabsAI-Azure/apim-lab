@@ -74,7 +74,7 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
       >**Note:** The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
-1. Navigate to the **Gateway** in Azure portal, we can see the status in thr **Overview** page.. It will show there is one healthy Gateway Node connected to the Deployment. The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
+1. Navigate to the **Gateway** in the Azure portal, and we can see the status in the **Overview** page.. It will show there is one healthy Gateway Node connected to the Deployment. The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
     ![](media/gateway.png)
 
@@ -88,7 +88,7 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
     ![](media/E9T4.2S2-0309.png)
   
-1. In the Notepad, copy the below URL and replace **Unlimited-Key** with the primary key that you copied in the revious step.
+1. In the Notepad, copy the URL below and replace **Unlimited-Key** with the primary key that you copied in the previous step.
 
     ```  
     https://localhost/colors/random?key=Unlimited-Key
@@ -98,7 +98,7 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 1. We will be using Postman to test the API. Open **Postman** using the shortcut on the Lab VM desktop and click on **Create an account**.
 
-1. Postman will open in web browser to create the account. Use the **Work email: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>**, log in to the postman.
+1. Postman will open in a web browser to create the account. Use the **Work email: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>**, log in to the postman.
 
     > **Note**: If you encounter an error like **"Only alphanumeric characters and hyphens are allowed,"** remove any **'*'** or other special characters from the user name.
 
@@ -106,10 +106,9 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
     ![](media/outlook-signin.png) 
 
-1. After successful sign in, it will open the Postman app on desktop. On the **Welcome to Postman!** page, enter **Odl_User (1)** as **your name**, select your role (2), and click on **Continue (3)**. Click on **Continue with free plan**.
+1. After successful sign-in, it will open the Postman app on the desktop. On the **Welcome to Postman!** page, enter **Odl_User (1)** as **your name**, select your role (2), and click on **Continue (3)**. Click on **Continue with free plan**.
 
     ![](media/postman-0309.png)
-
 
 1. Inside the **Postman**, click on **Workspaces (1)** drpo-down and select **odl-user- (2)** workspace
 
@@ -130,4 +129,4 @@ In this task, you have deployed a self-hosted gateway for Azure API Management, 
 
 ## You have successfully completed the lab
 
-By completing this Azure API Management lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning, and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.
+By completing this **Azure API Management** hands-on lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.

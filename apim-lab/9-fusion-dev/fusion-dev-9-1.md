@@ -90,11 +90,11 @@ In this task, you will view and edit the custom connector that you created in th
 
    ![](media/aaa3.png)
 
-1. You can view the recently created **Star Wars API** custom connecter. From here, select the pencil icon to edit the custom connector.
+1. You can view the recently created **Star Wars API** custom connector. From here, select the pencil icon to edit the custom connector.
 
    ![](media/3.png)
  
-1. On the top left corner, select **1. General** from the drop-down select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
+1. In the top left corner, click on **1. General** from the drop-down and select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
 
    ![](media/def.png)
 
@@ -102,9 +102,9 @@ In this task, you will view and edit the custom connector that you created in th
 
    - **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/people?search=Luke**
        
-      ![](media/aa3.png)
+       ![](media/aa3.png)
 
-1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. To get the sample JSON response, follow the below steps:
+1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. To get the sample JSON response, follow the steps below:
 
    - Navigate back to the **API Management service** in Azure Portal.
    
@@ -118,7 +118,7 @@ In this task, you will view and edit the custom connector that you created in th
 
       ![](media/5.png)
 
-1. Repeat the step-7 to import for the `getpeoplebyid` action. Provide the id as `1`.
+1. Repeat step 7 to import for the `getpeoplebyid` action. Provide the ID as `1`.
 
    >**Note:** Delete if you have other **Actions** Apart from `getpeople` and `getpeoplebyid`.
 
@@ -146,17 +146,17 @@ In this task, you will view and edit the custom connector that you created in th
 
        ![](media/origin001.png)
 
-1. Click on the **tick** mark on the top right which will update the Connector.
+1. Click on the **tick** mark on the top right, which will update the Connector.
 
-1. Select **6.Test**, from the top left corner and click on **+New connection** in the **Connections** section.
+1. Select **6.Test**, from the top left corner, and click on **+New connection** in the **Connections** section.
 
       ![](media/mapi103.png)
 
-      > **Note:** If prompted to provide the subscription key, navigate to Azure Portal and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
+      > **Note:** If prompted to provide the subscription key, navigate to Azure Portal, and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
       ![](media/Pg25-subscriptionid.png)
 
-   - Navigate back to the Power apps page, and paste the subscription key, select **Create**.
+1. Navigate back to the Power Apps page, paste the subscription key, and select **Create**.
 
       ![](./media/addcon01.png)
 
@@ -172,9 +172,9 @@ In this task, you will view and edit the custom connector that you created in th
 
 ### Task 3.1: Connect to the backing data source
 
-1. Login to [Onedrive](https://onedrive.live.com/login/).
+1. Log in to [Onedrive](https://onedrive.live.com/login/).
 
-   > **Note:** Use the following credentials for Onedrive for business.
+   > **Note:** Use the following credentials for OneDrive for Business.
     
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
 
