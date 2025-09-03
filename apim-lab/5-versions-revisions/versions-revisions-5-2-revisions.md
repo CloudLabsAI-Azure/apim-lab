@@ -1,6 +1,6 @@
 ## Exercise 5 Task 2: Create a new revision of an API
 
-In this task, you will create a new revision of the existing Star Wars API version 2.
+In Task 2, you will learn how to create a new revision of an existing API in Azure API Management (APIM). This involves adding a caching policy to improve API performance, testing the changes, and making the new revision the active one. 
 
 ### Task 2.1: Add a new revision
 

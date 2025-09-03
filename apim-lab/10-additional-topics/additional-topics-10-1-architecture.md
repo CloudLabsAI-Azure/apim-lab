@@ -1,8 +1,12 @@
-## Excercise 9 (Read Only)
+## Excercise 9 : Advanced Architecture Features of Azure API Management
 
 ## Estimated Duration: 60 minutes
 
-## Lab objectives
+## Overview
+
+In this exercise, we will explore some of the advanced architecture features of Azure API Management (APIM). We will look at how to deploy a full API Management architecture including backend services, API proxies, and a self-hosted gateway.
+
+## Objectives
 
 You will be able to complete the following tasks:
 
@@ -16,9 +20,9 @@ You will be able to complete the following tasks:
     - Task 4.1: Deploy the Self-hosted Gateway
     - Task 4.2: Testing the API
 
-## Task 1: Architecture Design Session
+## Task 1: Architecture Design Session (Read only)
 
-In this section, we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
+In this task, we provide you with a template architecture diagram for your Azure API Management baseline architecture. We recommend you take the time and answer the following questions:
 
 - What type of APIs are you onboarding to Azure APIM?   
 - What deployment model works for you (no vnet, internal, external)?  
@@ -35,3 +39,7 @@ In this section, we provide you with a template architecture diagram for your Az
 - [drawio editable svg](../../assets/diagrams/apimADSv2.svg)
 - [drawio editable png](../../assets/diagrams/apimADSv2.png)
 - [Visio](../../assets/diagrams/apimADSv2.vsdx) -->
+
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 9.
+
+  ![](../gs/media/api-07.png)

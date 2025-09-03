@@ -1,24 +1,24 @@
-## Continuation for Exercise 6, Task 2: How to integrate Azure API Management with Azure Application Insights
+## Exercise 6 Task 2: Integrating Azure API Management with Azure Application Insights
 
-Azure API Management allows for easy integration with Azure Application Insights - an extensible service for web developers building and managing apps on multiple platforms. This guide walks through every step of such integration and describes strategies for reducing performance impact on your Azure API Management instance.
+In this task you will be creating an Azure Application Insigths and will integrate it with your Azure API Management instance.
 
 ### Task 2.1: Create an Azure Application Insights instance
-
-Before you can use Azure Application Insights, you first need to create an instance of the service. The naming convention for Application Insights is: `appi-<environment>-<region>-<application-name>-<owner>-<instance>`
 
 1. In the search bar of the Azure portal, type **Application Insights (1)**. From the search results, select **Application Insights (2)**.
 
     ![App Insights Create Instance](media/04a.png)
 
-2. Click **+ Create**, then fill in the form.
+2. Click **+ Create**, then on the **Basics** tab, provide the following information:
 
     - Resource Group: **apim-rg (1)**
      
-   - Name: **appi-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** **(2)**
+    - Name: **appi-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />** **(2)**
 
-        ![App Insights Create Instance](media/appi-dev-hol-ms-1794367.png)
+    - Log Analytics Workspace: **Leave as default (3)**
 
-3. Click **Review + Create** **(3)**, followed by **Create**.
+        ![App Insights Create Instance](media/E6T2.1S2-0309.png)
+
+3. Click **Review + Create** **(4)**, followed by **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -31,21 +31,19 @@ Before you can use Azure Application Insights, you first need to create an insta
 
 1. Navigate to your **APIM** instance in the **Azure portal**.
 
-2. From the menu on the left, select **Application Insights** under the **Monitoring** section.
+2. From the menu on the left, select **Application Insights (2)** under the **Monitoring (1)** section and click on **+ Add (3)**
 
-3. Click **+ Add**.
+      ![APIM App Insights Logger](media/E6T2.2S2-0309.png)
 
-      ![APIM App Insights Logger](media/06.png)
+3. On the **Add a logger** window that opens on the right side, select the **Application Insights (1)** resource we created in the previous task and click on **Create (2)**.
 
-4. Select the **Application Insights** resource we created in the previous task and click on **Create**.
-
-     ![APIM App Insights Logger](media/07a.png)
+     ![APIM App Insights Logger](media/E6T2.2S3-0309.png)
    
-5. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
+4. You have just created an Azure Application Insights logger with an instrumentation key. It should now appear in the list.
 
     ![APIM App Insights Logger](media/08a.png)
 
-    > Behind the scenes, a [Logger](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/logger/createorupdate) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
+    > Behind the scenes, a [Logger](https://learn.microsoft.com/en-us/rest/api/apimanagement/logger/create-or-update?view=rest-apimanagement-2024-05-01&tabs=HTTP) entity is created in your Azure API Management instance, containing the Connection String of the Application Insights instance.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -56,29 +54,25 @@ Before you can use Azure Application Insights, you first need to create an insta
 
 ### Task 2.3: Enable Application Insights logging for your API
 
-1. Select **APIs** from the menu on the left.
+1. In your **APIM Instance**, select **APIs (1)** under APIs from the menu on the left.
 
-2. Click on the **Colors** API.
-
-3. Go to the **Settings** tab from the top bar.
+2. Click on the **Colors (2)** API and go to the **Settings (3)** tab from the top bar.
 
 4. Scroll down to the **Diagnostics Logs** section.
 
-5. On the **Application Insights** tab check the **Enable(1)** box.
+5. On the **Application Insights (1)** tab, select the following details and click on **Save (6)**: 
 
-6. In the **Destination (2)** dropdown select the logger you just added in the **Application Insights** blade.
+    - Check the **Enable(2)** box.
+    
+    - **Destination:** select the logger you just added in the **Application Insights (3)** blade.
 
-7. Set sampling to **100 (3)** to capture all events.
+    - **Sampling:** **100 (4)**.
 
-8. Check the **Always log errors (4)** checkbox.
+    - Check the **Always log errors (5)** checkbox.
 
-    ![APIM API App Insights Logger](media/pg21T2.3S8-1005a.png)
+      ![APIM API App Insights Logger](media/E6T2.3S4-0309.png)
 
-9. Click on **Save (5)**.
-
-    > Overriding the default value **0** in the **Number of payload bytes to log** field may significantly decrease the performance of your APIs.
-
-    > Behind the scenes, a [Diagnostic](https://docs.microsoft.com/rest/api/apimanagement/2019-12-01/diagnostic/createorupdate) entity named 'applicationinsights' is created at the API level.
+      > Behind the scenes, a [diagnostic](https://learn.microsoft.com/en-us/rest/api/apimanagement/diagnostic/create-or-update?view=rest-apimanagement-2024-05-01&tabs=HTTP) entity named 'applicationinsights' is created at the API level.
 
 ### What data is added to Azure Application Insights
 
@@ -100,18 +94,23 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
 ### Task 2.4: Viewing Azure Application Insights Data
 
-1. Go back to the **Application Insights** blade and click on the Application Insights instance.
-1. On the left hand side pane, click on the **Transaction search (1)** under **Investigate** to see details on a transactional level.
+1. Navigate back to the **Application Insights** blade in your **APIM instance** and click on the Application Insights instance to open it.
+
+1. On the left hand side pane, click on the **Transaction search (2)** under **Investigate (1)** to see details on a transactional level.
+
+    ![](media/E6T2.4S2-0309.png)
+
 1. In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
+
 1. Unselect **Availability (2)** from Event Types.
 
-    ![APIM API App Insights Logger](media/mapi61.png)
+    ![APIM API App Insights Logger](media/E6T2.4S4-0309.png)
 
     > **Note:** The logs may take up to 30 minutes to appear. Kindly continue with the next exercise and check back later.
 
 ### Performance implications and log sampling
 
-> Logging all events may have serious performance implications, depending on incoming request rate, payload size, etc.
+Logging all events may have serious performance implications, depending on incoming request rate, payload size, etc.
 
 Based on internal load tests, enabling this feature caused a 40%-50% reduction in throughput when the request rate exceeded 1,000 requests per second. Azure Application Insights is designed to use statistical analysis for assessing application performances. It is not intended to be an audit system and is not suited for logging each individual request for high-volume APIs.
 
@@ -120,4 +119,7 @@ Sampling is an effective tool in diagnosing often general operational issues. Fo
 
 Skipping logging of headers and body of requests and responses will also have a positive impact on alleviating performance issues.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 6.
+
+  ![](../gs/media/api-07.png)
+

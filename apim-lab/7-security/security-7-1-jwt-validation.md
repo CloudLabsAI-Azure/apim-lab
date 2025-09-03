@@ -2,11 +2,13 @@
 
 ### Estimated Duration: 50 minutes
 
-## Lab Overview
+## Overview
+
+In this exercise, we will explore some of the security features of Azure API Management (APIM).
 
 APIM focuses heavily on security in all three major areas of the product. Going into detail on each aspect is a large topic entirely of its own. Therefore, in this section we will focus more narrowly on one of the common approaches to secure access to an API.
 
-## Lab objectives
+## Objectives
 
 You will be able to complete the following tasks:
 
@@ -24,24 +26,24 @@ You will be able to complete the following tasks:
 
 ## Task 1: JSON Web Tokens (JWT)
 
-In this lab, we are going to see how to use JSON Web Tokens with your APIs.
+In this task, we are going to see how to use JSON Web Tokens with your APIs.
 
 ### Task 1.1: Creation
 
 JSON Web Tokens are an open-industry standard method for representing claims securely between two parties. More info at <https://jwt.io>. 
 
 Use the following sites:
-1. <https://www.unixtimestamp.com> to get a future date using the Epoch Unix Timestamp, **make sure to add the date or time _at least one hour from the current time_** as the JWT will not work otherwise (e.g. 01/11/2029 = `1862842300`).
+
+1. Copy and open the site <https://www.unixtimestamp.com> in a new browser tab to get a future date using the Epoch Unix Timestamp, **make sure to add the date or time _at least one hour from the current time_** as the JWT will not work otherwise (e.g. 01/11/2029 = `1862842300`).
+
 1. Copy the Unix TImestamp value in a notepad.
 
    ![](media/unix.png)
 
-1. <https://jwt.io> to create a JWT with payload. Scroll down and make the below changes in the **JWT Encoder** section:
-
-    ![](media/unixa.png)
+1. Open the site: <https://jwt.io>, to create a JWT with payload. Scroll down and make the below changes in the **JWT Encoder (1)** section:
 
     - Leave the **Header** as it is.
-    - Use the following **Payload** format and replace the `iat` value with your newly-created Unix timestamp:
+    - Use the following **Payload (2)** format and replace the `iat` **(3)** value with your newly-created Unix timestamp:
 
         ```json
         {
@@ -52,17 +54,15 @@ Use the following sites:
         }
         ```
         
-    - Your configuration should be similar to this now:
+    - Your configuration should be similar to this now **(4)**:
 
-        ![JWT.io Website](media/01a.png)
+        ![JWT.io Website](media/E7T1.1S3-0309.png)
 
-### Task 1.2: Validation (Read-Only)
+### Task 1.2: Validation
 
-1. Back in APIM, open the **Basic Calculator** API and select **All operations**.
+1. Back in APIM instance, open the **Basic Calculator (1)** API and select **All operations (2)**.
   
-1. In the **Code View** add an inbound `validate-jwt` policy with the signing key. Click on **Save**.
-
-   ![](media/Pg23-1.png)
+1. In the **Code View (3)** under Inbound processing, add an inbound `validate-jwt` **(4)** policy with the signing key. Click on **Save (5)**.
 
     ```xml
         <inbound>
@@ -75,23 +75,23 @@ Use the following sites:
         </inbound>
     ```
 
-    ![](media/Pg23-2.png)
+    ![](media/E7T1.2S2-0309.png)    
 
-1. Invoke the **Divide two integers** method on the API from the **Test** tab. Observe the `401` Unauthorized error.
+    ![](media/E7T1.2S2.1-0309.png)
+
+1. Invoke the **Div** operation on the API from the **Test** tab. Observe the `401` Unauthorized error.
 
     ![APIM Request with no JWT](media/03.png)
 
 1. Click on **+ Add Header** in the same Test tab and add the below details:
 
-    - Name: `Authorization`
-    - Value: `Bearer <jwt token>` 
-    - Replace `<jwt token>` with the **encoded** value from <https://jwt.io>
+    - Name: `Authorization` **(1)**
+    - Value: `Bearer <jwt token>` **(2)** 
+    - Replace `<jwt token>` with the **JSON Web Token** value from <https://jwt.io>
   
-        ![APIM Request Add Valid Authorization Header](media/mapi92.png)
+    - Note the bearer token will be shown in the Request payload **(3)** and click on **Send (4)** to test the operation again.
 
-         - Note the bearer token in the Request payload.
-
-        ![APIM Request Add Valid Authorization Header](media/04.png)
+        ![APIM Request Add Valid Authorization Header](media/E7T1.2S4-0309.png)
 
 1. Execute the test once more to see a `200` Success. 
 

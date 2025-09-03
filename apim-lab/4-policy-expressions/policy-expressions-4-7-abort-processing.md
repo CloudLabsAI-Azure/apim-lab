@@ -1,4 +1,4 @@
-## Continuation for Exercise 4,Task 7: Abort processing policy
+## Exercise 4 Task 7: Abort processing policy
 
 In this task, you will learn how to use the `return-response` policy to abort processing and return a custom response. 
 

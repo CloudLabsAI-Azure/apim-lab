@@ -1,6 +1,10 @@
-## Exercise 3 Task 4.1: Calling API and testing Subscription Keys
+## Exercise 3 Task 4: Test Rate Limiting Policy
 
-In this task, you will import and configure another existing [Colors API](https://colors-api.azurewebsites.net/swagger/v1/swagger.json) using the OpenAPI specification. You will then test the API in the Developer Portal and explore how to apply rate limits to different subscription tiers.
+In this task you will import and configure the "Colors API" in Azure API Management, successfully test it in the Developer Portal, and add rate limits to different subscription tiers (Starter and Unlimited).
+
+### Task 4.1: Calling API and testing Subscription Keys
+
+In this task, you will import the Colors API into your API Management instance and test it in the Developer Portal.
 
 1. Navigate back to your **Azure API Management** instance in Azure Portal.
 
