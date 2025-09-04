@@ -1,6 +1,6 @@
 # Exercise 3: Adding APIs
 
-### Estimated Duration: 50 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -105,3 +105,4 @@ In the above tasks, you added the Star Wars API to Azure API Management, configu
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 3.
 
   ![](../gs/media/api-07.png)
+

@@ -1,6 +1,6 @@
 ## Exercise 5: Version and Revisions
 
-## Estimated Duration: 50 Minutes
+## Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -8,9 +8,9 @@ In this exercise, you will learn how to manage versions and revisions of your AP
 
 Versions and revisions provide you with elegant means to safely manage the lifecycle of your APIs. 
 
-Versions of APIs are differentiated by a version identifier (e.g. `v1`, `v2`, etc.) through a versioning scheme such as a version path in the URL, a header, or a query string. Multiple versions can and may often be active at the same time to provide continued service while breaking changes may be introduced in newer versions.
+Versions of APIs are differentiated by a version identifier (e.g., `v1`, `v2`, etc.) through a versioning scheme such as a version path in the URL, a header, or a query string. Multiple versions can and may often be active at the same time to provide continued service, while breaking changes may be introduced in newer versions.
 
-Revisions allow you to safely make _non-breaking_ changes to your API. Developers who consume the API can be given details about the changes. Revisions can safely be tested before being activated for your consumers. Revisions also allow you to rollback changes. 
+Revisions allow you to safely make _non-breaking_ changes to your API. Developers who consume the API can be given details about the changes. Revisions can safely be tested before being activated for your consumers. Revisions also allow you to roll back changes. 
 
 For more information, visit the [Versions & Revisions](https://azure.microsoft.com/en-us/blog/versions-revisions) documentation.
 
@@ -31,7 +31,7 @@ In this Exercise, you will perform:
 
 In this task, you will create a new version of the existing Star Wars API.
 
-Proper version management not only helps organize your API, it also aids in Azure API Management. In this exercise, we are going to version an existing API.
+Proper version management not only helps organize your API, but it also aids in Azure API Management. In this exercise, we are going to version an existing API.
 
 > Good practice: Integrate version management from the beginning with a **v1** or similar identifier. 
 
@@ -55,13 +55,13 @@ Proper version management not only helps organize your API, it also aids in Azur
         ![APIM Version Create](media/E5T1.1S3-0209.png)
 
       - The new version, _v2_, is now added to the Star Wars API. 
-        > Any previous implementation of the newly-versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact on the consumers.
+        > Any previous implementation of the newly versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact on the consumers.
 
           ![APIM Version Created](media/03.png)
 
 ### Task 1.2: Test the new version
 
-> Sometimes, the version creation takes just a little bit of time. If you do not see it immediately, please keep refreshing and ensure you select the appropriate version as per the below instructions.
+> Sometimes, the version creation takes just a little bit of time. If you do not see it immediately, please keep refreshing and ensure you select the appropriate version as per the instructions below.
 
 1. Return to the **Developer portal** in the incognito window. Refresh the page, and then click on **APIs** at the top.
 
@@ -90,7 +90,7 @@ Proper version management not only helps organize your API, it also aids in Azur
 
 ### What Versions Enable
 
-Now that you have created a new version of the API, you have the ability to introduce breaking changes. Oftentimes times a breaking change in a backend API necessitates an API version change in APIM. Leaving a legacy implementation behind to focus on more contemporary API implementations also is a common versioning use case. Whatever the reason may be, Azure API Management provides means to abstract breaking changes in a responsible and safe manner.  
+Now that you have created a new version of the API, you have the ability to introduce breaking changes. Oftentimes times a breaking change in a backend API necessitates an API version change in APIM. Leaving a legacy implementation behind to focus on more contemporary API implementations is also a common versioning use case. Whatever the reason may be, Azure API Management provides a means to abstract breaking changes responsibly and safely.  
 
 ## Summary
 
@@ -99,4 +99,5 @@ In this task, you created a new version of an existing API. You also tested the 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 5.
 
   ![](../gs/media/api-07.png)
+
 
