@@ -18,13 +18,13 @@ An Event Hubs namespace provides a unique scoping container in which you create 
 
 1. Click on **Create** and on the Create Namespace page. Enter the following details:
 
-    - Subscription: Select the default subscription **(1)**
-    - Resource Group : Select **apim-rg (2)**
-    - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
-    - **Location** : Select the region of your APIM instance **(4)**.
-    - **Pricing Tier**: Choose **Basic (5)** for the dropdown.   
-    - **Throughput Units** : Leave as default **(6)**. 
-    - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
+   - Subscription: Select the default subscription **(1)**
+   - Resource Group : Select **apim-rg (2)**
+   - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
+   - **Location** : Select the region of your APIM instance **(4)**.
+   - **Pricing Tier**: Choose **Basic (5)** for the dropdown.   
+   - **Throughput Units** : Leave as default **(6)**. 
+   - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
       
       ![Create an Event Hub Namespace](media/create-eventhub-1005a.png)
 
@@ -234,5 +234,6 @@ In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) f
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/api-07.png)
+
 
 
