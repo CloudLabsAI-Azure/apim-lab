@@ -41,6 +41,13 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
    
     ![APIM Policy CORS All APIs](media/all-api-policy.png)  
 
-### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+## Summary
+
+In this task, you reviewed the pre-configured CORS policy in APIM and ensured that browser-based clients can securely make cross-domain requests to your APIs.
+
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 3.
+
+  ![](../gs/media/api-07.png)
+
 
 
