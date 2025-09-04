@@ -4,8 +4,7 @@
 
 ## Overview
 
-This lab provides a comprehensive introduction to Azure API Management service, guiding you through the essential steps to set up, configure, and optimize API services in Azure. You will learn how to access an API Management instance, customize the Developer Portal, and integrate APIs. The lab ses cover practical scenarios such as importing APIs, applying security policies, monitoring usage, and scaling your architecture for enterprise needs. By completing this lab, you will gain the skills needed to manage APIs efficiently and securely within the Azure ecosystem.
-
+This lab provides a comprehensive introduction to the Azure API Management service, guiding you through the essential steps to set up, configure, and optimize API services in Azure. You will learn how to access an API Management instance, customize the Developer Portal, and integrate APIs. The lab exercises cover practical scenarios such as importing APIs, applying security policies, monitoring usage, and scaling your architecture for enterprise needs. By completing this lab, you will gain the skills needed to manage APIs efficiently and securely within the Azure ecosystem.
 
 ## Objective
 
@@ -29,7 +28,7 @@ Understand how to leverage Azure’s API Management tools to enhance your coding
    - **Analytics & Monitoring**: Implement and utilize tools for tracking API performance and usage, and generate 
      insightful reports. Set up monitoring to detect anomalies, analyze trends, and optimize API performance based on 
      real-time data.
-   - **Security**: Integrate security measures such as OAuth, JWT, and IP restrictions to protect your APIs from 
+   - **Security**: Integrate security measures such as OAuth and IP restrictions to protect your APIs from 
      unauthorized access. Implement robust authentication and authorization practices to safeguard sensitive data and 
      ensure secure interactions.
    - **Fusion Dev**: Utilize Fusion Dev tools to enhance API management, streamline development workflows, and automate 
@@ -72,11 +71,9 @@ The architecture uses Azure API Management to manage and secure APIs. It include
 
 5. **Azure Key Vault**: Stores sensitive information like API keys and certificates securely.
 
-6. **JWT (JSON Web Tokens)**: Manages user authentication and permissions to ensure secure API access.
+6. **Azure Monitor and Application Insights**: Tracks API performance and provides alerts for monitoring and optimization.
 
-7. **Azure Monitor and Application Insights**: Tracks API performance and provides alerts for monitoring and optimization.
-
-8. **Azure Logic Apps**: Automates workflows and integrates with other services based on API events.
+7. **Azure Logic Apps**: Automates workflows and integrates with other services based on API events.
 
 ## Getting Started with Lab
 
@@ -84,7 +81,7 @@ Welcome to your Azure API Management workshop! We've prepared a seamless environ
 
 ## Accessing Your Lab Environment
 
-Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of lab guide to switch to different exercises of the lab guide.
+Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number at the bottom of the lab guide to switch to different exercises in the lab guide.
 
    ![07](media/acc-lab-env-0109.png)
 
@@ -112,17 +109,17 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
    ![](media/zoomin-0109.png)
 
 ## Let's Get Started with Azure Portal
 
-1. In the Lab VM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
+1. In the Lab VM, click on the Azure portal shortcut of the Microsoft Edge browser, which is created on the desktop.
 
    ![09](media/api-08.png)
    
-1. On **Sign into Microsoft Azure** tab you will see login screen, in that enter following email/username and then click on **Next**. 
+1. On the **Sign into Microsoft Azure** tab, you will see the login screen. In that, enter the following email/username and then click on **Next**. 
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    
      ![04](media/azure-signin1-0109.png)
@@ -134,7 +131,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
   
 1. If you see the pop-up **Stay Signed in?**, click No
 
-1. If you see a window for **Let's keep you account secure**, click on **Next** and follow steps to proceed with MFA setup.
+1. If you see a window for **Let's keep your account secure**, click on **Next** and follow steps to proceed with MFA setup.
 
    ![](media/mfa1-0109.png)
 
