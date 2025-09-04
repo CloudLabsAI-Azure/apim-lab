@@ -1,10 +1,10 @@
-# Exercise 4: Configure and implement policy expression to contol API behaviour and enforce rules.
+# Exercise 4: Configure and implement policy expression to control API behaviour and enforce rules.
 
-### Estimated Duration: 50 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 
-In this Ecercise, you will explore and apply different API Management policies such as CORS, caching, transformations, named values, mock responses, and request control.
+In this exercise, you will explore and apply different API Management policies such as CORS, caching, transformations, named values, mock responses, and request control.
 
 ## Objectives
 
@@ -42,4 +42,5 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
     ![APIM Policy CORS All APIs](media/all-api-policy.png)  
 
 ### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
+
 
