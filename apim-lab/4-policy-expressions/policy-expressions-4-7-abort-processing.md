@@ -1,4 +1,4 @@
-## Continuation for Exercise 4,Task 7: Abort processing policy (Read-Only)
+## Continuation for Exercise 4,Task 7: Abort processing policy 
 
 ### Aborting the processing
 
@@ -50,3 +50,4 @@ The ability to terminate a response gracefully is of importance in a number of c
   ![](./media/remove.png)
 
 ### Now, click on Next from the lower right corner to move on to the next page.
+
