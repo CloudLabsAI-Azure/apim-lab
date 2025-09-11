@@ -1,50 +1,56 @@
-## Continuation for Exercise 3, Task 3: Import API using OpenAPI (Read-Only)
+## Exercise 3 Task 3: Import API using OpenAPI 
+
+In this task, you will import an existing API that is hosted locally in your lab VM using the OpenAPI specification. 
 
 Instead of importing operations one-by-one, you can also import a full API. The [OpenAPI specification](https://www.openapis.org/) (aka [Swagger](https://swagger.io)) is a definition format to describe RESTful APIs. The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.
 
-As a demo, we will use an API that offers a simple calculator service : [Calc API](http://calcapi.cloudapp.net)
+1. Navigate back to your **Azure API Management** instance in Azure Portal.
 
-> This is an older API and is only available via `HTTP`. Azure API Management provides a means for fronting access to it via `HTTPS`, which further demonstrates how Azure API Management can help with a secure, uniform facade while the backend implementation can be reworked and upgraded.
+1. From the left menu, navigate to the API's (1) section and click on **+ Add API (2)**. Select **OpenAPI (3)** under Create from definition. 
 
-   ![APIM Calculator API](media2/01.png)
+   ![](media/E3T3S1-0209.png)  
 
-- Navigate back to your Azure API Management instance.
+1. On the **Create from OpenAPI specification** window select **Full (1)** option, enter the following details:
 
-1. On the left menu, open the **APIs** blade.  
-1. Click on **Add API**.  
-1. Under **Create from definition** select **OpenAPI**.
-
-      ![](media/b.png)
+   - OpenAPI specification: Click on **Select a file (2)**, navigate to *C:\Calculator-api* **(3)** location and select the **openapi.json (4)** file and click on **Save (5)**.
    
-1. Select the **Full (1)** option in the **Create from OpenAPI specification** dialog.  
-1. Enter `http://calcapi.cloudapp.net/calcapi.json` **(2)** as the **OpenAPI specification** value. You should subsequently see **Display name**, **Name**, and **Description** populate.  
+      ![](media/E3T3S3.1-0209.png)  
 
-   > **Note the intentional use of `http` instead of `https` as this backend does not presently support `https`.**  
+   - Display name: **Basic Calculator (6)**.
+   - URL Scheme : **Both (7)**.
+   - API URL suffix: **calc (8)**.
+   - Products : Assign **Starter** and **Unlimited (9)**.
+   - Click on **Create (10)**.
 
-1. While the backend service only runs on `HTTP`, we need to **set URL scheme to `Both` (3)** to allow for Azure API Management ingress to occur on HTTPS for callers such as the Developer Portal.  
-1. Set the **API URL suffix** to **calc (4)**  
-1. Assign **Starter** and **Unlimited** **(5)** products.  
-1. Press **Create (6)**.  
-
-      ![APIM Add Calculator API](opeai-api-1.png)
-
+      ![](media/E3T3S3.2-0209.png)
+     
 1. Once the API is created, it will show in the list of APIs along with all of its operations.
 
-   > Ensure that the backend shows as `HTTP`. If that is not the case, navigate to the **Settings** tab and update the **Web service URL** accordingly.
+   ![APIM Add Calculator API](media/E3T3S4-0209.png)
 
-      ![APIM Add Calculator API](media2/03.png)
+1. Now as our **Basic Calculator API** is hosted locally on the Lab VM, we will need to use the Lab VM public IP address to access it. To do this, we will need to change the **Web service URL** of the **Basic Calculator API** to use the Lab VM public IP address. 
 
-1. Back in the Developer Portal, try out the **Basic Calculator** API via the **Add two integers** GET method, then examine the response. Click on **Try it** by accepting the default values and hit **Send**.
+   - First, we navigate to our **apim-rg (1)** resource group and select the **Lab VM-<inject key="Deployment ID" enableCopy="false" /> (2)** and copy the **Public IP address (3)**.
 
-   > **Note**: Ensured you are signed up with your account in the **Developer Portal**.
+      ![](media/E3T3S5.1-0209.png)
 
-   > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
+      ![](media/E3T3S5.2-0209.png)
 
-      ![APIM Developer Portal Calculator API Try It](media2/04.png)
+   - Navigate back to the Azure API Management instance. Go to the **Settings (2)** section of the newly created **Basic Calculator (1)** API and enter the **Web service URL (3)** as `http://<vm-public-ip>:8080` and click on **Save (4)**.
 
-      ![APIM Developer Portal Calculator API Try It](media2/05.png)
+      > **Note**: Ensure to replace `<vm-public-ip>` with the actual public IP address of your Lab VM.
 
-    > Accepting the defaults of `49` and `51` suffices. There's presently an issue where defaults are shown in a dropdown. If you want to change the values, add new `a` and `b` parameters and values, then remove the dropdown values.
+      ![APIM Calculator API Change Backend URL](media/E3T3S5.3-0209.png)
+
+1. Navigate to the Developer Portal and try out the **Basic Calculator** API. Select the **Add (1)** GET method and click on **Try this operation (2)**. Click on the **+ Add parameters (3)** and add two parameters `a` and `b` and enter any integer value for both.
+
+      ![](media/E3T3S6.1-0209.png)
+
+1. Click on **Send (4)** to make the API call. You should get a `200 OK` response with the result of the addition operation.
+
+      ![](media/E3T3S6.2-0209.png)
+
+      ![](media/E3T3S6.3-0209.png)      
 
 1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *OpenAPI Editor (JSON)* option from the dropdown in the Frontend block:
 
@@ -52,27 +58,13 @@ As a demo, we will use an API that offers a simple calculator service : [Calc AP
 
       ![APIM Calculator API Swagger](media2/07.png)
 
----
 
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - If you receive a success message, you can proceed to the next task.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="732c9c59-ced2-4d95-a295-a08a3df0a339" />
-
-## Troubleshooting
-
-### Unable to complete the request
-
-This is likely a mixed-content CORS error in which you are attempting a call to an Azure API Management endpoint that is only set up for *HTTP*. It fails as the Developer Portal runs on *HTTPS*. Please check the setup steps above for the _URL scheme_.
-
-![APIM Calculator CORS Error](../../assets/images/apim-calc-cors-error.png)
-
----
 ## Summary
 
-In this task, you imported the "Calc API" using the OpenAPI specification in Azure API Management, allowing HTTPS access to an HTTP-only backend service. You configured the API, tested it in the Developer Portal, and explored its OpenAPI definition.Then, you added and configured the "Products" feature in Azure API Management, creating a "Gold Tier" product and managing access control for developers and guests, thereby allowing users to subscribe and access the associated APIs and products in the Developer Portal.
+In this task, you imported an existing API using the OpenAPI specification into Azure API Management. You configured the API to point to a locally hosted backend service and successfully tested it through the Developer Portal, demonstrating the ability to manage and consume APIs effectively.
 
-### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 3.
+
+  ![](../gs/media/api-07.png)
+
+
