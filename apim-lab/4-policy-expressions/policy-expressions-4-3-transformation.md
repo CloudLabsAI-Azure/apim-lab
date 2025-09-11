@@ -111,7 +111,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
 ---
 
-### Task 3.3: Transformation - XML to JSON (Read-Only)
+### Task 3.3: Transformation - XML to JSON 
 
 A frequent requirement is to transform content, especially to maintain compatibility with legacy APIs. For this lab we are going back to the **Basic Calculator** API that returned an XML response. 
 
@@ -134,7 +134,7 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
       ![APIM Policy Transform XML to JSON](media/22.png)
 
-### Task 3.4: Transformation - Delete response headers (Read-Only)
+### Task 3.4: Transformation - Delete response headers 
 
 A frequent requirement is to remove headers, especially ones that return security-related or superfluous information.
 
@@ -154,7 +154,7 @@ A frequent requirement is to remove headers, especially ones that return securit
 
       ![APIM Policy Delete Response Header](media/23.png)
 
-### Task 3.5: Transformation - Amend what's passed to the backend (Read-Only)
+### Task 3.5: Transformation - Amend what's passed to the backend 
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
@@ -199,3 +199,4 @@ In these transformation tasks, you implemented various policies in Azure API Man
 1. Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks.
+
