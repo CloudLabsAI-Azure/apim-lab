@@ -29,4 +29,4 @@ The email notification templates are managed within the Azure Management Portal,
 
 ### Click on Next from the lower right corner to move on to the next page for further tasks of Exercise 2
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

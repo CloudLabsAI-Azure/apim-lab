@@ -26,11 +26,13 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
     }
     ```
   
-      ![APIM Policy Mock Frontend](media/E4T5S4-0209.png)
+      ![APIM Policy Mock Frontend](media/p13t5p4.png)
 
 1. Under **Inbound processing** section , click on **Policy code editor** for the **Get Film** Operation.
+
+    ![](media/p13t5p5.png)
   
-1. In the inbound policy editor, add **Mock Response** under **Other policies** after the `<base />` tag and click on **Save**.
+1. In the inbound policy editor, add **Mock Response** **(1)** under **Other policies** after the `<base />` tag and click on **Save (2)**.
 
     ```xml    
     <inbound>
@@ -39,7 +41,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
     </inbound>
     ```
 
-      ![APIM Policy Mock Inbound](media/mapi8.png)
+      ![APIM Policy Mock Inbound](media/p13t5p6.png)
 
 1. Invoke the API from the **Test (1)** tab, click on **Send (2)** to receive a `200` success **(3)** with the mocked film data .
 
@@ -59,4 +61,4 @@ In this task, you created a mock response for the "Get Film" operation in the St
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

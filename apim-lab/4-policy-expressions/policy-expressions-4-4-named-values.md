@@ -4,7 +4,7 @@ In this task, you will create a Named Value in Azure API Management (APIM) that 
 
 **Named Values** (aka **Properties**) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage `string` constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
-1. Navigate to youa **APIM instance** in the Azure portal.From the left menu, select **Named values (1)** under **APIs** and click on **+ Add (2)** to add a new named value.
+1. Navigate to youa **APIM instance** in the Azure portal. From the left menu, select **Named values (1)** under **APIs** and click on **+ Add (2)** to add a new named value.
 
     ![APIM Named Values](media/E4T4S1-0209.png)
   
@@ -14,11 +14,11 @@ In this task, you will create a Named Value in Azure API Management (APIM) that 
     - Display name: **TimeNow** **(2)**
     - Type: **Plain** **(3)**
     - Value: `@(DateTime.Now.ToString())` **(4)**
-    - Click on **save** **(5)**
+    - Click on **Save** **(5)**
 
       ![APIM Named Values](media/add-name.png)
 
-1. Navigate back in the **APIs (1)** blade, open the **Add (3)** operation in the **Basic Calculator API (2)**.
+1. Navigate back in the **APIs (1)** blade, in the **Basic Calculator API (2)**, open the **Add (3)** operation. 
 
     ![APIM Named Values](media/E4T4S3-0209.png)  
     
@@ -52,7 +52,11 @@ In this task, you will create a Named Value in Azure API Management (APIM) that 
       </inbound>
       ```
 
-1. Test the operation by selecting the **Starter** or **Unlimited** product scope. 
+1. Go to the **Test (1)** section. In the Template parameters area, enter any integers **(2)** for parameters **a** and **b**. Then, using either the **Starter** or **Unlimited (3)** product, click **Send (4)**.
+
+    ![](media/p12t4p6(1).png)
+
+    ![](media/p12t4p6.png) 
 
 1. Examine the backend trace to find the added header with the evaluated named value. On the Test tab, click on **Trace (1)** and then **Trace (2)** from the top menu and select **Backend (3)**.
 
@@ -80,4 +84,4 @@ In this task, you created a Named Value in Azure API Management (APIM) to hold t
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
