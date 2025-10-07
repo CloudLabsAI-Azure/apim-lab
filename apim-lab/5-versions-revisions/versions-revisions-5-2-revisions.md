@@ -10,7 +10,7 @@ In Task 2, you will learn how to create a new revision of an existing API in Azu
 
 1. Select the **Revisions (1)** tab and click on **+ Add Revision (2)**
 
-      ![APIM Revisions Menu](media/E5T2.1S2-0209.png)
+      ![APIM Revisions Menu](media/p17t2.1p2.png)
   
 1. On the **Create a new revision of Stars Wars v2** window, enter the description as `Adding a caching policy` **(1)** and click on **Create (2)**.
   
@@ -70,9 +70,9 @@ In Task 2, you will learn how to create a new revision of an existing API in Azu
 
 ### Task 2.4: Make current revision
 
-1. Now, select the **Revisions (1)** tab. Click on the ellipsis for `rev2` **(2)** and select the **Make Current (3)** option.
+1. Now, select the **Revisions (1)** tab. Click on the **ellipsis (...)** for `rev2` **(2)** and select the **Make Current (3)** option.
 
-      ![APIM Revision Make Current](media/E5T2.4S1-0209.png)
+      ![APIM Revision Make Current](media/p17t2.4p1.png)
 
 1. On the **Make revision current** window, check the **Post to the Public Change log for the API (1)** and provide the description as `Adding a caching policy to improve API response time` **(2)**. Click on **Save (3)**.
 
@@ -83,6 +83,8 @@ In Task 2, you will learn how to create a new revision of an existing API in Azu
     > Unlike versioning, revisioning requires no URL updates for the API consumer.
 
       ![APIM Revision Make Current](media/17.png)
+
+      ![APIM Revision Make Current](media/p17t2.4p3.png)
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -99,4 +101,4 @@ In this task you created a new revision of an existing API and added a caching p
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

@@ -19,9 +19,12 @@ For more information, visit the [Versions & Revisions](https://azure.microsoft.c
 In this Exercise, you will perform:
 
 - Task 1: Create a new version of an API
+
    - Task 1.1: Add a new version
    - Task 1.2: Test the new version
+
 - Task 2: Create a new revision of an API
+    
     - Task 2.1: Add a new revision
     - Task 2.2: Add caching
     - Task 2.3: Test the new revision
@@ -39,7 +42,7 @@ Proper version management not only helps organize your API, but it also aids in 
 
 1. From your APIM instance, select the **Star Wars** API.
 
-1. Click on the ellipsis and select **Add version.**
+1. Click on the **ellipsis (...) (1)** and select **Add version (2)**.
 
       ![APIM Versions Add](media/E5T1.1S2-0209.png)
   
@@ -52,7 +55,7 @@ Proper version management not only helps organize your API, but it also aids in 
     - Products: **Starter** and **Unlimited** **(4)** 
     -  Click on **Create**: **(5)** 
 
-        ![APIM Version Create](media/E5T1.1S3-0209.png)
+        ![APIM Version Create](media/p16t1.1p3.png)
 
       - The new version, _v2_, is now added to the Star Wars API. 
         > Any previous implementation of the newly versioned API will simply be set to _Original_. This is a purely organizational change within APIM. The  version continues to operate on the same previous URL without a version identifier - there is no impact on the consumers.
@@ -75,11 +78,15 @@ Proper version management not only helps organize your API, but it also aids in 
 
       ![APIM Developer Portal Version 2](media/E5T1.2S3-0209.png)
 
-1. Test the `GetPeople` **(1)** operation, click on **Try this operation (2)**, then scroll down on the right and click **Send (3)**.
+1. Test the `GetPeople` **(1)** operation, click on **Try this operation (2)**, then add the subscription key you copied earlier in the **Ocp-Apim-Subscription-Key (3)** and scroll down click **Send (4)**.
 
       ![APIM Developer Portal Test Version](media/E5T1.2S4-0209.png)
 
-1. Review the HTTP response that appears below. 
+      ![](media/p16t1.2p4)
+
+1. Review the HTTP response that appears below.
+
+      ![](media/p16t1.2p5)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -98,6 +105,6 @@ In this task, you created a new version of an existing API. You also tested the 
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 5.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
 
 

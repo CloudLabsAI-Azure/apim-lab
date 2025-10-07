@@ -16,9 +16,13 @@ In this task you will be creating an Azure Application Insigths and will integra
 
     - Log Analytics Workspace: **Leave as default (3)**
 
+    - Click **Review + create** **(4)**
+
         ![App Insights Create Instance](media/E6T2.1S2-0309.png)
 
-3. Click **Review + Create** **(4)**, followed by **Create**.
+3. Under the **Review + create** tab, click **Create**.
+
+    ![](media/p19t2.1p3)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -57,6 +61,8 @@ In this task you will be creating an Azure Application Insigths and will integra
 1. In your **APIM Instance**, select **APIs (1)** under APIs from the menu on the left.
 
 2. Click on the **Colors (2)** API and go to the **Settings (3)** tab from the top bar.
+
+    ![](media/p19t2.3p2.png)
 
 4. Scroll down to the **Diagnostics Logs** section.
 
@@ -100,6 +106,10 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
     ![](media/E6T2.4S2-0309.png)
 
+    >**Note:** Click on **See all data in the last 24 hours**, to see the data.
+
+    ![](media/p19t2.4p2.png)
+
 1. In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
 
 1. Unselect **Availability (2)** from Event Types.
@@ -121,5 +131,5 @@ Skipping logging of headers and body of requests and responses will also have a 
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 6.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
 

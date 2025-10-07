@@ -59,4 +59,4 @@ In this task, you learned how to use the `return-response` policy to abort proce
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
