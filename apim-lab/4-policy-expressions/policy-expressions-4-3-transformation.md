@@ -179,7 +179,7 @@ In this task, you will modify the query string parameters and headers sent to th
 
 Query string parameters and headers can be easily modified prior to sending the request on to the backend. 
 
-1. Back in the same **Basic Calculator (1)** API operation, from the **Design (2)** tab select the **Add (3)** operation and add **inbound Processing (4)** policies to modify the query string and headers. 
+1. Back in the same **Basic Calculator (1)** API operation, from the **Design (2)** tab select the **Add (3)** operation and add **Inbound processing (4)** policies to modify the query string and headers. 
 
     ![APIM Policy Find & Replace](media/E4T3.5S1-0209.png)
 

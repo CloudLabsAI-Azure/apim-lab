@@ -20,7 +20,7 @@ You can also learn to personalize layouts and styles from the document reference
 
 The email notification templates are managed within the Azure Management Portal, accessible from the resource menu on the corresponding blade.
 
-1. In the Azure Portal, navigate to the Azure API Management instance, from the left navigation pane, under **Deployment + infrastructure (1)**, click on **Notifications Templates (2)**. 
+1. In the Azure Portal, navigate to the Azure API Management instance, from the left navigation pane, under **Deployment + infrastructure (1)**, click on **Notifications templates (2)**. 
 
 1. Preview the list of available notifications templates, which are customizable.
 

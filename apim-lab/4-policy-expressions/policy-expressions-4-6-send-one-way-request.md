@@ -10,13 +10,13 @@ This example shows a fire-and-forget [send-one-way-request](https://docs.microso
 
 The following policy and payload applies for both examples in this section (webhook and teams). **Please ensure that you replace the value in `<set-url>` with your webhook target URL.** You will identify the URL in either example below.
 
-1. From **Basic Calculator API (1)** ,select the **Add (2)** operation.
+1. From **Basic Calculator API (1)**, select the **Add (2)** operation.
 
-1. In **Outbound processing** section ,open the **Code View (3)**.
+1. In **Outbound processing** section, open the **Code View (3)**.
 
       ![](media/E4T6.1S3-0209.png)
 
-1. Add the `send-one-way-request` policy **(1)** to **Outbound processing** and replace the webhook and payload as required. For demo purposes, we are going to use the payload for a Teams message (even for Webhook.site) and also send the message on every successful request.
+1. Add the `send-one-way-request` policy to **Outbound processing** and replace the webhook and payload as required. For demo purposes, we are going to use the payload for a Teams message (even for Webhook.site) and also send the message on every successful request.
 
     >**Note:** Make sure that **Add** operation is selected.
 
@@ -70,7 +70,7 @@ The following policy and payload applies for both examples in this section (webh
 
       ![](media/p14t6warning.png)
 
-1. Go to the **Test (1)** section. In the Template parameters area, enter any integers **(2)** for parameters **a** and **b**. Click **Send (3)**.
+1. Go to the **Test (1)** section. In the Template parameters area, enter any integers **(2)** for parameters **a** and **b**. Click on **Send (3)**.
 
     ![](media/p14t6p3(1).png)
 

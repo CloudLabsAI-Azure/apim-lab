@@ -24,7 +24,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
    - **Location** : Select the region of your APIM instance **(4)**.
    - **Pricing Tier**: Choose **Basic (5)** for the dropdown.   
    - **Throughput Units** : Leave as default **(6)**. 
-   - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
+   - Select **Review + create (7)** at the bottom of the page, followed by **Create**.
       
       ![Create an Event Hub Namespace](media/p20t3.1p2.png)
 
@@ -49,7 +49,7 @@ We will create an Event Hub to receive logs from our APIM. To create an event hu
    
     ![Add Event Hub](media/E6T3.2S1-0309.png)
 
-1. On the **Create Event Hub** page, type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (1)** , then select **Review + Create (2)**, and click on the **Create**. 
+1. On the **Create Event Hub** page, type a name for your event hub : **evh-logger-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (1)** , then select **Review + create (2)**, and click on the **Create**. 
 
       ![Create Event Hub](media/E6T3.2S2-0309.png)
 

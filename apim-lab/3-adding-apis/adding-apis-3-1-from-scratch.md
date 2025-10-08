@@ -30,7 +30,7 @@ In this task, you will add a new API to your API Management instance from scratc
 
 Instead of developing an API, for this Exercise, you will use the existing [_Star Wars_ API](https://swapi.dev):
 
-1. Navigate to the Azure API Management instance and expand the **API's (1)** section and select **APIs (2)**. Click on **+ Add API (3)** and select the **HTTP - Manually define an HTTP API (4)**.
+1. Navigate to the Azure API Management instance and expand the **APIs (1)** section and select **APIs (2)**. Click on **+ Add API (3)** and select the **HTTP - Manually define an HTTP API (4)**.
 
    ![](media/E3T1S1-0209.png)
 

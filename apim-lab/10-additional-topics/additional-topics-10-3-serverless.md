@@ -29,7 +29,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/p25t3.1p4.png)
 
-1. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function..(3)**.
+1. Click on **Azure shaped icon (1)** and click on **Azure Functions (2)** and select **Create Function...(3)**.
 
       ![](media/a.png)
 
@@ -165,7 +165,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    ![](media/api10.png)
 
-1. In the logic app designer **search (1)** and **select (2)** **when a HTTP request is received**.
+1. In the logic app designer **search (1)** and select  **When a HTTP request is received (2)**.
 
    ![](media/E9T3.2S5-0309.png)
 
