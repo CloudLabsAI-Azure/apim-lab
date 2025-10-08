@@ -83,7 +83,7 @@ Welcome to your Azure API Management workshop! We've prepared a seamless environ
 
 Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will be loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number at the bottom of the lab guide to switch to different exercises in the lab guide.
 
-   ![07](media/acc-lab-env-0109.png)
+   ![07](media/guidetab.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -111,7 +111,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-   ![](media/zoomin-0109.png)
+   ![](media/zoomintab.png)
 
 ## Let's Get Started with Azure Portal
 
@@ -127,7 +127,7 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 1. Now enter the following password and click on **Sign in**.
    * Password: <inject key="AzureAdUserPassword"></inject>
    
-     ![05](media/azure-signin2-0109.png)
+     ![05](media/azpassword.png)
   
 1. If you see the pop-up **Stay Signed in?**, click No
 
@@ -175,6 +175,6 @@ Learner Support Contacts:
  
 Now, click on Next from the lower right corner to move on to the next page.
 
-  ![](media/api-07.png)
+  ![](media/nextpagetab.png)
 
 ### Happy Learning!!

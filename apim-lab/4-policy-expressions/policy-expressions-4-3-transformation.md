@@ -22,7 +22,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
       ![APIM Policy Find & Replace](media/mapi39.png)
 
-1. Enter **blue** for the `from` value and **green** for the `to` value in the find and replace element. Click on Save (2). Your outbound section should now look like below.
+1. Enter **blue** for the `from` value and **green** for the `to` value in the find and replace element. Click on **Save (2)**. Your outbound section should now look like below.
 
      ```xml  
     <outbound>
@@ -104,7 +104,9 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
       </policies>
     ```
 
-1. Test the API by going to the **Test** **(1)** tab, enter the **id** as 1 **(1)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Examine the different responses.
+    ![](media/p11t3.2p2.png)
+
+1. Test the API by going to the **Test** **(1)** tab, enter the **id** as 1 **(2)** and apply the appropriate **Starter** or **Unlimited** **(3)** product scope. Click on **Send (4)**. Examine the different responses.
 
       ![APIM Policy Transform Unlimited Product](media/set-people-id.png)
 
@@ -124,11 +126,11 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
 1. From you **Azure API Management** instance, select the **Basic Calculator API**. 
 
-1. On **Design tab (1)**, select **Add (2)** operation, then in **Outbound processing (3)** section click on **Policy code editor `</>` (4)** to transform the response body to JSON.
+1. On **Design tab (1)**, select **Add (2)** operation, then in **Outbound processing** section click on **Policy code editor `</>` (3)** to transform the response body to JSON.
 
       ![](media/E4T3.3S2-0209.png)
 
-1. Add the following outbound policy to transform the XML response to JSON and click on **Save**.
+1. Add the following outbound policy **(1)** to transform the XML response to JSON and click on **Save (2)**.
 
     ```xml
     <outbound>
@@ -137,9 +139,13 @@ A frequent requirement is to transform content, especially to maintain compatibi
     </outbound>
     ```
 
-      ![APIM Policy Find & Replace](media/E4T3.3S3-0209.png)
+      ![APIM Policy Find & Replace](media/p11t3.3p3.png)
 
-1. Test the API and examine the response. Note that it's now JSON.
+1. Go to the **Test (1)** section and in the Template parameters section, in the value column, add any integers **(2)** for parameters **a** and **b**, and then click **Send (3)**.
+
+    ![APIM Policy Find & Replace](media/p11t3.3p4.png)
+
+1. Now examine the response. Note that it's now JSON.
 
       ![APIM Policy Transform XML to JSON](media/E4T3.3S4-0209.png)
 
@@ -193,7 +199,11 @@ Query string parameters and headers can be easily modified prior to sending the 
 
     ![APIM Policy Find & Replace](media/E4T3.5S2-0209.png)
 
-1. Test the call by using either the **Starter** or **Unlimited** product, click on Trace button and then inspect the result on the **Trace** tab. 
+1. Go to the **Test (1)** section. In the Template parameters area, enter any integers **(2)** for parameters **a** and **b**. Then, using either the **Starter** or **Unlimited (3)** product, click **Send (4)** and review the result by selecting **Trace (5)**.
+
+    ![](media/p11t3.5p3.png)
+
+    ![](media/p11t3.5p3(1).png)
 
     >**Note:** If Tracing is not enabled, you will receive a pop up to enable it, select **Enable Tracing for one hour**.
 
@@ -221,4 +231,4 @@ In the above transformation tasks, you implemented various policies in Azure API
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

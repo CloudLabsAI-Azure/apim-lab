@@ -14,25 +14,25 @@ A product contains one or more APIs as well as a usage quota and the terms of us
    - Description: **Subscribers will be able to run X calls/minute up to a maximum of Y calls/week.** **(2)**
    - Published : **Check** **(3)**
 
-     ![APIM Add Product](media3/E2T4.3S1-0209.png)
+     ![APIM Add Product](media3/p5t4.3p2.png)
 
    - You can view the recently created **Gold Tier (2)** product from **Products (1)** section.
 
       ![APIM Add Product](media3/P5-T5.1-S3a.png)
 
-1. Next, we'll change the access control by clicking on **Gold Tier (1)** and selecting **Access control (2)** from the left pane.
+1. Next, we'll change the access control by clicking on **Gold Tier (1)** and selecting **Visibility (2)** from the left pane.
 
    ![APIM Add Product Access](media3/E2T4.3S3-0209.png)
 
-   ![APIM Add Product Access](media3/E2T4.3S3.2-0209.png)
+   ![APIM Add Product Access](media3/p5t4.3p3.png)
 
 1. Click on **Add group (1)** to add a new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**.
 
    ![APIM Add Product Access](media3/P5-T5.1-addgrpa.png)
 
-1. The two added roles should be visible now in **Access control** in Gold Tier.
+1. The two added roles should be visible now in **Visibility** in Gold Tier.
 
-     ![APIM Developer Portal Added Product](media3/05a.png)
+     ![APIM Developer Portal Added Product](media3/p5t4.3p5.png)
 
 1. Back in the private browsing session of the Developer portal, browse to **Products (1)** and observe the new product **Gold Tier (2)** is available.
 
@@ -51,4 +51,4 @@ In this task, you created a new product tier called "Gold Tier" in Azure API Man
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

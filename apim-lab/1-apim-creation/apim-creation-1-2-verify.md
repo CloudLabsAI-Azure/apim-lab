@@ -17,7 +17,7 @@ In this exercise, you will perform:
 
 In this task, you will access the pre-deployed Azure API Management instance and access it from the Azure portal. 
 
-1. Navigate to the **resource groups** in the Azure Portal and select the **apim-rg** resource group.
+1. Navigate to the **Resource groups** in the Azure Portal and select the **apim-rg** resource group.
 
    ![resourcegroup](media/E1T1S1-0109.png)
 
@@ -25,9 +25,13 @@ In this task, you will access the pre-deployed Azure API Management instance and
 
 1. On the resource groups **apim-rg**, select API Management service resource type with name **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />**. 
    
-   ![02](media/02b.png)
+   ![02](media/p1t1p2.png)
 
-1. Now we will verify that the Azure API Management instance functions correctly. Expand the **APIs  section(1)** from the left pane and click on **APIs (2)**. Select the existing **Echo API (3)**. 
+1. If the **Have you considered managing Al APIs in API Management?** pop-up window appears, click on **Dismiss**.
+
+   ![02](media/p1t1p3.png)
+
+1. Now we will verify that the Azure API Management instance functions correctly. Expand the **APIs (1)** section from the left pane and click on **APIs (2)**. Select the existing **Echo API (3)**. 
 
    ![](media/E1T1S3-0109.png)
 
@@ -71,7 +75,7 @@ In this task, you will access the Request URL of the Echo API directly from a we
    curl -v https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/echo/resource
    ```
 
-   ![](./media/commandpro.png)
+   ![](./media/p1t2p7.png)
      
    ![](./media/E1T2S7.2-0109.png)
 
@@ -88,4 +92,4 @@ In this exercise, you verified the setup and functionality of the Azure API Mana
 
 ### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

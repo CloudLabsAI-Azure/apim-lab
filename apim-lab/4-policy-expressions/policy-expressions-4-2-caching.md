@@ -18,9 +18,9 @@ Azure API Management can be configured for response caching which can significan
 
       ![APIM Enable Caching](media/12.png)
 
-1. Set a caching duration of `15` seconds and **Save**.
+1. Set a caching duration of `15` **(1)** seconds and **Save (2)**.
 
-      ![APIM Cache Duration](media/E4T2S5-0209.png)
+      ![APIM Cache Duration](media/p10t2p5.png)
 
 1. Navigate back to the website and configure the Colors website from Exercise 3(Task 4.2) to use the Unlimited subscription URL.
 
@@ -51,5 +51,5 @@ In this task, you configured response caching for the "Get random color" call in
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
 

@@ -12,11 +12,14 @@ In this exercise, you will perform:
 
 - Task 1: Explore monitoring using Azure Monitor
 - Task 2: Integrating Azure API Management with Azure Application Insights
+
   - Task 2.1: Create an Azure Application Insights instance
   - Task 2.2: Create a connection between Azure Application Insights and the Azure API Management service instance
   - Task 2.3: Enable Application Insights logging for your API
   - Task 2.4: Viewing Azure Application Insights Data
+
 - Task 3: Event Hub Overview
+
   - Task 3.1: Create an Event Hubs namespace
   - Task 3.2: Create an Event Hub
   - Task 3.3: Create Access to the Event Hub
@@ -30,7 +33,7 @@ In this task, you will be exploring the analytics capabilities of Azure API Mana
 
 1. In your **APIM instance**, from the left side menu select **Analytics (Classic) (2)** under **Monitoring (1)** section. 
 
-      ![](media/E6T1S1-0309.png)
+      ![](media/p18t1p1.png)
 
 1. The dashboard has several tabs on it. For example, here are _Timeline_, _Geography_, and _APIs_:
 
@@ -50,5 +53,5 @@ In this task, you will be exploring the analytics capabilities of Azure API Mana
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 6.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
 

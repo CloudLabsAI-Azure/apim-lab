@@ -1,6 +1,6 @@
 # Exercise 7: Security 
 
-### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
@@ -28,7 +28,9 @@ In this task, you will enable a system-assigned managed identity for your Azure 
 
     ![Register APIM](media/managed-identitiesa.png)
 
-1. On **Enabled system assigned managed identity** pop-up click on **Yes**.
+1. On **Enabled system assigned managed identity** pop-up, click on **Yes**.
+
+    ![](media/p21t1p2.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -41,7 +43,11 @@ In this task, you will enable a system-assigned managed identity for your Azure 
 
 In this task, you will create an Azure Key Vault and add a secret to it. This secret will later be accessed securely by your Azure API Management instance using its managed identity.
 
-1. In the Azure portal search bar, search and select **Key Vault** and click on **Create**.
+1. In the Azure portal search bar, search and select **Key Vaults (1)** and click on **+ Create (2)**.
+
+    ![](media/p21t2p1.png)
+
+    ![](media/p21t2p1(1).png)
 
 1. On the Create a key vault page, in the **Basics (1)** tab enter the following details and click on **Next (5)**: 
 
@@ -51,13 +57,15 @@ In this task, you will create an Azure Key Vault and add a secret to it. This se
 
     - Pricing tier: **Standard (4)**
 
-      ![Create Key Vault](media/E7T2.2S2-0309.png)
+      ![](media/p21t2p2.png)
 
-1. In the **Access configuration** tab, check the box for **vault access policy (1)** and click on **Review + Create (2)**.
+1. In the **Access configuration** tab, check the box for **vault access policy (1)** and click on **Review + create (2)**.
 
     ![Create Key Vault](media/9a.png)
 
-1. In **Review + Create** tab, click on **Create**.
+1. In **Review + create** tab, click on **Create**.
+
+    ![](media/p21t2p3.png)
 
 1. Once created, click on **Go to resource**, this will open recently created **key-vault**.
   
@@ -65,10 +73,12 @@ In this task, you will create an Azure Key Vault and add a secret to it. This se
 
       ![Create Key Vault](media/mapi93a.png)
 
-1. On the Create a secret page, provide the below details and click on **Create**.
+1. On the Create a secret page, provide the below details and click on **Create (3)**.
    
-    - Name:`favoritePerson`
-    - Secret value: `3`
+    - **Name (1)**:`favoritePerson`
+    - **Secret value (2)**: `3`
+
+        ![](media/p21t2p7.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -89,13 +99,15 @@ In this task, you will configure an access policy in Azure Key Vault to allow yo
 
       ![Create Key Vault](media/12.png)
 
-1. In the Principal tab and search for **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (1)** which is the name of your **Azure API Management instance** and select it **(2)**. Click on **Next (3)**
+1. In the Principal tab and search for **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (1)** which is the name of your **Azure API Management instance** and select it **(2)**. Click on **Next (3)** twice.
 
-    ![Create Key Vault](media/E7T2.3S3-0309.png)
+    ![Create Key Vault](media/p21t3p3.png)
 
-1. Click on Next again and click on **Create**.
+1. On the Review + create tab, click on **Create**.
 
-    You should see something like this:
+    ![](media/p21t3p4.png)
+
+1. You should see something like this:
 
     ![Create Key Vault](media/14.png)
 
@@ -105,22 +117,22 @@ In this task, you will configure your Azure API Management instance to access th
 
 1. Go back to your **APIM instance**.
 
-1. Navigate to the **APIs (1)** tab from the left pane. Click on **+ Add operation (2)** to the Star Wars API choosing the **Original (3)** version.
+1. Navigate to the **APIs (1)** tab from the left pane, select the **Original (2)** version of the Star Wars API, and then click **+ Add operation (3)**.
 
-    ![New operation](media/E7T2.4S2-0309.png)
+    ![](media/p21t4p2.png)
 
 1. In the **Add operation** tab, provide the following details and click on **Save (3)**:
   
     - Display Name: **Get Favorite Person (1)**
-    - URL: **/favorite (3)** 
+    - URL: **/favorite (2)** 
 
-      ![New operation](media/E7T2.4S3-0309.png)
+      ![](media/p21t4p3.png)
 
 1. Navigate to the **Inbound processing (1)** tab and select **Policy code editor (2)** in this operation.
 
     ![Create Key Vault](media/14a.png)
    
-1. Update the policies for **this** new operation, and click on **Save (2)**, and update the **Key vault name (1)** in the `set-url` value.
+1. Update the policies for this new operation, change the **Key vault name (1)** in the `set-url` value, and then click **Save (2)**.
 
     ```xml
     <!--
@@ -159,7 +171,7 @@ In this task, you will configure your Azure API Management instance to access th
     </policies>
     ```
 
-    ![Create Key Vault](media/E7T2.4S5-0309.png)
+    ![Create Key Vault](media/p21t4p5.png)
 
 ### Task 5: Test the operation
 
@@ -178,4 +190,4 @@ In this exercise, Azure API Management (APIM) is configured to securely access s
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

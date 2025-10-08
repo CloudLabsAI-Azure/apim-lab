@@ -16,17 +16,17 @@ An Event Hubs namespace provides a unique scoping container in which you create 
 
     ![Select Event Hubs in Portal](media/11a.png)
 
-1. Click on **Create** and on the Create Namespace page. Enter the following details:
+1. Click on **+ Create** and on the Create Namespace page. Enter the following details:
 
-   - Subscription: Select the default subscription **(1)**
-   - Resource Group : Select **apim-rg (2)**
+   - **Subscription**: Select the default subscription **(1)**
+   - **Resource Group** : Select **apim-rg (2)**
    - **Namespace name** : **evhns-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
    - **Location** : Select the region of your APIM instance **(4)**.
    - **Pricing Tier**: Choose **Basic (5)** for the dropdown.   
    - **Throughput Units** : Leave as default **(6)**. 
    - Select **Review + Create (7)** at the bottom of the page, followed by **Create**.
       
-      ![Create an Event Hub Namespace](media/create-eventhub-1005a.png)
+      ![Create an Event Hub Namespace](media/p20t3.1p2.png)
 
 1. Once it has been created, select **Go to resource** and confirm that you see the **Event Hubs Namespace** page similar to the following:   
       
@@ -114,14 +114,16 @@ Azure API Management loggers are configured using the [API Management REST API](
 
      ![ API Try It](media/api1504b.png)    
 
-1. Once you have signed in successfully, the Rest API window will open on the right side of the screen. 
+1. Once you have signed in successfully, the Rest API window will open on the right side of the screen. Click on **Continue with Account**.
+
+    ![](media/p20t3.4p5.png)
 
 1. Enter the following details in the **Parameters** section:
 
-    - LoggerId: **event-hub-logger (1)** (you will use it in the next steps)
-    - ResourceGroupName: **apim-rg (2)** 
-    - ServiceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
-    - SubscriptionId: Select the subscription given by default **(4)**.
+    - loggerId: **event-hub-logger (1)** (you will use it in the next steps)
+    - resourceGroupName: **apim-rg (2)** 
+    - serviceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
+    - subscriptionId: Select the subscription given by default **(4)**.
     - api-version: **2018-01-01 (5)**
 
         ![RREST API Try It](media/E6T3.4S6-0309.png)
@@ -141,7 +143,7 @@ Azure API Management loggers are configured using the [API Management REST API](
     }
     ```
 
-    ![RREST API Try It](media/E6T3.4S7-0309.png)    
+    ![RREST API Try It](media/p20t3.4p7.png)    
 
     >**Note:** Update the name of the **Events Hub Namespace** and the **Shared Access key** which we copied earlier in the notepad.
 
@@ -164,8 +166,8 @@ Once your logger is configured in Azure API Management, you can configure your l
    
 1. In the **Inbound** or **Outbound** processing window, enter the Code editor.
 1. Enter a new line after the `<base />` tag in the `inbound` or `outbound` policy section.
-1. Select **Show snippets**.
-1. In the right-hand pane, click on **Hide Snippets**, scroll down to the **Advanced policies** section, and select **Log to EventHub**. This will insert a template for the `log-to-eventhub` policy statement.
+1. Select **Show snippets (1)**.
+1. In the right-hand pane, click on **Hide Snippets (2)**, scroll down to the **Advanced policies** section, and select **Log to EventHub (3)**. This will insert a template for the `log-to-eventhub` policy statement.
 
     ![APIM Add Log to Event Hub](media/E6T3.5S7-0309.png)
 
@@ -233,7 +235,7 @@ In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) f
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
 
 
 

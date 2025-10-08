@@ -1,6 +1,6 @@
 # Exercise 8:  Fusion Dev (Read Only)
 
-### Estimated Duration : 40 minutes
+### Estimated Duration : 40 Minutes
 
 ## Overview
 
@@ -11,12 +11,17 @@ In this exercise, you'll create a Star Wars Fan Club mobile application using Po
 In this exercise, you will perform:
 
 - Task 1: Power Apps and APIM
+
    - Task 1.1: Update CORS policy
    - Task 1.2: Create a custom connector
+
 - Task 2: View your custom connector in Power Platform
 - Task 3: Generate the Star Wars Fan Club Application
+
    - Task 3.1: Connect to the backing data source
+
 - Task 4: Add Favorite Character information
+
    - Task 4.1: Add the Star Wars API Data Source
    - Task 4.2: Customize the generated app
    - Task 4.3: Add controls to the View Detail screen
@@ -43,7 +48,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 1. Click on **+ Add Allowed origin** and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
 
-   ![](media/aaa2a.png)
+   ![](media/p22t1.1p3.png)
 
 ### Task 1.2: Create a custom connector
 
@@ -53,11 +58,13 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/mapi100.png)
 
-1. Select your mail: <inject key="AzureAdUserEmail"></inject> and click on **Start free**.
+1. Select your mail: <inject key="AzureAdUserEmail"></inject> and check the Agreement checkbox **(2)**, then click on **Start free (3)**.
 
-   ![](media/mapi101.png)
+   ![](media/p22t1.2p3.png)
 
-1. Enter your password: <inject key="AzureAdUserPassword"></inject> and ensure you are signed up for the free trial.
+1. Select the country/region and click on **Get started**.
+
+   ![](media/p22t1.2p4.png)
 
 1. Navigate back to your API management service, from the left pane, click on **Power platform (1)** present under APIs section and click on **Create connector (2)**.
 
@@ -74,7 +81,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
    - API display name: **Star Wars API (3)**.
    - Click on **Create (4)**.
 
-        ![](media/Pg25-1.png)
+        ![](media/p22t1.2p6.png)
 
 ### Task 2: View your custom connector in Power Platform
 
@@ -86,9 +93,9 @@ In this task, you will view and edit the custom connector that you created in th
    
    ![](media/more.png)
 
-1. Scroll down and select **Custom Connectors**.
+1. Scroll down and select **Custom connectors**.
 
-   ![](media/aaa3.png)
+   ![](media/p22t2p3.png)
 
 1. You can view the recently created **Star Wars API** custom connector. From here, select the pencil icon to edit the custom connector.
 
@@ -284,4 +291,4 @@ In this exercise, you have integrated the Star Wars API with Azure API Managemen
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

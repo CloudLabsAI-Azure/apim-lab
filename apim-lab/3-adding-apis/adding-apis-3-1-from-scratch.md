@@ -20,6 +20,7 @@ In this Exercise, you will perform:
 - Task 2: Access Star Wars API from Developer Portal
 - Task 3: Import API using OpenAPI
 - Task 4: Test Rate Limiting Policy
+
    - Task 4.1: Calling API and testing Subscription Keys
    - Task 4.2: Rate limit
 
@@ -45,7 +46,7 @@ Instead of developing an API, for this Exercise, you will use the existing [_Sta
 
      > **Note**: While it is conventionally a good idea to version APIs from the onset, we are omitting this step here for the brevity of the labs.
 
-     ![APIM Add Blank API](<media/E3T1S2-0209.png>)
+     ![APIM Add Blank API](<media/p6t1p2.png>)
 
 1. Once the API is created, click on the **Star Wars (1)** API and select **+ Add operation (2)** to declare two new operations:
 
@@ -84,7 +85,7 @@ In this task, you will access the Developer Portal to explore and test the newly
 
 3. Click on **Star Wars** API, then select the **Get People (1)** operation. Click **Try this operation (2)**, scroll down, and click **Send (3)**. You should see a successful `200` response. After reviewing it, go ahead and close the panel.
 
-      ![APIM Developer Portal Star Wars Try It](media/E3T2S2-0209.png)
+      ![APIM Developer Portal Star Wars Try It](media/p6t2p3.png)
 
       ![APIM Developer Portal Star Wars Try It](media/E3T2S3.2-0209.png)
 
@@ -104,5 +105,5 @@ In the above tasks, you added the Star Wars API to Azure API Management, configu
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 3.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
 

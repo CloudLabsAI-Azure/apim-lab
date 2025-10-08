@@ -8,7 +8,7 @@ In this task, you will import the Colors API into your API Management instance a
 
 1. Navigate back to your **Azure API Management** instance in Azure Portal.
 
-1. From the left menu, navigate to the API's (1) section and click on **+ Add API (2)**. Select **OpenAPI (3)** under Create from definition. 
+1. From the left menu, navigate to the **APIs (1)** section and click on **+ Add API (2)**. Select **OpenAPI (3)** under Create from definition. 
 
    ![](media/E3T3S1-0209.png) 
   
@@ -19,7 +19,7 @@ In this task, you will import the Colors API into your API Management instance a
    - Name: **colors-api** **(4)**
    - Click on **Create (5)**.
 
-      ![](media3/E3T4.1S3-0209.png)
+      ![](media/p8t4.1p3.png)
 
 1. We can test the newly-added API from the **Test** **(2)** tab, select **Get Random Color** **(1)** and click on **Send** **(3)**.
 
@@ -86,7 +86,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
       ![](./media3/config.png)
    
-1. Replace the **API URL** with: `https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random` **(1)** and click on **Submit (2)**.
+1. Replace the **API URL** with: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/colors/random** **(1)** and click on **Submit (2)**.
 
       ![](./media3/E3T4.2S8-0209.png)
 
@@ -152,4 +152,4 @@ In this Task, you imported and configured the "Colors API" in Azure API Manageme
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

@@ -10,9 +10,9 @@ This example shows a fire-and-forget [send-one-way-request](https://docs.microso
 
 The following policy and payload applies for both examples in this section (webhook and teams). **Please ensure that you replace the value in `<set-url>` with your webhook target URL.** You will identify the URL in either example below.
 
-1. From **Basic Calculator API (1)** ,select the **Add (2)** operation .
+1. From **Basic Calculator API (1)** ,select the **Add (2)** operation.
 
-1. In **Outbound Processing** section ,open the **Code View (3)**.
+1. In **Outbound processing** section ,open the **Code View (3)**.
 
       ![](media/E4T6.1S3-0209.png)
 
@@ -68,13 +68,19 @@ The following policy and payload applies for both examples in this section (webh
 
       > **Note:** Click on **Save** when the warning pop-up appears.
 
-      ![](media/E4T6.2S2warn-0209.png)
+      ![](media/p14t6warning.png)
+
+1. Go to the **Test (1)** section. In the Template parameters area, enter any integers **(2)** for parameters **a** and **b**. Click **Send (3)**.
+
+    ![](media/p14t6p3(1).png)
 
 1. Invoke the API from the Azure API Management **Test** tab by clicking the **Trace** button and observe the `200` success response.
 
+    ![](media/p14t6p3.png)
+
 1. Check the **Trace** for the **Outbound** one-way message.
 
-      ![Webhook Site APIM Trace](media/E4T6.2S4-0209.png)
+      ![](media/p14t6p5.png)
 
 1. Observe the success in the Webhook site.
 
@@ -87,4 +93,4 @@ In this task, you set up a "Send One-Way" policy in Azure API Management to send
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)
