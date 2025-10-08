@@ -17,7 +17,7 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 ### Task 4.1: Deploy the Self-hosted Gateway
 
-1. In the **API Management service**, select the **Self-hosted Gateways** **(1)** option from the menu under **Deployment + infrastructure**, and click **+ Add** **(2)**
+1. In the **API Management service**, select the **Self-hosted Gateways** **(1)** option from the menu under **Deployment + infrastructure**, and click **+ Add** **(2)**.
 
     ![](media/api7.png)
 
@@ -90,7 +90,7 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 ## Task 4.2: Testing the API
 
-1. Navigate back to the **APIM instance**, click on **Subscriptions (1)** under **APIs** from left pane. Click on the ellipsis **(...) (2)** next to the **Unlimited** subscription and select **Show/hide keys (3)**.
+1. Navigate back to the **APIM instance**, click on **Subscriptions (1)** under **APIs** from left pane. Click on the **ellipsis** **(...) (2)** next to the **Unlimited** subscription and select **Show/hide keys (3)**.
 
     ![](media/E9T4.2S1-0309.png)
 

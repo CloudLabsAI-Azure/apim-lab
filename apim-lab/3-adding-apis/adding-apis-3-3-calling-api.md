@@ -72,7 +72,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
       ![APIM Policy CORS All APIs](media3/E3T4.2S3-0209.png)  
 
-1. Click on **Add allowed origin (1)**, enter the URL as `https://colors-web.azurewebsites.net`  **(2)** and then press on **Save (3)**
+1. Click on **+ Add allowed origin (1)**, enter the URL as `https://colors-web.azurewebsites.net`  **(2)** and then press on **Save (3)**
 
       ![APIM Policy CORS All APIs](media3/E3T4.2S4-0209.png) 
 

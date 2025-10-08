@@ -26,7 +26,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
 
    ![APIM Add Product Access](media3/p5t4.3p3.png)
 
-1. Click on **Add group (1)** to add a new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**.
+1. Click on **+ Add group (1)** to add a new group, check **Developers (2)** and **Guests (3)**, then press **Select (4)**.
 
    ![APIM Add Product Access](media3/P5-T5.1-addgrpa.png)
 

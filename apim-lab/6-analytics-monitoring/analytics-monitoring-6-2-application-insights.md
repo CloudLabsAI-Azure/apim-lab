@@ -60,7 +60,7 @@ In this task you will be creating an Azure Application Insigths and will integra
 
 1. In your **APIM Instance**, select **APIs (1)** under APIs from the menu on the left.
 
-2. Click on the **Colors (2)** API and go to the **Settings (3)** tab from the top bar.
+2. Click on the **Colors API (2)** and go to the **Settings (3)** tab from the top bar.
 
     ![](media/p19t2.3p2.png)
 
@@ -68,7 +68,7 @@ In this task you will be creating an Azure Application Insigths and will integra
 
 5. On the **Application Insights (1)** tab, select the following details and click on **Save (6)**: 
 
-    - Check the **Enable(2)** box.
+    - Check the **Enable (2)** box.
     
     - **Destination:** select the logger you just added in the **Application Insights (3)** blade.
 
@@ -112,7 +112,7 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
 1. In the Application Insights instance, you should be able to see logs and metrics after a few seconds.
 
-1. Unselect **Availability (2)** from Event Types.
+1. Unselect **Availability** from Event Types.
 
     ![APIM API App Insights Logger](media/E6T2.4S4-0309.png)
 

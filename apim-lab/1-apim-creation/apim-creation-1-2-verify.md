@@ -61,7 +61,7 @@ In this task, you will access the Request URL of the Echo API directly from a we
 
 1. Subscriptions are important and useful, but in this exercise, we just want to verify the Azure API Management instance is working as intended.
 
-1. Now, access the Request URL again in a new browser tab. In order to verify the status, open the Developer Tools by clicking on the **elipses (1)** on the top right corner of your browser. Select **More tools (2)** and then Developer **tools (3)**.
+1. Now, access the Request URL again in a new browser tab. In order to verify the status, open the Developer Tools by clicking on the **ellipsis (...) (1)** on the top right corner of your browser. Select **More tools (2)** and then **Developer tools (3)**.
 
    ![](media/E1T2S5-0109.png)
 

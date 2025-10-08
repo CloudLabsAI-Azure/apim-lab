@@ -43,7 +43,7 @@ In this task, you will enable a system-assigned managed identity for your Azure 
 
 In this task, you will create an Azure Key Vault and add a secret to it. This secret will later be accessed securely by your Azure API Management instance using its managed identity.
 
-1. In the Azure portal search bar, search and select **Key Vaults (1)** and click on **+ Create (2)**.
+1. In the Azure portal search bar, search and select **Key vaults (1)** and click on **+ Create (2)**.
 
     ![](media/p21t2p1.png)
 
@@ -59,13 +59,13 @@ In this task, you will create an Azure Key Vault and add a secret to it. This se
 
       ![](media/p21t2p2.png)
 
-1. In the **Access configuration** tab, check the box for **vault access policy (1)** and click on **Review + create (2)**.
+1. In the **Access configuration** tab, check the box for **Vault access policy (1)** and click on **Review + create (2)**.
 
     ![Create Key Vault](media/9a.png)
 
 1. In **Review + create** tab, click on **Create**.
 
-    ![](media/p21t2p3.png)
+    ![](media/p21t2p4.png)
 
 1. Once created, click on **Go to resource**, this will open recently created **key-vault**.
   
@@ -180,8 +180,7 @@ In this task, you will test the newly created operation in the developer portal 
 1. Sign in to the developer portal and test this new operation.
 
 1. Notice the request URL will be similar to: **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/favorite**
-
-   >**Note:** Ensure to select the product as **Unlimited** while testing.
+    >**Note:** Ensure to select the product as **Unlimited** while testing.
 
 ---
 ### Summary 

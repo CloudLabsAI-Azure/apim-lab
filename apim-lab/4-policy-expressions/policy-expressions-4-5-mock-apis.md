@@ -13,7 +13,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
  
       ![](media/E4T5S2-0209.png)
   
-1. In the **Responses (1)** configuration tab, press **+ Add response (2)**, Select `200 OK` **(3)**.
+1. In the **Responses (1)** configuration tab, press **+ Add response (2)**, select `200 OK` **(3)**.
 
     ![APIM Policy Mock Response](media/33a.png)
 
