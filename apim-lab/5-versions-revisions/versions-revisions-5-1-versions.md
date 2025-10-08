@@ -1,6 +1,6 @@
 ## Exercise 5: Version and Revisions
 
-## Estimated Duration: 60 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -78,15 +78,13 @@ Proper version management not only helps organize your API, but it also aids in 
 
       ![APIM Developer Portal Version 2](media/E5T1.2S3-0209.png)
 
-1. Test the `GetPeople` **(1)** operation, click on **Try this operation (2)**, then add the subscription key you copied earlier in the **Ocp-Apim-Subscription-Key (3)** and scroll down click **Send (4)**.
+1. Test the `GetPeople` **(1)** operation, click on **Try this operation (2)**, and scroll down click **Send (3)**.
 
       ![APIM Developer Portal Test Version](media/E5T1.2S4-0209.png)
 
-      ![](media/p16t1.2p4)
-
 1. Review the HTTP response that appears below.
 
-      ![](media/p16t1.2p5)
+      ![](media/p16t1.2p5.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.

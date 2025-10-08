@@ -10,9 +10,9 @@ This example shows a fire-and-forget [send-one-way-request](https://docs.microso
 
 The following policy and payload applies for both examples in this section (webhook and teams). **Please ensure that you replace the value in `<set-url>` with your webhook target URL.** You will identify the URL in either example below.
 
-1. From **Basic Calculator API (1)** ,select the **Add (2)** operation .
+1. From **Basic Calculator API (1)** ,select the **Add (2)** operation.
 
-1. In **Outbound Processing** section ,open the **Code View (3)**.
+1. In **Outbound processing** section ,open the **Code View (3)**.
 
       ![](media/E4T6.1S3-0209.png)
 

@@ -32,7 +32,7 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
 
    ![APIM Developer Portal Admin Launch](media/api-12a.png)
 
-   >**Note:** If the **Introducing the improved    developer portal and API
+   >**Note:** If the **Introducing the improved developer portal and API
    and product details pages!** pop-up appears, close it.
 
    ![APIM Developer Portal](media/p3t1p2.png)
