@@ -24,9 +24,9 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
 ### Task 2.1: Deploying Web and API containers with Azure Container Instances
 
-1. Open the **Azure Cloud Shell** and choose **Bash**.
+1. Open the **Azure Cloud Shell (1)** and choose **Bash (2)**.
 
-     ![Azure Cloud Shell](media/E9T2.1S1-0309.png)
+     ![Azure Cloud Shell](media/p24t2.1p1.png)
 
 1. The first time Cloud Shell is started it will require you to create a storage account.
 
@@ -45,7 +45,7 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    - Fileshare name: **apim (4)**
    - Click on **Create (5)**
 
-       ![](media/E9T2.1S2.3-0309.png)
+       ![](media/p24t2.1p2.png)
    
 1. We proceed to create a unique identifier suffix for resources created in this Lab:
 
@@ -127,6 +127,8 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
       aci-color-web-fernando22287.eastus.azurecontainer.io  Succeeded
       ```
 
+      ![](media/p24t2.1p5.png)
+
       >**Note:** If the status is showing as pending, wait for a few minutes and run the command again.
 
 1. Once you see the 'Succeeded' message, copy the generated FQDN URL and open it in a new browser tab. You should now see the homepage of the Colours Web application.
@@ -167,6 +169,8 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
    aci-color-api-fernando22287.eastus.azurecontainer.io  Succeeded
    ```
 
+   ![](media/p24t2.1p10.png)
+
     >**Note:** If the status is showing as pending, wait for a few minutes and run the command again.  
 
 1. Once you see the 'Succeeded' message, copy the generated FQDN URL and open it in a new browser tab. And we should see our home page (Swagger UI) for our Colours API:
@@ -181,4 +185,4 @@ In this Task, you have deployed Azure Container Instances (ACI) for both the Col
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 9.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

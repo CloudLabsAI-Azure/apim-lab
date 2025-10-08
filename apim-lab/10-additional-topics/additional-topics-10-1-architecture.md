@@ -1,6 +1,6 @@
 ## Excercise 9 : Advanced Architecture Features of Azure API Management
 
-## Estimated Duration: 60 minutes
+## Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -12,11 +12,16 @@ You will be able to complete the following tasks:
 
 - Task 1: Architecture Design Session
 - Task 2: Provision your own instance of ColoursWeb/ColoursAPI
+
     - Task 2.1: Deploying Web and API containers with Azure Container Instances
+
 - Task 3: API Proxy to Serverless
+
     - Task 3.1: Azure Functions
     - Task 3.2: Azure Logic Apps
+
 - Task 4: Self-hosted Gateway
+
     - Task 4.1: Deploy the Self-hosted Gateway
     - Task 4.2: Testing the API
 
@@ -42,4 +47,4 @@ In this task, we provide you with a template architecture diagram for your Azure
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 9.
 
-  ![](../gs/media/api-07.png)
+  ![](../gs/media/nextpagetab.png)

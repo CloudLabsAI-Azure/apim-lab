@@ -43,17 +43,25 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 1. Download the **env.conf (2)** file by clicking on it as shown in the below image, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`.
 
-1. Copy the Docker run command under Deployment scripts.
+1. Copy the Docker run command **(3)** under Deployment scripts.
   
     ```text
     docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
     ```
 
-    ![](media/E9T4.1S6-0309.png)  
+    ![](media/p26t4p7.png)  
 
-1. Launch Docker Desktop by using the shortcut available on the Lab VM desktop. After launching Docker Desktop, **accept the terms**, click **Continue without signing in**, and **skip** the survey. Docker Engine may take about 2-3 minutes to start. 
+1. Launch Docker Desktop by using the shortcut available on the Lab VM desktop. After launching Docker Desktop, **accept the terms**, click on **Skip** to skip the sign in process. Docker Engine may take about 2-3 minutes to start. 
 
-    ![](media/api4.png)    
+    ![](media/p26t4p8.png)
+
+    ![](media/p26t4p8(1).png)
+
+    >**Note:** If Docker Desktop displays an error saying **WSL needs updating**, copy the suggested command, open PowerShell as an administrator, and run it to update WSL. Once the update is complete, return to Docker Desktop and restart it.
+
+    ![](media/error.png)
+
+    ![](media/error(1).png)
 
 1. Minimize Docker Desktop and then open the PowerShell in the Lab VM and run the following commands:
 
@@ -72,15 +80,17 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
       docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
       ```
 
+      ![](media/p26t4p9.png)
+
       >**Note:** The first time this is executed, it will need to pull down the Docker image. So there will be a small delay.  Subsequently - if restarted - it will just use the downloaded image.
 
 1. Navigate to the **Gateway** in the Azure portal, and we can see the status in the **Overview** page.. It will show there is one healthy Gateway Node connected to the Deployment. The Gateway Node will keep in sync, and be automatically updated should any of the Gateway Deployment config changes.
 
-    ![](media/gateway.png)
+    ![](media/p26t4p10.png)
 
 ## Task 4.2: Testing the API
 
-1. Navigate back to the **APIM instance**, click on **Subscriptions (1)** under **APIs** from left pane. Click on the ellipsis **... (2)** (three dots) next to the **Unlimited** subscription and select **Show/hide keys (3)**.
+1. Navigate back to the **APIM instance**, click on **Subscriptions (1)** under **APIs** from left pane. Click on the ellipsis **(...) (2)** next to the **Unlimited** subscription and select **Show/hide keys (3)**.
 
     ![](media/E9T4.2S1-0309.png)
 
@@ -96,37 +106,51 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
     ![](../../assets/images/apim-app-gateway-test-1.png)
 
-1. We will be using Postman to test the API. Open **Postman** using the shortcut on the Lab VM desktop and click on **Create an account**.
+1. We will be using Postman to test the API. Open **Postman** using the shortcut on the Lab VM desktop and click on **Create Free Account**.
 
-1. Postman will open in a web browser to create the account. Use the **Work email: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>**, log in to the postman.
+    ![](media/p26t4.2p4.png)
+
+1. Postman will open in a web browser for account creation. Use the **Work email: <inject key="AzureAdUserEmail"></inject> (1)** and **Password: <inject key="AzureAdUserPassword"></inject> (2)**, then click **Create Free Account (3)**.
+
+    ![](media/p26t4.2p5.png)
 
     > **Note**: If you encounter an error like **"Only alphanumeric characters and hyphens are allowed,"** remove any **'*'** or other special characters from the user name.
 
-    > **Note:** If Postman prompts for an OTP during login, go to [**Outlook.com**](https://outlook.com), click **Sign in**, and use the **Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>** to access the inbox and retrieve the OTP code.
+    > **Note:** If Postman prompts for an OTP during login, go to [**Outlook.com**](https://outlook.com), click **Sign in (1)**, and use the **Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>** to access the inbox and retrieve the OTP code.
 
-    ![](media/outlook-signin.png) 
+    ![](media/outlook-signin.png)
 
-1. After successful sign-in, it will open the Postman app on the desktop. On the **Welcome to Postman!** page, enter **Odl_User (1)** as **your name**, select your role (2), and click on **Continue (3)**. Click on **Continue with free plan**.
+    ![](media/p26t4.2p5(1).png) 
+
+1. After successful sign-in, on the **This site is trying to open Postman.** pop-up wizard, click **Open**.
+
+    ![](media/p26t4.2p6.png)
+
+1. If prompted on the **Welcome to Postman!** page, enter **Odl_User (1)** as your name, choose your role **(2)**, and click **Continue (3)**. Then select **Continue with free plan**.
 
     ![](media/postman-0309.png)
 
-1. Inside the **Postman**, click on **Workspaces (1)** drpo-down and select **odl-user- (2)** workspace
+1. Inside the **Postman**, click on **Workspaces (1)** drop-down and select **odl-user-<inject key="Deployment ID" enableCopy="false" /> (2)** workspace
 
     ![](media/postman2-0309.png)
 
 1. On the **My Workspace** page, select **New (1)** and select **HTTP (2)**.
 
-    ![](media/postman3-0309.png)
+    ![](media/p26t4.2p8.png)
 
-1. Now, in the **Enter URL or paste text (1)**, enter the URL you copied earlier and select **Send (2)**. Observe the response (3).
+1. Now, in the **Enter URL or paste text (1)**, enter the URL you copied earlier and select **Send (2)**. Observe the response **(3)**.
 
-    ![](media/postman4-0309.png)
+    ![](media/p26t4.2p9.png)
 
+    ![](media/p26t4.2p9(1).png)
 
-### Summary
+---
+## Summary
 
 In this task, you have deployed a self-hosted gateway for Azure API Management, enabling the hosting of API gateway nodes in Docker or Kubernetes environments. Then you have configured the gateway deployment, downloaded configuration files, and executed Docker commands to start the gateway node. Finally, tested the API using Postman, confirming the proper functionality of the self-hosted gateway.
 
-## You have successfully completed the lab
+### Conclusion
 
 By completing this **Azure API Management** hands-on lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.
+
+### Congratulations! You've successfully completed the Hands-on lab.
