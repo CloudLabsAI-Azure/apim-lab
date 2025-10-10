@@ -89,23 +89,23 @@
         "Order": 21
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/9-fusion-dev/fusion-dev-9-1.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-1-architecture.md",
         "Order": 22
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-1-architecture.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-2-container-instance.md",
         "Order": 23
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-2-container-instance.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-3-serverless.md",
         "Order": 24
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-3-serverless.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-4-self-hosted-gateway.md",
         "Order": 25
       },
-      {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/10-additional-topics/additional-topics-10-4-self-hosted-gateway.md",
+            {
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/apim-lab/main/apim-lab/9-fusion-dev/fusion-dev-9-1.md",
         "Order": 26
       }
     ]

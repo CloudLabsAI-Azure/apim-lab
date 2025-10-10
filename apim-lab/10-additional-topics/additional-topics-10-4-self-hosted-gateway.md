@@ -1,4 +1,4 @@
-# Exericse 9 Task 4: Self-hosted Gateway
+# Exericse 8 Task 4: Self-hosted Gateway
 
 In this task, we will explore the Self-hosted Gateway feature of Azure API Management (APIM).
 

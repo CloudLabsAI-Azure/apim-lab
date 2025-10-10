@@ -1,4 +1,4 @@
-## Exercise 9 Task 3: API Proxy to Serverless
+## Exercise 8 Task 3: API Proxy to Serverless
 
 In this task, we will show you how to deploy serverless services and expose them via Azure API Management.
 
