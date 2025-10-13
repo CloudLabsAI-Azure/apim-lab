@@ -1,4 +1,4 @@
-## Exercise 9 Task 2: Provision your own instance of ColoursWeb/ColoursAPI
+## Exercise 8 Task 2: Provision your own instance of ColoursWeb/ColoursAPI
 
 In this task, we will show you how to deploy your own instances of the Colours Web and Colours API. Note - ColoursWeb / ColoursAPI is a new version of ColorsWeb/ColorsAPI, do not mix the web client and API versions.
 

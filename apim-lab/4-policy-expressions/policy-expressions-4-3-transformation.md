@@ -55,7 +55,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
 > **Note**: After saving any changes in the policy if you see this below pop-up, click on **Discard**.
 
-  ![APIM Policy Transform Starter Product](media/note.png)
+![APIM Policy Transform Starter Product](media/note.png)
 
 1. From your **Azure API Management** instance, click **Star Wars (1)** API, then select the **Get People By Id (2)** operation and then open **Policy code editor (3)** under **Outbound processing**.
 

@@ -1,4 +1,4 @@
-## Excercise 9 : Advanced Architecture Features of Azure API Management
+## Excercise 8 : Advanced Architecture Features of Azure API Management
 
 ## Estimated Duration: 60 Minutes
 
