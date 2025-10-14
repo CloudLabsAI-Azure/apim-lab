@@ -1,6 +1,6 @@
 # Exercise 9: Fusion Dev (Read Only)
 
-### Estimated Duration : 40 Minutes
+### Estimated Duration: 20 Minutes
 
 ## Overview
 
