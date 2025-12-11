@@ -36,7 +36,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
 1. Go back to the tab where you have the **Colors** API test console open. Invoke the API using the Unlimited subscription key.You should see that the color blue is replaced with green.
 
-      ![APIM Policy Find & Replace](media/greena.png)
+      ![APIM Policy Find & Replace](media/p10t1s6.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.

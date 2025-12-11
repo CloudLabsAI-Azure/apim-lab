@@ -54,7 +54,7 @@ Instead of importing operations one-by-one, you can also import a full API. The 
 
 1. Navigate back to the **Azure API Management Portal**, we can inspect/edit the Open API definition by selecting the *OpenAPI Editor (JSON)* option from the dropdown in the Frontend block:
 
-      ![APIM Calculator API Swagger](media2/06.png)
+      ![APIM Calculator API Swagger](media/p6t1s8.png)
 
       ![](media/p7t3p8.png)
 
