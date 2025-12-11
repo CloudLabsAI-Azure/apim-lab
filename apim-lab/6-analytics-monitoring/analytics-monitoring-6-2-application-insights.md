@@ -22,7 +22,7 @@ In this task you will be creating an Azure Application Insigths and will integra
 
 3. Under the **Review + create** tab, click **Create**.
 
-    ![](media/p19t2.1p3)
+    ![](media/p18t1s3.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - If you receive a success message, you can proceed to the next task.
@@ -34,6 +34,7 @@ In this task you will be creating an Azure Application Insigths and will integra
 ### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
 1. Navigate to your **APIM** instance in the **Azure portal**.
+
 
 2. From the menu on the left, select **Application Insights (2)** under the **Monitoring (1)** section and click on **+ Add (3)**
 
@@ -104,7 +105,7 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
 1. On the left hand side pane, click on the **Transaction search (2)** under **Investigate (1)** to see details on a transactional level.
 
-    ![](media/E6T2.4S2-0309.png)
+    ![](media/p18t2.4s1.png)
 
     >**Note:** Click on **See all data in the last 24 hours**, to see the data.
 

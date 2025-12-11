@@ -98,7 +98,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
 
 1. Click on the **Show (2)** and copy the Primary key **(3)** of **Starter** and **Unlimited** product subscription and paste it in a text editor for later use.
 
-      ![](./media3/E3T4.2S10-0209.png)
+      ![](./media/p7t4.2s11.png)
         
 1. Prepare the URL in a text editor:
 

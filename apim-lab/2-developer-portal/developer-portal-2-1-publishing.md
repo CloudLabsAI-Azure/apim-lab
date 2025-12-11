@@ -108,6 +108,8 @@ In order to do this, we recommend opening the **Developer portal** in a **privat
 
 1. Click the **Sign in** button at the top right corner, then select **Sign up** to create a new account. For this lab, you can use either a personal or work email address, but be sure to use one that is **different** from the email linked to your Azure subscription.
 
+      ![APIM Developer Portal Sign-up](media/p2t3.1s1.png)
+
       ![APIM Developer Portal Sign-up](media/p3t3.1p1.png)
 
 1. Check your inbox for the acceptance email and confirm to activate your account.
@@ -119,6 +121,8 @@ In order to do this, we recommend opening the **Developer portal** in a **privat
       ![APIM Developer Portal Sign-in](media/11.png)
 
 1. Click on **Products**, then select the **Starter** product.
+
+      ![APIM Developer Portal Sign-up](media/p2t3.1s4.png)
 
 1. Enter `Starter` **(1)** as the subscription name, then press **Subscribe (2)**. You should receive a confirmation email shortly.
 
@@ -162,7 +166,7 @@ It's now time to test one of the published APIs.
 
 1. Test the **Echo API (3)** using the POST verb by pressing **Test (4)** tab, using the defaults, then pressing **Send (5)** at the bottom.
 
-      ![APIM Developer Portal Try API](<media/Ex-2-T-3(1).png>)
+      ![APIM Developer Portal Try API](<media/p2t3.3s2.png>)
 
 1. You should see a successful `200` HTTP response.
 
