@@ -57,7 +57,7 @@ The architecture uses Azure API Management to manage and secure APIs. It include
 
 ## Architecture Diagram
 
-![](media/arch2.PNG.JPG)
+![](media/arch-02.PNG.jpg)
 
 ## Explanation of Components
 
