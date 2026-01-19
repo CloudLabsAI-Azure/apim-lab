@@ -39,9 +39,9 @@ The [cors policy](<https://docs.microsoft.com/en-us/azure/api-management/api-man
 
 1. Navigate to our **Azure API Management** instance, and select **All APIs** from the API section.
 
-1. Click on **CORS** under the **Inbound processing** tab to view the XML present within the **CORS** policy.
+1. Click on elipsis **(1)** beside **CORS** under the **Inbound processing** tab and select **Code editor (2)** to view the XML present within the **CORS** policy.
 
-    ![APIM Policy CORS All APIs](media/all-api1.png)
+    ![APIM Policy CORS All APIs](media/E4T1S3.2-1901.png)
    
     ![APIM Policy CORS All APIs](media/all-api-policy.png)  
 
@@ -52,6 +52,7 @@ In this task, you reviewed the pre-configured CORS policy in APIM and ensured th
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 3.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
 
