@@ -64,9 +64,11 @@ In Task 2, you will learn how to create a new revision of an existing API in Azu
 
       ![APIM Revision Caching Test](media/13.png)
 
-1. Test the API twice. The test trace should then show that the cache lookup occurred. 
+1. Click on **Send (1)** to test the API twice. Then click on **Trace (2)**, and go to **Trace (3)** tab and scroll down to see that the cache lookup occurred. 
 
-      ![APIM Revision Caching Test](media/14.png)
+      ![APIM Revision Caching Test](media/E5T2.3S2-1901.png)
+
+      ![APIM Revision Caching Test](media/E5T2.3S2.2-1901.png)
 
 ### Task 2.4: Make current revision
 
@@ -102,3 +104,4 @@ In this task you created a new revision of an existing API and added a caching p
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/nextpagetab.png)
+
