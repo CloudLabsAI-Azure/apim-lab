@@ -43,12 +43,13 @@ A product contains one or more APIs as well as a usage quota and the terms of us
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-      <validation step="8a9c8766-7111-4091-9f67-2fadaa51d74d" />
+      <validation step="646168b2-aacb-45c1-90b3-d49a7d066366" />
 
 ## Summary
 
 In this task, you created a new product tier called "Gold Tier" in Azure API Management and modified the access control settings for this product by adding the "Developers" and "Guests" groups, allowing them access to this product. This allows developers to subscribe to the "Gold Tier" product and access its associated APIs, establishing control and access policies for different user groups.
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
+
 
   ![](../gs/media/nextpagetab.png)
