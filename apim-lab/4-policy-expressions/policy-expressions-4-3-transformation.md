@@ -34,7 +34,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
 
       ![APIM Policy Find & Replace](media/bluegreen.png)
 
-1. Go back to the tab where you have the **Colors** API test console open. Invoke the API using the Unlimited subscription key.You should see that the color blue is replaced with green.
+1. Go back to the tab where you have the **Colors** API test console open. Invoke the API using the Unlimited subscription key.You should see that the color blue is replaced with green. The expected outcome is to verify that response content can be dynamically transformed without changing the backend API.
 
       ![APIM Policy Find & Replace](media/p10t1s6.png)
 
@@ -43,7 +43,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-      <validation step="45b2075d-29c8-4f18-8ec1-c67ed80a1934" />
+      <validation step="de54eb0a-f486-4ee0-92d2-b3a52755ac69" />
 
 ---
 
@@ -114,7 +114,7 @@ The [context variable](https://docs.microsoft.com/en-us/azure/api-management/api
 
       ![APIM Policy Transform Unlimited Product](media/E4T3.2S4-0209.png)
 
-1. With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response.
+1. With **Unlimited** product scope. Notice the four properties in red that are not included in the **Starter** scope response. In this way we can enforced product based response customization. 
 
       ![APIM Policy Transform Unlimited Product](media/E4T3.2S5-0209.png)
 
@@ -145,7 +145,7 @@ A frequent requirement is to transform content, especially to maintain compatibi
 
     ![APIM Policy Find & Replace](media/p11t3.3p4.png)
 
-1. Now examine the response. Note that it's now JSON.
+1. Now examine the response. Note that the content-type is now JSON.
 
       ![APIM Policy Transform XML to JSON](media/E4T3.3S4-0209.png)
 
@@ -207,7 +207,7 @@ Query string parameters and headers can be easily modified prior to sending the 
 
     >**Note:** If Tracing is not enabled, you will receive a pop up to enable it, select **Enable Tracing for one hour**.
 
-1. In the **Trace tab (1)**, select **Backend (2)**.
+1. In the **Trace tab (1)**, select **Backend (2)**. The outcome is to validate how API Management enriches backend requests with contextual metadata.
 
       ![APIM Policy Amend Backend Call](media/E4T3.5S4-0209.png)
 
@@ -219,16 +219,11 @@ Query string parameters and headers can be easily modified prior to sending the 
 ---
 ## Summary
 
-In the above transformation tasks, you implemented various policies in Azure API Management:
-
-1. You applied find-and-replace policies to modify response strings in the Colors API.
-
-1. Conditional policies were used in the Star Wars API to customize responses based on subscription tiers.
-
-1. You transformed XML to JSON in the Calculator API and removed specific response headers.
-
-1. Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
+In this exercise, you used Azure API Management policies to transform API requests and responses without modifying backend services. You learned how to manipulate response content, apply conditional logic based on subscription tiers, convert response formats, remove unnecessary headers, and enrich backend requests with dynamic parameters to improve security, compatibility, and flexibility.
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
+
   ![](../gs/media/nextpagetab.png)
+
+

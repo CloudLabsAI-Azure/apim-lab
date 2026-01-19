@@ -13,11 +13,11 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
  
       ![](media/E4T5S2-0209.png)
   
-1. In the **Responses (1)** configuration tab, press **+ Add response (2)**, select `200 OK` **(3)**.
+1. Scroll down to the **Responses (1)** configuration tab, press **+ Add response (2)**, select `200 OK` **(3)**.
 
     ![APIM Policy Mock Response](media/33a.png)
 
-1. Click on **+ Add representation (1)** under Representations, from the content-type  drop-down select `application/json`**(2)** and add this below sample data under **Sample (3)** and click on **Save (4)**:
+1. Click on **+ Add representation (1)** under Representations, from the content-type  drop-down search and select `application/json`**(2)** and add this below sample data under **Sample (3)** and click on **Save (4)**:
 
     ```json
     {
@@ -52,7 +52,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="3083e0a3-97d5-46ce-bdf3-7c9e6cd526e7" />
+      <validation step="bbbade54-8829-47e7-bbb5-1b9be30ee2bb" />
 ---
 
 ## Summary 
@@ -62,3 +62,5 @@ In this task, you created a mock response for the "Get Film" operation in the St
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
   ![](../gs/media/nextpagetab.png)
+
+

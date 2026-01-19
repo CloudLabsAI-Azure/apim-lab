@@ -58,7 +58,7 @@ The following policy and payload applies for both examples in this section (webh
 
 [Webhook.site](https://webhook.site) is a simple recipient to test webhook messages and requires no setup overhead, making this an ideal component in this lab, especially as we are not sending any sensitive information in our payload from our test Azure API Management instance.
 
-1. Go to [Webhook.site](https://webhook.site) and copy the value for **Your unique URL**.
+1. Navigate to [Webhook.site](https://webhook.site) in a new browser tab and copy the value for **Your unique URL**.
 
       ![Webhook Site Setup](media/E4T6.2S1-0209.png)
 
@@ -94,3 +94,4 @@ In this task, you set up a "Send One-Way" policy in Azure API Management to send
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
   ![](../gs/media/nextpagetab.png)
+

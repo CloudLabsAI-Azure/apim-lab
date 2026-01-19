@@ -29,7 +29,7 @@ In this task you will be creating an Azure Application Insigths and will integra
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="c50fd98d-9969-4471-95d7-ae0959ed081f" />
+    <validation step="e1fbca41-0f0f-474e-b48b-a7e9581f5610" />
 
 ### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
@@ -55,7 +55,7 @@ In this task you will be creating an Azure Application Insigths and will integra
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="65dfec7c-e946-478a-8012-7430913523bd" />
+    <validation step="beabf03d-01a8-4f11-a116-b109205fca6a" />
 
 ### Task 2.3: Enable Application Insights logging for your API
 
@@ -101,9 +101,11 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
 ### Task 2.4: Viewing Azure Application Insights Data
 
-1. Navigate back to the **Application Insights** blade in your **APIM instance** and click on the Application Insights instance to open it.
+1. Navigate back to the **Application Insights (1)** blade in your **APIM instance** and click on the **Application Insights (2)** instance to open it.
 
-1. On the left hand side pane, click on the **Transaction search (2)** under **Investigate (1)** to see details on a transactional level.
+    ![](media/E6T2.4S1-1901.png)
+
+1. On the left hand side pane, click on the **Search (2)** under **Investigate (1)** to see details on a transactional level.
 
     ![](media/p18t2.4s1.png)
 
@@ -133,4 +135,7 @@ Skipping logging of headers and body of requests and responses will also have a 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 6.
 
   ![](../gs/media/nextpagetab.png)
+
+
+
 
