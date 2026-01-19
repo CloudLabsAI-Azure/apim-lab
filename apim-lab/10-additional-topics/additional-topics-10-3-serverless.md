@@ -6,14 +6,20 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 ### Task 3.1: Azure Functions
 
-1. Search and select for **Function App**  in the portal, click on **+ Create**. Select **Consumption (1)** option and click on **Select (2)**.
+1. Search and select for **Function App**  in the Azure portal.
+
+   ![](media/E8T3.1S1-1901.png)
+
+1. Click on **+ Create**. Select **Consumption (1)** option and click on **Select (2)**.
+
+   > **Note:** On the confirmation window, click on **Confirm**.
 
    ![](media/E9T3.1S1-0309.png)
 
 1. On the **Create Function App** page, enter the following details:
 
    - Subscription: Select the default subscription **(1)**
-   - Resource group: **apim-rg (2)**
+   - Resource group: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (2)**
    - Function name : **func-<inject key="Deployment ID" enableCopy="false" />** **(3)**
    - Operating System : **Windows (4)**
    - Runtime stack : Select **.Net (5)**
@@ -21,7 +27,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Region: **Select the default region (7)**
    - Click on **Review + create (8)**
 
-      ![](media/p25t3.1p2.png)
+      ![](media/E8T3.1S2-1901.png)
 
 1. Click on **Create**.  Once the Resource is created, click on **Go to resource**.
    
@@ -44,7 +50,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
     - AccessRights: **Function**
     - Select how you would like to open your project: **Open in current window**
 
-1. Click on **Yes, I trust the authors** when prompted.
+1. Wait for the function to create and click on **Yes, I trust the authors** when prompted.
 
    ![](media/p25t3.1p7.png)
 
@@ -98,7 +104,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    >**Note:** On the Automatically Sign in to all desktop apps and websites on this device? prompt, select **No, this app only**.
 
-1. Now, we are going to publish the function to Azure. Navigate to the **Azure tab** in VS Code. Click on the **Azure functions (1)** icon and select **Deploy to Azure... (2)**.
+1. Once the sign in completed, we are going to publish the function to Azure. In the **Azure tab** in VS Code click on the **Azure functions (1)** icon and select **Deploy to Azure... (2)**.
 
       ![](media/p25t3.1p13.png)
          
@@ -120,7 +126,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. In the **Import Azure functions** page, click on **Select** on the right side. On the Select Azure Function app window, select your **Function App (1)** and click on **Select (2)**. Then select the **Function (3)** and click on **Select (4)**.
 
-      ![](media/E9T3.1S16-0309.png)
+      ![](media/E8T3.1S16-1901.png)
 
       ![](media/p25t3.1p16.png)
 
@@ -143,9 +149,11 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 ### Task 3.2: Azure Logic Apps
 
-1. We will be creating a simple logic app that is triggered by an HTTP Request
+1. We will be creating a simple logic app that is triggered by an HTTP Request. Search and selct Logic app in Azre portal.
 
-1. Search for **Logic Apps** in the Azure portal search bar and select it, and click on **+ Add (1)**. On the Create Logic App page, click on **Consumption (3)** and **Select (3)**.
+   ![](media/E8T3.2S1-1901.png)
+
+1. Click on **+ Add (1)**. On the Create Logic App page, click on **Consumption (3)** and **Select (3)**.
 
    ![](media/E9T3.2S2.1-0309.png)
 
@@ -154,14 +162,14 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 1. On the **Create Logic App (Multi-tenant)** page, enter the following details:
 
    - Subscription: Select the default subscription **(1)**
-   - Resource group: **apim-rg (2)**
+   - Resource group: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (2)**
    - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />** **(3)**
-   - Region: Select the regions you have used for pthe revious task **(4)**
+   - Region: Select the region you have used for the revious task **(4)**
    - Click on **Review + create (5)** then click on **Create**.
 
-      ![](media/api11.png)
+      ![](media/E8T3.2S3-1901.png)
 
-1. Once the Resource is created click on **Go to resource**, from the left menu under Development Tools select **Logic app designer (1)** and click on **Add a trigger (2)**.
+1. Once the Resource is created click on **Go to resource**. From the left menu under Development Tools select **Logic app designer (1)** and click on **Add a trigger (2)**.
 
    ![](media/api10.png)
 
@@ -185,7 +193,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/E9T3.2S5.2-0309.png)
 
-      ![](media/E9T3.2S5.3-0309.png)
+      ![](media/E8T3.2S5.3-1901.png)
 
 1. Search for **Azure Functions (1)**, and select the **Choose an Azure function (2)** and then select the function that you have created previously.
 
@@ -193,33 +201,27 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Now select the **Function App (1)** and the **Function (2)** and click on **Add action (3)**.
 
-   ![](media/E9T3.2S6.2-0309.png)
+   ![](media/E8T3.2S7-1901.png)
 
-1. Add a new action to send email by clicking on the **+** icon, search for **Send an email (1)**, and select **Send an email (V2) (2)** under Office 365 Outlook. Click on **Sign in** and sign in using the environment credentials
+1. Add a new action to send email by clicking on the **+** icon, search for **Send an email (1)**, and select **Send an email (V2) (2)** under Office 365 Outlook. Click on **Sign in (3)** and sign in using the environment credentials
 
    ![](media/api18a.png)
+
+   ![](media/E8T3.2S8.2-1901.png)
 
    - **To**: Specify your Email address, i.e. **<inject key="AzureAdUserEmail"></inject>** to receive the e-mail.
 
    - **Subject**: **Color**
 
-   - **Body**: type **msg (1)**, **:** and click on add dynamic content **(2)**, select **msg**. Similarly, type **Color**, **:** and click on add dynamic content, search **body** and select **body** which is present in **Azure function**.
+   - **Body**: type **msg (1)**, **:** and click on add dynamic content **(2)**, select **msg**. Similarly, type **Color**, **:** and click on add dynamic content, search **Body** and select **Body** which is present in **Azure function**.
 
         ![](media/E9T3.2S8.2-0309.png)
 
-        ![](media/E9T3.2S8.3-0309.png)
+        ![](media/E8T3.2S8.4-1901.png)
 
 1. Select **+** to add a new action, search and select **Response**, now **Save** the logic App.
 
    ![](media/T3.2S8a.png)
-
-   - Use the following sample message to generate the schema of the Request body payload.  By specifying the schema, the individual fields (in this case, `msg`) can be extracted and referred to in the subsequent logic
-
-      ```json
-      {
-      "msg": "text"
-      }
-      ```
 
 1. Let's add the logic app to API Management. In the API blade select **+ Add API (1)** and the **Logic App (2)** tile
 
@@ -231,13 +233,13 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    - Select the **Logic App**, and choose **Select**.
 
-      ![](media/p25t3.2p10(1).png)
+      ![](media/E8T3.2S10.3-1901.png)
 
    - On the **Create from Logic App** screen, choose **Full (1)**. Keep the existing Name and Description, set the URL suffix to **logicapp (2)**, select the **Starter** and **Unlimited (3)** products, and then click **Create (4)**.
 
       ![](media/p25t3.2p10(2).png)
 
-1. Validate the Logic App works - either from the Azure management portal or the developer portal. Click **Test (1)**, select **GET GetRandomColor (2)**, and click **Send (3)**.
+1. Validate the Logic App works - either from the Azure management portal or the developer portal. Click **Test (1)**, select **When an HTTP request is receieved (2)**, and click **Send (3)**.
 
       ![](media/18a.png)
 
@@ -247,7 +249,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
       ![](media/p25t3.2p12.png)
 
-1. Log in to [outlook](https://www.microsoft.com/en-gb/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f&sdf=0) using the Azure credentials and check that the email was sent
+1. Open outlook in a new browser tab using the link [outlook](https://www.microsoft.com/en-gb/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f&sdf=0) and sign in using the Azure credentials. Check that the email was sent
 
       ![](media/p25t3.2p13.png)
 
