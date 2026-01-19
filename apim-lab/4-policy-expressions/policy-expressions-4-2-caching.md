@@ -4,7 +4,7 @@ In this task, you will explore and apply the caching policy to your API.
 
 Azure API Management can be configured for response caching which can significantly reduce API latency, bandwidth consumption, and web service load for data that does not change frequently.
 
-1. Navigate back to your **Azure API Management** instance in Azure Portal. We will now apply caching to the **Colors API** we created in Exercise 3.
+1. Navigate to **All API's** section in the API management resource. We will now apply caching to the **Colors API** we created in Exercise 3.
 
 1. Go to the **Colors API (1)** and select the **Get random color (2)** call:
 
@@ -52,4 +52,5 @@ In this task, you configured response caching for the "Get random color" call in
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
   ![](../gs/media/nextpagetab.png)
+
 
