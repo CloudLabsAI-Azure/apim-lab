@@ -50,7 +50,7 @@ In this task, you will import the Colors API into your API Management instance a
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="5b532484-11cb-42b8-acfe-f313be86abdb" />
+      <validation step="11eb4759-b54b-4e41-a546-e2fa3d86e8e9" />
 
 ### Task 4.2: Rate limit
 
@@ -153,4 +153,5 @@ In this Task, you imported and configured the "Colors API" in Azure API Manageme
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/nextpagetab.png)
+
 

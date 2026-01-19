@@ -54,7 +54,7 @@ The Azure API Management Developer Portal uses role-based access control (RBAC).
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="eb98a7b8-73ac-4702-a2cf-13eed4d6f6dc" />
+   <validation step="3b8a26c1-5a63-401b-805b-ac1d6498c3b9" />
 
 ### Task 2: Enabling CORS for the Developer Portal
 
@@ -79,7 +79,7 @@ CORS is enabled by using policies. We will go deeper on this topic in later exer
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="646168b2-aacb-45c1-90b3-d49a7d066366" />
+   <validation step="d4b92395-ee33-451e-9dad-898856cea431" />
 
 ### Task 3: User Experience
 
@@ -180,4 +180,5 @@ In the above Tasks, you accessed, configured, and tested the Azure API Managemen
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 2.
 
   ![](../gs/media/nextpagetab.png)
+
 

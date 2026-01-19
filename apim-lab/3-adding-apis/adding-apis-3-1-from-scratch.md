@@ -71,7 +71,7 @@ Instead of developing an API, for this Exercise, you will use the existing [_Sta
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="8cca1865-2003-4fe1-9c18-db10dc145273" />
+      <validation step="5394ae8d-6ce9-4ef8-ba57-e7dbff0a416b" />
 
 ### Task 2: Access Star Wars API from Developer Portal
 
@@ -106,5 +106,6 @@ In the above tasks, you added the Star Wars API to Azure API Management, configu
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 3.
 
   ![](../gs/media/nextpagetab.png)
+
 
 

@@ -8,13 +8,11 @@ In this exercise, we will explore Managed Identities in Azure API Management (AP
 
 APIM focuses heavily on security in all three major areas of the product. Going into detail on each aspect is a large topic entirely of its own. Therefore, in this section we will focus more narrowly on one of the common approaches to secure access to an API.
 
-In Azure, an Active Directory identity can be assigned to a managed resource such as an Azure Function, App Service or even an Azure API Management instance. Once an identity is assigned, it has many capabilities to work with other resources that leverage Azure AD for authentication, much like a service principal.
-
 ## Objectives
 
 You will be able to complete the following tasks:
 
-- Task 1: Register Azure API Management with Active Directory
+- Task 1: Register Azure API Management with Microsoft Entra ID
 - Task 2: Create Key Vault and add a secret
 - Task 3: Access policy and principal assignment
 - Task 4: Azure API Management, Key Vault and Managed Service Identity
@@ -22,7 +20,7 @@ You will be able to complete the following tasks:
 
 ### Task 1: Register Azure API Management with Active Directory
 
-In this task, you will enable a system-assigned managed identity for your Azure API Management (APIM) instance. This identity allows APIM to securely authenticate with Azure Active Directory and access other Azure resources, such as Key Vault, without needing to manage credentials manually. 
+In this task, you will enable a system-assigned managed identity for your Azure API Management (APIM) instance. This identity allows APIM to securely authenticate with Microsoft Entr ID and access other Azure resources, such as Key Vault, without needing to manage credentials manually. 
 
 1. Navigate to your **API management** instance, select **Managed identities** **(1)** under Security from the left menu. In the System assigned tab, set the Status to **On** **(2)**, and click on **Save** **(3)**.
 
@@ -37,7 +35,7 @@ In this task, you will enable a system-assigned managed identity for your Azure 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-    <validation step="265b4d8d-55fc-4920-924d-e023e3cc7bfe" />
+    <validation step="114baa5f-6313-469d-932a-033f7744f3d2" />
 
 ### Task 2: Create Key Vault and add a secret
 
@@ -85,7 +83,7 @@ In this task, you will create an Azure Key Vault and add a secret to it. This se
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-    <validation step="dc38114c-e0bd-49ae-9eaa-a39d6b5da0ac" />
+    <validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
 
 ### Task 3: Access policy and principal assignment
 
@@ -191,3 +189,4 @@ In this exercise, Azure API Management (APIM) is configured to securely access s
 
 
   ![](../gs/media/nextpagetab.png)
+

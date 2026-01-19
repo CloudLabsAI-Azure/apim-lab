@@ -145,7 +145,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-   <validation step="bdad12de-adba-47d5-b483-ca9f24601765" />
+   <validation step="b25ed567-5d6a-4ddf-a9e0-dee66fcf78d7" />
 
 ### Task 3.2: Azure Logic Apps
 
@@ -259,7 +259,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-   <validation step="7713e90f-d6b3-4a55-a4a0-0b870f9fadfd" />
+   <validation step="c60e228d-7a4a-49bb-a8da-dfa8c1415230" />
 
 ## Summary
 

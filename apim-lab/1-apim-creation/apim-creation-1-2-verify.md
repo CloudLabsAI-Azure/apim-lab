@@ -84,7 +84,7 @@ In this task, you will access the Request URL of the Echo API directly from a we
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="161978f0-99f8-4b6c-9a34-0cc81877cda2" />
+      <validation step="a68aef90-9b22-4d42-98cb-9ea25d35a217" />
 
 ## Summary
 

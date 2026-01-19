@@ -43,7 +43,7 @@ The **find-and-replace** policy finds a substring in a request or response and r
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-      <validation step="de54eb0a-f486-4ee0-92d2-b3a52755ac69" />
+      <validation step="45b2075d-29c8-4f18-8ec1-c67ed80a1934" />
 
 ---
 
@@ -225,5 +225,6 @@ In this exercise, you used Azure API Management policies to transform API reques
 
 
   ![](../gs/media/nextpagetab.png)
+
 
 

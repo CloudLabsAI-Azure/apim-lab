@@ -75,7 +75,7 @@ In this task, you will create a Named Value in Azure API Management (APIM) that 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-      <validation step="4bd81d1c-b5b0-4e0d-96a7-3d29346c05e8" />
+      <validation step="0b2d0949-fa33-4cd3-a097-c56bbc605dcc" />
 ---
 
 ## Summary
@@ -85,5 +85,6 @@ In this task, you created a Named Value in Azure API Management (APIM) to hold t
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
   ![](../gs/media/nextpagetab.png)
+
 
 

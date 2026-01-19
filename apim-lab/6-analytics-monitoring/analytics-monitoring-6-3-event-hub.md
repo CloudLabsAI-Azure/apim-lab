@@ -38,7 +38,7 @@ An Event Hubs namespace provides a unique scoping container in which you create 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-    <validation step="82bd2dc3-58bc-43b2-aaf8-277dae0517ad" />
+    <validation step="8c241828-0198-4596-a1f0-4b70ef4fb3aa" />
 
 
 ### Task 3.2: Create an Event Hub
@@ -66,7 +66,7 @@ We will create an Event Hub to receive logs from our APIM. To create an event hu
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="b95f28d8-0dbe-49a9-998a-bc43355f9342" />
+    <validation step="3fefc0a6-157b-4820-a57b-5bd7a536f3df" />
 
 
 ### Task 3.3: Create Access to the Event Hub
@@ -238,6 +238,7 @@ In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) f
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
 
