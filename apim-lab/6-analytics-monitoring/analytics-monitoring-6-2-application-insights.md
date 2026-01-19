@@ -29,7 +29,7 @@ In this task you will be creating an Azure Application Insigths and will integra
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-    <validation step="c50fd98d-9969-4471-95d7-ae0959ed081f" />
+    <validation step="e1fbca41-0f0f-474e-b48b-a7e9581f5610" />
 
 ### Task 2.2: Create a connection between Azure Application Insights and Azure API Management service instance
 
@@ -135,5 +135,6 @@ Skipping logging of headers and body of requests and responses will also have a 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 6.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
