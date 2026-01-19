@@ -219,17 +219,10 @@ Query string parameters and headers can be easily modified prior to sending the 
 ---
 ## Summary
 
-In the above transformation tasks, you implemented various policies in Azure API Management:
-
-1. You applied find-and-replace policies to modify response strings in the Colors API.
-
-1. Conditional policies were used in the Star Wars API to customize responses based on subscription tiers.
-
-1. You transformed XML to JSON in the Calculator API and removed specific response headers.
-
-1. Query string parameters and headers were dynamically modified using inbound policies in the Calculator API.
+In this exercise, you used Azure API Management policies to transform API requests and responses without modifying backend services. You learned how to manipulate response content, apply conditional logic based on subscription tiers, convert response formats, remove unnecessary headers, and enrich backend requests with dynamic parameters to improve security, compatibility, and flexibility.
 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
 
   ![](../gs/media/nextpagetab.png)
+
