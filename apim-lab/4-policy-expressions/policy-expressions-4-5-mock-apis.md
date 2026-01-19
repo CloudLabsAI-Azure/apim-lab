@@ -52,7 +52,7 @@ Mocking in Azure API Management is a useful mechanism for API consumers to inter
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="bbbade54-8829-47e7-bbb5-1b9be30ee2bb" />
+      <validation step="3083e0a3-97d5-46ce-bdf3-7c9e6cd526e7" />
 ---
 
 ## Summary 
@@ -62,5 +62,6 @@ In this task, you created a mock response for the "Get Film" operation in the St
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
