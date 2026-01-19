@@ -101,9 +101,11 @@ Any request you make to the Colors API in Azure API Management will be subject t
 
 ### Task 2.4: Viewing Azure Application Insights Data
 
-1. Navigate back to the **Application Insights** blade in your **APIM instance** and click on the Application Insights instance to open it.
+1. Navigate back to the **Application Insights (1)** blade in your **APIM instance** and click on the **Application Insights (2)** instance to open it.
 
-1. On the left hand side pane, click on the **Transaction search (2)** under **Investigate (1)** to see details on a transactional level.
+    ![](media/E6T2.4S1-1901.png)
+
+1. On the left hand side pane, click on the **Search (2)** under **Investigate (1)** to see details on a transactional level.
 
     ![](media/p18t2.4s1.png)
 
@@ -133,4 +135,5 @@ Skipping logging of headers and body of requests and responses will also have a 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 6.
 
   ![](../gs/media/nextpagetab.png)
+
 
