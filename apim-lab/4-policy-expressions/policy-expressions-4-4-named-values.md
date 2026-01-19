@@ -58,7 +58,7 @@ In this task, you will create a Named Value in Azure API Management (APIM) that 
 
     ![](media/p12t4p6.png) 
 
-1. Examine the backend trace to find the added header with the evaluated named value. On the Test tab, click on **Trace (1)** and then **Trace (2)** from the top menu and select **Backend (3)**.
+1. Examine the backend trace to find the added header with the evaluated named value. On the Test tab, click on **Trace (1)** and then **Trace (2)** from the top menu and select **Backend (3)**. The output would be similar as mentioned below:
 
     ```json
     {
@@ -85,3 +85,4 @@ In this task, you created a Named Value in Azure API Management (APIM) to hold t
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 4.
 
   ![](../gs/media/nextpagetab.png)
+
