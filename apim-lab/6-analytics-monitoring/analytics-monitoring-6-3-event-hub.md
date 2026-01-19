@@ -79,11 +79,11 @@ We will create an Event Hub to receive logs from our APIM. To create an event hu
 
     ![Event Hub Send Policy](media/E6T3.3S3-0309.png)
 
-1. Open the new policy created and copy the **Primary connection string** to a notepad. Also, copy the **Event Hub namespace**. You will use both values in the next section.
+1. Open the new policy created and copy the **Primary connection string (1)** to a notepad. Also, copy the **Event Hub namespace (2)**. You will use both values in the next section.
 
-    ![Event Hub Connection](media/19upda.png)
+    ![Event Hub Connection](media/E6T3.3S4.1-1901.png)
 
-    ![Event Hub Connection](media/17a.png)
+    ![Event Hub Connection](media/E6T3.3S4.2-1901.png)
 
 
 ### Task 3.4: Create an Azure API Management logger
@@ -114,6 +114,8 @@ Azure API Management loggers are configured using the [API Management REST API](
 
      ![ API Try It](media/api1504b.png)    
 
+1. On the You're all set page, click on **Back to learn**. 
+
 1. Once you have signed in successfully, the Rest API window will open on the right side of the screen. Click on **Continue with Account**.
 
     ![](media/p20t3.4p5.png)
@@ -121,12 +123,12 @@ Azure API Management loggers are configured using the [API Management REST API](
 1. Enter the following details in the **Parameters** section:
 
     - loggerId: **event-hub-logger (1)** (you will use it in the next steps)
-    - resourceGroupName: **apim-rg (2)** 
+    - resourceGroupName: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (2)** 
     - serviceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
     - subscriptionId: Select the subscription given by default **(4)**.
     - api-version: **2018-01-01 (5)**
 
-        ![RREST API Try It](media/E6T3.4S6-0309.png)
+        ![RREST API Try It](media/E6T3.4S6-1901.png)
 
 1. Replace the request **Body (1)** with the following json. Make sure you replace the parameters appropriately and press **Run (2)**:
 
@@ -167,11 +169,11 @@ Once your logger is configured in Azure API Management, you can configure your l
 1. In the **Inbound** or **Outbound** processing window, enter the Code editor.
 1. Enter a new line after the `<base />` tag in the `inbound` or `outbound` policy section.
 1. Select **Show snippets (1)**.
-1. In the right-hand pane, click on **Hide Snippets (2)**, scroll down to the **Advanced policies** section, and select **Log to EventHub (3)**. This will insert a template for the `log-to-eventhub` policy statement.
+1. Scroll down to the **Advanced policies** section, and select **Log to EventHub (3)**. This will insert a template for the `log-to-eventhub` policy statement.
 
     ![APIM Add Log to Event Hub](media/E6T3.5S7-0309.png)
 
-1. Replace the entire code block with the snippet provided below to ensure there are no errors in the policy configuration:
+1. For now, replace the entire code block with the snippet provided below to ensure there are no errors in the policy configuration:
 
     ```
     <!--
@@ -236,6 +238,7 @@ In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) f
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
 
