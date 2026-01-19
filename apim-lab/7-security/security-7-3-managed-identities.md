@@ -37,7 +37,7 @@ In this task, you will enable a system-assigned managed identity for your Azure 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-    <validation step="114baa5f-6313-469d-932a-033f7744f3d2" />
+    <validation step="265b4d8d-55fc-4920-924d-e023e3cc7bfe" />
 
 ### Task 2: Create Key Vault and add a secret
 
@@ -85,7 +85,7 @@ In this task, you will create an Azure Key Vault and add a secret to it. This se
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
          
-    <validation step="c496182a-286f-4509-b2e7-43d5c1dd6403" />
+    <validation step="dc38114c-e0bd-49ae-9eaa-a39d6b5da0ac" />
 
 ### Task 3: Access policy and principal assignment
 
@@ -188,5 +188,6 @@ In this task, you will test the newly created operation in the developer portal 
 In this exercise, Azure API Management (APIM) is configured to securely access secrets from Azure Key Vault using Managed Service Identity (MSI), enhancing security and enabling the retrieval of secrets for API management operations, as demonstrated during testing in the developer portal.
 
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
+
 
   ![](../gs/media/nextpagetab.png)
