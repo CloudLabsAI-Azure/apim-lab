@@ -1,42 +1,31 @@
-# Exercise 9: Fusion Dev (Read Only)
+# Exercise 9: Fusion Dev (Optional)
 
-### Estimated Duration: 20 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Overview
 
-In this exercise, you'll create a Star Wars Fan Club mobile application using Power Apps and Azure API Management. You'll connect your member data from an Excel worksheet, integrate Star Wars character information through a custom connector, and customize the app to display favorite character details for each member.
+In this exercise, you will create a Power Apps Canvas application that uses an Excel worksheet as the primary data source and integrates with the Star Wars API via a custom connector exported from Azure API Management. This application will allow users to view and search for information about Star Wars characters.
 
 ## Objectives
 
 In this exercise, you will perform:
 
 - Task 1: Power Apps and APIM
-
-   - Task 1.1: Update CORS policy
-   - Task 1.2: Create a custom connector
-
 - Task 2: View your custom connector in Power Platform
 - Task 3: Generate the Star Wars Fan Club Application
+- Task 4: Add the Star Wars API Data Source
 
-   - Task 3.1: Connect to the backing data source
-
-- Task 4: Add Favorite Character information
-
-   - Task 4.1: Add the Star Wars API Data Source
-   - Task 4.2: Customize the generated app
-   - Task 4.3: Add controls to the View Detail screen
-   - Task 4.4: Connect the Detail Screen to the Star Wars API
-   - Task 4.5: Show the Star Wars character information on the Detail Screen
-
-## Task 1: Power Apps and APIM
+### Task 1: Power Apps and APIM
 
 The *premier* Star Wars Fan club is growing and the club officers would like to upgrade from their existing member tracking worksheet to a mobile application that would be available to their members all over the world. The members would also like to see information about their favorite Star Wars movies and characters in the application that would update as new shows and movies are released.
 
-In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the Azure API Management instance that you created [in part three](../3-adding-apis/adding-apis-3-1-from-scratch.md) of this lab. The Excel worksheet of member profiles will serve as the primary backing data source and will be used to generate a base application. You will export the Star Wars API from Azure API Management as a Power Platform Custom Connector so that the Canvas App can access real-time Star Wars character information. For each of the Fan Club members, you can then search the Star Wars API character data and show information about their favorite character in the Canvas App.
+In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the Azure API Management instance that you created [in part three](../3-adding-apis/adding-apis-3-1-from-scratch.md) of this lab. The Excel worksheet of member profiles will serve as the primary backing data source and will be used to generate a base application. You will export the Star Wars API from Azure API Management as a Power Platform Custom Connector so that the Canvas App can access real-time Star Wars character information. 
 
 > *Note: This exercise requires access to Power Apps Premium connectors. Sign up for a [free Developer Plan](https://powerapps.microsoft.com/en-us/developerplan/).* Use the credentials given in the lab environment to sign up for a Developer Plan.
 
-### Task 1.1: Update CORS policy
+#### Task 1.1: Update CORS policy
+
+In this task, you will update the CORS policy in your Azure API Management instance to allow requests from Power Apps.
 
 1. IN your Azure API management instance, navigate to API section. 
  
@@ -48,7 +37,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/E9T1.1S3-1901.png)
 
-### Task 1.2: Create a custom connector
+#### Task 1.2: Create a custom connector
 
 1. Navigate to the following link: [Power Platform](https://www.microsoft.com/en-us/power-platform/products/power-apps/free) in a new browser tab.
 
@@ -95,9 +84,9 @@ In this task, you will view and edit the custom connector that you created in th
 
    ![](media/p22t2p3.png)
 
-1. You can view the recently created **Star Wars API** custom connector. From here, select the pencil icon to edit the custom connector.
+1. On the Custom connectors page, click on **New cusom connector (1)** dropdown and select Create from **Azure service (Preview) (2)**.
 
-   ![](media/3.png)
+   ![](media/E9T2S4-2109.png)
  
 1. In the top left corner, click on **1. General** from the drop-down and select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
 
@@ -159,11 +148,11 @@ In this task, you will view and edit the custom connector that you created in th
 
       ![](media/Pg25-subscriptionid.png)
 
-1. Navigate back to the Power Apps page, paste the subscription key, and select **Create**.
+1. Navigate back to the Power Apps page, paste the **subscription key (1)**, and select **Create (2)**.
 
-      ![](./media/addcon01.png)
+      ![](./media/E9T2S13-2109.png)
 
-1. Navigate back to the **Custom Connectors** page and click on the pencil icon i.e **Edit**.
+1. Navigate back to the **Custom Connectors** page in Power apps portal and click on the pencil icon i.e **Edit**.
 
 1. Return to the **Test** page and test each of the API actions, in **getpeople** in the search section type **Luke** and select **Test operations**.
 
@@ -171,121 +160,62 @@ In this task, you will view and edit the custom connector that you created in th
 
    ![](./media/E9T2S15.2-1901.png)
 
-## **Task 3: Generate the Star Wars Fan Club Application**
+### Task 3: Generate the Star Wars Fan Club Application**
 
-### Task 3.1: Connect to the backing data source
+In this task, you will create a Canvas App in Power Apps using the Excel worksheet as the primary data source.
 
-1. Log in to [Onedrive](https://onedrive.live.com/login/).
+1. In the Power Apps portal, click on **+ Create** from the left navigation list and select **Start with data (2).**
 
-   > **Note:** Use the following credentials for OneDrive for Business.
-    
-    * Email/Username: <inject key="AzureAdUserEmail"></inject>
+   ![](media/E9T3S1-2109.png)
 
-    * Password: <inject key="AzureAdUserPassword"></inject>
+1. On the Start with data page click on **Create new tables**.
 
-1. On **Securely store and share files** page, select **Your OneDrive is ready**.
+   ![](media/E9T3S2-2109.png)
 
-1. Select **+ Create or upload (1)**, click on **Files Upload (2)**, in the Jump VM, navigate to **C:\LabFiles\fanclubmembers.xlsx** path, and upload **fanclubmembers.xlsx**  to your OneDrive for Business account.
+1. On the Choose an option to create table page, select **Import and Excel or .CSV (1)**, and click on **Select from device (2)**.
 
-   ![](media/upload-onedrive-1005.png)
- 
-3. Navigate back to Power Apps Editor, in the left pane, select **Home**.
+   ![](media/E9T3S3-2109.png)
 
-4. Select **Create (1)** , select **Excel (2)** and then click on **+ New connection**.
+   ![](media/E9T3S3.1-2109.png)
 
-   ![](media/excel.png)
-   
-5. Under **Connections** , select **OneDrive for Business**, select **Create**, and select **<inject key="AzureAdUserEmail"></inject>**. On **Confirmation required** page, select **Allow access**. 
+1. Navigate to **C:\LabFiles (1)** path, select the **fanclubmembers.xlsx (2)** and click on **Open (3)** to upload the file. Then click on **Import (4)**.
 
-6. Under **Choose an Excel file** , select the **fanClubMembers.xlsx** file.
+   ![](media/E9T3S4-2109.png)
 
-7. Under **Choose a table** , select the **MemberList** table.
+   ![](media/E9T3S4.1-2109.png)
 
-8. Select **Connect** on the bottom right.
+1. Click on **Save and open app**. On the **Done working?** pop-up, click on **Save and open app**.
 
-9. Power Apps will generate the app by inspecting your data and matching it with Power Apps screens.
+   ![](media/E9T3S5-2109.png)
 
-   >**Note:** On **Welcome to Power Apps Studio** page, select **Skip**.
+1. Click on **Skip** on the Welcom to Power Apps Studio pop-up window. 
 
-## **Task 4: Add Favorite Character information**
+1. The App will be open in Editing mode in Power Apps editor. You can click on the Play button at the top right corner to use the app. 
 
-Your generated app will now be in edit mode in the Power Apps Studio.
+   ![](media/E9T3S7-2109.png)
 
-### Task 4.1: Add the Star Wars API Data Source
+### Task 4: Add the Star Wars API Data Source
+
+In this task, you will add the Star Wars API custom connector as a data source to your Canvas App.
 
 1. Select **Data (1)** from the left pane and then select **+ Add data (2)** from the drop-down menu.
 
-2. Search for **Star Wars (3)** in the search field and choose the connection to the **Star Wars API (4)**.
+2. Search for **Star Wars API (3)** in the search field and choose the connection to the **Star Wars API (4)**.
 
-     ![](media/mapi104.png)
+     ![](media/E9T4S2-2109.png)
 
-### Task 4.2: Customize the generated app
+1. Click on Play button to open the app and the app will look like this
 
-Your generated app will now be in edit mode in the Power Apps Studio.
+     ![](media/E9T4S2-2109.png)
 
-You can customize your app theme using the **Theme** drop-down menu and selecting an option. You can change or format the fields that are shown in the Gallery by selecting **Tree view** in the left pane, clicking on BrowseGallery1, and making edits in the right formatting pane.
-
-![](media/10.png)
-
-### Task 4.3: Add controls to the View Detail screen
-
-1. In the Tree view, select **DetailScreen1**.
-
-   ![](media/mapi105.png)
-
-1. Select the **+** icon on the left side of the screen to bring up the **Insert** panel.
-
-1. Select **Text Label** and add labels for the **Favorite Character:** section header and for each one of the character description fields.
-
-1. For each label control, change the **Text** property in the right-side **Properties** panel to describe each field.
-
-1. Drag the controls on the screen so they are below the header and are aligned with the center of the screen.
-
-   ![](media/11.png)
-
-### Task 4.4: Connect the Detail Screen to the Star Wars API
-
-1. In the left pane, select the **Tree view** and then the **BrowseGallery1** under **Browsescreen1**.
-
-2. Using the drop-down menu, select the **OnSelect** action that will be executed when a user selects a Fan Club member from the gallery.
-
-3. In the **OnSelect** function, we will navigate to **DetailScreen1** and call the Star Wars API to get the character details for the member&#39;s favorite character.
-
-    ```
-    Navigate(DetailScreen1, ScreenTransition.None);
-
-    ClearCollect(characterCollection, StarWars.getpeople({search: ThisItem.MemberFavoriteCharacter}).results);
-    ```
-    
-    ![](media/onselect.png)
-
-### Task 4.5: Show the Star Wars character information on the Detail Screen
-
-1. For each of the description labels on **DetailScreen1** , change the **Text** property in the right-side **Properties** panel to include the data from the API. For example, for the **Name:** label: `&quot;Name:&quot; &amp; &quot; &quot; &amp; First(characterCollection).name`
-
-    - Select `Name` Label and Enter `"Name: " & First(characterCollection).name`
-
-       ![](media/fx.png)
-
-    - Likewise, you can enter the following for each label:
-    - Mass: `"Mass: " & Text(First(characterCollection).mass, "[$-en-US]0") & " kg"`
-    - Height: `"Height: " & Text(First(characterCollection).height, "[$-en-US]0") & " cm"`
-    - Birth year: `"Birth Year: " & First(characterCollection).birth_year`
-    - Gender: `"Gender: " & First(characterCollection).gender`
-   
-2. Select **Play** in the upper-right corner to practice using the app.
- 
-   ![](media/powerapps-output1.png)
-
-   ![](media/powerapps-output2.png)
-
+1. After the app is generated, you can customize it to match your requirements. This includes changing the app theme and branding, renaming labels and headers, reordering or hiding fields, adjusting the layout of lists and details, and applying conditional formatting based on data values. You can also enhance the app by adding search capabilities, buttons, and integrating external APIs using connectors to extend the app’s functionality.
 --- 
 
-### Summary
+## Summary
 
-In this exercise, you have integrated the Star Wars API with Azure API Management, exported it as a Power Platform Custom Connector, and created a Canvas App to allow Fan Club members to search and view information about their favorite Star Wars characters.
+In this exercise, you created a Power Apps Canvas application that uses an Excel worksheet as the primary data source and integrates with the Star Wars API via a custom connector exported from Azure API Management. This application allows users to view and search for information about Star Wars characters.
 
-### Conclusion
+## Conclusion
 
 By completing this **Azure API Management** hands-on lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.
 
