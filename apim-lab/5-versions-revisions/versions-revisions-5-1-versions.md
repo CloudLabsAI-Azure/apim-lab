@@ -91,7 +91,7 @@ Proper version management not only helps organize your API, but it also aids in 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="933cfba5-a379-4008-b435-b298a76e4a21" />
+      <validation step="150dd1c5-427a-46c3-88b6-6c18bc0ed5a3" />
 
 ### What Versions Enable
 
@@ -104,6 +104,7 @@ In this task, you created a new version of an existing API. You also tested the 
 ### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 5.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
 
