@@ -38,17 +38,15 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
 ### Task 1.1: Update CORS policy
 
-1. In your Azure API Management resource, navigate to the **Portal Overview** under **Developer Portal** from the left pane to verify if CORS has been enabled globally. Here's what the Portal overview will look like if CORS has been enabled:
-
-   ![](media/1.png)
+1. IN your Azure API management instance, navigate to API section. 
  
-1. Now go to **All APIs (1)**, and click on **edit icon (2)** from the Inbound Processing tab.
+1. Click on **All APIs (1)**, and click on **edit icon (2)** from the Inbound Processing tab.
 
    ![](media/aaa1a.png)
 
-1. Click on **+ Add Allowed origin** and add https://flow.microsoft.com and https://make.powerapps.com as allowed origins, and click on **Save**.
+1. Click on **+ Add Allowed origin (1)** and add **`https://flow.microsoft.com` and `https://make.powerapps.com` (2)** as allowed origins, and click on **Save (3)**.
 
-   ![](media/p22t1.1p3.png)
+   ![](media/E9T1.1S3-1901.png)
 
 ### Task 1.2: Create a custom connector
 
@@ -62,7 +60,7 @@ In this exercise, you will be using [Star Wars API](https://swapi.dev/) with the
 
    ![](media/p22t1.2p3.png)
 
-1. Select the country/region and click on **Get started**.
+1. On the Welcome to Power Apps page, select the country/region and click on **Get started**.
 
    ![](media/p22t1.2p4.png)
 
@@ -131,7 +129,7 @@ In this task, you will view and edit the custom connector that you created in th
 
 1. In the left pane, select **+ New policy** under the **Policies** section.
 
-   ![](media/mapi102.png)
+   ![](media/E9T2S9-1901.png)
 
 1. Fill out the new policy with the following information:
 
@@ -151,13 +149,11 @@ In this task, you will view and edit the custom connector that you created in th
       
        ![](media/action.png)
 
-       ![](media/origin001.png)
-
 1. Click on the **tick** mark on the top right, which will update the Connector.
 
-1. Select **6.Test**, from the top left corner, and click on **+New connection** in the **Connections** section.
+1. Select **5.Test (2)**, from the top left corner **(1)**, and click on **+New connection (3)** in the **Connections** section.
 
-      ![](media/mapi103.png)
+      ![](media/E9T2S12-1901.png)
 
       > **Note:** If prompted to provide the subscription key, navigate to Azure Portal, and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
@@ -173,7 +169,7 @@ In this task, you will view and edit the custom connector that you created in th
 
    ![](media/8.png)
 
-   ![](./media/res01.png)
+   ![](./media/E9T2S15.2-1901.png)
 
 ## **Task 3: Generate the Star Wars Fan Club Application**
 
@@ -289,6 +285,8 @@ You can customize your app theme using the **Theme** drop-down menu and selectin
 
 In this exercise, you have integrated the Star Wars API with Azure API Management, exported it as a Power Platform Custom Connector, and created a Canvas App to allow Fan Club members to search and view information about their favorite Star Wars characters.
 
-### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
+### Conclusion
 
-  ![](../gs/media/nextpagetab.png)
+By completing this **Azure API Management** hands-on lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.
+
+### Congratulations! You've successfully completed the Hands-on lab.

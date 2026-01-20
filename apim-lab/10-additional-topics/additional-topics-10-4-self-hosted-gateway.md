@@ -41,15 +41,15 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
     >**Note:** Here you can find the scripts for deploying on Docker and Kubernetes, for this lab, we will be using the Docker option.
 
-1. Download the **env.conf (2)** file by clicking on it as shown in the below image, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`.
+1. Download the **env.conf (2)** file by clicking on it as shown in the below image, and it will be saved automatically in the following path: `C:/Users/demouser/Downloads`. Copy the Docker run command **(3)** under Deployment scripts.
 
-1. Copy the Docker run command **(3)** under Deployment scripts.
+    ![](media/p26t4p7.png)
+
+   The run command would be like this:
   
     ```text
     docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
     ```
-
-    ![](media/p26t4p7.png)  
 
 1. Launch Docker Desktop by using the shortcut available on the Lab VM desktop. After launching Docker Desktop, **accept the terms**, click on **Skip** to skip the sign in process. Docker Engine may take about 2-3 minutes to start. 
 
@@ -74,7 +74,7 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
       cat env.conf
       ```
 
-    - Run the Docker run command
+    - Run the Docker run command which you copied in the previeos step
 
       ```
       docker run -d -p 80:8080 -p 443:8081 --name OnPremiseGateway --env-file env.conf mcr.microsoft.com/azure-api-management/gateway:v2
@@ -116,17 +116,17 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
     > **Note**: If you encounter an error like **"Only alphanumeric characters and hyphens are allowed,"** remove any **'*'** or other special characters from the user name.
 
-    > **Note:** If Postman prompts for an OTP during login, go to [**Outlook.com**](https://outlook.com), click **Sign in (1)**, and use the **Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>** to access the inbox and retrieve the OTP code.
+1. Postman will ask for an OTP during login, go to [**Outlook.com**](https://outlook.com), click **Sign in (1)**, and use the **Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>** to access the inbox and retrieve the **OTP code (2)** and click on **Verify Account (3)**.
 
     ![](media/outlook-signin.png)
 
-    ![](media/p26t4.2p5(1).png) 
+    ![](media/E8T4.2S5.3-1901.png) 
 
 1. After successful sign-in, on the **This site is trying to open Postman.** pop-up wizard, click **Open**.
 
     ![](media/p26t4.2p6.png)
 
-1. If prompted on the **Welcome to Postman!** page, enter **Odl_User (1)** as your name, choose your role **(2)**, and click **Continue (3)**. Then select **Continue with free plan**.
+1. On the **Welcome to Postman!** page, enter **Odl_User (1)** as your name, choose your role **(2)**, and click **Continue (3)**. Then select **Continue with free plan**.
 
     ![](media/postman-0309.png)
 
@@ -149,8 +149,6 @@ There can be multiple Gateway Deployments and multiple Gateway Nodes.  The Gatew
 
 In this task, you have deployed a self-hosted gateway for Azure API Management, enabling the hosting of API gateway nodes in Docker or Kubernetes environments. Then you have configured the gateway deployment, downloaded configuration files, and executed Docker commands to start the gateway node. Finally, tested the API using Postman, confirming the proper functionality of the self-hosted gateway.
 
-### Conclusion
+### Now, click on Next from the lower right corner to move on to the next page for further tasks of Exercise 9.
 
-By completing this **Azure API Management** hands-on lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.
-
-### Congratulations! You've successfully completed the Hands-on lab.
+  ![](../gs/media/nextpagetab.png)
