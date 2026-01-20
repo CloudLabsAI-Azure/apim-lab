@@ -43,7 +43,7 @@ A product contains one or more APIs as well as a usage quota and the terms of us
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
    
-      <validation step="8a9c8766-7111-4091-9f67-2fadaa51d74d" />
+      <validation step="c7f056ed-a800-4300-b4c0-5f1b0137ee7f" />
 
 ## Summary
 
@@ -53,4 +53,5 @@ In this task, you created a new product tier called "Gold Tier" in Azure API Man
 
 
   ![](../gs/media/nextpagetab.png)
+
 
