@@ -144,7 +144,7 @@ First, we need to enable CORS for the domain name of the front end. To achieve t
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-      <validation step="d845544d-8b92-4516-a1f7-d3c7171aa300" />
+      <validation step="1f76f1e2-0059-4133-a585-99bc3ec5846e" />
 
 ## Summary
 
@@ -153,6 +153,7 @@ In this Task, you imported and configured the "Colors API" in Azure API Manageme
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
 
