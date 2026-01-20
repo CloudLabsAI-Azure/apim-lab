@@ -19,7 +19,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 1. On the **Create Function App** page, enter the following details:
 
    - Subscription: Select the default subscription **(1)**
-   - Resource group: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (2)**
+   - Resource group: **apim-rg (2)**
    - Function name : **func-<inject key="Deployment ID" enableCopy="false" />** **(3)**
    - Operating System : **Windows (4)**
    - Runtime stack : Select **.Net (5)**
@@ -27,7 +27,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
    - Region: **Select the default region (7)**
    - Click on **Review + create (8)**
 
-      ![](media/E8T3.1S2-1901.png)
+      ![](media/E8T3.1S3-2109.png)
 
 1. Click on **Create**.  Once the Resource is created, click on **Go to resource**.
    
@@ -126,7 +126,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. In the **Import Azure functions** page, click on **Select** on the right side. On the Select Azure Function app window, select your **Function App (1)** and click on **Select (2)**. Then select the **Function (3)** and click on **Select (4)**.
 
-      ![](media/E8T3.1S16-1901.png)
+      ![](media/E8T3.1S17-2109.png)
 
       ![](media/p25t3.1p16.png)
 
@@ -162,12 +162,12 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 1. On the **Create Logic App (Multi-tenant)** page, enter the following details:
 
    - Subscription: Select the default subscription **(1)**
-   - Resource group: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (2)**
+   - Resource group: **apim-rg (2)**
    - Logic App Name: **logicapp-<inject key="Deployment ID" enableCopy="false" />** **(3)**
    - Region: Select the region you have used for the revious task **(4)**
    - Click on **Review + create (5)** then click on **Create**.
 
-      ![](media/E8T3.2S3-1901.png)
+      ![](media/E8T3.2S3-2109.png)
 
 1. Once the Resource is created click on **Go to resource**. From the left menu under Development Tools select **Logic app designer (1)** and click on **Add a trigger (2)**.
 
@@ -201,7 +201,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
 1. Now select the **Function App (1)** and the **Function (2)** and click on **Add action (3)**.
 
-   ![](media/E8T3.2S7-1901.png)
+   ![](media/E8T3.2S7-2109.png)
 
 1. Add a new action to send email by clicking on the **+** icon, search for **Send an email (1)**, and select **Send an email (V2) (2)** under Office 365 Outlook. Click on **Sign in (3)** and sign in using the environment credentials
 
@@ -233,7 +233,7 @@ Azure Serverless (Functions and Logic Apps) can be configured to benefit from th
 
    - Select the **Logic App**, and choose **Select**.
 
-      ![](media/E8T3.2S10.3-1901.png)
+      ![](media/E8T3.2S10.3-2109.png)
 
    - On the **Create from Logic App** screen, choose **Full (1)**. Keep the existing Name and Description, set the URL suffix to **logicapp (2)**, select the **Starter** and **Unlimited (3)** products, and then click **Create (4)**.
 
