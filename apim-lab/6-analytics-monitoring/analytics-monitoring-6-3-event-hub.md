@@ -83,7 +83,7 @@ We will create an Event Hub to receive logs from our APIM. To create an event hu
 
     ![Event Hub Connection](media/E6T3.3S4.1-1901.png)
 
-    ![Event Hub Connection](media/E6T3.3S4.2-1901.png)
+    ![Event Hub Connection](media/eventhubnamespace-2109.png)
 
 
 ### Task 3.4: Create an Azure API Management logger
@@ -123,12 +123,12 @@ Azure API Management loggers are configured using the [API Management REST API](
 1. Enter the following details in the **Parameters** section:
 
     - loggerId: **event-hub-logger (1)** (you will use it in the next steps)
-    - resourceGroupName: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (2)** 
+    - resourceGroupName: **apim-rg (2)** 
     - serviceName: **apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" /> (3)**
     - subscriptionId: Select the subscription given by default **(4)**.
     - api-version: **2018-01-01 (5)**
 
-        ![RREST API Try It](media/E6T3.4S6-1901.png)
+        ![RREST API Try It](media/2eventhub-cred-2109.png)
 
 1. Replace the request **Body (1)** with the following json. Make sure you replace the parameters appropriately and press **Run (2)**:
 
@@ -145,7 +145,7 @@ Azure API Management loggers are configured using the [API Management REST API](
     }
     ```
 
-    ![RREST API Try It](media/p20t3.4p7.png)    
+    ![RREST API Try It](media/eventhub-cred-2109.png)    
 
     >**Note:** Update the name of the **Events Hub Namespace** and the **Shared Access key** which we copied earlier in the notepad.
 
@@ -238,6 +238,7 @@ In this Task, Azure Event Hubs are integrated with Azure API Management (APIM) f
 ### You have successfully completed the Exercise. Click on **Next >>** to proceed with the next exercise.
 
   ![](../gs/media/nextpagetab.png)
+
 
 
 

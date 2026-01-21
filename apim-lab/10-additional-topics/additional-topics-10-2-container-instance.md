@@ -39,20 +39,20 @@ With the container, we can deploy to multiple hosting options: VM's, App Service
 
      ![Azure Cloud Shell](media/E9T2.1S2.2-0309.png)
 
-   - Select Resource Group: **apim-rg-<inject key="Deployment ID" enableCopy="false" /> (1)**
+   - Select Resource Group: **apim-rg (1)**
    - Region: **East US (2)**
    - Storage account name: **apim<inject key="Deployment ID" enableCopy="false" /> (3)**
    - Fileshare name: **apim (4)**
    - Click on **Create (5)**
 
-       ![](media/E8T2.1S2.3-1901.png)
+       ![](media/E8T2.1S2.3-2109.png)
    
 1. We proceed to create a unique identifier suffix for resources created in this Lab:
 
    - Define the existing resource group name
 
      ```
-     APIMLAB_RGNAME=apim-rg-<inject key="Deployment ID" enableCopy="false" />
+     APIMLAB_RGNAME=apim-rg
      ```
 
    - Define other variables
