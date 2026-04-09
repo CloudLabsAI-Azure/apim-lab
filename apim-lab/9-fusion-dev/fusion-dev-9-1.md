@@ -59,8 +59,6 @@ In this task, you will update the CORS policy in your Azure API Management insta
 
    >**Note:** If you see **Activate account** button, then click on it to activate your Power Platform account and then click on **Create connector**.
 
-   > **Note:** The option is expected to appear within an hour. Kindly proceed with the subsequent exercises and revisit this section afterward.
-
 1. On the **Create a Connector** page, enter the following details:
 
    - API : Select the **Star Wars (1)** API.
@@ -87,16 +85,29 @@ In this task, you will view and edit the custom connector that you created in th
 1. On the Custom connectors page, click on **New cusom connector (1)** dropdown and select Create from **Azure service (Preview) (2)**.
 
    ![](media/E9T2S4-2109.png)
- 
+
+1. On the Create from Azure service )preview) window, select the following options, and click on **Continue (6)**:
+
+   - Connector name: **Star Wars (1)**.
+   - Subscription: Select the subscription where your API Management instance is deployed **(1)**.
+   - Resource group: Select the resource group where your API Management instance is deployed **(2)**.
+   - Azure Service: Select **API Management (3)**.
+   - Service name: Select your API Management instance **(4)**.
+   - API name: **star-wars (5)**.
+
+      ![](media/E9T2S5-1004.png)
+
 1. In the top left corner, click on **1. General** from the drop-down and select **Definition** screen, we need to define a search query string for people so that the Power App can search for character records by name.
 
    ![](media/def.png)
 
-1. In the **Request** section, select **+ Import from sample (1)**. Enter a sample request **URL (2)** with the search query string, and select **Import (3)**:
+1. In the **Request** section, select **+ Import from sample (1)**. Select **Get (2)** in the Verb option, enter a sample request **URL (3)** with the search query string, and select **Import (4)**:
 
    - **https://apim-dev-hol-ms-<inject key="Deployment ID" enableCopy="false" />.azure-api.net/sw/people?search=Luke**
-       
-       ![](media/aa3.png)
+
+       ![](media/E9T2S7.1-1004.png)
+
+       ![](media/E9T2S7.2-1004.png)
 
 1. In the **Response** section of the `getpeople` action, select the `200` response and then select **+ Import from sample**. To get the sample JSON response, follow the steps below:
 
@@ -144,7 +155,7 @@ In this task, you will view and edit the custom connector that you created in th
 
       ![](media/E9T2S12-1901.png)
 
-      > **Note:** If prompted to provide the subscription key, navigate to Azure Portal, and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
+1. When prompted to provide the subscription key, navigate to Azure Portal, and you can find the subscription key in the API Management Service, from the left menu under APIs click on **Subscriptions (1)**, choose **Unlimited**, click on **... > Show/hide keys (2)**. Copy the **Primary key (3)**.  
 
       ![](media/Pg25-subscriptionid.png)
 
