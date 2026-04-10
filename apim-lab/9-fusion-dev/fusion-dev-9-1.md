@@ -171,33 +171,27 @@ In this task, you will view and edit the custom connector that you created in th
 
    ![](./media/E9T2S15.2-1901.png)
 
-### Task 3: Generate the Star Wars Fan Club Application**
+### Task 3: Generate the Star Wars Fan Club Application
 
 In this task, you will create a Canvas App in Power Apps using the Excel worksheet as the primary data source.
 
-1. In the Power Apps portal, click on **+ Create** from the left navigation list and select **Start with data (2).**
+1. In the Power Apps portal, click on **Home (1)** from the left navigation list and select **Start with data (2)** to create your app.
 
-   ![](media/E9T3S1-2109.png)
+   ![](media/E9T3S1-1004.png)
 
-1. On the Start with data page click on **Create new tables**.
+1. On the Creat an app page, select **Upload file (1)** option and click on **Select from device (2)**.
 
-   ![](media/E9T3S2-2109.png)
+   ![](media/E9T3S2-1004.png)
 
-1. On the Choose an option to create table page, select **Import and Excel or .CSV (1)**, and click on **Select from device (2)**.
+   ![](media/E9T3S2.1-1004.png)
 
-   ![](media/E9T3S3-2109.png)
-
-   ![](media/E9T3S3.1-2109.png)
-
-1. Navigate to **C:\LabFiles (1)** path, select the **fanclubmembers.xlsx (2)** and click on **Open (3)** to upload the file. Then click on **Import (4)**.
+1. Navigate to **C:\LabFiles (1)** path, select the **fanclubmembers.xlsx (2)** and click on **Open (3)** to upload the file. Then click on **Create app (4)**.
 
    ![](media/E9T3S4-2109.png)
 
-   ![](media/E9T3S4.1-2109.png)
+   ![](media/E9T3S3.1-1004.png)
 
-1. Click on **Save and open app**. On the **Done working?** pop-up, click on **Save and open app**.
-
-   ![](media/E9T3S5-2109.png)
+1. It may take a couple of minutes for Power Apps to generate the application based on the Excel data. Once the app is created, you would be navigated to the app canvas page. 
 
 1. Click on **Skip** on the Welcom to Power Apps Studio pop-up window. 
 
@@ -217,7 +211,7 @@ In this task, you will add the Star Wars API custom connector as a data source t
 
 1. Click on Play button to open the app and the app will look like this
 
-     ![](media/E9T4S2-2109.png)
+     ![](media/E9T4S3-1004.png)
 
 1. After the app is generated, you can customize it to match your requirements. This includes changing the app theme and branding, renaming labels and headers, reordering or hiding fields, adjusting the layout of lists and details, and applying conditional formatting based on data values. You can also enhance the app by adding search capabilities, buttons, and integrating external APIs using connectors to extend the app’s functionality.
 --- 
@@ -228,6 +222,6 @@ In this exercise, you created a Power Apps Canvas application that uses an Excel
 
 ## Conclusion
 
-By completing this **Azure API Management** hands-on lab, you have gained hands-on experience in deploying and managing APIs using Azure API Management. You have learned how to create and configure an API Management instance, import and manage APIs, apply policies for security and transformation, and monitor API usage. Additionally, you have explored advanced features such as versioning and self-hosted gateways. This knowledge equips you with the skills needed to effectively manage APIs in a cloud environment, ensuring secure and efficient access to your services.
+By completing this **Azure API Management** hands-on lab, you have gained practical experience in designing, implementing, and managing APIs using Azure API Management. You have learned how to create APIs from scratch, add existing APIs, implement security policies, apply rate limiting and throttling, monitor API performance, and export APIs for use in Power Platform applications. Through these exercises, you've developed skills in API governance, developer portal management, and integration with modern cloud services, enabling you to build scalable and secure API solutions for your organization.
 
 ### Congratulations! You've successfully completed the Hands-on lab.
