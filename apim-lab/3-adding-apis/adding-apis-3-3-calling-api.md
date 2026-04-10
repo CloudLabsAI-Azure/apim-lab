@@ -31,6 +31,11 @@ In this task, you will import the Colors API into your API Management instance a
 
    > **Note:** If you encounter with **401 error**, switch to the **Settings** tab, **uncheck** Subscription required, and press **Save** at the bottom of the page and reperform step 4.
 
+   > **Note:** If you are encountering a 404 error, please perform the following steps:
+   > - Click on the POST: Reset Colors operation and Test it. 
+   > - Then, click on the Get:Get colors operation and Test it.
+   > - After that, click on the Get random color operation and Test it. You should now receive a 200 response.
+
 1. We will now add **Products** to the API. On the **Settings** tab, set **Products** to include **Starter** and **Unlimited** **(1)**, then press **Save (2)**.
 
       ![APIM Add Product](media3/05.png)
